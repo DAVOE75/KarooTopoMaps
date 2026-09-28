@@ -95,7 +95,7 @@ MIT License — David García Pascual (hesiOX) 2026
 If you find these maps useful and would like to support their maintenance:
 
 <div align="center">
-  <a href="https://www.paypal.me/latiendadeajedrez" target="_blank">
-    <img src="https://img.shields.io/badge/☕_Buy_me_a_coffee-0070BA?style=for-the-badge&logo=paypal&logoColor=white" alt="Buy me a coffee" />
+  <a href="https://buymeacoffee.com/hesiox" target="_blank">
+    <img src="https://img.shields.io/badge/☕_Buy_me_a_coffee-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=black" alt="Buy me a coffee" />
   </a>
 </div>
