@@ -158,3 +158,15 @@ Si tienes ADB y quieres instalar todos los temas de golpe:
 MIT License — David García Pascual (hesiOX) 2026
 
 Los estilos cartográficos están inspirados en la cartografía del IGN España, distribuidos bajo licencia abierta para uso no comercial.
+
+---
+
+## ☕ Apoya el proyecto
+
+Si estos mapas te han resultado útiles y quieres apoyar su mantenimiento:
+
+<div align="center">
+  <a href="https://www.paypal.me/latiendadeajedrez" target="_blank">
+    <img src="https://img.shields.io/badge/☕_Invítame_a_un_café-0070BA?style=for-the-badge&logo=paypal&logoColor=white" alt="Invítame a un café" />
+  </a>
+</div>
