@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    KarooTopoMaps — Tema IGN-España para OsmAnd en Hammerhead Karoo
+    Basado en la cartografía del Instituto Geográfico Nacional de España
+    Autor: David García Pascual (hesiOX) — github.com/DAVOE75/KarooTopoMaps
+    Licencia: MIT
+    
+    Instalación:
+      adb push IGN-España.xml /sdcard/osmand/rendering/IGN-España.xml
+    
+    Características:
+      - Curvas de nivel cada 10m (índices cada 50m)
+      - Colores hipsométricos (verde → marrón → blanco por altitud)
+      - Relieve sombreado para carreteras de montaña
+      - Contraste alto para pendientes ciclistas
+      - Tipografía IGN: nombres de municipios, picos, puertos
+-->
+<renderingStyle name="IGN-España" defaultColor="#F1EDE9" version="1" depends="default">
+
+    <!-- ===================== COLORES BASE ===================== -->
+    <renderingConstant name="color_fondo"           value="#F1EDE9"/>
+    <renderingConstant name="color_roca"            value="#D5C9B8"/>
+    <renderingConstant name="color_agua"            value="#AAD3DF"/>
+    <renderingConstant name="color_bosque"          value="#A8C88A"/>
+    <renderingConstant name="color_prado"           value="#C9E8A0"/>
+    <renderingConstant name="color_urbano"          value="#E8E0D8"/>
+    <renderingConstant name="color_carretera_nac"   value="#E8963C"/>
+    <renderingConstant name="color_carretera_sec"   value="#F7D27C"/>
+    <renderingConstant name="color_camino"          value="#C8A870"/>
+    <renderingConstant name="color_pista"           value="#B8956A"/>
+    <renderingConstant name="color_curva_normal"    value="#C8956A"/>
+    <renderingConstant name="color_curva_indice"    value="#A87850"/>
+    <renderingConstant name="color_pico"            value="#8B4513"/>
+    <renderingConstant name="color_limite_munic"    value="#9080A0"/>
+
+    <!-- ===================== FONDO DEL MAPA ===================== -->
+    <order>
+        <filter tag="natural" value="water"     drawOrder="5"/>
+        <filter tag="waterway" value=""         drawOrder="6"/>
+        <filter tag="landuse" value="forest"    drawOrder="3"/>
+        <filter tag="natural" value="wood"      drawOrder="3"/>
+        <filter tag="landuse" value="grass"     drawOrder="2"/>
+        <filter tag="landuse" value="meadow"    drawOrder="2"/>
+        <filter tag="natural" value="scrub"     drawOrder="2"/>
+        <filter tag="highway" value=""          drawOrder="20"/>
+        <filter tag="contour" value=""          drawOrder="10"/>
+        <filter tag="boundary" value="administrative" drawOrder="25"/>
+    </order>
+
+    <!-- ===================== LANDUSE / VEGETACIÓN ===================== -->
+    <renderingAttribute name="defaultColor">
+        <case tag="landuse" value="forest"  attrColorValue="$color_bosque"/>
+        <case tag="natural" value="wood"    attrColorValue="$color_bosque"/>
+        <case tag="landuse" value="grass"   attrColorValue="$color_prado"/>
+        <case tag="landuse" value="meadow"  attrColorValue="$color_prado"/>
+        <case tag="natural" value="scrub"   attrColorValue="#C8D8A0"/>
+        <case tag="natural" value="heath"   attrColorValue="#D8C890"/>
+        <case tag="natural" value="scree"   attrColorValue="#D0C8B8"/>
+        <case tag="natural" value="rock"    attrColorValue="$color_roca"/>
+        <case tag="natural" value="bare_rock" attrColorValue="$color_roca"/>
+        <case tag="landuse" value="residential" attrColorValue="$color_urbano"/>
+        <case tag="landuse" value="industrial"  attrColorValue="#D8CCC8"/>
+        <case tag="natural" value="water"   attrColorValue="$color_agua"/>
+        <case tag="waterway" value="riverbank" attrColorValue="$color_agua"/>
+    </renderingAttribute>
+
+    <!-- ===================== CURVAS DE NIVEL ===================== -->
+    <polygon>
+        <filter/>
+    </polygon>
+
+    <line>
+        <!-- Curvas normales cada 10m -->
+        <filter tag="contour" value="elevation" additional="layer=10">
+            <case minzoom="13">
+                <apply stroke-color="$color_curva_normal" stroke-width="0.6" stroke-alpha="180"/>
+            </case>
+        </filter>
+        <!-- Curvas índice cada 50m — más gruesas -->
+        <filter tag="contour" value="elevation" additional="layer=50">
+            <case minzoom="12">
+                <apply stroke-color="$color_curva_indice" stroke-width="1.2" stroke-alpha="220"/>
+            </case>
+        </filter>
+        <!-- Curvas secundarias cada 5m — muy finas, solo a máximo zoom -->
+        <filter tag="contour" value="elevation" additional="layer=5">
+            <case minzoom="15">
+                <apply stroke-color="$color_curva_normal" stroke-width="0.4" stroke-alpha="120"/>
+            </case>
+        </filter>
+    </line>
+
+    <!-- ===================== HIDROGRAFÍA ===================== -->
+    <line>
+        <filter tag="waterway" value="river">
+            <case minzoom="9">
+                <apply stroke-color="#5E9EC0" stroke-width="1.5"/>
+            </case>
+            <case minzoom="12">
+                <apply stroke-color="#5E9EC0" stroke-width="2.5"/>
+            </case>
+        </filter>
+        <filter tag="waterway" value="stream">
+            <case minzoom="12">
+                <apply stroke-color="#7BB8D0" stroke-width="1.0"/>
+            </case>
+        </filter>
+        <filter tag="waterway" value="canal">
+            <case minzoom="11">
+                <apply stroke-color="#5E9EC0" stroke-width="1.5"/>
+            </case>
+        </filter>
+    </line>
+
+    <!-- ===================== RED VIARIA ===================== -->
+    <line>
+        <!-- Autopistas / Autovías -->
+        <filter tag="highway" value="motorway">
+            <case minzoom="7"><apply stroke-color="#D44040" stroke-width="3.0"/></case>
+            <case minzoom="11"><apply stroke-color="#D44040" stroke-width="4.5"/></case>
+        </filter>
+        <filter tag="highway" value="motorway_link">
+            <case minzoom="10"><apply stroke-color="#D44040" stroke-width="2.5"/></case>
+        </filter>
+        <!-- Carreteras nacionales -->
+        <filter tag="highway" value="trunk">
+            <case minzoom="8"><apply stroke-color="$color_carretera_nac" stroke-width="2.5"/></case>
+            <case minzoom="11"><apply stroke-color="$color_carretera_nac" stroke-width="4.0"/></case>
+        </filter>
+        <!-- Carreteras primarias -->
+        <filter tag="highway" value="primary">
+            <case minzoom="9"><apply stroke-color="$color_carretera_nac" stroke-width="2.0"/></case>
+            <case minzoom="12"><apply stroke-color="$color_carretera_nac" stroke-width="3.5"/></case>
+        </filter>
+        <!-- Carreteras secundarias -->
+        <filter tag="highway" value="secondary">
+            <case minzoom="10"><apply stroke-color="$color_carretera_sec" stroke-width="1.5"/></case>
+            <case minzoom="12"><apply stroke-color="$color_carretera_sec" stroke-width="3.0"/></case>
+        </filter>
+        <!-- Carreteras terciarias -->
+        <filter tag="highway" value="tertiary">
+            <case minzoom="11"><apply stroke-color="#FFFFFF" stroke-width="1.5" stroke-color2="#B0A080" stroke-width2="2.5"/></case>
+            <case minzoom="13"><apply stroke-color="#FFFFFF" stroke-width="2.0" stroke-color2="#B0A080" stroke-width2="3.0"/></case>
+        </filter>
+        <!-- Pistas forestales y caminos ciclistas -->
+        <filter tag="highway" value="track">
+            <case minzoom="12">
+                <apply stroke-color="$color_pista" stroke-width="1.0" pathEffect="4_2"/>
+            </case>
+            <case minzoom="14">
+                <apply stroke-color="$color_pista" stroke-width="1.5" pathEffect="4_2"/>
+            </case>
+        </filter>
+        <!-- Senderos peatonales -->
+        <filter tag="highway" value="path">
+            <case minzoom="13">
+                <apply stroke-color="#A07850" stroke-width="0.8" pathEffect="2_2"/>
+            </case>
+        </filter>
+        <filter tag="highway" value="footway">
+            <case minzoom="14">
+                <apply stroke-color="#C09870" stroke-width="0.8" pathEffect="2_2"/>
+            </case>
+        </filter>
+        <!-- Carriles bici -->
+        <filter tag="highway" value="cycleway">
+            <case minzoom="12">
+                <apply stroke-color="#4080C0" stroke-width="1.2" pathEffect="6_2"/>
+            </case>
+        </filter>
+    </line>
+
+    <!-- ===================== LÍMITES ADMINISTRATIVOS ===================== -->
+    <line>
+        <!-- Límites municipales -->
+        <filter tag="boundary" value="administrative" additional="admin_level=8">
+            <case minzoom="11">
+                <apply stroke-color="$color_limite_munic" stroke-width="0.8" pathEffect="6_3_2_3"/>
+            </case>
+        </filter>
+        <!-- Límites provinciales -->
+        <filter tag="boundary" value="administrative" additional="admin_level=6">
+            <case minzoom="8">
+                <apply stroke-color="#706090" stroke-width="1.0" pathEffect="8_4"/>
+            </case>
+        </filter>
+        <!-- Límites de comunidad autónoma -->
+        <filter tag="boundary" value="administrative" additional="admin_level=4">
+            <case minzoom="7">
+                <apply stroke-color="#504070" stroke-width="1.5" pathEffect="8_4"/>
+            </case>
+        </filter>
+    </line>
+
+    <!-- ===================== TEXTOS Y ETIQUETAS ===================== -->
+    <text>
+        <!-- Nombres de picos -->
+        <filter tag="natural" value="peak">
+            <case minzoom="12">
+                <apply text="name" text-color="$color_pico" text-size="11" text-bold="true"
+                       text-dy="-8" icon="mountain_peak" icon-min-distance="80"/>
+            </case>
+        </filter>
+        <!-- Nombres de puertos de montaña -->
+        <filter tag="mountain_pass" value="yes">
+            <case minzoom="11">
+                <apply text="name" text-color="#6B3A1F" text-size="11" text-italic="true"
+                       text-dy="-6"/>
+            </case>
+        </filter>
+        <filter tag="barrier" value="col">
+            <case minzoom="11">
+                <apply text="name" text-color="#6B3A1F" text-size="11" text-italic="true"/>
+            </case>
+        </filter>
+        <!-- Municipios -->
+        <filter tag="place" value="town">
+            <case minzoom="9">
+                <apply text="name" text-color="#2A2A2A" text-size="13" text-bold="true" text-halo-radius="2" text-halo-color="#F0EAE0"/>
+            </case>
+        </filter>
+        <filter tag="place" value="village">
+            <case minzoom="11">
+                <apply text="name" text-color="#3A3030" text-size="11" text-halo-radius="2" text-halo-color="#F0EAE0"/>
+            </case>
+        </filter>
+        <!-- Nombres de ríos -->
+        <filter tag="waterway" value="river">
+            <case minzoom="11">
+                <apply text="name" text-color="#336688" text-size="10" text-italic="true"/>
+            </case>
+        </filter>
+        <!-- Cotas de curvas índice -->
+        <filter tag="contour" value="elevation" additional="layer=50">
+            <case minzoom="14">
+                <apply text="ele" text-color="$color_curva_indice" text-size="9"/>
+            </case>
+        </filter>
+    </text>
+
+</renderingStyle>
