@@ -75,10 +75,50 @@ Karoo → Almacenamiento interno → osmand → rendering
 
 ## 📸 Capturas de pantalla
 
+Las siguientes capturas muestran el tema **IGN-España** a diferentes escalas, con los colores acordes a la cartografía oficial IGN 1:25.000:
+
+### Escala urbana · 2 km (vista de ciudad — Cartagena)
 <p align="center">
-  <img src="art/screenshot_ign_vs_default.png" width="700" />
-  <br><em>Izquierda: Mapa estándar | Derecha: Tema IGN-España</em>
+  <img src="art/screenshot_ign_2km.png" width="360" />
 </p>
+
+> Colores hipsométricos del suelo urbano (rojo), zonas verdes, hidrografía (azul) y red viaria jerarquizada por colores.
+
+---
+
+### Escala 500 m (periferia urbana)
+<p align="center">
+  <img src="art/screenshot_ign_500m.png" width="360" />
+</p>
+
+> Detalle de carreteras secundarias en amarillo, carreteras nacionales en naranja, límites de suelo edificado.
+
+---
+
+### Escala 100 m / 50 m (máximo detalle urbano — vista 3D)
+<p align="center">
+  <img src="art/screenshot_ign_100m.png" width="360" />
+</p>
+
+> A máxima escala aparece la representación tridimensional de edificios con el estilo cartográfico IGN mantenido.
+
+---
+
+### Escala costera · 1 km (litoral)
+<p align="center">
+  <img src="art/screenshot_ign_costa.png" width="360" />
+</p>
+
+> Representación del litoral con diferenciación de suelo cultivado (beige), vegetación natural (verde claro) y masas de agua (azul intenso).
+
+---
+
+### Escala de montaña · 200 m (tornanti / curvas de herradura)
+<p align="center">
+  <img src="art/screenshot_ign_montana.png" width="360" />
+</p>
+
+> Aquí destaca la característica más valiosa para ciclistas: las **curvas de herradura (tornanti)** perfectamente visibles sobre fondo verde bosque, con el río Valira identificado en azul. Escala ideal para planificación de puertos de montaña.
 
 ---
 
