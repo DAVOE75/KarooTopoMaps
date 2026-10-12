@@ -24,11 +24,13 @@ jobs:
           distribution: 'temurin'
           cache: gradle
 
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
+      - name: Fix gradlew permissions and line endings
+        run: |
+          sed -i -e 's/\r$//' gradlew
+          chmod +x gradlew
 
       - name: Build Release APK
-        run: ./gradlew assembleRelease
+        run: ./gradlew assembleRelease --stacktrace
 
       - name: Prepare APK Asset
         run: |
