@@ -4,11 +4,7 @@
 > *Transform your bike computer's native map with high-contrast, professional cartographic styles.*
 
 <p align="center">
-  <img src="art/logo2.png" width="140" alt="KarooTopoMaps Logo" />
-</p>
-
-<p align="center">
-  <img src="art/banner.png" width="700" alt="KarooTopoMaps Banner" />
+  <img src="art/logo.png" width="140" alt="KarooTopoMaps Logo" />
 </p>
 
 <p align="center">
