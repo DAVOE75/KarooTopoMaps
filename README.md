@@ -17,8 +17,11 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/DAVOE75/KarooTopoMaps/releases/latest"><img src="https://img.shields.io/badge/APK-Descargar%20v1.1.1-gold?style=for-the-badge&logo=android" alt="Download APK" /></a>
-  <a href="https://buymeacoffee.com/davoe75"><img src="https://img.shields.io/badge/Apoya%20el%20proyecto-Buy%20Me%20A%20Coffee-orange?style=for-the-badge&logo=buy-me-a-coffee" alt="Buy Me A Coffee" /></a>
+  <a href="https://github.com/DAVOE75/KarooTopoMaps/releases/latest"><img src="https://img.shields.io/github/v/release/DAVOE75/KarooTopoMaps?style=flat-square&logo=android&logoColor=white&label=Versi%C3%B3n&color=2E7D32" alt="Última versión" /></a>
+  <a href="https://github.com/DAVOE75/KarooTopoMaps/releases"><img src="https://img.shields.io/github/downloads/DAVOE75/KarooTopoMaps/total?style=flat-square&logo=github&logoColor=white&label=Descargas&color=D4AF37" alt="Descargas totales" /></a>
+  <img src="https://img.shields.io/badge/Dispositivo-Karoo_1_•_2_•_3-1B1B1B?style=flat-square&logo=googlemaps&logoColor=D4AF37" alt="Compatibilidad Karoo" />
+  <a href="https://github.com/DAVOE75/KarooTopoMaps/blob/main/LICENSE"><img src="https://img.shields.io/github/license/DAVOE75/KarooTopoMaps?style=flat-square&label=Licencia&color=455A64" alt="Licencia MIT" /></a>
+  <a href="https://buymeacoffee.com/davoe75"><img src="https://img.shields.io/badge/Donar-Buy_Me_a_Coffee-FF813F?style=flat-square&logo=buy-me-a-coffee&logoColor=white" alt="Buy Me A Coffee" /></a>
 </p>
 
 ---

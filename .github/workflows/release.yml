@@ -46,12 +46,14 @@ jobs:
           fi
           cp app/build/outputs/apk/release/app-release.apk release_assets/KarooTopoMaps-${TAG_NAME}.apk
           cp app/build/outputs/apk/release/app-release.apk release_assets/KarooTopoMaps.apk
+          cp manifest.json release_assets/manifest.json
+          cp karoo-app-manifest.json release_assets/karoo-app-manifest.json
 
       - name: Create GitHub Release and Upload APK
         uses: softprops/action-gh-release@v2
         if: startsWith(github.ref, 'refs/tags/')
         with:
-          files: release_assets/*.apk
+          files: release_assets/*
           name: Release ${{ github.ref_name }}
           draft: false
           prerelease: false
