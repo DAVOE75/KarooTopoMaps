@@ -1,0 +1,9 @@
+<resources>
+    <style name="Theme.KarooTopoMaps" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">#FFD700</item>
+        <item name="colorOnPrimary">#000000</item>
+        <item name="android:windowBackground">#121212</item>
+        <item name="android:statusBarColor">#121212</item>
+        <item name="android:navigationBarColor">#121212</item>
+    </style>
+</resources>

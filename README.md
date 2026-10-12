@@ -1,172 +1,98 @@
 # 🗺️ KarooTopoMaps
 
-> Temas de mapa topográfico para dispositivos **Hammerhead Karoo** | Topographic map themes for Hammerhead Karoo devices
+> **Colección Cartográfica Premium y Extensión para dispositivos Hammerhead Karoo (1, 2 y Karoo 3)**  
+> *Transforma el mapa nativo de tu ciclocomputador con estilos cartográficos profesionales de alto contraste.*
 
 <p align="center">
-  <img src="art/banner.png" width="600" />
+  <img src="art/logo2.png" width="140" alt="KarooTopoMaps Logo" />
+</p>
+
+<p align="center">
+  <img src="art/banner.png" width="700" alt="KarooTopoMaps Banner" />
 </p>
 
 <p align="center">
   <a href="README.md">🇪🇸 Español</a> |
   <a href="README_en.md">🇬🇧 English</a> |
-  <a href="README_fr.md">🇫🇷 Français</a>
+  <a href="README_fr.md">🇫🇷 Français</a> |
+  <a href="README_de.md">🇩🇪 Deutsch</a> |
+  <a href="README_it.md">🇮🇹 Italiano</a> |
+  <a href="README_pt.md">🇵🇹 Português</a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/DAVOE75/KarooTopoMaps/releases/latest"><img src="https://img.shields.io/badge/APK-Descargar%20v1.0.0-gold?style=for-the-badge&logo=android" alt="Download APK" /></a>
+  <a href="https://buymeacoffee.com/davoe75"><img src="https://img.shields.io/badge/Apoya%20el%20proyecto-Buy%20Me%20A%20Coffee-orange?style=for-the-badge&logo=buy-me-a-coffee" alt="Buy Me A Coffee" /></a>
 </p>
 
 ---
 
-## 🌍 ¿Qué es esto?
+## 🌟 ¿Qué es KarooTopoMaps?
 
-Este repositorio contiene temas de renderizado cartográfico que transforman el mapa estándar de tu Karoo en mapas topográficos de alta calidad, similares a los del **Instituto Geográfico Nacional (IGN)** de España.
+**KarooTopoMaps** es una suite cartográfica y aplicación Android complementaria diseñada específicamente para ciclistas exigentes. Sustituye la estética estándar del mapa nativo de tu Hammerhead Karoo por **8 temas cartográficos artesanales y radicalmente diferenciados entre sí**.
 
-> ⚠️ **Importante:** Estos temas modifican la apariencia visual del mapa, no las fuentes de datos. El Karoo seguirá usando sus propios datos de OpenStreetMap, pero renderizados con el estilo topográfico del IGN.
+Cada estilo ha sido calibrado milimétricamente teniendo en cuenta la óptica de las pantallas transflectivas de Karoo bajo la luz directa del sol, garantizando máxima visibilidad de senderos, curvas de nivel y un contraste perfecto sobre el track de tu ruta.
 
 ---
 
-## 🎨 Temas Disponibles
+## 🎨 Catálogo de Temas Premium
 
-| Tema | Descripción | País |
+| Tema | Identidad Cartográfica | Ideal para |
 |---|---|---|
-| `IGN-España` | Estilo topográfico del IGN español. Curvas de nivel, relieve sombreado, colores hipsométricos | 🇪🇸 España |
-| `IGN-Ciclismo` | Variante optimizada para ciclismo. Mayor contraste de pendientes, carreteras destacadas | 🇪🇸 España |
+| **🗺️ IGN** | Cartografía oficial 1:25.000 del Instituto Geográfico Nacional: curvas de nivel maestras y secundarias con halo, fondo terroso, parcelario nítido y avenidas jerarquizadas. | Exploración general, senderismo y puertos de carretera. |
+| **📜 Explorador Vintage** | Monocromático sepia en relieve litográfico (grabador de cobre del s. XIX / lámina MTN50). Sin ningún color moderno: el track rojo de tu ruta resalta como una joya. | Gravel nostálgico, cicloturismo y eventos clásicos. |
+| **🪨 Tierra y Grava** | Estética alpina orgánica: fondo blanco hueso reflectante, pistas de tierra y grava en marrón chocolate oscuro con guiones gruesos, y curvas en tonos arena y arcilla. | Pistas forestales, bikepacking y pistas de grava técnica. |
+| **🌈 Tecnológico / DEM** | Modelo digital de elevación con mapa de calor hipsométrico continuo (valles verdes → media montaña ámbar → cumbres terracota) y senderos negros con halo blanco. | Puertos de montaña, escaladas y desnivel acumulado. |
+| **🌲 Territorio Trail** | Verde pino denso estructurado, senderos en púrpura mora de visibilidad extrema y dificultad técnica MTB por código de color OSM (S0-S5). | Enduro, All-Mountain y trialeras boscosas. |
+| **🏔️ Granito Altiplano** | Minimalismo nórdico mineral: escala de grises pizarra fría, lagos en azul hielo y asfalto oscuro sin colores que distraigan. | Ciclismo alpino frío, carretera técnica y estética pura. |
+| **🕶️ Modo Nocturno Táctico** | Negro carbón mate antirreflejos de alto contraste sin neones estridentes. Pistas en blanco y descansos visuales absolutos. | Salidas nocturnas, amaneceres y ahorro de batería. |
+| **🚵 Elevate MTB** | Estilo alpino clásico centroeuropeo (tipo SwissTopo / Kompass) con waymarking completo y senderos en marrón montañero tradicional. | Senderismo alpino de alta cota y travesías de montaña. |
+| **⚡ ALT-MTB Especial** | Variante de ultra-alto contraste óptico con carreteras saturadas para lectura bajo el sol más cegador del verano. | Días de sol intenso extremo y gravel veraniego. |
 
 ---
 
-## 📦 Instalación
+## 📲 Instalación Rápida de la App
 
-Hay **dos métodos** de instalación:
+La forma más sencilla e interactiva de cambiar de tema al vuelo directamente desde la pantalla de tu Karoo:
 
----
-
-### Método 1 — Vía ADB (Recomendado ⭐)
-
-El método más rápido. Solo necesitas Android Debug Bridge (ADB) instalado en tu PC.
-
-**Paso 1.** Conecta tu Karoo al PC mediante cable USB y activa la depuración ADB:
-> En tu Karoo: **Ajustes → Sistema → Acerca del dispositivo** → pulsa 7 veces en "Número de compilación" → vuelve a **Ajustes → Opciones para desarrolladores → Depuración USB: ON**
-
-**Paso 2.** Descarga el archivo del tema que quieras de la carpeta [`themes/`](themes/)
-
-**Paso 3.** Ejecuta en tu PC:
-
-```bash
-adb push themes/IGN-España.xml /sdcard/osmand/rendering/IGN-España.xml
-```
-
-**Paso 4.** En tu Karoo, abre **OsmAnd → Configurar mapa → Estilo de mapa** y selecciona `IGN-España`.
+1. **Descarga el APK**: Descarga la última versión [`KarooTopoMaps-v1.0.0.apk`](release/KarooTopoMaps-v1.0.0.apk) o desde la sección [Releases](https://github.com/DAVOE75/KarooTopoMaps/releases).
+2. **Instala en tu Karoo**:
+   * Mediante **ADB**:
+     ```powershell
+     adb install -r KarooTopoMaps-v1.0.0.apk
+     ```
+   * O utilizando herramientas inalámbricas como Karoo Appstore / Sidequest.
+3. **Abre KarooTopoMaps**: En la pantalla de tu Karoo, abre la aplicación, pulsa **"Aplicar este tema"** en el que más te guste y listo: entra en la app **Ride** y disfruta de la nueva cartografía.
 
 ---
 
-### Método 2 — Vía cable USB (MTP)
+## 🛠️ Instalación Manual de Archivos XML (Sin App)
 
-Si no tienes ADB, puedes copiar el archivo manualmente:
-
-**Paso 1.** Conecta el Karoo al PC con cable USB y elige **"Transferencia de archivos (MTP)"**
-
-**Paso 2.** Navega a:
-```
-Karoo → Almacenamiento interno → osmand → rendering
-```
-
-**Paso 3.** Copia el archivo `.xml` del tema en esa carpeta
-
-**Paso 4.** En tu Karoo: **OsmAnd → Configurar mapa → Estilo de mapa** → selecciona el tema
-
----
-
-## 📸 Capturas de pantalla
-
-Las siguientes capturas muestran el tema **IGN-España** a diferentes escalas, con los colores acordes a la cartografía oficial IGN 1:25.000:
-
-### Escala urbana · 2 km (vista de ciudad — Cartagena)
-<p align="center">
-  <img src="art/screenshot_ign_2km.png" width="360" />
-</p>
-
-> Colores hipsométricos del suelo urbano (rojo), zonas verdes, hidrografía (azul) y red viaria jerarquizada por colores.
-
----
-
-### Escala 500 m (periferia urbana)
-<p align="center">
-  <img src="art/screenshot_ign_500m.png" width="360" />
-</p>
-
-> Detalle de carreteras secundarias en amarillo, carreteras nacionales en naranja, límites de suelo edificado.
-
----
-
-### Escala 100 m / 50 m (máximo detalle urbano — vista 3D)
-<p align="center">
-  <img src="art/screenshot_ign_100m.png" width="360" />
-</p>
-
-> A máxima escala aparece la representación tridimensional de edificios con el estilo cartográfico IGN mantenido.
-
----
-
-### Escala costera · 1 km (litoral)
-<p align="center">
-  <img src="art/screenshot_ign_costa.png" width="360" />
-</p>
-
-> Representación del litoral con diferenciación de suelo cultivado (beige), vegetación natural (verde claro) y masas de agua (azul intenso).
-
----
-
-### Escala de montaña · 200 m (tornanti / curvas de herradura)
-<p align="center">
-  <img src="art/screenshot_ign_montana.png" width="360" />
-</p>
-
-> Aquí destaca la característica más valiosa para ciclistas: las **curvas de herradura (tornanti)** perfectamente visibles sobre fondo verde bosque, con el río Valira identificado en azul. Escala ideal para planificación de puertos de montaña.
-
----
-
-## 🔧 Instalación por Script (Windows)
-
-Si tienes ADB y quieres instalar todos los temas de golpe:
+Si prefieres copiar directamente el tema a través de tu ordenador:
 
 ```powershell
-# Desde la raíz del repositorio
-.\scripts\install_themes.ps1
+# Ejemplo: Aplicar el tema Tierra y Grava directamente
+adb push app/src/main/assets/themes/theme_gravel.xml /sdcard/mtb_v2.xml
 ```
 
 ---
 
-## 🤝 Contribuir
+## 🌍 Idiomas Soportados
 
-¿Tienes un tema propio o mejoras para los existentes? ¡Las PR son bienvenidas!
-
-1. Haz fork del repositorio
-2. Crea una rama: `git checkout -b mi-tema-nuevo`
-3. Añade tu archivo `.xml` en la carpeta `themes/`
-4. Describe los cambios en el README
-5. Abre una Pull Request
-
----
-
-## 📚 Recursos
-
-- [Documentación oficial de estilos OsmAnd](https://osmand.net/docs/technical/osmand-file-formats/osmand-rendering-style)
-- [Repositorio de estilos de la comunidad OsmAnd](https://github.com/osmandapp/OsmAnd-resources)
-- [ALTGRAPH — Extensión 3D de altimetría para Karoo](https://github.com/DAVOE75/ALTGRAPH)
+La aplicación y la documentación están completamente localizadas a:
+* 🇪🇸 **Español**
+* 🇬🇧 **English**
+* 🇫🇷 **Français**
+* 🇩🇪 **Deutsch**
+* 🇮🇹 **Italiano**
+* 🇵🇹 **Português**
 
 ---
 
-## 📄 Licencia
+## ☕ Apoyo al Proyecto
 
-MIT License — David García Pascual (hesiOX) 2026
+Este proyecto requiere incontables horas de trabajo cartográfico minucioso, calibración bajo el sol y desarrollo. Si disfrutas de estos mapas en tus salidas en bicicleta, puedes invitarme a un café:
 
-Los estilos cartográficos están inspirados en la cartografía del IGN España, distribuidos bajo licencia abierta para uso no comercial.
-
----
-
-## ☕ Apoya el proyecto
-
-Si estos mapas te han resultado útiles y quieres apoyar su mantenimiento:
-
-<div align="center">
-  <a href="https://buymeacoffee.com/hesiox" target="_blank">
-    <img src="https://img.shields.io/badge/☕_Invítame_a_un_café-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=black" alt="Invítame a un café" />
-  </a>
-</div>
+<p align="center">
+  <a href="https://buymeacoffee.com/davoe75"><img src="https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="Buy Me A Coffee" /></a>
+</p>

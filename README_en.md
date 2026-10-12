@@ -1,101 +1,73 @@
 # 🗺️ KarooTopoMaps
 
-> Topographic map themes for **Hammerhead Karoo** devices | [🇪🇸 Español](README.md)
+> **Premium Cartographic Collection and Companion App for Hammerhead Karoo devices (1, 2, and Karoo 3)**  
+> *Transform your bike computer's native map with high-contrast, professional cartographic styles.*
 
 <p align="center">
-  <img src="art/banner.png" width="600" />
+  <img src="art/logo2.png" width="140" alt="KarooTopoMaps Logo" />
+</p>
+
+<p align="center">
+  <img src="art/banner.png" width="700" alt="KarooTopoMaps Banner" />
+</p>
+
+<p align="center">
+  <a href="README.md">🇪🇸 Español</a> |
+  <a href="README_en.md">🇬🇧 English</a> |
+  <a href="README_fr.md">🇫🇷 Français</a> |
+  <a href="README_de.md">🇩🇪 Deutsch</a> |
+  <a href="README_it.md">🇮🇹 Italiano</a> |
+  <a href="README_pt.md">🇵🇹 Português</a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/DAVOE75/KarooTopoMaps/releases/latest"><img src="https://img.shields.io/badge/APK-Download%20v1.0.0-gold?style=for-the-badge&logo=android" alt="Download APK" /></a>
+  <a href="https://buymeacoffee.com/davoe75"><img src="https://img.shields.io/badge/Support%20Project-Buy%20Me%20A%20Coffee-orange?style=for-the-badge&logo=buy-me-a-coffee" alt="Buy Me A Coffee" /></a>
 </p>
 
 ---
 
-## 🌍 What is this?
+## 🌟 What is KarooTopoMaps?
 
-This repository contains cartographic rendering themes that transform your Karoo's standard map into high-quality topographic maps, similar to those of Spain's **National Geographic Institute (IGN)** and other national topographic mapping agencies.
+**KarooTopoMaps** is a premium cartographic suite and Android companion application designed specifically for cyclists. It replaces the default map style on your Hammerhead Karoo with **8 radically distinct, handcrafted map themes**.
 
-> ⚠️ **Important:** These themes modify the visual appearance of the map, not the data sources. Karoo will still use its own OpenStreetMap data, but rendered with topographic IGN-style visuals.
+Each style is calibrated for sunlight readability on Karoo transflective displays, maximizing singletrack definition, contour readability, and route contrast.
 
 ---
 
-## 🎨 Available Themes
+## 🎨 Premium Theme Catalog
 
-| Theme | Description | Country |
+| Theme | Cartographic Identity | Best For |
 |---|---|---|
-| `IGN-España` | Spanish IGN topographic style. Contour lines, hillshading, hypsometric colors | 🇪🇸 Spain |
-| `IGN-Ciclismo` | Cycling-optimized variant. Higher gradient contrast, highlighted roads | 🇪🇸 Spain |
+| **🗺️ IGN** | Official 1:25,000 Spanish National Geographic Institute style: contour lines with halo, earthy relief, sharp parcels, and ranked avenues. | General exploration, hiking, and mountain pass road riding. |
+| **📜 Vintage Explorer** | 19th-century engraved monochrome sepia (copperplate lithograph / historic MTN50 sheet). 0% modern colors: your red route track pops like a jewel. | Nostalgic gravel rides, bikepacking, and vintage events. |
+| **🪨 Earth &amp; Gravel** | Organic alpine styling: reflective bone-white base, dark chocolate dashed unpaved roads, and clay/sand contour shading. | Forest roads, remote gravel sectors, and mixed-surface adventures. |
+| **🌈 High-Visibility DEM** | Digital elevation model with continuous hypsometric heatmap (green valleys → amber mid-mountain → terracotta summits) and black trails with white halo. | Mountain passes, elevation relief reading, and steep climbs. |
+| **🌲 Trail Territory** | Dense structured pine forest green, high-visibility mulberry purple singletracks, and OSM technical trail ratings (S0-S5). | Enduro, All-Mountain, and technical woods riding. |
+| **🏔️ Granite Altiplano** | Scandinavian mineral minimalism: slate-gray monochrome base, ice-blue water bodies, and dark roads without visual clutter. | Pure alpine road, cold weather riding, and clean geometry lovers. |
+| **🕶️ Tactical Dark Mode** | Matte anti-glare carbon black base without fluorescent accents. Off-white tracks with zero eye fatigue and reduced battery consumption. | Night rides, dawn patrol, and low-light winter workouts. |
+| **🚵 Elevate MTB** | Classic central European alpine cartography (SwissTopo / Kompass style) featuring complete waymarking and traditional hiking trail colors. | High alpine treks and traditional mountain biking. |
+| **⚡ ALT-MTB Special** | High optical contrast variant with saturated road casings designed for direct midday summer sunlight. | Midsummer blazing sun and harsh glare conditions. |
 
 ---
 
-## 📦 Installation
+## 📲 App Installation
 
-There are **two methods** to install:
+The quickest way to switch themes on the fly directly on your Karoo:
 
----
-
-### Method 1 — Via ADB (Recommended ⭐)
-
-The fastest method. You just need Android Debug Bridge (ADB) installed on your PC.
-
-**Step 1.** Connect your Karoo via USB and enable ADB debugging:
-> On your Karoo: **Settings → System → About device** → tap 7 times on "Build number" → go back to **Settings → Developer options → USB Debugging: ON**
-
-**Step 2.** Download the theme file you want from the [`themes/`](themes/) folder
-
-**Step 3.** Run on your PC:
-
-```bash
-adb push themes/IGN-España.xml /sdcard/osmand/rendering/IGN-España.xml
-```
-
-**Step 4.** On your Karoo, open **OsmAnd → Configure map → Map style** and select `IGN-España`.
+1. **Download the APK**: Download the latest [`KarooTopoMaps-v1.0.0.apk`](release/KarooTopoMaps-v1.0.0.apk) or grab it from [Releases](https://github.com/DAVOE75/KarooTopoMaps/releases).
+2. **Install to your Karoo**:
+   ```bash
+   adb install -r KarooTopoMaps-v1.0.0.apk
+   ```
+3. **Launch KarooTopoMaps**: On your Karoo screen, open the app, tap **"Apply this theme"**, open the **Ride** app, and enjoy!
 
 ---
 
-### Method 2 — Via USB cable (MTP)
+## ☕ Support the Project
 
-If you don't have ADB, you can copy the file manually:
+Creating, calibrating, and testing these map styles under real outdoor sunlight takes countless hours. If you enjoy these themes on your rides, you can support ongoing development:
 
-**Step 1.** Connect Karoo to PC with USB cable and choose **"File Transfer (MTP)"**
-
-**Step 2.** Navigate to:
-```
-Karoo → Internal Storage → osmand → rendering
-```
-
-**Step 3.** Copy the `.xml` theme file into that folder
-
-**Step 4.** On your Karoo: **OsmAnd → Configure map → Map style** → select the theme
-
----
-
-## 🔧 Script Installation (Windows)
-
-If you have ADB and want to install all themes at once:
-
-```powershell
-.\scripts\install_themes.ps1
-```
-
----
-
-## 📚 Resources
-
-- [OsmAnd rendering style documentation](https://osmand.net/docs/technical/osmand-file-formats/osmand-rendering-style)
-- [OsmAnd community styles repository](https://github.com/osmandapp/OsmAnd-resources)
-- [ALTGRAPH — 3D Altimetry extension for Karoo](https://github.com/DAVOE75/ALTGRAPH)
-
----
-
-## 📄 License
-
-MIT License — David García Pascual (hesiOX) 2026
----
-
-## ☕ Support the project
-
-If you find these maps useful and would like to support their maintenance:
-
-<div align="center">
-  <a href="https://buymeacoffee.com/hesiox" target="_blank">
-    <img src="https://img.shields.io/badge/☕_Buy_me_a_coffee-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=black" alt="Buy me a coffee" />
-  </a>
-</div>
+<p align="center">
+  <a href="https://buymeacoffee.com/davoe75"><img src="https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="Buy Me A Coffee" /></a>
+</p>

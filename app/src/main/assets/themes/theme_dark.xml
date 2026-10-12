@@ -1,0 +1,856 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<rendertheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" map-background="#181A1B"
+    version="1" xmlns="http://mapsforge.org/renderTheme"
+    xsi:schemaLocation="http://mapsforge.org/renderTheme https://raw.githubusercontent.com/mapsforge/vtm/master/resources/rendertheme.xsd">
+
+    <!-- AREA STYLES -->
+    <style-area fill="#1A2D3B" id="water" mesh="true"/>
+
+    <!-- LINE CASINGS -->
+    <style-line id="unpaved_casing" stroke="#3A3026" cap="round"/>
+    <style-line id="unpaved_cycleway_casing" stroke="#4A3F33" cap="round"/>
+    <style-line id="paved_cycleway_casing" stroke="#25352A" cap="round"/>
+
+    <!-- LINE STYLES -->
+    <style-line id="path" stroke="#D0D0D0" dasharray="6,4" width="0.85" cap="round" width="0.6"/>
+    <style-line id="cycling_path" stroke="#111111" dasharray="8,8" cap="round" width="0.9"/>
+    <style-line id="ferry" stroke="#2E4E63" dasharray="8,8" cap="round" width="0.9"/>
+
+    <!-- Base style for fixed width lines -->
+    <style-line cap="butt" fix="true" id="fix" width="1.0"/>
+
+    <!-- Water line styles -->
+    <style-line cap="butt" id="water" stroke="#284457" width="1.0"/>
+    <style-line fix="false" id="river" stroke="#284457" use="water"/>
+
+    <!-- Text styles -->
+    <style-text id="poi_label" caption="true" dy="-15" fill="#E0E0E0" font-family="thin"
+        k="name" size="11" stroke="#111111" stroke-width="2.0" style="bold" />
+
+    <!-- Road Labels - need to set priority and size where used, and override fill if needed -->
+    <style-text id="road_label" k="name" fill="#282C30" stroke="#111111" stroke-width="2.0" style="bold"/>
+
+    <!-- STYLE ASSIGNMENT RULES -->
+
+    <!-- Land vs. sea -->
+    <m e="way" k="natural" v="issea|sea">
+        <area use="water"/>
+    </m>
+    <m e="way" k="natural" v="nosea">
+        <area mesh="true" fill="#181A1B"/>
+    </m>
+    <!-- paleta general aproximada a los mapas topograficos 1:25000 del IGN -->
+
+    <!-- Closed ways (except highways and buildings --> 
+    <m closed="yes" e="way" k="highway|building" v="~">
+        <m k="landuse">
+            <m v="meadow">
+                <area mesh="true" fill="#1B241E"/>
+            </m>
+            <m v="residential">
+                <area mesh="true" fill="#222222" stroke="#333333" stroke-width="0.3"/>
+            </m>
+            <m v="allotments">
+                <area mesh="true" fill="#222222"/>
+            </m>
+            <m v="retail">
+                <area mesh="true" fill="#222222" stroke="#333333" stroke-width="0.3"/>
+            </m>
+            <m v="commercial">
+                <area mesh="true" fill="#252525" stroke="#383838" stroke-width="0.3"/>
+            </m>
+            <m v="farm|farmyard|farmland|orchard|vineyard">
+                <area mesh="true" fill="#1B241E"/>
+            </m>
+            <m v="quarry">
+                <area mesh="true" fill="#252525"/>
+            </m>
+            <m v="industrial|railway">
+                <area mesh="true" fill="#252525" stroke="#383838" stroke-width="0.3"/>
+            </m>
+            <m v="cemetery">
+                <area mesh="true" fill="#252525"/>
+            </m>
+        </m>
+        <m k="amenity">
+            <m v="kindergarten|school|college|university">
+                <area mesh="true" fill="#25241E"/>
+                <line cap="butt" fix="true" stroke="#404040" width="1.0"/>
+            </m>
+            <m v="hospital">
+                <area mesh="true" fill="#222222"/>
+            </m>
+        </m>
+        <m k="landuse">
+            <m v="recreation_ground">
+                <area mesh="true" fill="#202B24"/>
+            </m>
+            <m v="brownfield">
+                <area mesh="true" fill="#252525"/>
+            </m>
+        </m>
+        <m k="leisure" v="park|common|green|golf_course|pitch">
+            <area mesh="true" fill="#202B24"/>
+        </m>
+        <m k="natural">
+            <m k="natural" v="grassland|scrub">
+                <area mesh="true" fill="#1B241E"/>
+            </m>
+            <m v="sand|beach">
+                <area mesh="true" fill="#202020"/>
+            </m>
+            <m v="rock|bare_rock|stone|scree|glacier|cliff">
+                <area mesh="true" fill="#222528"/>
+            </m>
+        </m>
+
+        <m k="amenity" v="parking">
+            <area mesh="true" fill="#303030"/>
+        </m>
+
+        <!-- fill constante en todos los niveles de zoom: evita que el bosque se vea gris al acercar -->
+        <m k="landuse|natural" v="forest|wood">
+            <area mesh="true" fill="#202B24"/>
+        </m>
+
+        <!-- keep grass above forest:wood and leisure:park! -->
+        <!-- http://wiki.openstreetmap.org/wiki/Proposed_features/conservation,
+                often serves as background for leisure=nature_reserve -->
+        <m k="landuse" v="grass">
+            <area mesh="true" fill="#1B241E"/>
+        </m>
+
+        <m k="leisure" v="garden">
+            <area mesh="true" fill="#1B241E"/>
+        </m>
+
+        <m k="landuse" v="reservoir|basin">
+            <area use="water"/>
+        </m>
+        <!-- End landuse, natural, leisure, tourism, amenity areas -->
+    </m> <!--- End of closed ways -->
+
+    <!-- Waterways (rivers, streams, etc.) -->
+    <m e="way" k="waterway">
+        <m v="ditch|drain" zoom-min="14">
+            <line use="water" width="0.2"/>
+        </m>
+        <m v="stream" zoom-min="13">
+            <line use="water" width="0.4"/>
+        </m>
+        <m v="canal">
+            <line use="river" width="-0.3"/>
+        </m>
+        <m v="river">
+            <m zoom-min="12">
+                <line use="river" width="0.5"/>
+            </m>
+            <m zoom-min="10">
+                <line use="water" width="0.3"/>
+            </m>
+            <m zoom-min="8">
+                <line use="water" width="0.1"/>
+            </m>
+        </m>
+        <m v="riverbank|dock">
+            <!-- Using mesh=true for areas causes problems below ZL 12 -->
+            <!-- Using just lines at lower ZL is not a good solution (big rivers look bad) -->
+            <area use="water" mesh="false"/>
+        </m>
+        <m v="weir">
+            <line stroke="#284457" use="fix"/>
+        </m>
+        <m v="dam" zoom-min="12">
+            <line stroke="#ababab" use="fix" width="0.2"/>
+        </m>
+        <m k="lock" v="yes|true">
+            <line stroke="#f8f8f8" use="fix" width="0.5"/>
+        </m>
+    </m>
+    <!-- Closed natural water features (e.g. lakes) -->
+    <m e="way">
+        <m closed="yes" k="natural" v="water">
+            <area use="water" />
+            <caption font-family="thin" area-size="0.2" fill="#000000" k="name" size="14"/>
+        </m>
+    </m>
+
+    <!-- partially transparent areas, draw later. these can overlap water and land -->
+    <m k="leisure" v="nature_reserve">
+        <area mesh="true" fill="#33202B24"/>
+    </m>
+    <m k="landuse" v="military">
+        <area mesh="true" fill="#33282C30"/>
+        <caption font-family="thin" area-size="0.2" fill="#000000" k="name" size="14"/>
+    </m>
+
+    <!-- Railway -->
+    <m e="way" k="railway">
+        <m v="station">
+            <area fill="#dbdbc9" stroke="#707070" stroke-width="0.3"/>
+        </m>
+        <!-- Railway bridge casings (TODO - needs work?) -->
+        <m zoom-min="14">
+            <m k="bridge" v="yes|true">
+                <m v="tram|subway|light_rail|narrow_gauge">
+                    <line cap="butt" fix="true" stroke="#777777" width="0.9"/>
+                </m>
+                <m v="rail">
+                    <line cap="butt" fix="true" stroke="#777777" width="0.9"/>
+                </m>
+            </m>
+        </m>
+        <!--- Rail: use a line pattern above zoom 13 -->
+        <m v="rail|turntable" zoom-min="14">
+            <line cap="butt" fix="true" stipple="10" stipple-stroke="#111111"
+                  stipple-width="0.8" stroke="#666666" width="2.0"/>
+        </m>
+        <m v="rail|turntable" zoom-max="13">
+            <line cap="butt" fix="true" stroke="#ddaa9988" width="1.0"/>
+        </m>
+        <m v="tram" zoom-min="15">
+            <line fix="true" stroke="#887766" width="1.0"/>
+        </m>
+        <m v="light_rail|subway|narrow_gauge" zoom-min="14">
+            <line stroke="#999999" width="0.25"/>
+        </m>
+        <!-- Other tag values such as disused, spur, abandoned, preserved... --> 
+        <m k="railway" v="~">
+            <line cap="butt" fix="true" stroke="#cccccc" width="0.6"/>
+        </m>
+    </m>
+
+    <!-- airport area features -->
+    <m e="way" k="aeroway" v="aerodrome|apron|helipad">
+        <area mesh="true" fill="#c7c7b1"/>
+        <caption font-family="thin" area-size="0.2" fill="#000000" k="name" size="14"/>
+    </m>
+    <m e="way" k="aeroway" v="terminal">
+        <area mesh="true" fill="#25241E"/>
+    </m>
+
+    <!-- buildings: rojo intenso con borde, visible desde zoom urbano; a partir de z18 se aclara para no saturar el detalle -->
+    <m e="way" k="building" v="*" zoom-min="14" zoom-max="17">
+        <area mesh="true" fill="#282828" stroke="#404040" stroke-width="0.3"/>
+    </m>
+    <m e="way" k="building" v="*" zoom-min="18">
+        <area mesh="true" fill="#222222" stroke="#383838" stroke-width="0.3"/>
+    </m>
+
+    <!-- elevation contours -->
+    <!-- Nota: este esquema (VTM) no admite curve="cubic" en <line>. Cada tramo dibuja primero un halo claro y despues
+         la linea de color para que las curvas se distingan del fondo en todos los niveles de zoom (z8 en adelante). -->
+    <m e="way" k="natural" v="minor_contour_line|major_contour_line">
+        <m zoom-min="8" zoom-max="9">
+            <m k="natural" v="major_contour_line">
+                <line stroke="#111111" width="0.85"/>
+                <line stroke="#484848" width="0.58"/>
+            </m>
+        </m>
+        <m zoom-min="10" zoom-max="12">
+            <m k="natural" v="minor_contour_line">
+                <line stroke="#111111" width="0.58"/>
+                <line stroke="#383838" width="0.38"/>
+            </m>
+            <m k="natural" v="major_contour_line">
+                <line stroke="#111111" width="0.85"/>
+                <line stroke="#484848" width="0.58"/>
+            </m>
+        </m>
+        <m zoom-min="13" zoom-max="14">
+            <m k="natural" v="minor_contour_line">
+                <line stroke="#111111" width="0.55"/>
+                <line stroke="#383838" width="0.35"/>
+            </m>
+            <m k="natural" v="major_contour_line">
+                <line stroke="#111111" width="0.8"/>
+                <line stroke="#5A5A5A" width="0.55"/>
+                <text k="name" caption="true" size="11" priority="5" fill="#CCCCCC" stroke="#111111" stroke-width="2.0" style="bold"/>
+            </m>
+        </m>
+        <m zoom-min="15" zoom-max="16">
+            <m k="natural" v="minor_contour_line">
+                <line stroke="#111111" width="0.5"/>
+                <line stroke="#383838" width="0.34"/>
+            </m>
+            <m k="natural" v="major_contour_line">
+                <line stroke="#111111" width="0.7"/>
+                <line stroke="#484848" width="0.5"/>
+                <text k="name" caption="true" size="12" priority="5" fill="#CCCCCC" stroke="#111111" stroke-width="2.0" style="bold"/>
+            </m>
+        </m>
+        <m zoom-min="17">
+            <m k="natural" v="minor_contour_line">
+                <line stroke="#111111" width="0.55"/>
+                <line stroke="#383838" width="0.38"/>
+            </m>
+            <m k="natural" v="major_contour_line">
+                <line stroke="#111111" width="0.75"/>
+                <line stroke="#484848" width="0.55"/>
+                <text k="name" caption="true" size="13" priority="5" fill="#CCCCCC" stroke="#111111" stroke-width="2.0" style="bold"/>
+            </m>
+        </m>
+    </m>
+
+    <!-- special roads -->
+
+    <!-- runway lines -->
+    <m e="way" k="aeroway" v="runway|taxiway">
+        <m k="*" v="*" zoom-min="10" zoom-max="12">
+            <line stroke="#a6a5a2" width="1.5"/>
+        </m>
+        <m k="*" v="*" zoom-min="13">
+            <line stroke="#a6a5a2" width="2.0"/>
+        </m>
+    </m>
+    <!-- piste (ski slopes) -->
+    <m e="way" k="piste" v="*">
+        <line stroke="#606060" width="0.3"/>
+    </m>
+    <!-- aerialways (gondola, cablecar, chair-lift, etc.) -->
+    <m e="way" k="aerialway" v="*">
+        <line stroke="#624d41" width="0.3"/>
+    </m>
+
+    <!-- Cycling networks -->
+    <m e="way" select="first">
+        <m k="icn" v="yes" zoom-min="10">
+            <m k="bridge" v="yes|true">
+                <line stroke="#A8D5BA" cap="butt" width="4.2"/>
+            </m>
+            <m k="bridge" v="~">
+                <line stroke="#A8D5BA" width="4.2"/>
+            </m>
+        </m>
+        <m e="way" k="ncn" v="yes" zoom-min="11">
+            <m k="bridge" v="yes|true">
+                <line stroke="#505050" cap="butt" width="4.2"/>
+            </m>
+            <m k="bridge" v="~">
+                <line stroke="#505050" width="4.2"/>
+            </m>
+        </m>
+        <m k="rcn" v="yes" zoom-min="12">
+            <m k="bridge" v="yes|true">
+                <line stroke="#505050" cap="butt" width="4.2"/>
+            </m>
+            <m k="bridge" v="~">
+                <line stroke="#505050" width="4.2"/>
+            </m>
+        </m>
+        <m k="lcn" v="yes" zoom-min="13">
+            <m k="bridge" v="yes|true">
+                <line stroke="#85B8DE" cap="butt" width="4.2"/>
+            </m>
+            <m k="bridge" v="~">
+                <line stroke="#85B8DE" width="4.2"/>
+            </m>
+        </m>
+    </m>
+
+    <!-- footway (separate bicycle-allowed from other)-->
+    <m e="way" k="highway" v="footway">
+        <m select="first">
+            <m k="bicycle" v="yes|designated">
+                <line use="cycling_path"/>
+            </m>
+            <m k="footway" v="sidewalk" zoom-min="15">
+                <!-- Not sure if there is a better way to not display sidewalks -->
+                <line width="0.0"/>
+            </m>
+            <m k="~" v="~">
+                <line use="path"/>
+            </m>
+        </m>
+    </m>
+
+    <!-- highway=track - mostly agricultural and farm roads -->
+    <!-- TODO - highlight any with explicit bicycleaccess? -->
+    <m e="way" k="highway" v="path|track|bridleway">
+        <m select="first">
+            <m k="mtb_difficulty" v="1">
+                <m select="first">
+                    <m k="surface" v="unpaved|compacted|ground|gravel|dirt|grass|sand|fine_gravel">
+                        <m k="motor_vehicle|motorcar" v="yes|private|permissive|delivery|designated|destination|customers|official|public|restricted|allowed|permit|residents">
+                            <line use="path"/>
+                        </m>
+                        <m k="motor_vehicle|motorcar" v="~|yes|private|permissive|delivery|designated|destination|customers|official|public|restricted|allowed|permit|residents">
+                            <line stroke="#C7A3C7" cap="round" width="1.0"/>
+                        </m>
+                    </m>
+                    <m k="surface" v="~|unpaved|compacted|ground|gravel|dirt|grass|sand|fine_gravel">
+                        <line use="path"/>
+                    </m>
+                </m>
+            </m>
+            <m k="mtb_difficulty" v="2">
+                <line stroke="#A8D5BA" cap="round" width="1.0"/>
+            </m>
+            <m k="mtb_difficulty" v="3">
+                <line stroke="#85B8DE" cap="round" width="1.0"/>
+            </m>
+            <m k="mtb_difficulty" v="4">
+                <line stroke="#000000" cap="round" width="1.0"/>
+            </m>
+            <m k="mtb_difficulty" v="5">
+                <line stroke="#DE8585" cap="round" width="1.0"/>
+            </m>
+            <m k="~" v="~">
+                <line use="path"/>
+            </m>
+        </m>
+    </m>
+
+    <m e="way" k="highway" v="path|track|bridleway">
+        <m k="name" v="*">
+            <m zoom-min="14">
+                <text use="road_label" fill="#FFFFFF" size="13" priority="7"/>
+            </m>
+        </m>
+    </m>
+
+    <!-- service roads - separate parking aisle and driveway from other service roads -->
+    <m e="way" k="highway" v="service">
+        <m k="service" v="driveway" zoom-min="17">
+            <line stroke="#2A2A2A" cap="round" dasharray="6,4" width="0.4"/>
+        </m>
+        <m k="service" v="parking_aisle" zoom-min="14">
+            <line stroke="#2A2A2A" cap="round" width="0.6"/>
+        </m>
+        <m k="service" v="alley" zoom-min="14">
+            <line stroke="#2A2A2A" cap="round" width="0.85"/>
+        </m>
+        <m k="service" v="~" zoom-min="14">
+            <line stroke="#2A2A2A" cap="round" width="0.85"/>
+        </m>
+    </m>
+
+    <!-- pedestrian highways -->
+    <m e="way" k="highway" v="pedestrian">
+        <m zoom-min="14">
+            <line stroke="#2A2A2A" cap="round" width="0.9"/>
+            <text use="road_label" size="12" priority="15"/>
+        </m>
+    </m>
+
+    <!-- road casings (separate treatment for unpaved, cycleways, cyclelanes) -->
+    <!-- sin casing especial para tuneles de autovia: no aplica a un ciclocomputador -->
+
+    <m e="way" k="highway" v="cycleway">
+        <!-- differentiate unpaved from paved -->
+        <m k="mtb_difficulty" v="~"> <!-- no mtb difficulty: original casing logic (brown for unpaved) -->
+            <m k="surface" v="unpaved|compacted|ground|gravel|dirt|grass|sand|fine_gravel">
+                <line use="unpaved_cycleway_casing" width="1.2"/>
+            </m>
+            <m k="surface" v="~"> <!-- surface tag does not exist -->
+                <line use="paved_cycleway_casing" width="1.2"/>
+            </m>
+        </m>
+        <m k="mtb_difficulty" v="*"> <!-- mtb difficulty set: gate unpaved casing on motorized access -->
+            <m k="surface" v="unpaved|compacted|ground|gravel|dirt|grass|sand|fine_gravel">
+                <m k="motor_vehicle|motorcar" v="yes|private|permissive|delivery|designated|destination|customers|official|public|restricted|allowed|permit|residents">
+                    <line use="unpaved_casing" width="1.2"/>
+                </m>
+            </m>
+            <m k="surface" v="~"> <!-- surface tag does not exist -->
+                <line use="paved_cycleway_casing" width="1.2"/>
+            </m>
+        </m>
+    </m>
+    <m e="way" k="highway" v="residential|living_street">
+        <m zoom-min="15">
+            <line stroke="#505050" cap="round" width="1.8"/>
+        </m>
+        <m zoom-max="14" zoom-min="13">
+            <line stroke="#505050" cap="round" width="1.6"/>
+        </m>
+        <m k="surface" v="unpaved|compacted|ground|gravel|dirt|grass|sand|fine_gravel" zoom-min="13">
+            <line use="unpaved_casing" width="2.2"/>
+        </m>
+        <m k="surface" v="~">
+            <m k="cycleway" v="*" zoom-min="13">
+                <m k="bridge" v="yes|true">
+                    <line use="paved_cycleway_casing" cap="butt" width="1.9"/>
+                </m>
+                <m k="bridge" v="~">
+                    <line use="paved_cycleway_casing" width="1.9"/>
+                </m>
+            </m>
+            <m k="cycleway" v="~" zoom-min="15">
+                <m k="bridge" v="yes|true">
+                    <line stroke="#707070" cap="butt" width="1.5"/>
+                </m>
+                <m k="bridge" v="~">
+                    <line stroke="#707070" cap="round" width="1.5"/>
+                </m>
+            </m>
+        </m>
+    </m>
+    <m e="way" k="highway" v="unclassified|road">
+        <m zoom-min="15">
+            <line stroke="#505050" cap="round" width="2.0"/>
+        </m>
+        <m zoom-max="14" zoom-min="12">
+            <line stroke="#505050" cap="round" width="1.8"/>
+        </m>
+        <m k="surface" v="unpaved|compacted|ground|gravel|dirt|grass|sand|fine_gravel" zoom-min="12">
+            <line use="unpaved_casing" width="2.4"/>
+        </m>
+        <m k="surface" v="~">
+            <m k="cycleway" v="*" zoom-min="12">
+                <m k="bridge" v="yes|true">
+                    <line use="paved_cycleway_casing" cap="butt" width="2.1"/>
+                </m>
+                <m k="bridge" v="~">
+                    <line use="paved_cycleway_casing" width="2.1"/>
+                </m>
+            </m>
+            <m k="cycleway" v="~" zoom-min="14">
+                <m k="bridge" v="yes|true">
+                    <line stroke="#707070" cap="butt" width="1.7"/>
+                </m>
+                <m k="bridge" v="~">
+                    <line stroke="#707070" cap="round" width="1.7"/>
+                </m>
+            </m>
+        </m>
+    </m>
+    <m e="way" k="highway" v="tertiary|tertiary_link">
+        <m zoom-min="14">
+            <line stroke="#807050" cap="round" width="2.2"/>
+        </m>
+        <m zoom-max="13" zoom-min="11">
+            <line stroke="#807050" cap="round" width="2.0"/>
+        </m>
+        <m k="surface" v="unpaved|compacted|ground|gravel|dirt|grass|sand|fine_gravel" zoom-min="12">
+            <line use="unpaved_casing" width="2.6"/>
+        </m>
+        <m k="surface" v="~">
+            <m k="cycleway" v="*" zoom-min="12">
+                <m k="bridge" v="yes|true">
+                    <line use="paved_cycleway_casing" cap="butt" width="2.3"/>
+                </m>
+                <m k="bridge" v="~">
+                    <line use="paved_cycleway_casing" width="2.3"/>
+                </m>
+            </m>
+            <m k="cycleway" v="~" zoom-min="14">
+                <m k="bridge" v="yes|true">
+                    <line stroke="#707070" cap="butt" width="1.9"/>
+                </m>
+                <m k="bridge" v="~">
+                    <line stroke="#707070" cap="round" width="1.9"/>
+                </m>
+            </m>
+        </m>
+    </m>
+    <m e="way" k="highway" v="secondary|secondary_link">
+        <m zoom-min="13">
+            <line stroke="#C8A050" cap="round" width="2.3"/>
+        </m>
+        <m zoom-max="12" zoom-min="10">
+            <line stroke="#C8A050" cap="round" width="2.1"/>
+        </m>
+        <m k="surface" v="unpaved|compacted|ground|gravel|dirt|grass|sand|fine_gravel" zoom-min="10">
+            <line use="unpaved_casing" width="2.8"/>
+        </m>
+        <m k="surface" v="~">
+            <m k="cycleway" v="*" zoom-min="10">
+                <m k="bridge" v="yes|true">
+                    <line use="paved_cycleway_casing" cap="butt" width="2.5"/>
+                </m>
+                <m k="bridge" v="~">
+                    <line use="paved_cycleway_casing" width="2.5"/>
+                </m>
+            </m>
+            <m k="cycleway" v="~" zoom-min="13">
+                <m k="bridge" v="yes|true">
+                    <line stroke="#707070" cap="butt" width="2.0"/>
+                </m>
+                <m k="bridge" v="~">
+                    <line stroke="#707070" cap="round" width="2.0"/>
+                </m>
+            </m>
+        </m>
+    </m>
+    <m e="way" k="highway" v="primary|primary_link">
+        <m zoom-min="12">
+            <line stroke="#A05050" cap="round" width="2.5"/>
+        </m>
+        <m zoom-max="11" zoom-min="8">
+            <line stroke="#A05050" cap="round" width="2.3"/>
+        </m>
+        <m k="surface" v="unpaved|compacted|ground|gravel|dirt|grass|sand|fine_gravel" zoom-min="10">
+            <line use="unpaved_casing" width="2.8"/>
+        </m>
+        <m k="surface" v="~">
+            <m k="cycleway" v="*" zoom-min="10">
+                <m k="bridge" v="yes|true">
+                    <line use="paved_cycleway_casing" cap="butt" width="2.5"/>
+                </m>
+                <m k="bridge" v="~">
+                    <line use="paved_cycleway_casing" width="2.5"/>
+                </m>
+            </m>
+            <m k="cycleway" v="~" zoom-min="12">
+                <m k="bridge" v="yes|true">
+                    <line stroke="#707070" cap="butt" width="2.3"/>
+                </m>
+                <m k="bridge" v="~">
+                    <line stroke="#707070" cap="round" width="2.3"/>
+                </m>
+            </m>
+        </m>
+    </m>
+
+    <!-- autovias/autopistas: banda roja continua estilo IGN con linea central amarilla continua -->
+    <m e="way" k="highway" v="motorway|motorway_link|trunk|trunk_link">
+        <line stroke="#703535" cap="round" width="2.8"/>
+        <line stroke="#A05050" cap="round" width="2.2"/>
+        <line stroke="#181A1B" cap="round" width="0.35"/>
+        <text use="road_label" size="13" priority="14"/>
+    </m>
+
+    <!-- inner fill and labels for roads -->
+
+    <!-- TODO - check for mtb tags -->
+    <m e="way" k="highway" v="residential|living_street">
+        <m zoom-min="15">
+            <line stroke="#111111" cap="round" width="1.2"/>
+        </m>
+        <m zoom-max="14" zoom-min="13">
+            <line stroke="#111111" cap="round" width="1.0"/>
+        </m>
+        <m zoom-min="13">
+            <text use="road_label" size="13" priority="8"/>
+        </m>
+    </m>
+    <m e="way" k="highway" v="unclassified|road">
+        <m zoom-min="15">
+            <line stroke="#111111" cap="round" width="1.4"/>
+        </m>
+        <m zoom-max="14" zoom-min="12">
+            <line stroke="#111111" cap="round" width="1.2"/>
+        </m>
+        <m zoom-min="12">
+            <text use="road_label" size="13" priority="9"/>
+        </m>
+    </m>
+    <m e="way" k="highway" v="tertiary|tertiary_link">
+        <m zoom-min="14">
+            <line stroke="#111111" cap="round" width="1.6"/>
+        </m>
+        <m zoom-max="13" zoom-min="11">
+            <line stroke="#111111" cap="round" width="1.4"/>
+        </m>
+        <m zoom-min="11">
+            <text use="road_label" size="13" priority="10"/>
+        </m>
+    </m>
+    <m e="way" k="highway" v="secondary|secondary_link">
+        <m zoom-min="13">
+            <line stroke="#111111" cap="round" width="1.7"/>
+        </m>
+        <m zoom-max="12" zoom-min="10">
+            <line stroke="#111111" cap="round" width="1.5"/>
+        </m>
+        <m zoom-min="10">
+            <text use="road_label" size="13" priority="11"/>
+        </m>
+    </m>
+    <m e="way" k="highway" v="primary|primary_link">
+        <m zoom-min="12">
+            <line stroke="#111111" cap="round" width="1.9"/>
+        </m>
+        <m zoom-max="11" zoom-min="8">
+            <line stroke="#111111" cap="round" width="1.7"/>
+        </m>
+        <m zoom-min="8">
+            <text use="road_label" size="13" priority="12"/>
+        </m>
+    </m>
+
+    <!-- highway=cycleway indicates a separate way used for cycling -->
+    <m e="way" k="highway" v="cycleway">
+        <m select="first">
+            <m k="mtb_difficulty" v="1">
+                <m k="surface" v="unpaved|compacted|ground|gravel|dirt|grass|sand|fine_gravel">
+                    <m k="motor_vehicle|motorcar" v="yes|private|permissive|delivery|designated|destination|customers|official|public|restricted|allowed|permit|residents">
+                        <line stroke="#C7A3C7" cap="round" width="1.0"/>
+                    </m>
+                    <m k="motor_vehicle|motorcar" v="~|yes|private|permissive|delivery|designated|destination|customers|official|public|restricted|allowed|permit|residents">
+                        <line use="cycling_path"/>
+                    </m>
+                </m>
+                <m k="surface" v="~|unpaved|compacted|ground|gravel|dirt|grass|sand|fine_gravel">
+                    <line use="cycling_path"/>
+                </m>
+            </m>
+            <m k="mtb_difficulty" v="2">
+                <line stroke="#A8D5BA" cap="round" width="1.0"/>
+            </m>
+            <m k="mtb_difficulty" v="3">
+                <line stroke="#85B8DE" cap="round" width="1.0"/>
+            </m>
+            <m k="mtb_difficulty" v="4">
+                <line stroke="#000000" cap="round" width="1.0"/>
+            </m>
+            <m k="mtb_difficulty" v="5">
+                <line stroke="#DE8585" cap="round" width="1.0"/>
+            </m>
+            <m k="~" v="~">
+                <line use="cycling_path"/>
+            </m>
+        </m>
+    </m>
+
+    <m e="way" k="highway" v="cycleway">
+        <m zoom-min="13">
+            <text use="road_label" fill="#FFFFFF" size="14" priority="6"/>
+        </m>
+    </m>
+
+    <!-- route=ferry -->
+    <m e="way" k="route" v="ferry">
+        <line use="ferry"/>
+        <m zoom-min="12">
+            <text use="road_label" fill="#FFFFFF" size="13" priority="9"/>
+        </m>
+    </m>
+
+    <!-- highway one-way markers -->
+    <m k="tunnel" v="~|false|no">
+        <m k="area" v="~|false|no">
+            <m k="highway">
+                <m k="oneway" v="yes|true" zoom-min="15">
+                    <lineSymbol src="file:/icons/oneway.svg" symbol-percent="125" repeat-gap="175"/>
+                </m>
+            </m>
+        </m>
+    </m>
+
+    <!-- /roads -->
+
+    <!-- poi -->
+    <m e="node" k="amenity">
+        <m v="bank|atm" zoom-min="15">
+            <symbol id="bank" symbol-percent="125" src="file:/icons/bank-15-bg.svg"/>
+        </m>
+        <m v="beach" zoom-min="15">
+            <symbol id="beach" symbol-percent="125" src="file:/icons/beach-15-bg.svg"/>
+        </m>
+        <m v="grave_yard" zoom-min="15">
+            <symbol id="cemetery" symbol-percent="125" src="file:/icons/cemetery-15-bg.svg"/>
+        </m>
+        <m v="university" zoom-min="15">
+            <symbol id="college" symbol-percent="125" src="file:/icons/college-15-bg.svg"/>
+        </m>
+        <m v="convenience" zoom-min="15">
+            <symbol id="convenience" symbol-percent="125" src="file:/icons/convenience-15-bg.svg"/>
+        </m>
+        <m v="hospital" zoom-min="15">
+            <symbol id="hospital" symbol-percent="125" src="file:/icons/hospital-15-bg.svg"/>
+            <text use="poi_label"/>
+        </m>
+        <m e="node" k="tourism" v="information" zoom-min="15">
+            <symbol id="information" symbol-percent="125" src="file:/icons/information-15-bg.svg"/>
+        </m>
+        <m v="library" zoom-min="15">
+            <symbol id="library" symbol-percent="125" src="file:/icons/library-15-bg.svg"/>
+            <text use="poi_label"/>
+        </m>
+        <!-- <m e="node" k="amenity" v="park" zoom-min="15">
+            <symbol id="park" symbol-percent="125" src="file:/icons/park-15-bg.svg" />
+        </m> -->
+        <!-- <m e="node" k="amenity" v="parking" zoom-min="13">
+            <symbol id="parking" symbol-percent="125" src="file:/icons/parking-15-bg.svg" />
+        </m> -->
+        <m v="pharmacy" zoom-min="15">
+            <symbol id="pharmacy" symbol-percent="125" src="file:/icons/pharmacy-15-bg.svg"/>
+            <text use="poi_label"/>
+        </m>
+        <m v="police" zoom-min="15">
+            <symbol id="police" symbol-percent="125" src="file:/icons/police-15-bg.svg"/>
+        </m>
+        <m v="toilets" zoom-min="15">
+            <symbol id="toilet" symbol-percent="125" src="file:/icons/toilet-15-bg.svg"/>
+            <text use="poi_label"/>
+        </m>
+        <m v="drinking_water" zoom-min="15">
+            <symbol id="drinking-water" symbol-percent="125" src="file:/icons/drinking-water-15-bg.svg"/>
+            <text use="poi_label"/>
+        </m>
+        <m v="cafe" zoom-min="15">
+            <symbol id="cafe" symbol-percent="125" src="file:/icons/cafe-15-bg.svg"/>
+            <text use="poi_label"/>
+        </m>
+        <m v="bicycle_rental" zoom-min="15">
+            <symbol id="bicycle" symbol-percent="125" src="file:/icons/bicycle-15-bg.svg"/>
+        </m>
+    </m>
+
+    <m e="node" k="mtb_difficulty">
+        <m v="2" zoom-min="15">
+            <symbol id="mtb_2" symbol-percent="100" src="file:/icons/mtb-easy.svg"/>
+        </m>
+        <m v="3" zoom-min="15">
+            <symbol id="mtb_3" symbol-percent="100" src="file:/icons/mtb-med.svg"/>
+        </m>
+        <m v="4" zoom-min="15">
+            <symbol id="mtb_4" symbol-percent="150" src="file:/icons/mtb-hard.svg"/>
+        </m>
+        <m v="5" zoom-min="15">
+            <symbol id="mtb_5" symbol-percent="125" src="file:/icons/mtb-pro.svg"/>
+        </m>
+    </m>
+
+    <m e="node" k="tourism">
+        <m v="picnic_site" zoom-min="15">
+            <symbol id="picnic-site" symbol-percent="125" src="file:/icons/picnic-site-15-bg.svg"/>
+        </m>
+        <m v="camp_site" zoom-min="15">
+            <symbol id="campsite" symbol-percent="125" src="file:/icons/campsite-15-bg.svg"/>
+            <text use="poi_label"/>
+        </m>
+    </m>
+    <m e="node" k="shop">
+        <m v="supermarket" zoom-min="15">
+            <symbol id="grocery" symbol-percent="125" src="file:/icons/grocery-15-bg.svg"/>
+        </m>
+        <m v="bicycle" zoom-min="15">
+            <symbol id="bicycle" symbol-percent="125" src="file:/icons/bicycle-15-bg.svg"/>
+            <text use="poi_label"/>
+        </m>
+    </m>
+
+    <!-- place labels -->
+    <m e="node" k="place">
+        <m v="locality" zoom-min="13">
+            <caption style="bold" fill="#606060" k="name" priority="5" size="13"
+                    font-family="thin" stroke="#111111" stroke-width="2.0" />
+        </m>
+        <m v="suburb|neighborhood" zoom-min="12">
+            <caption style="bold_italic" fill="#404040" k="name" priority="4" size="14"
+                    font-family="thin" stroke="#111111" stroke-width="2.0" />
+        </m>
+        <m v="village|hamlet" zoom-min="12">
+            <caption style="bold_italic" fill="#404040" k="name" priority="3" size="15"
+                    font-family="thin" stroke="#111111" stroke-width="2.0" />
+        </m>
+        <m v="island" zoom-min="10">
+            <caption style="bold_italic" fill="#404040" k="name" priority="5" size="15"
+                    font-family="thin" stroke="#111111" stroke-width="2.0" />
+        </m>
+        <m v="town">
+            <caption style="bold_italic" fill="#404040" k="name" priority="2" size="16"
+                    font-family="thin" stroke="#111111" stroke-width="2.0" />
+        </m>
+        <m v="city">
+            <caption style="bold_italic" dy="14" fill="#000000" k="name" priority="1" size="17"
+                    font-family="thin" stroke="#111111" stroke-width="2.0" />
+        </m>
+    </m>
+    <!-- /place -->
+
+</rendertheme>
+

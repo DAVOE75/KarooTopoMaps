@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">KarooTopoMaps</string>
+    <string name="title_themes">KarooTopoMaps</string>
+    <string name="subtitle_themes">Scegli lo stile visivo per la mappa nativa del tuo Karoo</string>
+    <string name="btn_apply">Applica al Karoo</string>
+    <string name="btn_active">Tema Attivo ✓</string>
+    <string name="badge_active">ATTIVO</string>
+    <string name="badge_rec">Consigliato</string>
+    <string name="btn_restore">Ripristina mappa originale Karoo</string>
+    <string name="theme_applied_success">Tema applicato! Apri Ride per visualizzarlo.</string>
+    <string name="theme_restore_success">Tema originale Karoo ripristinato con successo.</string>
+    <string name="error_storage_permission">È richiesta l\'autorizzazione di accesso alla memoria.</string>
+
+    <!-- Temi -->
+    <string name="theme_ign_name">IGN</string>
+    <string name="theme_ign_desc">Tavolozza ufficiale IGN 1:25.000: curve di livello, rilievo ombreggiato, colori ipsometrici e massima nitidezza.</string>
+
+    <string name="theme_vintage_name">Esploratore Vintage</string>
+    <string name="theme_vintage_desc">Estetica pergamena del XIX secolo nei toni seppia, ideale per uscite gravel tranquille.</string>
+
+    <string name="theme_gravel_name">Terra e Ghiaia</string>
+    <string name="theme_gravel_desc">Stile alpino organico in tonalità argilla e sabbia. Massima definizione per curve di livello e sentieri.</string>
+
+    <string name="theme_dem_name">Tecnologico / DEM</string>
+    <string name="theme_dem_desc">Mappa di calore ipsometrica continua. Colori vivaci per il rilievo e le salite alpine.</string>
+
+    <string name="theme_trail_name">Territorio Trail</string>
+    <string name="theme_trail_desc">Ottimizzato per MTB: boschi verdi marcati e percorsi tecnici colorati in base alla difficoltà.</string>
+
+    <string name="theme_granite_name">Granito Altiplano</string>
+    <string name="theme_granite_desc">Estetica minerale pulita in tonalità ardesia e grigio freddo. Stile scandinavo ad alto contrasto.</string>
+
+    <string name="theme_dark_name">Modalità Notturna Tattica</string>
+    <string name="theme_dark_desc">Sfondo opaco scuro con strade in bianco e ciano neon per prevenire l\'affaticamento visivo.</string>
+
+    <string name="theme_elevate_name">Elevate MTB</string>
+    <string name="theme_elevate_desc">Stile montano classico con sentieri ad alta visibilità e segnaletica outdoor.</string>
+
+    <string name="theme_alt_name">ALT-MTB Speciale</string>
+    <string name="theme_alt_desc">Variante ad alto contrasto per la massima leggibilità sotto la luce diretta del sole sul Karoo.</string>
+</resources>
