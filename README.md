@@ -17,7 +17,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/DAVOE75/KarooTopoMaps/releases/latest"><img src="https://img.shields.io/badge/APK-Descargar%20v1.0.0-gold?style=for-the-badge&logo=android" alt="Download APK" /></a>
+  <a href="https://github.com/DAVOE75/KarooTopoMaps/releases/latest"><img src="https://img.shields.io/badge/APK-Descargar%20v1.1.1-gold?style=for-the-badge&logo=android" alt="Download APK" /></a>
   <a href="https://buymeacoffee.com/davoe75"><img src="https://img.shields.io/badge/Apoya%20el%20proyecto-Buy%20Me%20A%20Coffee-orange?style=for-the-badge&logo=buy-me-a-coffee" alt="Buy Me A Coffee" /></a>
 </p>
 
@@ -113,14 +113,21 @@ Cada estilo ha sido calibrado milimétricamente teniendo en cuenta la óptica de
 
 La forma más sencilla e interactiva de cambiar de tema directamente desde la pantalla de tu Karoo:
 
-1. **Descarga el APK**: Descarga la última versión [`KarooTopoMaps-v1.0.0.apk`](release/KarooTopoMaps-v1.0.0.apk) o desde la sección [Releases](https://github.com/DAVOE75/KarooTopoMaps/releases).
+1. **Descarga el APK**: Descarga la última versión [`KarooTopoMaps-v1.1.1.apk`](release/KarooTopoMaps-v1.1.1.apk) o desde la sección [Releases](https://github.com/DAVOE75/KarooTopoMaps/releases).
 2. **Instala en tu Karoo**:
    * Mediante **ADB**:
      ```powershell
-     adb install -r KarooTopoMaps-v1.0.0.apk
+     adb install -r KarooTopoMaps-v1.1.1.apk
      ```
    * O utilizando herramientas inalámbricas como Karoo Appstore o Sidequest.
 3. **Abre KarooTopoMaps**: En la pantalla de tu Karoo, abre la aplicación, pulsa **"Aplicar al Karoo"** en el que más te guste y listo: entra en la app **Ride** y disfruta de la nueva cartografía.
+
+---
+
+## Origen Cartográfico y Créditos
+
+* **Tema IGN Oficial**: Este estilo cartográfico ha sido diseñado de manera 100% artesanal e independiente por David García Pascual (hesiOX), basándose fielmente en la simbología, curvas de nivel y paleta hipsométrica del **Mapa Topográfico Nacional MTN25 (escala 1:25.000)** del **Instituto Geográfico Nacional de España (IGN / CNIG)**. En ningún momento se ha consultado, utilizado ni copiado el tema Elevate ni recursos de Tobias Kuehn; se trata de una implementación Mapsforge pura y nativa sin dependencias de paquetes externos de iconos.
+* **Licencia del Proyecto**: [MIT License](LICENSE).
 
 ---
 

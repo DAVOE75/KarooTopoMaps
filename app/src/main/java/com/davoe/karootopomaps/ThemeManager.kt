@@ -120,12 +120,7 @@ object ThemeManager {
             saveCurrentThemeId(context, theme.id)
             Log.d(TAG, "Theme applied: ${theme.id} to ${target.absolutePath}")
 
-            // Trigger Karoo system refresh intents
-            try {
-                val intent = android.content.Intent("io.hammerhead.intent.action.RIDE_APP_PRELOAD")
-                context.sendBroadcast(intent)
-            } catch (ignored: Exception) {}
-
+            triggerKarooRefresh(context)
             true
         } catch (e: Exception) {
             Log.e(TAG, "Error applying theme ${theme.id}", e)
@@ -135,44 +130,63 @@ object ThemeManager {
 
     fun restoreOriginalTheme(context: Context): Boolean {
         val target = getTargetThemeFile()
-
-        // 1. Try restoring from factory original_karoo.xml asset
-        try {
-            context.assets.open("themes/original_karoo.xml").use { input ->
-                FileOutputStream(target).use { output ->
-                    input.copyTo(output)
-                }
-            }
-            saveCurrentThemeId(context, "original_karoo")
-            Log.d(TAG, "Restored from original_karoo asset")
-            return true
-        } catch (e: Exception) {
-            Log.e(TAG, "Error restoring from original asset, trying backup", e)
-        }
-
-        // 2. Fallback to backup file if exists
         val backup = getBackupFile()
+
+        // 1. Prefer user's authentic device backup created when app first ran
         if (backup.exists()) {
             return try {
                 backup.copyTo(target, overwrite = true)
-                saveCurrentThemeId(context, "original_karoo")
+                saveCurrentThemeId(context, null)
+                Log.d(TAG, "Restored original theme from device backup: ${backup.absolutePath}")
+                triggerKarooRefresh(context)
                 true
             } catch (e: Exception) {
-                Log.e(TAG, "Error restoring backup", e)
-                false
+                Log.e(TAG, "Error restoring from device backup, trying bundled fallback", e)
+                restoreFromBundledAsset(context, target)
             }
         }
 
-        return false
+        // 2. Fallback to factory bundled original_karoo.xml asset if no device backup is found
+        return restoreFromBundledAsset(context, target)
     }
 
-    fun getCurrentThemeId(context: Context): String {
-        val prefs = context.getSharedPreferences("karoo_topo_maps", Context.MODE_PRIVATE)
-        return prefs.getString("selected_theme_id", "ign_topo") ?: "ign_topo"
+    private fun restoreFromBundledAsset(context: Context, target: File): Boolean {
+        return try {
+            context.assets.open("themes/original_karoo.xml").use { input ->
+                FileOutputStream(target).use { output ->
+                    input.copyTo(output)
+                    output.flush()
+                    output.fd.sync()
+                }
+            }
+            saveCurrentThemeId(context, null)
+            Log.d(TAG, "Restored original theme from bundled asset")
+            triggerKarooRefresh(context)
+            true
+        } catch (e: Exception) {
+            Log.e(TAG, "Error restoring from bundled original_karoo asset", e)
+            false
+        }
     }
 
-    private fun saveCurrentThemeId(context: Context, themeId: String) {
+    private fun triggerKarooRefresh(context: Context) {
+        try {
+            val intent = android.content.Intent("io.hammerhead.intent.action.RIDE_APP_PRELOAD")
+            context.sendBroadcast(intent)
+        } catch (ignored: Exception) {}
+    }
+
+    fun getCurrentThemeId(context: Context): String? {
         val prefs = context.getSharedPreferences("karoo_topo_maps", Context.MODE_PRIVATE)
-        prefs.edit().putString("selected_theme_id", themeId).apply()
+        return prefs.getString("selected_theme_id", null)
+    }
+
+    private fun saveCurrentThemeId(context: Context, themeId: String?) {
+        val prefs = context.getSharedPreferences("karoo_topo_maps", Context.MODE_PRIVATE)
+        if (themeId != null) {
+            prefs.edit().putString("selected_theme_id", themeId).apply()
+        } else {
+            prefs.edit().remove("selected_theme_id").apply()
+        }
     }
 }

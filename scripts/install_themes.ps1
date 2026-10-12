@@ -31,12 +31,15 @@ if ($devices -notmatch "device$") {
 }
 Write-Host "Karoo detectado: OK" -ForegroundColor Green
 
-# Crear carpeta de destino si no existe
-Write-Host ""
-Write-Host "Creando carpeta de temas en el Karoo..." -ForegroundColor Yellow
-adb shell "mkdir -p /sdcard/osmand/rendering/" 2>&1 | Out-Null
+# Determinar carpeta de destino según la versión de OsmAnd
+$destDirs = @(
+    "/sdcard/Android/data/net.osmand/files/rendering/",
+    "/sdcard/Android/data/net.osmand.plus/files/rendering/",
+    "/sdcard/osmand/rendering/"
+)
 
-# Instalar temas
+Write-Host ""
+Write-Host "Instalando temas..." -ForegroundColor Yellow
 $themesDir = Join-Path $PSScriptRoot "..\themes"
 $themes = Get-ChildItem -Path $themesDir -Filter "*.xml"
 
@@ -45,15 +48,16 @@ if ($themes.Count -eq 0) {
     exit 1
 }
 
-Write-Host ""
-Write-Host "Instalando temas..." -ForegroundColor Yellow
 foreach ($theme in $themes) {
-    Write-Host "  → $($theme.Name)" -ForegroundColor White -NoNewline
-    $result = adb push $theme.FullName "/sdcard/osmand/rendering/$($theme.Name)" 2>&1
+    Write-Host "  → $($theme.Name)" -ForegroundColor White
+    foreach ($dest in $destDirs) {
+        adb shell "mkdir -p $dest" 2>&1 | Out-Null
+        $result = adb push $theme.FullName "$dest$($theme.Name)" 2>&1
+    }
     if ($LASTEXITCODE -eq 0) {
-        Write-Host "  ✓ OK" -ForegroundColor Green
+        Write-Host "    ✓ Instalado correctamente" -ForegroundColor Green
     } else {
-        Write-Host "  ✗ ERROR" -ForegroundColor Red
+        Write-Host "    ✗ Error al copiar" -ForegroundColor Red
     }
 }
 

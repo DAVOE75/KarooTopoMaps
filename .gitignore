@@ -11,3 +11,4 @@ app/build/
 .cxx
 *.apk
 !release/*.apk
+.vscode/

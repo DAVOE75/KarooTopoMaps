@@ -29,6 +29,11 @@ jobs:
           sed -i -e 's/\r$//' gradlew
           chmod +x gradlew
 
+      - name: Validate XML Themes
+        run: |
+          sudo apt-get update && sudo apt-get install -y libxml2-utils
+          xmllint --noout app/src/main/assets/themes/*.xml
+
       - name: Build Release APK
         run: ./gradlew assembleRelease --stacktrace
 

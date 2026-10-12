@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <rendertheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" map-background="#FDFDFD"
     version="1" xmlns="http://mapsforge.org/renderTheme"
     xsi:schemaLocation="http://mapsforge.org/renderTheme https://raw.githubusercontent.com/mapsforge/vtm/master/resources/rendertheme.xsd">
@@ -12,7 +12,7 @@
     <style-line id="paved_cycleway_casing" stroke="#27AE60" cap="round"/>
 
     <!-- LINE STYLES -->
-    <style-line id="path" stroke="#6E2D5E" dasharray="6,4" width="0.85" cap="round" width="0.6"/>
+    <style-line id="path" stroke="#6E2D5E" dasharray="6,4" width="0.85" cap="round"/>
     <style-line id="cycling_path" stroke="#FFFFFF" dasharray="8,8" cap="round" width="0.9"/>
     <style-line id="ferry" stroke="#2980B9" dasharray="8,8" cap="round" width="0.9"/>
 

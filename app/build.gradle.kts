@@ -11,8 +11,19 @@ android {
         applicationId = "com.davoe.karootopomaps"
         minSdk = 26
         targetSdk = 32
-        versionCode = 2
-        versionName = "1.1.0"
+        versionCode = 3
+        versionName = "1.1.1"
+    }
+
+    signingConfigs {
+        create("release") {
+            storeFile = file("release.keystore")
+            storePassword = "karootopomaps"
+            keyAlias = "karootopomaps"
+            keyPassword = "karootopomaps"
+            enableV1Signing = true
+            enableV2Signing = true
+        }
     }
 
     buildTypes {
@@ -22,7 +33,7 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
-            signingConfig = signingConfigs.getByName("debug")
+            signingConfig = signingConfigs.getByName("release")
         }
     }
 

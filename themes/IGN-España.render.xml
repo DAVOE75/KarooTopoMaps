@@ -6,7 +6,7 @@
     Licencia: MIT
     
     Instalación:
-      adb push IGN-España.xml /sdcard/osmand/rendering/IGN-España.xml
+      adb push IGN-España.render.xml /sdcard/osmand/rendering/IGN-España.render.xml
     
     Características:
       - Curvas de nivel cada 10m (índices cada 50m)

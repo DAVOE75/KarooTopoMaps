@@ -21,7 +21,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/DAVOE75/KarooTopoMaps/releases/latest"><img src="https://img.shields.io/badge/APK-Download%20v1.0.0-gold?style=for-the-badge&logo=android" alt="Download APK" /></a>
+  <a href="https://github.com/DAVOE75/KarooTopoMaps/releases/latest"><img src="https://img.shields.io/badge/APK-Download%20v1.1.1-gold?style=for-the-badge&logo=android" alt="Download APK" /></a>
   <a href="https://buymeacoffee.com/davoe75"><img src="https://img.shields.io/badge/Support%20Project-Buy%20Me%20A%20Coffee-orange?style=for-the-badge&logo=buy-me-a-coffee" alt="Buy Me A Coffee" /></a>
 </p>
 
@@ -113,12 +113,19 @@ Each style is calibrated for sunlight readability on Karoo transflective display
 
 The quickest way to switch themes on the fly directly on your Karoo:
 
-1. **Download the APK**: Download the latest [`KarooTopoMaps-v1.0.0.apk`](release/KarooTopoMaps-v1.0.0.apk) or grab it from [Releases](https://github.com/DAVOE75/KarooTopoMaps/releases).
+1. **Download the APK**: Download the latest [`KarooTopoMaps-v1.1.1.apk`](release/KarooTopoMaps-v1.1.1.apk) or grab it from [Releases](https://github.com/DAVOE75/KarooTopoMaps/releases).
 2. **Install to your Karoo**:
    ```bash
-   adb install -r KarooTopoMaps-v1.0.0.apk
+   adb install -r KarooTopoMaps-v1.1.1.apk
    ```
 3. **Launch KarooTopoMaps**: On your Karoo screen, open the app, tap **"Apply to Karoo"**, open the **Ride** app, and enjoy!
+
+---
+
+## Cartographic Origin and Credits
+
+* **Official IGN Theme**: This style has been handcrafted and independently created by David García Pascual (hesiOX), modeled faithfully on the cartographic symbology, hypsometric colors, and contour line specifications of Spain's **MTN25 (1:25,000 scale) National Topographic Map** published by the **Instituto Geográfico Nacional de España (IGN / CNIG)**. It does not use, borrow, or copy code from Tobias Kuehn's Elevate theme, nor does it rely on external icon packs (`ele-res`). It is a pure, standalone vector Mapsforge rendering style engineered specifically for the Hammerhead Karoo.
+* **License**: [MIT License](LICENSE).
 
 ---
 
