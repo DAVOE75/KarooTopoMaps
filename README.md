@@ -8,10 +8,6 @@
 </p>
 
 <p align="center">
-  <img src="art/banner.png" width="700" alt="KarooTopoMaps Banner" />
-</p>
-
-<p align="center">
   <a href="README.md">Español</a> |
   <a href="README_en.md">English</a> |
   <a href="README_fr.md">Français</a> |
