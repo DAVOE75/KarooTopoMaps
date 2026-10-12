@@ -3,39 +3,39 @@
     <string name="title_themes">KarooTopoMaps</string>
     <string name="subtitle_themes">Escolha o estilo visual para o mapa nativo do seu Karoo</string>
     <string name="btn_apply">Aplicar ao Karoo</string>
-    <string name="btn_active">Tema Ativo ✓</string>
+    <string name="btn_active">Tema Ativo</string>
     <string name="badge_active">ATIVO</string>
     <string name="badge_rec">Recomendado</string>
-    <string name="btn_restore">Restaurar Mapa Original do Karoo</string>
+    <string name="btn_restore">Restaurar mapa original Karoo</string>
     <string name="theme_applied_success">Tema aplicado! Abra o Ride para visualizar.</string>
     <string name="theme_restore_success">Tema original do Karoo restaurado com sucesso.</string>
-    <string name="error_storage_permission">Permissão de acesso ao armazenamento necessária.</string>
+    <string name="error_storage_permission">Permissão de acesso aos arquivos necessária.</string>
 
     <!-- Temas -->
     <string name="theme_ign_name">IGN</string>
-    <string name="theme_ign_desc">Paleta oficial IGN 1:25.000: Curvas de nível, relevo sombreado, cores hipsométricas e parcelário nítido.</string>
+    <string name="theme_ign_desc">Paleta oficial IGN 1:25.000: curvas de nível, relevo nítido, cores hipsométricas e parcelamento claro.</string>
 
     <string name="theme_vintage_name">Explorador Vintage</string>
-    <string name="theme_vintage_desc">Estética de pergaminho do século XIX em tons sépia suaves, ideal para passeios tranquilos de gravel.</string>
+    <string name="theme_vintage_desc">Estética de gravura litográfica do século XIX em sépia monocromático para percursos tranquilos de gravel.</string>
 
     <string name="theme_gravel_name">Terra e Cascalho</string>
-    <string name="theme_gravel_desc">Estilo alpino em tons de argila e areia. Máxima definição para curvas de nível e trilhas na floresta.</string>
+    <string name="theme_gravel_desc">Estilo alpino orgânico em argila e areia. Máxima definição para curvas de nível e estradas florestais.</string>
 
     <string name="theme_dem_name">Tecnológico / MDE</string>
-    <string name="theme_dem_desc">Mapa de calor hipsométrico contínuo. Cores vivas para o relevo e subidas de montanha.</string>
+    <string name="theme_dem_desc">Mapa térmico hipsométrico contínuo. Cores nítidas de relevo para subidas de montanha.</string>
 
     <string name="theme_trail_name">Território Trail</string>
-    <string name="theme_trail_desc">Otimizado para MTB: florestas verdes destacadas e cores dinâmicas para a dificuldade das trilhas.</string>
+    <string name="theme_trail_desc">Otimizado para BTT: florestas densas e dificuldade técnica das trilhas com código de cores.</string>
 
     <string name="theme_granite_name">Granito Altiplano</string>
-    <string name="theme_granite_desc">Estética mineral limpa em tons de ardósia e cinza frio. Geometria escandinava de alto contraste.</string>
+    <string name="theme_granite_desc">Estética mineral limpa em ardósia e tons frios. Geometria escandinava de alto contraste.</string>
 
     <string name="theme_dark_name">Modo Noturno Tático</string>
-    <string name="theme_dark_desc">Fundo fosco escuro com estradas em branco e ciano neon para reduzir o cansaço visual noturno.</string>
+    <string name="theme_dark_desc">Fundo preto fosco antirreflexo para evitar fadiga visual e reduzir o consumo de bateria.</string>
 
-    <string name="theme_elevate_name">Elevate MTB</string>
-    <string name="theme_elevate_desc">Estilo clássico de montanha com trilhas de alta visibilidade e sinalização outdoor.</string>
+    <string name="theme_elevate_name">Elevate BTT</string>
+    <string name="theme_elevate_desc">Estilo alpino clássico com caminhos bem visíveis e sinalização completa de montanha.</string>
 
-    <string name="theme_alt_name">ALT-MTB Especial</string>
-    <string name="theme_alt_desc">Variante de alto contraste para máxima visibilidade sob o sol direto no Karoo.</string>
+    <string name="theme_alt_name">ALT-BTT Especial</string>
+    <string name="theme_alt_desc">Variante de alto contraste óptico desenhada para máxima visibilidade sob sol direto.</string>
 </resources>

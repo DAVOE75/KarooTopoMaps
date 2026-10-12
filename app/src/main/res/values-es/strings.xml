@@ -3,7 +3,7 @@
     <string name="title_themes">KarooTopoMaps</string>
     <string name="subtitle_themes">Elige el estilo visual para el mapa nativo de tu Karoo</string>
     <string name="btn_apply">Aplicar al Karoo</string>
-    <string name="btn_active">Tema Activo ✓</string>
+    <string name="btn_active">Tema Activo</string>
     <string name="badge_active">ACTIVO</string>
     <string name="badge_rec">Recomendado</string>
     <string name="btn_restore">Restaurar Mapa Original Karoo</string>
@@ -16,7 +16,7 @@
     <string name="theme_ign_desc">Paleta oficial IGN 1:25.000: Curvas de nivel, relieve claro, colores hipsométricos y parcelario de gran nitidez.</string>
 
     <string name="theme_vintage_name">Explorador Vintage</string>
-    <string name="theme_vintage_desc">Estética de pergamino del siglo XIX en tonos sepia apagados, ideal para rutas de gravel relajadas.</string>
+    <string name="theme_vintage_desc">Estética de grabado litográfico del siglo XIX en sepia monocromático, ideal para rutas de gravel.</string>
 
     <string name="theme_gravel_name">Tierra y Grava</string>
     <string name="theme_gravel_desc">Estilo alpino en tonos arcilla y arena. Máxima definición para curvas de nivel y pistas forestales.</string>
@@ -25,13 +25,13 @@
     <string name="theme_dem_desc">Mapa de calor hipsométrico continuo. Colores vivos para el relieve y puertos de montaña.</string>
 
     <string name="theme_trail_name">Territorio Trail</string>
-    <string name="theme_trail_desc">Optimizado para MTB: bosques verdes marcados y dificultad de senderos (singletracks) por colores vivos.</string>
+    <string name="theme_trail_desc">Optimizado para MTB: bosques verdes marcados y dificultad técnica de senderos por código de color.</string>
 
     <string name="theme_granite_name">Granito Altiplano</string>
     <string name="theme_granite_desc">Estética mineral limpia en escala de grises fríos y pizarra. Estilo escandinavo de alto contraste.</string>
 
     <string name="theme_dark_name">Modo Nocturno Táctico</string>
-    <string name="theme_dark_desc">Fondo oscuro mate con carreteras en blanco y cian neón para evitar fatiga visual nocturna.</string>
+    <string name="theme_dark_desc">Fondo oscuro mate antirreflejos para evitar fatiga visual nocturna y reducir consumo.</string>
 
     <string name="theme_elevate_name">Elevate MTB</string>
     <string name="theme_elevate_desc">Estilo clásico de montaña con senderos muy visibles y simbología outdoor.</string>

@@ -1,4 +1,4 @@
-# 🗺️ KarooTopoMaps
+# KarooTopoMaps
 
 > **Coleção Cartográfica Premium e Aplicativo para ciclo-computadores Hammerhead Karoo (1, 2 e Karoo 3)**  
 > *Transforme o mapa nativo do seu dispositivo com estilos cartográficos profissionais de alto contraste.*
@@ -12,12 +12,12 @@
 </p>
 
 <p align="center">
-  <a href="README.md">🇪🇸 Español</a> |
-  <a href="README_en.md">🇬🇧 English</a> |
-  <a href="README_fr.md">🇫🇷 Français</a> |
-  <a href="README_de.md">🇩🇪 Deutsch</a> |
-  <a href="README_it.md">🇮🇹 Italiano</a> |
-  <a href="README_pt.md">🇵🇹 Português</a>
+  <a href="README.md">Español</a> |
+  <a href="README_en.md">English</a> |
+  <a href="README_fr.md">Français</a> |
+  <a href="README_de.md">Deutsch</a> |
+  <a href="README_it.md">Italiano</a> |
+  <a href="README_pt.md">Português</a>
 </p>
 
 <p align="center">
@@ -27,21 +27,65 @@
 
 ---
 
-## 🎨 Catálogo de Temas
+## Galeria em Dispositivo Real (Hammerhead Karoo)
 
-* **🗺️ IGN**: Estilo topográfico oficial 1:25.000 com curvas de nível e relevo nítido.
-* **📜 Explorador Vintage**: Gravura litográfica do século XIX em sépia puro.
-* **🪨 Terra e Cascalho**: Estilo gravel alpino orgânico com estradas de terra em chocolate escuro.
-* **🌈 Tecnológico / MDE**: Mapa térmico hipsométrico contínuo para subidas de montanha.
-* **🌲 Território Trail**: Florestas densas e dificuldade técnica das trilhas de MTB (S0-S5).
-* **🏔️ Granito Altiplano**: Minimalismo escandinavo mineral em ardósia fria e água azul-gelo.
-* **🕶️ Modo Noturno Tático**: Preto fosco antirreflexo sem cores neon para não cansar a visão.
-* **🚵 Elevate MTB**: Estilo alpino clássico com waymarking completo de montanha.
-* **⚡ ALT-MTB Especial**: Contraste óptico máximo sob sol direto de verão.
+<table align="center">
+  <tr>
+    <td align="center" width="33%">
+      <img src="art/theme_ign.png" width="220" /><br>
+      <b>IGN Oficial</b><br>
+      <i>Mapa topográfico clássico 1:25.000 com curvas de nível e parcelamento nítido</i>
+    </td>
+    <td align="center" width="33%">
+      <img src="art/theme_vintage.png" width="220" /><br>
+      <b>Explorador Vintage</b><br>
+      <i>Gravura do século XIX em sépia monocromático sem cores modernas</i>
+    </td>
+    <td align="center" width="33%">
+      <img src="art/theme_gravel.png" width="220" /><br>
+      <b>Terra e Cascalho</b><br>
+      <i>Gravel alpino: estradas em chocolate escuro e curvas cor de areia</i>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="33%">
+      <img src="art/theme_dem.png" width="220" /><br>
+      <b>Tecnológico / MDE</b><br>
+      <i>Mapa térmico hipsométrico contínuo com trilhas pretas bem recortadas</i>
+    </td>
+    <td align="center" width="33%">
+      <img src="art/theme_trail.png" width="220" /><br>
+      <b>Território Trail</b><br>
+      <i>Florestas de pinheiros densas, trilhas roxas e código de cores BTT OSM</i>
+    </td>
+    <td align="center" width="33%">
+      <img src="art/theme_granite.png" width="220" /><br>
+      <b>Granito Altiplano</b><br>
+      <i>Minimalismo nórdico em ardósia, asfalto frio e água azul-gelo</i>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="33%">
+      <img src="art/theme_dark.png" width="220" /><br>
+      <b>Modo Noturno Tático</b><br>
+      <i>Preto fosco antirreflexo com caminhos brancos e sem cores neon</i>
+    </td>
+    <td align="center" width="33%">
+      <img src="art/theme_elevate.png" width="220" /><br>
+      <b>Elevate BTT</b><br>
+      <i>Estilo alpino europeu clássico com trilhas em marrom montanhês</i>
+    </td>
+    <td align="center" width="33%">
+      <img src="art/theme_alt.png" width="220" /><br>
+      <b>ALT-BTT Especial</b><br>
+      <i>Contraste óptico extremo sob sol direto de verão</i>
+    </td>
+  </tr>
+</table>
 
 ---
 
-## 📲 Instalação
+## Instalação
 
 Instale o APK [`release/KarooTopoMaps-v1.0.0.apk`](release/KarooTopoMaps-v1.0.0.apk) via ADB:
 

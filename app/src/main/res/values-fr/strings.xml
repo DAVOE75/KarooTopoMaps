@@ -3,39 +3,39 @@
     <string name="title_themes">KarooTopoMaps</string>
     <string name="subtitle_themes">Choisissez le style visuel de la carte native de votre Karoo</string>
     <string name="btn_apply">Appliquer au Karoo</string>
-    <string name="btn_active">Thème Actif ✓</string>
+    <string name="btn_active">Thème Actif</string>
     <string name="badge_active">ACTIF</string>
     <string name="badge_rec">Recommandé</string>
-    <string name="btn_restore">Restaurer la carte Karoo d\'origine</string>
-    <string name="theme_applied_success">Thème appliqué ! Ouvrez Ride pour voir le changement.</string>
-    <string name="theme_restore_success">Thème Karoo d\'origine restauré avec succès.</string>
-    <string name="error_storage_permission">Autorisation d\'accès au stockage requise.</string>
+    <string name="btn_restore">Restaurer la carte d\'origine</string>
+    <string name="theme_applied_success">Thème appliqué ! Ouvrez Ride pour voir le résultat.</string>
+    <string name="theme_restore_success">Thème Karoo d\'origine restauré.</string>
+    <string name="error_storage_permission">Autorisation d\'accès aux fichiers requise.</string>
 
     <!-- Thèmes -->
     <string name="theme_ign_name">IGN</string>
-    <string name="theme_ign_desc">Palette officielle IGN 1:25 000 : courbes de niveau, ombrage du relief, couleurs hypsométriques et haute netteté.</string>
+    <string name="theme_ign_desc">Palette officielle IGN 1:25 000 : courbes de niveau, ombrage du relief, teintes hypsométriques et parcelles nettes.</string>
 
     <string name="theme_vintage_name">Explorateur Vintage</string>
-    <string name="theme_vintage_desc">Esthétique parchemin du XIXe siècle en tons sépia doux, idéal pour les sorties gravel paisibles.</string>
+    <string name="theme_vintage_desc">Esthétique de gravure du XIXe siècle en sépia monochrome, idéale pour les sorties gravel paisibles.</string>
 
     <string name="theme_gravel_name">Terre &amp; Gravier</string>
-    <string name="theme_gravel_desc">Style alpin organique argile et sable. Définition maximale des courbes de niveau et des pistes forestières.</string>
+    <string name="theme_gravel_desc">Style alpin organique en teintes argile et sable. Définition maximale des pistes forestières.</string>
 
     <string name="theme_dem_name">Technologique / MNE</string>
-    <string name="theme_dem_desc">Carte thermique hypsométrique continue. Couleurs vives pour le relief en montagne.</string>
+    <string name="theme_dem_desc">Carte thermique hypsométrique continue. Relief dynamique pour gravir les cols de montagne.</string>
 
     <string name="theme_trail_name">Territoire Trail</string>
-    <string name="theme_trail_desc">Optimisé pour le VTT : forêts denses et code couleur dynamique pour la difficulté des sentiers.</string>
+    <string name="theme_trail_desc">Optimisé pour le VTT : forêts denses et cotation technique des sentiers par code couleur.</string>
 
     <string name="theme_granite_name">Granit Altiplano</string>
-    <string name="theme_granite_desc">Esthétique minérale et ardoise scandinave. Géométrie pure sans distraction.</string>
+    <string name="theme_granite_desc">Esthétique minérale épurée en niveaux de gris ardoise. Géométrie scandinave à fort contraste.</string>
 
     <string name="theme_dark_name">Mode Nuit Tactique</string>
-    <string name="theme_dark_desc">Fond carbone mat avec routes en blanc et cyan néon pour réduire la fatigue oculaire.</string>
+    <string name="theme_dark_desc">Fond noir mat antireflet pour préserver la vision nocturne et économiser la batterie.</string>
 
     <string name="theme_elevate_name">Elevate VTT</string>
-    <string name="theme_elevate_desc">Style montagne classique avec sentiers bien visibles et balisage extérieur.</string>
+    <string name="theme_elevate_desc">Style montagnard classique avec sentiers très lisibles et balisage de randonnée complet.</string>
 
     <string name="theme_alt_name">ALT-VTT Spécial</string>
-    <string name="theme_alt_desc">Variante à contraste élevé pour une lisibilité maximale sous le plein soleil du Karoo.</string>
+    <string name="theme_alt_desc">Variante à contraste extrême conçue pour une lisibilité parfaite sous le soleil direct.</string>
 </resources>

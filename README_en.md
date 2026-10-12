@@ -1,4 +1,4 @@
-# 🗺️ KarooTopoMaps
+# KarooTopoMaps
 
 > **Premium Cartographic Collection and Companion App for Hammerhead Karoo devices (1, 2, and Karoo 3)**  
 > *Transform your bike computer's native map with high-contrast, professional cartographic styles.*
@@ -12,12 +12,12 @@
 </p>
 
 <p align="center">
-  <a href="README.md">🇪🇸 Español</a> |
-  <a href="README_en.md">🇬🇧 English</a> |
-  <a href="README_fr.md">🇫🇷 Français</a> |
-  <a href="README_de.md">🇩🇪 Deutsch</a> |
-  <a href="README_it.md">🇮🇹 Italiano</a> |
-  <a href="README_pt.md">🇵🇹 Português</a>
+  <a href="README.md">Español</a> |
+  <a href="README_en.md">English</a> |
+  <a href="README_fr.md">Français</a> |
+  <a href="README_de.md">Deutsch</a> |
+  <a href="README_it.md">Italiano</a> |
+  <a href="README_pt.md">Português</a>
 </p>
 
 <p align="center">
@@ -27,7 +27,7 @@
 
 ---
 
-## 🌟 What is KarooTopoMaps?
+## What is KarooTopoMaps
 
 **KarooTopoMaps** is a premium cartographic suite and Android companion application designed specifically for cyclists. It replaces the default map style on your Hammerhead Karoo with **9 radically distinct, handcrafted map themes**.
 
@@ -35,57 +35,57 @@ Each style is calibrated for sunlight readability on Karoo transflective display
 
 ---
 
-## 📸 Real Device Gallery (Hammerhead Karoo)
+## Real Device Gallery (Hammerhead Karoo)
 
 <table align="center">
   <tr>
     <td align="center" width="33%">
       <img src="art/theme_ign.png" width="220" /><br>
-      <b>🗺️ Official IGN</b><br>
+      <b>Official IGN</b><br>
       <i>Classic 1:25,000 topomap with contours, urban parcels, and avenues</i>
     </td>
     <td align="center" width="33%">
       <img src="art/theme_vintage.png" width="220" /><br>
-      <b>📜 Vintage Explorer</b><br>
+      <b>Vintage Explorer</b><br>
       <i>19th-century engraved monochrome sepia: 0% modern colors</i>
     </td>
     <td align="center" width="33%">
       <img src="art/theme_gravel.png" width="220" /><br>
-      <b>🪨 Earth &amp; Gravel</b><br>
+      <b>Earth &amp; Gravel</b><br>
       <i>Alpine gravel: dark chocolate dashed tracks and sandy contours</i>
     </td>
   </tr>
   <tr>
     <td align="center" width="33%">
       <img src="art/theme_dem.png" width="220" /><br>
-      <b>🌈 High-Visibility DEM</b><br>
+      <b>High-Visibility DEM</b><br>
       <i>Digital elevation heatmap model with black high-contrast trails</i>
     </td>
     <td align="center" width="33%">
       <img src="art/theme_trail.png" width="220" /><br>
-      <b>🌲 Trail Territory</b><br>
+      <b>Trail Territory</b><br>
       <i>Dense pine woods, mulberry purple trails, and OSM MTB ratings</i>
     </td>
     <td align="center" width="33%">
       <img src="art/theme_granite.png" width="220" /><br>
-      <b>🏔️ Granite Altiplano</b><br>
+      <b>Granite Altiplano</b><br>
       <i>Nordic minimalism: cold slate-gray base and ice-blue water</i>
     </td>
   </tr>
   <tr>
     <td align="center" width="33%">
       <img src="art/theme_dark.png" width="220" /><br>
-      <b>🕶️ Tactical Dark Mode</b><br>
+      <b>Tactical Dark Mode</b><br>
       <i>Matte anti-glare carbon black with off-white tracks and zero neons</i>
     </td>
     <td align="center" width="33%">
       <img src="art/theme_elevate.png" width="220" /><br>
-      <b>🚵 Elevate MTB</b><br>
+      <b>Elevate MTB</b><br>
       <i>Central European alpine style with mountain brown singletracks</i>
     </td>
     <td align="center" width="33%">
       <img src="art/theme_alt.png" width="220" /><br>
-      <b>⚡ ALT-MTB Special</b><br>
+      <b>ALT-MTB Special</b><br>
       <i>High optical contrast variant for blazing summer sunlight</i>
     </td>
   </tr>
@@ -93,23 +93,23 @@ Each style is calibrated for sunlight readability on Karoo transflective display
 
 ---
 
-## 🎨 Theme Comparison
+## Theme Comparison
 
 | Theme | Cartographic Identity | Best For |
 |---|---|---|
-| **🗺️ IGN** | Official 1:25,000 Spanish National Geographic Institute style: contour lines with halo, earthy relief, sharp parcels, and ranked avenues. | General exploration, hiking, and mountain pass road riding. |
-| **📜 Vintage Explorer** | 19th-century engraved monochrome sepia (copperplate lithograph / historic MTN50 sheet). 0% modern colors: your red route track pops like a jewel. | Nostalgic gravel rides, bikepacking, and vintage events. |
-| **🪨 Earth &amp; Gravel** | Organic alpine styling: reflective bone-white base, dark chocolate dashed unpaved roads, and clay/sand contour shading. | Forest roads, remote gravel sectors, and mixed-surface adventures. |
-| **🌈 High-Visibility DEM** | Digital elevation model with continuous hypsometric heatmap (green valleys → amber mid-mountain → terracotta summits) and black trails with white halo. | Mountain passes, elevation relief reading, and steep climbs. |
-| **🌲 Trail Territory** | Dense structured pine forest green, high-visibility mulberry purple singletracks, and OSM technical trail ratings (S0-S5). | Enduro, All-Mountain, and technical woods riding. |
-| **🏔️ Granite Altiplano** | Scandinavian mineral minimalism: slate-gray monochrome base, ice-blue water bodies, and dark roads without visual clutter. | Pure alpine road, cold weather riding, and clean geometry lovers. |
-| **🕶️ Tactical Dark Mode** | Matte anti-glare carbon black base without fluorescent accents. Off-white tracks with zero eye fatigue and reduced battery consumption. | Night rides, dawn patrol, and low-light winter workouts. |
-| **🚵 Elevate MTB** | Classic central European alpine cartography (SwissTopo / Kompass style) featuring complete waymarking and traditional hiking trail colors. | High alpine treks and traditional mountain biking. |
-| **⚡ ALT-MTB Special** | High optical contrast variant with saturated road casings designed for direct midday summer sunlight. | Midsummer blazing sun and harsh glare conditions. |
+| **IGN** | Official 1:25,000 Spanish National Geographic Institute style: contour lines with halo, earthy relief, sharp parcels, and ranked avenues. | General exploration, hiking, and mountain pass road riding. |
+| **Vintage Explorer** | 19th-century engraved monochrome sepia (copperplate lithograph / historic MTN50 sheet). 0% modern colors: your red route track pops with clarity. | Nostalgic gravel rides, bikepacking, and vintage events. |
+| **Earth &amp; Gravel** | Organic alpine styling: reflective bone-white base, dark chocolate dashed unpaved roads, and clay/sand contour shading. | Forest roads, remote gravel sectors, and mixed-surface adventures. |
+| **High-Visibility DEM** | Digital elevation model with continuous hypsometric heatmap (green valleys to amber mid-mountain and terracotta summits) and black trails with white halo. | Mountain passes, elevation relief reading, and steep climbs. |
+| **Trail Territory** | Dense structured pine forest green, high-visibility mulberry purple singletracks, and OSM technical trail ratings (S0-S5). | Enduro, All-Mountain, and technical woods riding. |
+| **Granite Altiplano** | Scandinavian mineral minimalism: slate-gray monochrome base, ice-blue water bodies, and dark roads without visual clutter. | Pure alpine road, cold weather riding, and clean geometry lovers. |
+| **Tactical Dark Mode** | Matte anti-glare carbon black base without fluorescent accents. Off-white tracks with zero eye fatigue and reduced battery consumption. | Night rides, dawn patrol, and low-light winter workouts. |
+| **Elevate MTB** | Classic central European alpine cartography (SwissTopo / Kompass style) featuring complete waymarking and traditional hiking trail colors. | High alpine treks and traditional mountain biking. |
+| **ALT-MTB Special** | High optical contrast variant with saturated road casings designed for direct midday summer sunlight. | Midsummer blazing sun and harsh glare conditions. |
 
 ---
 
-## 📲 App Installation
+## App Installation
 
 The quickest way to switch themes on the fly directly on your Karoo:
 
@@ -118,11 +118,11 @@ The quickest way to switch themes on the fly directly on your Karoo:
    ```bash
    adb install -r KarooTopoMaps-v1.0.0.apk
    ```
-3. **Launch KarooTopoMaps**: On your Karoo screen, open the app, tap **"Apply this theme"**, open the **Ride** app, and enjoy!
+3. **Launch KarooTopoMaps**: On your Karoo screen, open the app, tap **"Apply to Karoo"**, open the **Ride** app, and enjoy!
 
 ---
 
-## ☕ Support the Project
+## Support the Project
 
 Creating, calibrating, and testing these map styles under real outdoor sunlight takes countless hours. If you enjoy these themes on your rides, you can support ongoing development:
 
