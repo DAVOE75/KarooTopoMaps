@@ -27,6 +27,10 @@
 
 ---
 
+<p align="center">
+  <img src="art/logo.png" width="700" alt="KarooTopoMaps Banner" />
+</p>
+
 ## Qué es KarooTopoMaps
 
 **KarooTopoMaps** es una suite cartográfica artesanal y aplicación Android complementaria diseñada específicamente para ciclistas exigentes. Sustituye la estética estándar del mapa nativo de tu Hammerhead Karoo por **9 temas cartográficos profesionales radicalmente diferenciados entre sí**.
