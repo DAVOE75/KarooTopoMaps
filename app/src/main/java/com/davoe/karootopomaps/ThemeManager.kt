@@ -17,55 +17,64 @@ object ThemeManager {
             nameRes = R.string.theme_ign_name,
             descriptionRes = R.string.theme_ign_desc,
             assetFileName = "themes/ign_topo.xml",
+            previewDrawableRes = R.drawable.preview_ign,
             badgeRes = R.string.badge_rec
         ),
         MapTheme(
             id = "vintage",
             nameRes = R.string.theme_vintage_name,
             descriptionRes = R.string.theme_vintage_desc,
-            assetFileName = "themes/theme_vintage.xml"
+            assetFileName = "themes/theme_vintage.xml",
+            previewDrawableRes = R.drawable.preview_vintage
         ),
         MapTheme(
             id = "gravel",
             nameRes = R.string.theme_gravel_name,
             descriptionRes = R.string.theme_gravel_desc,
-            assetFileName = "themes/theme_gravel.xml"
+            assetFileName = "themes/theme_gravel.xml",
+            previewDrawableRes = R.drawable.preview_gravel
         ),
         MapTheme(
             id = "dem",
             nameRes = R.string.theme_dem_name,
             descriptionRes = R.string.theme_dem_desc,
-            assetFileName = "themes/theme_dem.xml"
+            assetFileName = "themes/theme_dem.xml",
+            previewDrawableRes = R.drawable.preview_dem
         ),
         MapTheme(
             id = "trail",
             nameRes = R.string.theme_trail_name,
             descriptionRes = R.string.theme_trail_desc,
-            assetFileName = "themes/theme_trail.xml"
+            assetFileName = "themes/theme_trail.xml",
+            previewDrawableRes = R.drawable.preview_trail
         ),
         MapTheme(
             id = "granite",
             nameRes = R.string.theme_granite_name,
             descriptionRes = R.string.theme_granite_desc,
-            assetFileName = "themes/theme_granite.xml"
+            assetFileName = "themes/theme_granite.xml",
+            previewDrawableRes = R.drawable.preview_granite
         ),
         MapTheme(
             id = "dark",
             nameRes = R.string.theme_dark_name,
             descriptionRes = R.string.theme_dark_desc,
-            assetFileName = "themes/theme_dark.xml"
+            assetFileName = "themes/theme_dark.xml",
+            previewDrawableRes = R.drawable.preview_dark
         ),
         MapTheme(
             id = "elevate_mtb",
             nameRes = R.string.theme_elevate_name,
             descriptionRes = R.string.theme_elevate_desc,
-            assetFileName = "themes/elevate_mtb.xml"
+            assetFileName = "themes/elevate_mtb.xml",
+            previewDrawableRes = R.drawable.preview_elevate
         ),
         MapTheme(
             id = "alt_mtb",
             nameRes = R.string.theme_alt_name,
             descriptionRes = R.string.theme_alt_desc,
-            assetFileName = "themes/alt_mtb.xml"
+            assetFileName = "themes/alt_mtb.xml",
+            previewDrawableRes = R.drawable.preview_alt
         )
     )
 

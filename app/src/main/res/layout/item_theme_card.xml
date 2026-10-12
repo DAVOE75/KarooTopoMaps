@@ -63,18 +63,20 @@
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/cardPreview"
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="180dp"
             android:layout_marginBottom="12dp"
-            android:visibility="gone"
-            app:cardCornerRadius="8dp"
-            app:strokeColor="#333333"
+            app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="#141414"
+            app:strokeColor="#2E2E2E"
             app:strokeWidth="1dp">
 
             <ImageView
                 android:id="@+id/ivPreview"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:scaleType="centerCrop"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"
+                android:padding="6dp"
                 android:contentDescription="Vista previa" />
 
         </com.google.android.material.card.MaterialCardView>
