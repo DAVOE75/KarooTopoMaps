@@ -29,13 +29,71 @@
 
 ## 🌟 What is KarooTopoMaps?
 
-**KarooTopoMaps** is a premium cartographic suite and Android companion application designed specifically for cyclists. It replaces the default map style on your Hammerhead Karoo with **8 radically distinct, handcrafted map themes**.
+**KarooTopoMaps** is a premium cartographic suite and Android companion application designed specifically for cyclists. It replaces the default map style on your Hammerhead Karoo with **9 radically distinct, handcrafted map themes**.
 
 Each style is calibrated for sunlight readability on Karoo transflective displays, maximizing singletrack definition, contour readability, and route contrast.
 
 ---
 
-## 🎨 Premium Theme Catalog
+## 📸 Real Device Gallery (Hammerhead Karoo)
+
+<table align="center">
+  <tr>
+    <td align="center" width="33%">
+      <img src="art/theme_ign.png" width="220" /><br>
+      <b>🗺️ Official IGN</b><br>
+      <i>Classic 1:25,000 topomap with contours, urban parcels, and avenues</i>
+    </td>
+    <td align="center" width="33%">
+      <img src="art/theme_vintage.png" width="220" /><br>
+      <b>📜 Vintage Explorer</b><br>
+      <i>19th-century engraved monochrome sepia: 0% modern colors</i>
+    </td>
+    <td align="center" width="33%">
+      <img src="art/theme_gravel.png" width="220" /><br>
+      <b>🪨 Earth &amp; Gravel</b><br>
+      <i>Alpine gravel: dark chocolate dashed tracks and sandy contours</i>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="33%">
+      <img src="art/theme_dem.png" width="220" /><br>
+      <b>🌈 High-Visibility DEM</b><br>
+      <i>Digital elevation heatmap model with black high-contrast trails</i>
+    </td>
+    <td align="center" width="33%">
+      <img src="art/theme_trail.png" width="220" /><br>
+      <b>🌲 Trail Territory</b><br>
+      <i>Dense pine woods, mulberry purple trails, and OSM MTB ratings</i>
+    </td>
+    <td align="center" width="33%">
+      <img src="art/theme_granite.png" width="220" /><br>
+      <b>🏔️ Granite Altiplano</b><br>
+      <i>Nordic minimalism: cold slate-gray base and ice-blue water</i>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="33%">
+      <img src="art/theme_dark.png" width="220" /><br>
+      <b>🕶️ Tactical Dark Mode</b><br>
+      <i>Matte anti-glare carbon black with off-white tracks and zero neons</i>
+    </td>
+    <td align="center" width="33%">
+      <img src="art/theme_elevate.png" width="220" /><br>
+      <b>🚵 Elevate MTB</b><br>
+      <i>Central European alpine style with mountain brown singletracks</i>
+    </td>
+    <td align="center" width="33%">
+      <img src="art/theme_alt.png" width="220" /><br>
+      <b>⚡ ALT-MTB Special</b><br>
+      <i>High optical contrast variant for blazing summer sunlight</i>
+    </td>
+  </tr>
+</table>
+
+---
+
+## 🎨 Theme Comparison
 
 | Theme | Cartographic Identity | Best For |
 |---|---|---|

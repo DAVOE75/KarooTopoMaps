@@ -29,13 +29,71 @@
 
 ## 🌟 ¿Qué es KarooTopoMaps?
 
-**KarooTopoMaps** es una suite cartográfica y aplicación Android complementaria diseñada específicamente para ciclistas exigentes. Sustituye la estética estándar del mapa nativo de tu Hammerhead Karoo por **8 temas cartográficos artesanales y radicalmente diferenciados entre sí**.
+**KarooTopoMaps** es una suite cartográfica artesanal y aplicación Android complementaria diseñada específicamente para ciclistas exigentes. Sustituye la estética estándar del mapa nativo de tu Hammerhead Karoo por **9 temas cartográficos profesionales radicalmente diferenciados entre sí**.
 
 Cada estilo ha sido calibrado milimétricamente teniendo en cuenta la óptica de las pantallas transflectivas de Karoo bajo la luz directa del sol, garantizando máxima visibilidad de senderos, curvas de nivel y un contraste perfecto sobre el track de tu ruta.
 
 ---
 
-## 🎨 Catálogo de Temas Premium
+## 📸 Galería Visual en Dispositivo Real (Hammerhead Karoo)
+
+<table align="center">
+  <tr>
+    <td align="center" width="33%">
+      <img src="art/theme_ign.png" width="220" /><br>
+      <b>🗺️ IGN Oficial</b><br>
+      <i>Cartografía clásica 1:25.000 con curvas maestras, parcelario y avenidas</i>
+    </td>
+    <td align="center" width="33%">
+      <img src="art/theme_vintage.png" width="220" /><br>
+      <b>📜 Explorador Vintage</b><br>
+      <i>Litografía s. XIX en sepia monocromático, sin colores modernos</i>
+    </td>
+    <td align="center" width="33%">
+      <img src="art/theme_gravel.png" width="220" /><br>
+      <b>🪨 Tierra y Grava</b><br>
+      <i>Gravel alpino: pistas en marrón chocolate oscuro y curvas en arena</i>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="33%">
+      <img src="art/theme_dem.png" width="220" /><br>
+      <b>🌈 Tecnológico / DEM</b><br>
+      <i>Modelo digital de elevación con mapa de calor y senderos negros</i>
+    </td>
+    <td align="center" width="33%">
+      <img src="art/theme_trail.png" width="220" /><br>
+      <b>🌲 Territorio Trail</b><br>
+      <i>Verde pino denso, senderos púrpura y dificultad técnica MTB OSM</i>
+    </td>
+    <td align="center" width="33%">
+      <img src="art/theme_granite.png" width="220" /><br>
+      <b>🏔️ Granito Altiplano</b><br>
+      <i>Minimalismo nórdico en gris pizarra, asfalto frío y agua azul hielo</i>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="33%">
+      <img src="art/theme_dark.png" width="220" /><br>
+      <b>🕶️ Modo Nocturno Táctico</b><br>
+      <i>Negro carbón mate antirreflejos de alto contraste sin neones</i>
+    </td>
+    <td align="center" width="33%">
+      <img src="art/theme_elevate.png" width="220" /><br>
+      <b>🚵 Elevate MTB</b><br>
+      <i>Estilo alpino europeo tradicional con senderos marrón montañero</i>
+    </td>
+    <td align="center" width="33%">
+      <img src="art/theme_alt.png" width="220" /><br>
+      <b>⚡ ALT-MTB Especial</b><br>
+      <i>Ultra-alto contraste óptico saturado para sol cegador de verano</i>
+    </td>
+  </tr>
+</table>
+
+---
+
+## 🎨 Comparativa del Catálogo de Temas
 
 | Tema | Identidad Cartográfica | Ideal para |
 |---|---|---|
@@ -68,7 +126,7 @@ La forma más sencilla e interactiva de cambiar de tema al vuelo directamente de
 
 ## 🛠️ Instalación Manual de Archivos XML (Sin App)
 
-Si prefieres copiar directamente el tema a través de tu ordenador:
+Si prefieres copiar directamente el archivo a través de tu ordenador:
 
 ```powershell
 # Ejemplo: Aplicar el tema Tierra y Grava directamente
