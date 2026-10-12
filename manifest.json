@@ -1,13 +1,13 @@
 {
   "label": "KarooTopoMaps",
   "packageName": "com.davoe.karootopomaps",
-  "latestApkUrl": "https://github.com/DAVOE75/KarooTopoMaps/releases/latest/download/KarooTopoMaps-v1.0.0.apk",
-  "latestVersion": "1.0.0",
-  "latestVersionCode": 1,
+  "latestApkUrl": "https://github.com/DAVOE75/KarooTopoMaps/releases/latest/download/KarooTopoMaps.apk",
+  "latestVersion": "1.1.0",
+  "latestVersionCode": 2,
   "iconUrl": "https://raw.githubusercontent.com/DAVOE75/KarooTopoMaps/main/art/logo2.png",
   "developer": "DAVOE75",
   "description": "Custom high-contrast topographic map styles for Hammerhead Karoo devices. Switch between 9 handcrafted map styles directly on your Karoo.",
-  "releaseNotes": "v1.0.0: Initial release with standalone companion app, 9 handcrafted map styles (Official IGN, Earth & Gravel, High-Visibility DEM, Trail Territory, Vintage Explorer, Granite Altiplano, Tactical Dark Mode, Elevate MTB, ALT-MTB Special), and multilingual support.",
+  "releaseNotes": "v1.1.0: Real device card previews in the theme switcher panel, updated UI layout, and enhanced theme contrast.",
   "screenshotUrls": [
     "https://raw.githubusercontent.com/DAVOE75/KarooTopoMaps/main/art/theme_ign.png",
     "https://raw.githubusercontent.com/DAVOE75/KarooTopoMaps/main/art/theme_gravel.png",
