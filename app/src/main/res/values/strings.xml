@@ -3,14 +3,9 @@
     <string name="title_themes">KarooTopoMaps</string>
     <string name="subtitle_themes">Choose the visual style for your Karoo\'s native map</string>
     <string name="btn_apply">Apply to Karoo</string>
-    <string name="btn_apply_change">Apply Variant</string>
     <string name="btn_active">Active Theme</string>
     <string name="badge_active">ACTIVE</string>
-    <string name="badge_active_3d">ACTIVE (3D Relief)</string>
-    <string name="badge_active_flat">ACTIVE (Flat)</string>
     <string name="badge_rec">Recommended</string>
-    <string name="option_relief_3d">3D Relief (Slope Shading)</string>
-    <string name="option_relief_3d_desc">Simulates mountain volume and 3D slope shading</string>
     <string name="btn_restore">Restore Original Karoo Map</string>
     <string name="theme_applied_success">Theme applied! Open Ride to view.</string>
     <string name="theme_restore_success">Original Karoo theme restored.</string>

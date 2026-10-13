@@ -3,14 +3,9 @@
     <string name="title_themes">KarooTopoMaps</string>
     <string name="subtitle_themes">Wähle den visuellen Stil für die native Karte deines Karoo</string>
     <string name="btn_apply">Auf Karoo anwenden</string>
-    <string name="btn_apply_change">Variante anwenden</string>
     <string name="btn_active">Aktives Theme</string>
     <string name="badge_active">AKTIV</string>
-    <string name="badge_active_3d">AKTIV (3D-Relief)</string>
-    <string name="badge_active_flat">AKTIV (Flach)</string>
     <string name="badge_rec">Empfohlen</string>
-    <string name="option_relief_3d">3D-Relief (Hangschattierung)</string>
-    <string name="option_relief_3d_desc">Simuliert Bergvolumen und plastische Hangschatten</string>
     <string name="btn_restore">Originale Karoo-Karte wiederherstellen</string>
     <string name="theme_applied_success">Theme angewendet! Öffne Ride zur Ansicht.</string>
     <string name="theme_restore_success">Originales Karoo-Theme wiederhergestellt.</string>
@@ -18,29 +13,29 @@
 
     <!-- Themes -->
     <string name="theme_ign_name">IGN</string>
-    <string name="theme_ign_desc">Offizielle IGN 1:25.000 Palette: Höhenlinien, Schattierung, hypsometrische Farben und klare Flurstücke.</string>
+    <string name="theme_ign_desc">Offizielle IGN 1:25.000 Palette: Höhenlinien, klares Relief, hypsometrische Farben und scharfe Flurstücke.</string>
 
     <string name="theme_vintage_name">Vintage-Entdecker</string>
-    <string name="theme_vintage_desc">Kupferstich-Ästhetik des 19. Jahrhunderts in reinem Sepia, ideal für entspannte Gravel-Fahrten.</string>
+    <string name="theme_vintage_desc">Kupferstich-Ästhetik des 19. Jahrhunderts in reinem Sepia, ideal für ruhige Gravel-Fahrten.</string>
 
     <string name="theme_gravel_name">Erde &amp; Schotter</string>
-    <string name="theme_gravel_desc">Organischer alpiner Ton- und Sandstil. Maximale Definition für Forstwege und Schotterpisten.</string>
+    <string name="theme_gravel_desc">Organischer alpiner Ton- und Sandstil. Maximale Definition für Höhenlinien und Waldwege.</string>
 
-    <string name="theme_dem_name">Technologisch / DHM</string>
-    <string name="theme_dem_desc">Kontinuierliche hypsometrische Heatmap. Lebendige Reliefdarstellung für Gebirgspässe.</string>
+    <string name="theme_dem_name">DHM Hohe Sichtbarkeit</string>
+    <string name="theme_dem_desc">Kontinuierliche hypsometrische Heatmap-Farbgebung. Lebendiges Höhenrelief für Pässe.</string>
 
     <string name="theme_trail_name">Trail-Revier</string>
-    <string name="theme_trail_desc">Für Mountainbiker optimiert: dichte Nadelwälder und Farbcodierung technischer Singletrails.</string>
+    <string name="theme_trail_desc">Kontrastreiches MTB-Theme mit dichten Kiefernwäldern und farbcodierten Singletrail-Schwierigkeiten.</string>
 
     <string name="theme_granite_name">Granit-Hochland</string>
-    <string name="theme_granite_desc">Klare mineralische Ästhetik in Schiefergrau und Kaltgrau. Kontrastreiche skandinavische Geometrie.</string>
+    <string name="theme_granite_desc">Minimalistische kühle Mineral- und Schieferästhetik. Klare skandinavische alpine Geometrie.</string>
 
     <string name="theme_dark_name">Taktischer Nachtmodus</string>
-    <string name="theme_dark_desc">Mattes Kohlegrau ohne Blendung zur Schonung der Augen bei Nachtfahrten.</string>
+    <string name="theme_dark_desc">Mattes, blendfreies Anthrazit zur Vermeidung nächtlicher Augenermüdung.</string>
 
     <string name="theme_elevate_name">Elevate MTB</string>
-    <string name="theme_elevate_desc">Klassischer Alpenstil mit gut sichtbaren Pfaden und vollständiger Wandermarkierung.</string>
+    <string name="theme_elevate_desc">Klassischer Bergstil mit gut sichtbaren Wegen und Outdoor-Markierungen.</string>
 
     <string name="theme_alt_name">ALT-MTB Spezial</string>
-    <string name="theme_alt_desc">Extremer Kontrast für perfekte Lesbarkeit unter direkter Sommersonneneinstrahlung.</string>
+    <string name="theme_alt_desc">Kontrastreiche Variante für maximale Lesbarkeit unter direkter Karoo-Sonneneinstrahlung.</string>
 </resources>
