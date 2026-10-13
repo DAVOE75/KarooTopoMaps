@@ -112,10 +112,10 @@ Jeder Stil wurde präzise für die transflektiven Displays des Karoo bei direkte
 
 Der schnellste Weg, Stile direkt auf deinem Karoo zu wechseln:
 
-1. **APK herunterladen**: Lade die neueste Version [`KarooTopoMaps-v1.2.1.apk`](release/KarooTopoMaps-v1.2.1.apk) herunter oder hole sie direkt von [Releases](https://github.com/DAVOE75/KarooTopoMaps/releases).
+1. **APK herunterladen**: Lade die neueste Version [`KarooTopoMaps-v1.2.2.apk`](release/KarooTopoMaps-v1.2.2.apk) herunter oder hole sie direkt von [Releases](https://github.com/DAVOE75/KarooTopoMaps/releases).
 2. **Auf deinem Karoo installieren**:
    ```bash
-   adb install -r KarooTopoMaps-v1.2.1.apk
+   adb install -r KarooTopoMaps-v1.2.2.apk
    ```
 3. **KarooTopoMaps starten**: Öffne die App auf deinem Karoo, tippe auf **"Auf Karoo anwenden"** beim gewünschten Thema, öffne die **Ride**-App und genieße die Karte!
 

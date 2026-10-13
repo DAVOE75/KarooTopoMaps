@@ -112,10 +112,10 @@ Cada estilo foi minuciosamente calibrado para as telas transfletivas do Karoo so
 
 A forma mais simples de trocar de tema diretamente na tela do seu Karoo:
 
-1. **Baixe o APK**: Baixe a versão mais recente [`KarooTopoMaps-v1.2.1.apk`](release/KarooTopoMaps-v1.2.1.apk) ou pegue na seção [Releases](https://github.com/DAVOE75/KarooTopoMaps/releases).
+1. **Baixe o APK**: Baixe a versão mais recente [`KarooTopoMaps-v1.2.2.apk`](release/KarooTopoMaps-v1.2.2.apk) ou pegue na seção [Releases](https://github.com/DAVOE75/KarooTopoMaps/releases).
 2. **Instale no seu Karoo**:
    ```bash
-   adb install -r KarooTopoMaps-v1.2.1.apk
+   adb install -r KarooTopoMaps-v1.2.2.apk
    ```
 3. **Abra o KarooTopoMaps**: Abra o aplicativo na tela do seu Karoo, toque em **"Aplicar ao Karoo"** no tema desejado, abra o aplicativo **Ride** e aproveite!
 
