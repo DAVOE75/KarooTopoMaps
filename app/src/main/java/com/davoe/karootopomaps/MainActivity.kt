@@ -19,6 +19,7 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.card.MaterialCardView
+import com.google.android.material.switchmaterial.SwitchMaterial
 
 class MainActivity : AppCompatActivity() {
 
@@ -77,6 +78,7 @@ class MainActivity : AppCompatActivity() {
     private fun renderThemes() {
         themesContainer.removeAllViews()
         val currentThemeId = ThemeManager.getCurrentThemeId(this)
+        val activeIs3D = ThemeManager.isTheme3DActive(this)
         val inflater = LayoutInflater.from(this)
 
         for (theme in ThemeManager.AVAILABLE_THEMES) {
@@ -86,6 +88,8 @@ class MainActivity : AppCompatActivity() {
             val tvBadge = cardView.findViewById<TextView>(R.id.tvBadge)
             val cardPreview = cardView.findViewById<MaterialCardView>(R.id.cardPreview)
             val ivPreview = cardView.findViewById<ImageView>(R.id.ivPreview)
+            val cardOptions = cardView.findViewById<MaterialCardView>(R.id.cardOptions)
+            val switchRelief3D = cardView.findViewById<SwitchMaterial>(R.id.switchRelief3D)
             val btnSelect = cardView.findViewById<MaterialButton>(R.id.btnSelectTheme)
 
             tvName.text = getString(theme.nameRes)
@@ -100,11 +104,41 @@ class MainActivity : AppCompatActivity() {
 
             val isSelected = (theme.id == currentThemeId)
 
+            if (theme.has3DReliefOption) {
+                cardOptions.visibility = View.VISIBLE
+                val pref3D = ThemeManager.isTheme3DPreference(this, theme.id)
+                switchRelief3D.setOnCheckedChangeListener(null)
+                switchRelief3D.isChecked = if (isSelected) activeIs3D else pref3D
+
+                switchRelief3D.setOnCheckedChangeListener { _, isChecked ->
+                    ThemeManager.setTheme3DPreference(this, theme.id, isChecked)
+                    if (isSelected) {
+                        if (isChecked != activeIs3D) {
+                            btnSelect.text = getString(R.string.btn_apply_change)
+                            btnSelect.isEnabled = true
+                            btnSelect.setBackgroundColor(0xFFFFD700.toInt())
+                            btnSelect.setTextColor(0xFF000000.toInt())
+                        } else {
+                            btnSelect.text = getString(R.string.btn_active)
+                            btnSelect.isEnabled = false
+                            btnSelect.setBackgroundColor(0xFF333333.toInt())
+                            btnSelect.setTextColor(0xFF888888.toInt())
+                        }
+                    }
+                }
+            } else {
+                cardOptions.visibility = View.GONE
+            }
+
             if (isSelected) {
                 cardView.strokeColor = 0xFFFFD700.toInt()
                 cardView.strokeWidth = 4
                 tvBadge.visibility = View.VISIBLE
-                tvBadge.text = getString(R.string.badge_active)
+                tvBadge.text = if (theme.has3DReliefOption) {
+                    if (activeIs3D) getString(R.string.badge_active_3d) else getString(R.string.badge_active_flat)
+                } else {
+                    getString(R.string.badge_active)
+                }
                 tvBadge.setBackgroundColor(0xFF2E7D32.toInt())
                 btnSelect.text = getString(R.string.btn_active)
                 btnSelect.isEnabled = false
@@ -127,15 +161,16 @@ class MainActivity : AppCompatActivity() {
             }
 
             btnSelect.setOnClickListener {
-                applyTheme(theme)
+                val use3D = if (theme.has3DReliefOption) switchRelief3D.isChecked else false
+                applyTheme(theme, use3D)
             }
 
             themesContainer.addView(cardView)
         }
     }
 
-    private fun applyTheme(theme: MapTheme) {
-        val success = ThemeManager.applyTheme(this, theme)
+    private fun applyTheme(theme: MapTheme, use3D: Boolean = false) {
+        val success = ThemeManager.applyTheme(this, theme, use3D)
         if (success) {
             Toast.makeText(this, getString(R.string.theme_applied_success), Toast.LENGTH_SHORT).show()
             renderThemes()

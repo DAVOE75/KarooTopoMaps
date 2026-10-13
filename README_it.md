@@ -96,7 +96,7 @@ Ogni stile è stato calibrato con precisione millimetrica per i display transfle
 
 | Tema | Identità Cartografica | Ideale per |
 |---|---|---|
-| **IGN** | Cartografia ufficiale 1:25.000 dell'IGN spagnolo: curve direttrici e secondarie con alone, rilievo caldo, parcelle definite e strade gerarchizzate. | Esplorazione generale, trekking e passi alpini su strada. |
+| **IGN** | Cartografia ufficiale 1:25.000 dell'IGN spagnolo con selettore interattivo **Rilievo 3D / Piatto**: attiva le curve volumetriche con ombreggiatura plastica dei pendii MTN25 o mantieni il design piatto tradizionale. | Esplorazione generale, trekking e passi alpini con o senza rilievo 3D. |
 | **Esploratore Vintage** | Incisione monocromatica seppia del XIX secolo (litografia su lastra di rame). 0% colori moderni: la traccia rossa risalta con assoluta nitidezza. | Gravel vintage, cicloturismo ed eventi classici. |
 | **Terra e Ghiaia** | Estetica alpina organica: sfondo bianco panna riflettente, differenziazione granulare del fondo stradale e piste (grade 1 a 5: asfalto, compatto, ghiaia fine, terra battuta). | Strade forestali, bikepacking, gravel tecnico e transizioni di fondo. |
 | **Tecnologico / DEM** | Modello digitale di elevazione con mappa termica ipsometrica continua (valli verdi, mezza montagna ambra, vette terracotta) e sentieri neri bordati di bianco. | Passi di montagna, salite impegnative e dislivello continuo. |
@@ -112,10 +112,10 @@ Ogni stile è stato calibrato con precisione millimetrica per i display transfle
 
 Il modo più semplice per cambiare tema direttamente sullo schermo del tuo Karoo:
 
-1. **Scarica l'APK**: Scarica l'ultima versione [`KarooTopoMaps-v1.1.2.apk`](release/KarooTopoMaps-v1.1.2.apk) o prendila dalla sezione [Releases](https://github.com/DAVOE75/KarooTopoMaps/releases).
+1. **Scarica l'APK**: Scarica l'ultima versione [`KarooTopoMaps-v1.2.0.apk`](release/KarooTopoMaps-v1.2.0.apk) o prendila dalla sezione [Releases](https://github.com/DAVOE75/KarooTopoMaps/releases).
 2. **Installa sul tuo Karoo**:
    ```bash
-   adb install -r KarooTopoMaps-v1.1.2.apk
+   adb install -r KarooTopoMaps-v1.2.0.apk
    ```
 3. **Avvia KarooTopoMaps**: Apri l'app sul Karoo, tocca **"Applica a Karoo"** sul tema scelto, apri l'app **Ride** e goditi la nuova cartografia!
 

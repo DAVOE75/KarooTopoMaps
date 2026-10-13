@@ -94,7 +94,7 @@ Cada estilo ha sido calibrado milimétricamente teniendo en cuenta la óptica de
 
 | Tema | Identidad Cartográfica | Ideal para |
 |---|---|---|
-| **IGN** | Cartografía oficial 1:25.000 del Instituto Geográfico Nacional: curvas de nivel maestras y secundarias con halo, fondo terroso, parcelario nítido y avenidas jerarquizadas. | Exploración general, senderismo y puertos de carretera. |
+| **IGN** | Cartografía oficial 1:25.000 del Instituto Geográfico Nacional con selector interactivo de **Relieve 3D / Plano**: activa curvas volumétricas con sombreado plástico de ladera MTN25 o mantén el diseño plano tradicional. | Exploración general, senderismo y puertos de montaña con o sin relieve 3D. |
 | **Explorador Vintage** | Monocromático sepia en relieve litográfico (grabador de cobre del siglo XIX / lámina MTN50). Sin ningún color moderno: el track rojo de tu ruta resalta con claridad absoluta. | Gravel nostálgico, cicloturismo y eventos clásicos. |
 | **Tierra y Grava** | Estética alpina orgánica: fondo blanco hueso reflectante, pistas de tierra y grava con diferenciación de firme (grade 1 a 5 y superficies: asfalto, compactado, grava, tierra) y curvas en arena y arcilla. | Pistas forestales, bikepacking, gravel técnico y transiciones de firme. |
 | **Tecnológico / DEM** | Modelo digital de elevación con mapa de calor hipsométrico continuo (valles verdes a media montaña ámbar y cumbres terracota) y senderos negros con halo blanco. | Puertos de montaña, escaladas y desnivel acumulado. |
@@ -110,11 +110,11 @@ Cada estilo ha sido calibrado milimétricamente teniendo en cuenta la óptica de
 
 La forma más sencilla e interactiva de cambiar de tema directamente desde la pantalla de tu Karoo:
 
-1. **Descarga el APK**: Descarga la última versión [`KarooTopoMaps-v1.1.2.apk`](release/KarooTopoMaps-v1.1.2.apk) o desde la sección [Releases](https://github.com/DAVOE75/KarooTopoMaps/releases).
+1. **Descarga el APK**: Descarga la última versión [`KarooTopoMaps-v1.2.0.apk`](release/KarooTopoMaps-v1.2.0.apk) o desde la sección [Releases](https://github.com/DAVOE75/KarooTopoMaps/releases).
 2. **Instala en tu Karoo**:
    * Mediante **ADB**:
      ```powershell
-     adb install -r KarooTopoMaps-v1.1.2.apk
+     adb install -r KarooTopoMaps-v1.2.0.apk
      ```
    * O utilizando herramientas inalámbricas como Karoo Appstore o Sidequest.
 3. **Abre KarooTopoMaps**: En la pantalla de tu Karoo, abre la aplicación, pulsa **"Aplicar al Karoo"** en el que más te guste y listo: entra en la app **Ride** y disfruta de la nueva cartografía.

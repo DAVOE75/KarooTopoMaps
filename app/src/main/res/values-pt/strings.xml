@@ -3,9 +3,14 @@
     <string name="title_themes">KarooTopoMaps</string>
     <string name="subtitle_themes">Escolha o estilo visual para o mapa nativo do seu Karoo</string>
     <string name="btn_apply">Aplicar ao Karoo</string>
+    <string name="btn_apply_change">Aplicar variante</string>
     <string name="btn_active">Tema Ativo</string>
     <string name="badge_active">ATIVO</string>
+    <string name="badge_active_3d">ATIVO (Relevo 3D)</string>
+    <string name="badge_active_flat">ATIVO (Plano)</string>
     <string name="badge_rec">Recomendado</string>
+    <string name="option_relief_3d">Relevo 3D (Sombreamento)</string>
+    <string name="option_relief_3d_desc">Simula o volume da montanha e sombras de encosta</string>
     <string name="btn_restore">Restaurar mapa original Karoo</string>
     <string name="theme_applied_success">Tema aplicado! Abra o Ride para visualizar.</string>
     <string name="theme_restore_success">Tema original do Karoo restaurado com sucesso.</string>

@@ -18,7 +18,9 @@ object ThemeManager {
             descriptionRes = R.string.theme_ign_desc,
             assetFileName = "themes/ign_topo.xml",
             previewDrawableRes = R.drawable.preview_ign,
-            badgeRes = R.string.badge_rec
+            badgeRes = R.string.badge_rec,
+            has3DReliefOption = true,
+            reliefAssetFileName = "themes/ign_topo_relief.xml"
         ),
         MapTheme(
             id = "vintage",
@@ -105,12 +107,17 @@ object ThemeManager {
         return true
     }
 
-    fun applyTheme(context: Context, theme: MapTheme): Boolean {
+    fun applyTheme(context: Context, theme: MapTheme, use3DRelief: Boolean = false): Boolean {
         ensureBackupExists()
         val target = getTargetThemeFile()
+        val assetPath = if (use3DRelief && theme.reliefAssetFileName != null) {
+            theme.reliefAssetFileName
+        } else {
+            theme.assetFileName
+        }
 
         return try {
-            context.assets.open(theme.assetFileName).use { input ->
+            context.assets.open(assetPath).use { input ->
                 FileOutputStream(target).use { output ->
                     input.copyTo(output)
                     output.flush()
@@ -118,7 +125,8 @@ object ThemeManager {
                 }
             }
             saveCurrentThemeId(context, theme.id)
-            Log.d(TAG, "Theme applied: ${theme.id} to ${target.absolutePath}")
+            saveActiveThemeIs3D(context, use3DRelief && theme.has3DReliefOption)
+            Log.d(TAG, "Theme applied: ${theme.id} (3D=$use3DRelief) to ${target.absolutePath}")
 
             triggerKarooRefresh(context)
             true
@@ -137,6 +145,7 @@ object ThemeManager {
             return try {
                 backup.copyTo(target, overwrite = true)
                 saveCurrentThemeId(context, null)
+                saveActiveThemeIs3D(context, false)
                 Log.d(TAG, "Restored original theme from device backup: ${backup.absolutePath}")
                 triggerKarooRefresh(context)
                 true
@@ -160,6 +169,7 @@ object ThemeManager {
                 }
             }
             saveCurrentThemeId(context, null)
+            saveActiveThemeIs3D(context, false)
             Log.d(TAG, "Restored original theme from bundled asset")
             triggerKarooRefresh(context)
             true
@@ -188,5 +198,25 @@ object ThemeManager {
         } else {
             prefs.edit().remove("selected_theme_id").apply()
         }
+    }
+
+    fun isTheme3DActive(context: Context): Boolean {
+        val prefs = context.getSharedPreferences("karoo_topo_maps", Context.MODE_PRIVATE)
+        return prefs.getBoolean("active_theme_is_3d", false)
+    }
+
+    private fun saveActiveThemeIs3D(context: Context, is3D: Boolean) {
+        val prefs = context.getSharedPreferences("karoo_topo_maps", Context.MODE_PRIVATE)
+        prefs.edit().putBoolean("active_theme_is_3d", is3D).apply()
+    }
+
+    fun isTheme3DPreference(context: Context, themeId: String): Boolean {
+        val prefs = context.getSharedPreferences("karoo_topo_maps", Context.MODE_PRIVATE)
+        return prefs.getBoolean("pref_3d_$themeId", false)
+    }
+
+    fun setTheme3DPreference(context: Context, themeId: String, enabled: Boolean) {
+        val prefs = context.getSharedPreferences("karoo_topo_maps", Context.MODE_PRIVATE)
+        prefs.edit().putBoolean("pref_3d_$themeId", enabled).apply()
     }
 }

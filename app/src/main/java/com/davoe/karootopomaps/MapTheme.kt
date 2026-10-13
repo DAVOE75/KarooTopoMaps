@@ -9,5 +9,7 @@ data class MapTheme(
     @StringRes val descriptionRes: Int,
     val assetFileName: String,
     @DrawableRes val previewDrawableRes: Int? = null,
-    @StringRes val badgeRes: Int? = null
+    @StringRes val badgeRes: Int? = null,
+    val has3DReliefOption: Boolean = false,
+    val reliefAssetFileName: String? = null
 )

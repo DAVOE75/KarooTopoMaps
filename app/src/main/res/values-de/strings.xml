@@ -3,9 +3,14 @@
     <string name="title_themes">KarooTopoMaps</string>
     <string name="subtitle_themes">Wähle den visuellen Stil für die native Karte deines Karoo</string>
     <string name="btn_apply">Auf Karoo anwenden</string>
+    <string name="btn_apply_change">Variante anwenden</string>
     <string name="btn_active">Aktives Theme</string>
     <string name="badge_active">AKTIV</string>
+    <string name="badge_active_3d">AKTIV (3D-Relief)</string>
+    <string name="badge_active_flat">AKTIV (Flach)</string>
     <string name="badge_rec">Empfohlen</string>
+    <string name="option_relief_3d">3D-Relief (Hangschattierung)</string>
+    <string name="option_relief_3d_desc">Simuliert Bergvolumen und plastische Hangschatten</string>
     <string name="btn_restore">Originale Karoo-Karte wiederherstellen</string>
     <string name="theme_applied_success">Theme angewendet! Öffne Ride zur Ansicht.</string>
     <string name="theme_restore_success">Originales Karoo-Theme wiederhergestellt.</string>

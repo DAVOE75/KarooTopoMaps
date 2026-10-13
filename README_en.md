@@ -96,7 +96,7 @@ Each style is calibrated for sunlight readability on Karoo transflective display
 
 | Theme | Cartographic Identity | Best For |
 |---|---|---|
-| **IGN** | Official 1:25,000 Spanish National Geographic Institute style: contour lines with halo, earthy relief, sharp parcels, and ranked avenues. | General exploration, hiking, and mountain pass road riding. |
+| **IGN** | Official 1:25,000 Spanish National Geographic Institute style with interactive **3D Relief / Flat toggle**: switch between volumetric MTN25 plastic slope shading and classic flat cartography. | General exploration, hiking, and mountain passes with or without 3D relief. |
 | **Vintage Explorer** | 19th-century engraved monochrome sepia (copperplate lithograph / historic MTN50 sheet). 0% modern colors: your red route track pops with clarity. | Nostalgic gravel rides, bikepacking, and vintage events. |
 | **Earth &amp; Gravel** | Organic alpine styling: reflective bone-white base, granular surface and track grade distinctions (grade 1 to 5: asphalt, compacted gravel, crunchy dirt tracks, doubletrack), and clay/sand contour shading. | Forest roads, remote gravel sectors, bikepacking, and surface transitions. |
 | **High-Visibility DEM** | Digital elevation model with continuous hypsometric heatmap (green valleys to amber mid-mountain and terracotta summits) and black trails with white halo. | Mountain passes, elevation relief reading, and steep climbs. |
@@ -112,10 +112,10 @@ Each style is calibrated for sunlight readability on Karoo transflective display
 
 The quickest way to switch themes on the fly directly on your Karoo:
 
-1. **Download the APK**: Download the latest [`KarooTopoMaps-v1.1.2.apk`](release/KarooTopoMaps-v1.1.2.apk) or grab it from [Releases](https://github.com/DAVOE75/KarooTopoMaps/releases).
+1. **Download the APK**: Download the latest [`KarooTopoMaps-v1.2.0.apk`](release/KarooTopoMaps-v1.2.0.apk) or grab it from [Releases](https://github.com/DAVOE75/KarooTopoMaps/releases).
 2. **Install to your Karoo**:
    ```bash
-   adb install -r KarooTopoMaps-v1.1.2.apk
+   adb install -r KarooTopoMaps-v1.2.0.apk
    ```
 3. **Launch KarooTopoMaps**: On your Karoo screen, open the app, tap **"Apply to Karoo"**, open the **Ride** app, and enjoy!
 

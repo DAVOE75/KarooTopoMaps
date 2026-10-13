@@ -11,8 +11,8 @@ android {
         applicationId = "com.davoe.karootopomaps"
         minSdk = 26
         targetSdk = 32
-        versionCode = 4
-        versionName = "1.1.2"
+        versionCode = 5
+        versionName = "1.2.0"
     }
 
     signingConfigs {
