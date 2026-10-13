@@ -312,9 +312,10 @@
         <line stroke="#624d41" width="0.3"/>
     </m>
 
-    <!-- Cycling networks -->
+    <!-- Cycling networks (EuroVelo / ICN, National, Regional, Local) -->
+    <!-- Supports both standard OSM tags (icn=yes) and OpenAndroMaps (network=icn) -->
     <m e="way" select="first">
-        <m k="icn" v="yes" zoom-min="10">
+        <m k="network|icn" v="icn|yes" zoom-min="10">
             <m k="bridge" v="yes|true">
                 <line stroke="#8C5332" cap="butt" width="4.2"/>
             </m>
@@ -322,7 +323,7 @@
                 <line stroke="#8C5332" width="4.2"/>
             </m>
         </m>
-        <m e="way" k="ncn" v="yes" zoom-min="11">
+        <m k="network|ncn" v="ncn|yes" zoom-min="11">
             <m k="bridge" v="yes|true">
                 <line stroke="#8C5332" cap="butt" width="4.2"/>
             </m>
@@ -330,7 +331,7 @@
                 <line stroke="#8C5332" width="4.2"/>
             </m>
         </m>
-        <m k="rcn" v="yes" zoom-min="12">
+        <m k="network|rcn" v="rcn|yes" zoom-min="12">
             <m k="bridge" v="yes|true">
                 <line stroke="#7A4222" cap="butt" width="4.2"/>
             </m>
@@ -338,7 +339,7 @@
                 <line stroke="#7A4222" width="4.2"/>
             </m>
         </m>
-        <m k="lcn" v="yes" zoom-min="13">
+        <m k="network|lcn" v="lcn|yes" zoom-min="13">
             <m k="bridge" v="yes|true">
                 <line stroke="#7A4222" cap="butt" width="4.2"/>
             </m>

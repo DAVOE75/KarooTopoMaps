@@ -312,38 +312,39 @@
         <line stroke="#624d41" width="0.3"/>
     </m>
 
-    <!-- Cycling networks -->
+    <!-- Cycling networks (EuroVelo / ICN, National, Regional, Local) -->
+    <!-- Supports both standard OSM tags (icn=yes) and OpenAndroMaps (network=icn) -->
     <m e="way" select="first">
-        <m k="icn" v="yes" zoom-min="10">
+        <m k="network|icn" v="icn|yes" zoom-min="10">
             <m k="bridge" v="yes|true">
-                <line stroke="#455A64" cap="butt" width="4.2"/>
+                <line stroke="#1E88E5" cap="butt" width="4.5"/>
             </m>
             <m k="bridge" v="~">
-                <line stroke="#455A64" width="4.2"/>
+                <line stroke="#1E88E5" cap="round" width="4.5"/>
             </m>
         </m>
-        <m e="way" k="ncn" v="yes" zoom-min="11">
+        <m k="network|ncn" v="ncn|yes" zoom-min="11">
             <m k="bridge" v="yes|true">
-                <line stroke="#455A64" cap="butt" width="4.2"/>
+                <line stroke="#E53935" cap="butt" width="4.2"/>
             </m>
             <m k="bridge" v="~">
-                <line stroke="#455A64" width="4.2"/>
+                <line stroke="#E53935" cap="round" width="4.2"/>
             </m>
         </m>
-        <m k="rcn" v="yes" zoom-min="12">
+        <m k="network|rcn" v="rcn|yes" zoom-min="12">
             <m k="bridge" v="yes|true">
-                <line stroke="#37474F" cap="butt" width="4.2"/>
+                <line stroke="#8E24AA" cap="butt" width="4.0"/>
             </m>
             <m k="bridge" v="~">
-                <line stroke="#37474F" width="4.2"/>
+                <line stroke="#8E24AA" cap="round" width="4.0"/>
             </m>
         </m>
-        <m k="lcn" v="yes" zoom-min="13">
+        <m k="network|lcn" v="lcn|yes" zoom-min="13">
             <m k="bridge" v="yes|true">
-                <line stroke="#263238" cap="butt" width="4.2"/>
+                <line stroke="#00897B" cap="butt" width="3.8"/>
             </m>
             <m k="bridge" v="~">
-                <line stroke="#263238" width="4.2"/>
+                <line stroke="#00897B" cap="round" width="3.8"/>
             </m>
         </m>
     </m>

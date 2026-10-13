@@ -7,8 +7,8 @@
     <style-area fill="#94B2C7" id="water" mesh="true"/>
 
     <!-- LINE CASINGS -->
-    <style-line id="unpaved_casing" stroke="#5C4033" cap="round"/>
-    <style-line id="unpaved_cycleway_casing" stroke="#6D4C3D" cap="round"/>
+    <style-line id="unpaved_casing" stroke="#5C4033" dasharray="10,4" cap="round"/>
+    <style-line id="unpaved_cycleway_casing" stroke="#6D4C3D" dasharray="8,4" cap="round"/>
     <style-line id="paved_cycleway_casing" stroke="#7A8B7B" cap="round"/>
 
     <!-- LINE STYLES -->
@@ -312,38 +312,39 @@
         <line stroke="#624d41" width="0.3"/>
     </m>
 
-    <!-- Cycling networks -->
+    <!-- Cycling networks (EuroVelo / ICN, National, Regional, Local) -->
+    <!-- Supports both standard OSM tags (icn=yes) and OpenAndroMaps (network=icn) -->
     <m e="way" select="first">
-        <m k="icn" v="yes" zoom-min="10">
+        <m k="network|icn" v="icn|yes" zoom-min="10">
             <m k="bridge" v="yes|true">
-                <line stroke="#8C7355" cap="butt" width="4.2"/>
+                <line stroke="#1E88E5" cap="butt" width="4.5"/>
             </m>
             <m k="bridge" v="~">
-                <line stroke="#8C7355" width="4.2"/>
+                <line stroke="#1E88E5" cap="round" width="4.5"/>
             </m>
         </m>
-        <m e="way" k="ncn" v="yes" zoom-min="11">
+        <m k="network|ncn" v="ncn|yes" zoom-min="11">
             <m k="bridge" v="yes|true">
-                <line stroke="#6D4C3D" cap="butt" width="4.2"/>
+                <line stroke="#E53935" cap="butt" width="4.2"/>
             </m>
             <m k="bridge" v="~">
-                <line stroke="#6D4C3D" width="4.2"/>
+                <line stroke="#E53935" cap="round" width="4.2"/>
             </m>
         </m>
-        <m k="rcn" v="yes" zoom-min="12">
+        <m k="network|rcn" v="rcn|yes" zoom-min="12">
             <m k="bridge" v="yes|true">
-                <line stroke="#5C4033" cap="butt" width="4.2"/>
+                <line stroke="#8E24AA" cap="butt" width="4.0"/>
             </m>
             <m k="bridge" v="~">
-                <line stroke="#5C4033" width="4.2"/>
+                <line stroke="#8E24AA" cap="round" width="4.0"/>
             </m>
         </m>
-        <m k="lcn" v="yes" zoom-min="13">
+        <m k="network|lcn" v="lcn|yes" zoom-min="13">
             <m k="bridge" v="yes|true">
-                <line stroke="#5C4033" cap="butt" width="4.2"/>
+                <line stroke="#00897B" cap="butt" width="3.8"/>
             </m>
             <m k="bridge" v="~">
-                <line stroke="#5C4033" width="4.2"/>
+                <line stroke="#00897B" cap="round" width="3.8"/>
             </m>
         </m>
     </m>
@@ -364,9 +365,64 @@
         </m>
     </m>
 
-    <!-- highway=track - mostly agricultural and farm roads -->
-    <!-- TODO - highlight any with explicit bicycleaccess? -->
-    <m e="way" k="highway" v="path|track|bridleway">
+    <!-- highway=track - Forest, agricultural and gravel tracks with full surface & tracktype info -->
+    <m e="way" k="highway" v="track">
+        <m select="first">
+            <!-- Grade 1 / Paved track: Solid white core with chocolate casing -->
+            <m k="tracktype" v="grade1">
+                <line stroke="#5C4033" width="1.8" cap="round"/>
+                <line stroke="#FFFFFF" width="1.2" cap="round"/>
+            </m>
+            <m k="surface" v="asphalt|paved|concrete|paving_stones">
+                <line stroke="#5C4033" width="1.8" cap="round"/>
+                <line stroke="#FFFFFF" width="1.2" cap="round"/>
+            </m>
+
+            <!-- Grade 2 / Compacted / Fine Gravel: Fast rolling champagne gravel -->
+            <m k="tracktype" v="grade2">
+                <line stroke="#5C4033" width="1.6" cap="round"/>
+                <line stroke="#F0E6D8" width="1.0" dasharray="16,4" cap="round"/>
+            </m>
+            <m k="surface" v="compacted|fine_gravel">
+                <line stroke="#5C4033" width="1.6" cap="round"/>
+                <line stroke="#F0E6D8" width="1.0" dasharray="16,4" cap="round"/>
+            </m>
+
+            <!-- Grade 3 / Standard Gravel / Dirt: Classic crunchy gravel -->
+            <m k="tracktype" v="grade3">
+                <line stroke="#5C4033" width="1.4" dasharray="10,4" cap="round"/>
+            </m>
+            <m k="surface" v="gravel|pebblestone|ground|dirt|unpaved">
+                <line stroke="#5C4033" width="1.4" dasharray="10,4" cap="round"/>
+            </m>
+
+            <!-- Grade 4 / Rough stony/rocky track -->
+            <m k="tracktype" v="grade4">
+                <line stroke="#5C4033" width="1.1" dasharray="6,4" cap="round"/>
+            </m>
+
+            <!-- Grade 5 / Grass, sand, soft or overgrown doubletrack -->
+            <m k="tracktype" v="grade5">
+                <line stroke="#6D4C3D" width="0.9" dasharray="3,4" cap="round"/>
+            </m>
+            <m k="surface" v="grass|sand|mud|earth">
+                <line stroke="#6D4C3D" width="0.9" dasharray="3,4" cap="round"/>
+            </m>
+
+            <!-- Default track fallback when no grade/surface specified -->
+            <m k="~" v="~">
+                <line stroke="#5C4033" width="1.3" dasharray="9,4" cap="round"/>
+            </m>
+        </m>
+        <m k="name" v="*">
+            <m zoom-min="14">
+                <text use="road_label" fill="#2B2119" size="13" priority="7"/>
+            </m>
+        </m>
+    </m>
+
+    <!-- highway=path|bridleway (Singletracks and bridleways) -->
+    <m e="way" k="highway" v="path|bridleway">
         <m select="first">
             <m k="mtb_difficulty" v="1">
                 <m select="first">
@@ -399,9 +455,6 @@
                 <line use="path"/>
             </m>
         </m>
-    </m>
-
-    <m e="way" k="highway" v="path|track|bridleway">
         <m k="name" v="*">
             <m zoom-min="14">
                 <text use="road_label" fill="#2B2119" size="13" priority="7"/>
