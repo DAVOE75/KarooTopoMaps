@@ -5,7 +5,7 @@
     Autor: David Garcia Pascual (hesiOX) — https://github.com/DAVOE75/KarooTopoMaps
     Licencia: MIT
 -->
-<rendertheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" map-background="#F6F4EB"
+<rendertheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" map-background="#f5efd7"
     version="1" xmlns="http://mapsforge.org/renderTheme"
     xsi:schemaLocation="http://mapsforge.org/renderTheme https://raw.githubusercontent.com/mapsforge/vtm/master/resources/rendertheme.xsd">
 
@@ -43,7 +43,7 @@
         <area use="water"/>
     </m>
     <m e="way" k="natural" v="nosea">
-        <area mesh="true" fill="#F6F4EB"/>
+        <area mesh="true" fill="#f5efd7"/>
     </m>
     <!-- paleta oficial clonada del Mapa Topografico Nacional 1:25.000 del IGN (MTN25) -->
 
@@ -54,13 +54,13 @@
                 <area mesh="true" fill="#D7E4B4"/>
             </m>
             <m v="residential">
-                <area mesh="true" fill="#F38D82" stroke="#C8554B" stroke-width="0.3"/>
+                <area mesh="true" fill="#f48d84" stroke="#c8554b" stroke-width="0.3"/>
             </m>
             <m v="allotments">
                 <area mesh="true" fill="#D4E5B5"/>
             </m>
             <m v="retail">
-                <area mesh="true" fill="#F38D82" stroke="#C8554B" stroke-width="0.3"/>
+                <area mesh="true" fill="#f48d84" stroke="#c8554b" stroke-width="0.3"/>
             </m>
             <m v="commercial">
                 <area mesh="true" fill="#E7D0E2" stroke="#B496B0" stroke-width="0.3"/>
@@ -242,56 +242,18 @@
         <area mesh="true" fill="#c2c180"/>
     </m>
 
-    <!-- buildings: Oficial IGN MTN25 rojo ladrillo / coral terroso con borde definido -->
-    <m e="way" k="building" v="*" zoom-min="14" zoom-max="17">
-        <area mesh="true" fill="#D1746C" stroke="#A84038" stroke-width="0.35"/>
-    </m>
-    <m e="way" k="building" v="*" zoom-min="18">
-        <area mesh="true" fill="#E0867F" stroke="#A84038" stroke-width="0.35"/>
+    <!-- buildings: Oficial IGN MTN25 (#f48d84 con borde fino definido) -->
+    <m e="way" k="building" v="*" zoom-min="14">
+        <area mesh="true" fill="#f48d84" stroke="#a84038" stroke-width="0.35"/>
     </m>
 
-    <!-- elevation contours: Oficial IGN MTN25 (trazo unico limpio y nitido, sin doble margen ni artefactos) -->
-    <m e="way" k="natural" v="minor_contour_line|major_contour_line">
-        <m zoom-min="8" zoom-max="9">
-            <m k="natural" v="major_contour_line">
-                <line stroke="#855F3C" width="0.48"/>
-            </m>
-        </m>
-        <m zoom-min="10" zoom-max="12">
-            <m k="natural" v="minor_contour_line">
-                <line stroke="#9E7E5A" width="0.28"/>
-            </m>
-            <m k="natural" v="major_contour_line">
-                <line stroke="#855F3C" width="0.52"/>
-            </m>
-        </m>
-        <m zoom-min="13" zoom-max="14">
-            <m k="natural" v="minor_contour_line">
-                <line stroke="#9E7E5A" width="0.32"/>
-            </m>
-            <m k="natural" v="major_contour_line">
-                <line stroke="#855F3C" width="0.55"/>
-                <text k="name" caption="true" size="11" priority="5" fill="#5C442A" stroke="#FFFFFF" stroke-width="2.0" style="bold"/>
-            </m>
-        </m>
-        <m zoom-min="15" zoom-max="16">
-            <m k="natural" v="minor_contour_line">
-                <line stroke="#9E7E5A" width="0.34"/>
-            </m>
-            <m k="natural" v="major_contour_line">
-                <line stroke="#855F3C" width="0.56"/>
-                <text k="name" caption="true" size="12" priority="5" fill="#5C442A" stroke="#FFFFFF" stroke-width="2.0" style="bold"/>
-            </m>
-        </m>
-        <m zoom-min="17">
-            <m k="natural" v="minor_contour_line">
-                <line stroke="#9E7E5A" width="0.36"/>
-            </m>
-            <m k="natural" v="major_contour_line">
-                <line stroke="#855F3C" width="0.58"/>
-                <text k="name" caption="true" size="13" priority="5" fill="#5C442A" stroke="#FFFFFF" stroke-width="2.0" style="bold"/>
-            </m>
-        </m>
+    <!-- elevation contours: Oficial IGN MTN25 (trazo unico limpio sin duplicacion) -->
+    <m e="way" k="natural|contour_ext" v="minor_contour_line|elevation_minor|elevation_medium" zoom-min="14">
+        <line stroke="#9E7E5A" width="0.30" cap="round"/>
+    </m>
+    <m e="way" k="natural|contour_ext" v="major_contour_line|elevation_major" zoom-min="11">
+        <line stroke="#855F3C" width="0.55" cap="round"/>
+        <text k="name" caption="true" size="11" priority="5" fill="#5C442A" stroke="#FFFFFF" stroke-width="2.0" style="bold"/>
     </m>
 
     <!-- special roads -->

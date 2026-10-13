@@ -15,21 +15,21 @@
       - Contraste alto para pendientes ciclistas
       - Tipografía IGN: nombres de municipios, picos, puertos
 -->
-<renderingStyle name="IGN-España" defaultColor="#F1EDE9" version="1" depends="default">
+<renderingStyle name="IGN-España" defaultColor="#f5efd7" version="1" depends="default">
 
     <!-- ===================== COLORES BASE ===================== -->
-    <renderingConstant name="color_fondo"           value="#F1EDE9"/>
+    <renderingConstant name="color_fondo"           value="#f5efd7"/>
     <renderingConstant name="color_roca"            value="#D5C9B8"/>
-    <renderingConstant name="color_agua"            value="#AAD3DF"/>
-    <renderingConstant name="color_bosque"          value="#A8C88A"/>
-    <renderingConstant name="color_prado"           value="#C9E8A0"/>
-    <renderingConstant name="color_urbano"          value="#E8E0D8"/>
-    <renderingConstant name="color_carretera_nac"   value="#E8963C"/>
-    <renderingConstant name="color_carretera_sec"   value="#F7D27C"/>
-    <renderingConstant name="color_camino"          value="#C8A870"/>
-    <renderingConstant name="color_pista"           value="#B8956A"/>
-    <renderingConstant name="color_curva_normal"    value="#C8956A"/>
-    <renderingConstant name="color_curva_indice"    value="#A87850"/>
+    <renderingConstant name="color_agua"            value="#B3E3F9"/>
+    <renderingConstant name="color_bosque"          value="#A3C8A7"/>
+    <renderingConstant name="color_prado"           value="#D7E4B4"/>
+    <renderingConstant name="color_urbano"          value="#f48d84"/>
+    <renderingConstant name="color_carretera_nac"   value="#EB1727"/>
+    <renderingConstant name="color_carretera_sec"   value="#EBD32B"/>
+    <renderingConstant name="color_camino"          value="#FFFFFF"/>
+    <renderingConstant name="color_pista"           value="#555555"/>
+    <renderingConstant name="color_curva_normal"    value="#9E7E5A"/>
+    <renderingConstant name="color_curva_indice"    value="#855F3C"/>
     <renderingConstant name="color_pico"            value="#8B4513"/>
     <renderingConstant name="color_limite_munic"    value="#9080A0"/>
 
