@@ -5,12 +5,12 @@
     Autor: David Garcia Pascual (hesiOX) — https://github.com/DAVOE75/KarooTopoMaps
     Licencia: MIT
 -->
-<rendertheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" map-background="#f7f4ec"
+<rendertheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" map-background="#F6F4EB"
     version="1" xmlns="http://mapsforge.org/renderTheme"
     xsi:schemaLocation="http://mapsforge.org/renderTheme https://raw.githubusercontent.com/mapsforge/vtm/master/resources/rendertheme.xsd">
 
-    <!-- AREA STYLES -->
-    <style-area fill="#0086D1" id="water" mesh="true"/>
+    <!-- AREA STYLES: Oficial IGN MTN25 1:25.000 -->
+    <style-area fill="#B3E3F9" id="water" stroke="#6BB8E0" stroke-width="0.3" mesh="true"/>
 
     <!-- LINE CASINGS -->
     <style-line id="unpaved_casing" stroke="#854E85" cap="round"/>
@@ -18,23 +18,23 @@
     <style-line id="paved_cycleway_casing" stroke="#327a04" cap="round"/>
 
     <!-- LINE STYLES -->
-    <style-line id="path" stroke="#606060" dasharray="6,6" cap="round" width="0.6"/>
+    <style-line id="path" stroke="#555555" dasharray="6,4" cap="round" width="0.6"/>
     <style-line id="cycling_path" stroke="#ffffff" dasharray="8,8" cap="round" width="0.9"/>
-    <style-line id="ferry" stroke="#6666FF" dasharray="8,8" cap="round" width="0.9"/>
+    <style-line id="ferry" stroke="#50A8DE" dasharray="8,8" cap="round" width="0.9"/>
 
     <!-- Base style for fixed width lines -->
     <style-line cap="butt" fix="true" id="fix" width="1.0"/>
 
-    <!-- Water line styles -->
-    <style-line cap="butt" id="water" stroke="#0086D1" width="1.0"/>
-    <style-line fix="false" id="river" stroke="#0086D1" use="water"/>
+    <!-- Water line styles: Oficial IGN azul hidrografia -->
+    <style-line cap="butt" id="water" stroke="#50A8DE" width="1.0"/>
+    <style-line fix="false" id="river" stroke="#429AD2" use="water"/>
 
-    <!-- Text styles -->
-    <style-text id="poi_label" caption="true" dy="-15" fill="#2d51bc" font-family="thin"
+    <!-- Text styles: Oficial IGN toponimia azul agua y rotulacion viaria -->
+    <style-text id="poi_label" caption="true" dy="-15" fill="#1B6CA8" font-family="thin"
         k="name" size="11" stroke="#ffffff" stroke-width="2.0" style="bold" />
 
     <!-- Road Labels - need to set priority and size where used, and override fill if needed -->
-    <style-text id="road_label" k="name" fill="#444444" stroke="#ffffff" stroke-width="2.0" style="bold"/>
+    <style-text id="road_label" k="name" fill="#222222" stroke="#ffffff" stroke-width="2.0" style="bold"/>
 
     <!-- STYLE ASSIGNMENT RULES -->
 
@@ -43,91 +43,98 @@
         <area use="water"/>
     </m>
     <m e="way" k="natural" v="nosea">
-        <area mesh="true" fill="#f7f4ec"/>
+        <area mesh="true" fill="#F6F4EB"/>
     </m>
-    <!-- paleta general aproximada a los mapas topograficos 1:25000 del IGN -->
+    <!-- paleta oficial clonada del Mapa Topografico Nacional 1:25.000 del IGN (MTN25) -->
 
-    <!-- Closed ways (except highways and buildings --> 
+    <!-- Closed ways (except highways and buildings) --> 
     <m closed="yes" e="way" k="highway|building" v="~">
         <m k="landuse">
             <m v="meadow">
-                <area mesh="true" fill="#d7e4b4"/>
+                <area mesh="true" fill="#D7E4B4"/>
             </m>
             <m v="residential">
-                <area mesh="true" fill="#e63023" stroke="#8c231a" stroke-width="0.3"/>
+                <area mesh="true" fill="#F38D82" stroke="#C8554B" stroke-width="0.3"/>
             </m>
             <m v="allotments">
-                <area mesh="true" fill="#cfac7c"/>
+                <area mesh="true" fill="#D4E5B5"/>
             </m>
             <m v="retail">
-                <area mesh="true" fill="#e63023" stroke="#8c231a" stroke-width="0.3"/>
+                <area mesh="true" fill="#F38D82" stroke="#C8554B" stroke-width="0.3"/>
             </m>
             <m v="commercial">
-                <area mesh="true" fill="#b8291a" stroke="#7a1e14" stroke-width="0.3"/>
+                <area mesh="true" fill="#E7D0E2" stroke="#B496B0" stroke-width="0.3"/>
             </m>
-            <m v="farm|farmyard|farmland|orchard|vineyard">
-                <area mesh="true" fill="#a7c28f"/>
+            <m v="farm|farmyard">
+                <area mesh="true" fill="#EAE8D0"/>
+            </m>
+            <m v="farmland|orchard|vineyard">
+                <area mesh="true" fill="#D8E7BD"/>
             </m>
             <m v="quarry">
-                <area mesh="true" fill="#b8b1ad"/>
+                <area mesh="true" fill="#DDD9D0"/>
             </m>
             <m v="industrial|railway">
-                <area mesh="true" fill="#b8291a" stroke="#7a1e14" stroke-width="0.3"/>
+                <area mesh="true" fill="#E7D0E2" stroke="#B496B0" stroke-width="0.3"/>
             </m>
             <m v="cemetery">
-                <area mesh="true" fill="#bdc7b3"/>
+                <area mesh="true" fill="#D6DDD0"/>
             </m>
         </m>
         <m k="amenity">
             <m v="kindergarten|school|college|university">
-                <area mesh="true" fill="#c2c180"/>
-                <line cap="butt" fix="true" stroke="#9aabae" width="1.0"/>
+                <area mesh="true" fill="#F0E8D0" stroke="#B5A890" stroke-width="0.3"/>
             </m>
             <m v="hospital">
-                <area mesh="true" fill="#d9c7ab"/>
+                <area mesh="true" fill="#F5DEC8" stroke="#B58060" stroke-width="0.3"/>
             </m>
         </m>
         <m k="landuse">
             <m v="recreation_ground">
-                <area mesh="true" fill="#8BC34A"/>
+                <area mesh="true" fill="#88C773"/>
             </m>
             <m v="brownfield">
-                <area mesh="true" fill="#b9baad"/>
+                <area mesh="true" fill="#D8D4CC"/>
             </m>
         </m>
-        <m k="leisure" v="park|common|green|golf_course|pitch">
-            <area mesh="true" fill="#8BC34A"/>
+        <m k="leisure">
+            <m v="park|common|green|golf_course">
+                <area mesh="true" fill="#88C773"/>
+            </m>
+            <m v="pitch|sports_centre|track">
+                <area mesh="true" fill="#FFFFFF" stroke="#333333" stroke-width="0.3"/>
+            </m>
+            <m v="swimming_pool">
+                <area use="water"/>
+            </m>
         </m>
         <m k="natural">
             <m k="natural" v="grassland|scrub">
-                <area mesh="true" fill="#c7dca0"/>
+                <area mesh="true" fill="#DCE8C3"/>
             </m>
             <m v="sand|beach">
-                <area mesh="true" fill="#f5e8d6"/>
+                <area mesh="true" fill="#E9DFA1"/>
             </m>
             <m v="rock|bare_rock|stone|scree|glacier|cliff">
-                <area mesh="true" fill="#c9c6be"/>
+                <area mesh="true" fill="#D8D4CC"/>
             </m>
         </m>
 
         <m k="amenity" v="parking">
-            <area mesh="true" fill="#999999"/>
+            <area mesh="true" fill="#E0DED7" stroke="#A8A49C" stroke-width="0.3"/>
         </m>
 
-        <!-- fill constante en todos los niveles de zoom: evita que el bosque se vea gris al acercar -->
+        <!-- Bosques / Masa forestal: Verde salvia oficial IGN MTN25 -->
         <m k="landuse|natural" v="forest|wood">
-            <area mesh="true" fill="#5FA050"/>
+            <area mesh="true" fill="#A3C8A7"/>
         </m>
 
-        <!-- keep grass above forest:wood and leisure:park! -->
-        <!-- http://wiki.openstreetmap.org/wiki/Proposed_features/conservation,
-                often serves as background for leisure=nature_reserve -->
         <m k="landuse" v="grass">
-            <area mesh="true" fill="#d7e4b4"/>
+            <area mesh="true" fill="#D7E4B4"/>
         </m>
 
         <m k="leisure" v="garden">
-            <area mesh="true" fill="#e4edc8"/>
+            <area mesh="true" fill="#D7E4B4"/>
         </m>
 
         <m k="landuse" v="reservoir|basin">
@@ -235,65 +242,54 @@
         <area mesh="true" fill="#c2c180"/>
     </m>
 
-    <!-- buildings: rojo intenso con borde, visible desde zoom urbano; a partir de z18 se aclara para no saturar el detalle -->
+    <!-- buildings: Oficial IGN MTN25 rojo ladrillo / coral terroso con borde definido -->
     <m e="way" k="building" v="*" zoom-min="14" zoom-max="17">
-        <area mesh="true" fill="#c41c0a" stroke="#7a1208" stroke-width="0.3"/>
+        <area mesh="true" fill="#D1746C" stroke="#A84038" stroke-width="0.35"/>
     </m>
     <m e="way" k="building" v="*" zoom-min="18">
-        <area mesh="true" fill="#a0c41c0a" stroke="#7a1208" stroke-width="0.3"/>
+        <area mesh="true" fill="#E0867F" stroke="#A84038" stroke-width="0.35"/>
     </m>
 
-    <!-- elevation contours -->
-    <!-- Nota: este esquema (VTM) no admite curve="cubic" en <line>. Cada tramo dibuja primero un halo claro y despues
-         la linea de color para que las curvas se distingan del fondo en todos los niveles de zoom (z8 en adelante). -->
+    <!-- elevation contours: Oficial IGN MTN25 (trazo unico limpio y nitido, sin doble margen ni artefactos) -->
     <m e="way" k="natural" v="minor_contour_line|major_contour_line">
         <m zoom-min="8" zoom-max="9">
             <m k="natural" v="major_contour_line">
-                <line stroke="#FBF8EF" width="0.85"/>
-                <line stroke="#8B5230" width="0.58"/>
+                <line stroke="#855F3C" width="0.48"/>
             </m>
         </m>
         <m zoom-min="10" zoom-max="12">
             <m k="natural" v="minor_contour_line">
-                <line stroke="#FBF8EF" width="0.58"/>
-                <line stroke="#96633C" width="0.38"/>
+                <line stroke="#9E7E5A" width="0.28"/>
             </m>
             <m k="natural" v="major_contour_line">
-                <line stroke="#FBF8EF" width="0.85"/>
-                <line stroke="#8B4A28" width="0.58"/>
+                <line stroke="#855F3C" width="0.52"/>
             </m>
         </m>
         <m zoom-min="13" zoom-max="14">
             <m k="natural" v="minor_contour_line">
-                <line stroke="#FBF8EF" width="0.55"/>
-                <line stroke="#8F5B36" width="0.35"/>
+                <line stroke="#9E7E5A" width="0.32"/>
             </m>
             <m k="natural" v="major_contour_line">
-                <line stroke="#FBF8EF" width="0.8"/>
-                <line stroke="#7C4726" width="0.55"/>
-                <text k="name" caption="true" size="11" priority="5" fill="#5C3A1E" stroke="#ffffff" stroke-width="2.0" style="bold"/>
+                <line stroke="#855F3C" width="0.55"/>
+                <text k="name" caption="true" size="11" priority="5" fill="#5C442A" stroke="#FFFFFF" stroke-width="2.0" style="bold"/>
             </m>
         </m>
         <m zoom-min="15" zoom-max="16">
             <m k="natural" v="minor_contour_line">
-                <line stroke="#FBF8EF" width="0.5"/>
-                <line stroke="#9C6B42" width="0.34"/>
+                <line stroke="#9E7E5A" width="0.34"/>
             </m>
             <m k="natural" v="major_contour_line">
-                <line stroke="#FBF8EF" width="0.7"/>
-                <line stroke="#8B5230" width="0.5"/>
-                <text k="name" caption="true" size="12" priority="5" fill="#5C3A1E" stroke="#ffffff" stroke-width="2.0" style="bold"/>
+                <line stroke="#855F3C" width="0.56"/>
+                <text k="name" caption="true" size="12" priority="5" fill="#5C442A" stroke="#FFFFFF" stroke-width="2.0" style="bold"/>
             </m>
         </m>
         <m zoom-min="17">
             <m k="natural" v="minor_contour_line">
-                <line stroke="#FBF8EF" width="0.55"/>
-                <line stroke="#9C6B42" width="0.38"/>
+                <line stroke="#9E7E5A" width="0.36"/>
             </m>
             <m k="natural" v="major_contour_line">
-                <line stroke="#FBF8EF" width="0.75"/>
-                <line stroke="#8B5230" width="0.55"/>
-                <text k="name" caption="true" size="13" priority="5" fill="#5C3A1E" stroke="#ffffff" stroke-width="2.0" style="bold"/>
+                <line stroke="#855F3C" width="0.58"/>
+                <text k="name" caption="true" size="13" priority="5" fill="#5C442A" stroke="#FFFFFF" stroke-width="2.0" style="bold"/>
             </m>
         </m>
     </m>
@@ -553,10 +549,10 @@
     </m>
     <m e="way" k="highway" v="secondary|secondary_link">
         <m zoom-min="13">
-            <line stroke="#FFCC00" cap="round" width="2.3"/>
+            <line stroke="#333333" cap="round" width="2.3"/>
         </m>
         <m zoom-max="12" zoom-min="10">
-            <line stroke="#FFCC00" cap="round" width="2.1"/>
+            <line stroke="#333333" cap="round" width="2.0"/>
         </m>
         <m k="surface" v="unpaved|compacted|ground|gravel|dirt|grass|sand|fine_gravel" zoom-min="10">
             <line use="unpaved_casing" width="2.8"/>
@@ -572,20 +568,20 @@
             </m>
             <m k="cycleway" v="~" zoom-min="13">
                 <m k="bridge" v="yes|true">
-                    <line stroke="#707070" cap="butt" width="2.0"/>
+                    <line stroke="#333333" cap="butt" width="2.3"/>
                 </m>
                 <m k="bridge" v="~">
-                    <line stroke="#707070" cap="round" width="2.0"/>
+                    <line stroke="#333333" cap="round" width="2.3"/>
                 </m>
             </m>
         </m>
     </m>
     <m e="way" k="highway" v="primary|primary_link">
         <m zoom-min="12">
-            <line stroke="#E2231A" cap="round" width="2.5"/>
+            <line stroke="#222222" cap="round" width="2.5"/>
         </m>
         <m zoom-max="11" zoom-min="8">
-            <line stroke="#E2231A" cap="round" width="2.3"/>
+            <line stroke="#222222" cap="round" width="2.2"/>
         </m>
         <m k="surface" v="unpaved|compacted|ground|gravel|dirt|grass|sand|fine_gravel" zoom-min="10">
             <line use="unpaved_casing" width="2.8"/>
@@ -610,23 +606,22 @@
         </m>
     </m>
 
-    <!-- autovias/autopistas: banda roja continua estilo IGN con linea central amarilla continua -->
+    <!-- autovias/autopistas: Oficial IGN (doble calzada roja con divisoria central blanca) -->
     <m e="way" k="highway" v="motorway|motorway_link|trunk|trunk_link">
-        <line stroke="#8C1D0F" cap="round" width="2.8"/>
-        <line stroke="#E2231A" cap="round" width="2.2"/>
-        <line stroke="#FFD100" cap="round" width="0.35"/>
+        <line stroke="#8C1D0F" cap="round" width="3.0"/>
+        <line stroke="#EB1727" cap="round" width="2.4"/>
+        <line stroke="#FFFFFF" cap="round" width="0.45"/>
         <text use="road_label" size="13" priority="14"/>
     </m>
 
-    <!-- inner fill and labels for roads -->
+    <!-- inner fill and labels for roads: Oficial IGN MTN25 -->
 
-    <!-- TODO - check for mtb tags -->
     <m e="way" k="highway" v="residential|living_street">
         <m zoom-min="15">
-            <line stroke="#ffffff" cap="round" width="1.2"/>
+            <line stroke="#ffffff" cap="round" width="1.1"/>
         </m>
         <m zoom-max="14" zoom-min="13">
-            <line stroke="#ffffff" cap="round" width="1.0"/>
+            <line stroke="#ffffff" cap="round" width="0.9"/>
         </m>
         <m zoom-min="13">
             <text use="road_label" size="13" priority="8"/>
@@ -634,10 +629,10 @@
     </m>
     <m e="way" k="highway" v="unclassified|road">
         <m zoom-min="15">
-            <line stroke="#ffffff" cap="round" width="1.4"/>
+            <line stroke="#ffffff" cap="round" width="1.2"/>
         </m>
         <m zoom-max="14" zoom-min="12">
-            <line stroke="#ffffff" cap="round" width="1.2"/>
+            <line stroke="#ffffff" cap="round" width="1.0"/>
         </m>
         <m zoom-min="12">
             <text use="road_label" size="13" priority="9"/>
@@ -645,10 +640,10 @@
     </m>
     <m e="way" k="highway" v="tertiary|tertiary_link">
         <m zoom-min="14">
-            <line stroke="#ffffff" cap="round" width="1.6"/>
+            <line stroke="#F7E67E" cap="round" width="1.4"/>
         </m>
         <m zoom-max="13" zoom-min="11">
-            <line stroke="#ffffff" cap="round" width="1.4"/>
+            <line stroke="#F7E67E" cap="round" width="1.2"/>
         </m>
         <m zoom-min="11">
             <text use="road_label" size="13" priority="10"/>
@@ -656,10 +651,10 @@
     </m>
     <m e="way" k="highway" v="secondary|secondary_link">
         <m zoom-min="13">
-            <line stroke="#ffffff" cap="round" width="1.7"/>
+            <line stroke="#EBD32B" cap="round" width="1.7"/>
         </m>
         <m zoom-max="12" zoom-min="10">
-            <line stroke="#ffffff" cap="round" width="1.5"/>
+            <line stroke="#EBD32B" cap="round" width="1.5"/>
         </m>
         <m zoom-min="10">
             <text use="road_label" size="13" priority="11"/>
@@ -667,10 +662,10 @@
     </m>
     <m e="way" k="highway" v="primary|primary_link">
         <m zoom-min="12">
-            <line stroke="#ffffff" cap="round" width="1.9"/>
+            <line stroke="#EB1727" cap="round" width="1.9"/>
         </m>
         <m zoom-max="11" zoom-min="8">
-            <line stroke="#ffffff" cap="round" width="1.7"/>
+            <line stroke="#EB1727" cap="round" width="1.6"/>
         </m>
         <m zoom-min="8">
             <text use="road_label" size="13" priority="12"/>
