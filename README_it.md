@@ -4,11 +4,7 @@
 > *Trasforma la mappa nativa del tuo dispositivo con stili topografici professionali ad alto contrasto.*
 
 <p align="center">
-  <img src="art/logo2.png" width="140" alt="KarooTopoMaps Logo" />
-</p>
-
-<p align="center">
-  <img src="art/banner.png" width="700" alt="KarooTopoMaps Banner" />
+  <img src="art/logo.png" width="350" alt="KarooTopoMaps Logo" />
 </p>
 
 <p align="center">
@@ -21,9 +17,20 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/DAVOE75/KarooTopoMaps/releases/latest"><img src="https://img.shields.io/badge/APK-Scarica%20v1.0.0-gold?style=for-the-badge&logo=android" alt="Download APK" /></a>
-  <a href="https://buymeacoffee.com/davoe75"><img src="https://img.shields.io/badge/Sostieni-Buy%20Me%20A%20Coffee-orange?style=for-the-badge&logo=buy-me-a-coffee" alt="Buy Me A Coffee" /></a>
+  <a href="https://github.com/DAVOE75/KarooTopoMaps/releases/latest"><img src="https://img.shields.io/github/v/release/DAVOE75/KarooTopoMaps?style=flat-square&logo=android&logoColor=white&label=Versione&color=2E7D32" alt="Ultima Versione" /></a>
+  <a href="https://github.com/DAVOE75/KarooTopoMaps/releases"><img src="https://img.shields.io/github/downloads/DAVOE75/KarooTopoMaps/total?style=flat-square&logo=github&logoColor=white&label=Download&color=D4AF37" alt="Download Totali" /></a>
+  <img src="https://img.shields.io/badge/Dispositivo-Karoo_1_•_2_•_3-1B1B1B?style=flat-square&logo=googlemaps&logoColor=D4AF37" alt="Compatibilità Karoo" />
+  <a href="https://github.com/DAVOE75/KarooTopoMaps/blob/main/LICENSE"><img src="https://img.shields.io/github/license/DAVOE75/KarooTopoMaps?style=flat-square&label=Licenza&color=455A64" alt="Licenza MIT" /></a>
+  <a href="https://buymeacoffee.com/davoe75"><img src="https://img.shields.io/badge/Dona-Buy_Me_a_Coffee-FF813F?style=flat-square&logo=buy-me-a-coffee&logoColor=white" alt="Buy Me A Coffee" /></a>
 </p>
+
+---
+
+## Cos'è KarooTopoMaps
+
+**KarooTopoMaps** è una suite cartografica artigianale e un'applicazione Android complementare progettata specificamente per ciclisti esigenti. Sostituisce la mappa predefinita del tuo Hammerhead Karoo con **9 stili cartografici professionali radicalmente distinti**.
+
+Ogni stile è stato calibrato con precisione millimetrica per i display transflettivi del Karoo sotto la luce solare diretta, garantendo la massima leggibilità dei sentieri, delle curve di livello e un contrasto perfetto sul tracciato della tua traccia.
 
 ---
 
@@ -85,10 +92,46 @@
 
 ---
 
-## Installazione
+## Confronto Catalogo Temi
 
-Installa l'APK [`release/KarooTopoMaps-v1.0.0.apk`](release/KarooTopoMaps-v1.0.0.apk) via ADB:
+| Tema | Identità Cartografica | Ideale per |
+|---|---|---|
+| **IGN** | Cartografia ufficiale 1:25.000 dell'IGN spagnolo: curve direttrici e secondarie con alone, rilievo caldo, parcelle definite e strade gerarchizzate. | Esplorazione generale, trekking e passi alpini su strada. |
+| **Esploratore Vintage** | Incisione monocromatica seppia del XIX secolo (litografia su lastra di rame). 0% colori moderni: la traccia rossa risalta con assoluta nitidezza. | Gravel vintage, cicloturismo ed eventi classici. |
+| **Terra e Ghiaia** | Estetica alpina organica: sfondo bianco panna riflettente, differenziazione granulare del fondo stradale e piste (grade 1 a 5: asfalto, compatto, ghiaia fine, terra battuta). | Strade forestali, bikepacking, gravel tecnico e transizioni di fondo. |
+| **Tecnologico / DEM** | Modello digitale di elevazione con mappa termica ipsometrica continua (valli verdi, mezza montagna ambra, vette terracotta) e sentieri neri bordati di bianco. | Passi di montagna, salite impegnative e dislivello continuo. |
+| **Territorio Trail** | Pinete dense e strutturate, sentieri color mora ad altissima visibilità e classificazione tecnica MTB OSM (S0-S5). | Enduro, All-Mountain e discese boschive tecniche. |
+| **Granito Altiplano** | Minimalismo minerale scandinavo: scala di grigi ardesia fredda, laghi blu ghiaccio e risalto delle reti ciclabili ufficiali (EuroVelo / ICN, NCN, RCN) su asfalto pulito. | Bici da corsa alpina, ciclovie a lunga percorrenza e puristi del design. |
+| **Modalità Notturna Tattica** | Nero antracite opaco antiriflesso senza accenti fluo. Tracce bianche riposanti per gli occhi e minor consumo energetico. | Uscite notturne, prime luci dell'alba e allenamenti invernali. |
+| **Elevate MTB** | Stile alpino classico mitteleuropeo (tipo SwissTopo / Kompass) con waymarking completo e sentieri marrone montano. | Trekking alpino in quota e mountain bike tradizionale. |
+| **ALT-MTB Speciale** | Variante a contrasto ottico estremo con bordi saturi progettata per la lettura sotto il sole a picco dell'estate. | Giornate di sole accecante e forte riverbero estivo. |
 
-```bash
-adb install -r KarooTopoMaps-v1.0.0.apk
-```
+---
+
+## Installazione Rapida
+
+Il modo più semplice per cambiare tema direttamente sullo schermo del tuo Karoo:
+
+1. **Scarica l'APK**: Scarica l'ultima versione [`KarooTopoMaps-v1.1.2.apk`](release/KarooTopoMaps-v1.1.2.apk) o prendila dalla sezione [Releases](https://github.com/DAVOE75/KarooTopoMaps/releases).
+2. **Installa sul tuo Karoo**:
+   ```bash
+   adb install -r KarooTopoMaps-v1.1.2.apk
+   ```
+3. **Avvia KarooTopoMaps**: Apri l'app sul Karoo, tocca **"Applica a Karoo"** sul tema scelto, apri l'app **Ride** e goditi la nuova cartografia!
+
+---
+
+## Origine Cartografica e Crediti
+
+* **Tema IGN Ufficiale**: Questo stile cartografico è stato creato in modo totalmente artigianale e indipendente da David García Pascual (hesiOX), basandosi fedelmente sulla simbologia, curve di livello e tinte altimetriche della **Mappa Topografica Nazionale MTN25 (scala 1:25.000)** dell'**Instituto Geográfico Nacional de España (IGN / CNIG)**. Non è stato consultato né copiato il tema Elevate di Tobias Kuehn, né sono necessari pacchetti esterni di icone (`ele-res`). Si tratta di uno stile vettoriale Mapsforge puro e nativo.
+* **Licenza**: [MIT License](LICENSE).
+
+---
+
+## Supporta il Progetto
+
+Creare, calibrare e collaudare questi stili sotto il sole richiede innumerevoli ore di lavoro. Se ti piace usare queste mappe nelle tue uscite in bici, puoi offrirmi un caffè:
+
+<p align="center">
+  <a href="https://buymeacoffee.com/davoe75"><img src="https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" alt="Buy Me A Coffee" /></a>
+</p>

@@ -98,10 +98,10 @@ Each style is calibrated for sunlight readability on Karoo transflective display
 |---|---|---|
 | **IGN** | Official 1:25,000 Spanish National Geographic Institute style: contour lines with halo, earthy relief, sharp parcels, and ranked avenues. | General exploration, hiking, and mountain pass road riding. |
 | **Vintage Explorer** | 19th-century engraved monochrome sepia (copperplate lithograph / historic MTN50 sheet). 0% modern colors: your red route track pops with clarity. | Nostalgic gravel rides, bikepacking, and vintage events. |
-| **Earth &amp; Gravel** | Organic alpine styling: reflective bone-white base, dark chocolate dashed unpaved roads, and clay/sand contour shading. | Forest roads, remote gravel sectors, and mixed-surface adventures. |
+| **Earth &amp; Gravel** | Organic alpine styling: reflective bone-white base, granular surface and track grade distinctions (grade 1 to 5: asphalt, compacted gravel, crunchy dirt tracks, doubletrack), and clay/sand contour shading. | Forest roads, remote gravel sectors, bikepacking, and surface transitions. |
 | **High-Visibility DEM** | Digital elevation model with continuous hypsometric heatmap (green valleys to amber mid-mountain and terracotta summits) and black trails with white halo. | Mountain passes, elevation relief reading, and steep climbs. |
 | **Trail Territory** | Dense structured pine forest green, high-visibility mulberry purple singletracks, and OSM technical trail ratings (S0-S5). | Enduro, All-Mountain, and technical woods riding. |
-| **Granite Altiplano** | Scandinavian mineral minimalism: slate-gray monochrome base, ice-blue water bodies, and dark roads without visual clutter. | Pure alpine road, cold weather riding, and clean geometry lovers. |
+| **Granite Altiplano** | Scandinavian mineral minimalism: slate-gray monochrome base, ice-blue water bodies, and high-visibility official cycling networks (EuroVelo / ICN, NCN, RCN) over clean asphalt. | Pure alpine road, official cycleway touring, and clean geometry lovers. |
 | **Tactical Dark Mode** | Matte anti-glare carbon black base without fluorescent accents. Off-white tracks with zero eye fatigue and reduced battery consumption. | Night rides, dawn patrol, and low-light winter workouts. |
 | **Elevate MTB** | Classic central European alpine cartography (SwissTopo / Kompass style) featuring complete waymarking and traditional hiking trail colors. | High alpine treks and traditional mountain biking. |
 | **ALT-MTB Special** | High optical contrast variant with saturated road casings designed for direct midday summer sunlight. | Midsummer blazing sun and harsh glare conditions. |
@@ -112,10 +112,10 @@ Each style is calibrated for sunlight readability on Karoo transflective display
 
 The quickest way to switch themes on the fly directly on your Karoo:
 
-1. **Download the APK**: Download the latest [`KarooTopoMaps-v1.1.1.apk`](release/KarooTopoMaps-v1.1.1.apk) or grab it from [Releases](https://github.com/DAVOE75/KarooTopoMaps/releases).
+1. **Download the APK**: Download the latest [`KarooTopoMaps-v1.1.2.apk`](release/KarooTopoMaps-v1.1.2.apk) or grab it from [Releases](https://github.com/DAVOE75/KarooTopoMaps/releases).
 2. **Install to your Karoo**:
    ```bash
-   adb install -r KarooTopoMaps-v1.1.1.apk
+   adb install -r KarooTopoMaps-v1.1.2.apk
    ```
 3. **Launch KarooTopoMaps**: On your Karoo screen, open the app, tap **"Apply to Karoo"**, open the **Ride** app, and enjoy!
 
