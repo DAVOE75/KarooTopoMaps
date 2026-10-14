@@ -380,12 +380,12 @@ class CustomThemeEditorActivity : AppCompatActivity() {
         })
 
         // Populate Palette grid with 6 columns centered to fit the Karoo screen perfectly
-        val displayMetrics = resources.displayMetrics
-        val screenWidth = displayMetrics.widthPixels
-        // Screen width minus dialog margins and padding (approx 50dp) divided by 6 columns
-        val availableWidth = (screenWidth - (48 * displayMetrics.density)).toInt()
-        val swatchSize = (availableWidth / 6.5).toInt().coerceIn(48, 70)
-        val swatchMargin = 4
+        val density = resources.displayMetrics.density
+        // Dialog width on Karoo (480px width) is around 380px inside AlertDialog
+        // 6 columns: swatchSize * 6 + margin * 12 <= availableWidth
+        val swatchSize = (34 * density).toInt() // 34dp circles
+        val swatchMargin = (3 * density).toInt() // 3dp margin
+        gridPalette.columnCount = 6
 
         for (colorHex in PRESET_COLORS) {
             val isCurrent = colorHex.equals(selectedColor, ignoreCase = true)
@@ -397,7 +397,7 @@ class CustomThemeEditorActivity : AppCompatActivity() {
                 }
                 radius = swatchSize / 2f
                 strokeColor = if (isCurrent) Color.parseColor("#FFD700") else Color.parseColor("#444444")
-                strokeWidth = if (isCurrent) 6 else 2
+                strokeWidth = if (isCurrent) 5 else 2
                 setCardBackgroundColor(Color.parseColor(colorHex))
                 setOnClickListener {
                     selectedColor = colorHex
