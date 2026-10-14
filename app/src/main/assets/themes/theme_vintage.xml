@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <rendertheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" map-background="#F3EBD8"
     version="1" xmlns="http://mapsforge.org/renderTheme"
     xsi:schemaLocation="http://mapsforge.org/renderTheme https://raw.githubusercontent.com/mapsforge/vtm/master/resources/rendertheme.xsd">
@@ -240,54 +240,57 @@
     <!-- elevation contours -->
     <!-- Nota: este esquema (VTM) no admite curve="cubic" en <line>. Cada tramo dibuja primero un halo claro y despues
          la linea de color para que las curvas se distingan del fondo en todos los niveles de zoom (z8 en adelante). -->
-    <m e="way" k="natural" v="minor_contour_line|major_contour_line">
+    <m e="way" k="natural|contour_ext" v="minor_contour_line|major_contour_line|elevation_minor|elevation_medium|elevation_major">
         <m zoom-min="8" zoom-max="9">
-            <m k="natural" v="major_contour_line">
+            <m k="natural|contour_ext" v="major_contour_line|elevation_major">
                 <line stroke="#F9F5EC" width="0.85"/>
                 <line stroke="#8C5332" width="0.58"/>
             </m>
         </m>
         <m zoom-min="10" zoom-max="12">
-            <m k="natural" v="minor_contour_line">
+            <m k="natural|contour_ext" v="minor_contour_line|elevation_minor|elevation_medium">
                 <line stroke="#F9F5EC" width="0.58"/>
                 <line stroke="#AB724E" width="0.38"/>
             </m>
-            <m k="natural" v="major_contour_line">
+            <m k="natural|contour_ext" v="major_contour_line|elevation_major">
                 <line stroke="#F9F5EC" width="0.85"/>
                 <line stroke="#7A4222" width="0.58"/>
             </m>
         </m>
         <m zoom-min="13" zoom-max="14">
-            <m k="natural" v="minor_contour_line">
+            <m k="natural|contour_ext" v="minor_contour_line|elevation_minor|elevation_medium">
                 <line stroke="#F9F5EC" width="0.55"/>
                 <line stroke="#AB724E" width="0.35"/>
             </m>
-            <m k="natural" v="major_contour_line">
+            <m k="natural|contour_ext" v="major_contour_line|elevation_major">
                 <line stroke="#F9F5EC" width="0.8"/>
                 <line stroke="#663519" width="0.55"/>
                 <text k="name" caption="true" size="11" priority="5" fill="#542B12" stroke="#F8F3E8" stroke-width="2.0" style="bold"/>
+                <text k="ele" caption="true" size="11" priority="5" fill="#542B12" stroke="#F8F3E8" stroke-width="2.0" style="bold"/>
             </m>
         </m>
         <m zoom-min="15" zoom-max="16">
-            <m k="natural" v="minor_contour_line">
+            <m k="natural|contour_ext" v="minor_contour_line|elevation_minor|elevation_medium">
                 <line stroke="#F9F5EC" width="0.5"/>
                 <line stroke="#AB724E" width="0.34"/>
             </m>
-            <m k="natural" v="major_contour_line">
+            <m k="natural|contour_ext" v="major_contour_line|elevation_major">
                 <line stroke="#F9F5EC" width="0.7"/>
                 <line stroke="#8C5332" width="0.5"/>
                 <text k="name" caption="true" size="12" priority="5" fill="#542B12" stroke="#F8F3E8" stroke-width="2.0" style="bold"/>
+                <text k="ele" caption="true" size="12" priority="5" fill="#542B12" stroke="#F8F3E8" stroke-width="2.0" style="bold"/>
             </m>
         </m>
         <m zoom-min="17">
-            <m k="natural" v="minor_contour_line">
+            <m k="natural|contour_ext" v="minor_contour_line|elevation_minor|elevation_medium">
                 <line stroke="#F9F5EC" width="0.55"/>
                 <line stroke="#AB724E" width="0.38"/>
             </m>
-            <m k="natural" v="major_contour_line">
+            <m k="natural|contour_ext" v="major_contour_line|elevation_major">
                 <line stroke="#F9F5EC" width="0.75"/>
                 <line stroke="#8C5332" width="0.55"/>
                 <text k="name" caption="true" size="13" priority="5" fill="#542B12" stroke="#F8F3E8" stroke-width="2.0" style="bold"/>
+                <text k="ele" caption="true" size="13" priority="5" fill="#542B12" stroke="#F8F3E8" stroke-width="2.0" style="bold"/>
             </m>
         </m>
     </m>

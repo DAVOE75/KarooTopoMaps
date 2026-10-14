@@ -1,17 +1,17 @@
-{
-  "label": "KarooTopoMaps",
-  "packageName": "com.davoe.karootopomaps",
-  "latestApkUrl": "https://github.com/DAVOE75/KarooTopoMaps/releases/latest/download/KarooTopoMaps.apk",
-  "latestVersion": "1.2.2",
-  "latestVersionCode": 7,
-  "iconUrl": "https://raw.githubusercontent.com/DAVOE75/KarooTopoMaps/main/art/logo2.png",
-  "developer": "hesiOX",
-  "description": "Custom high-contrast topographic map styles for Hammerhead Karoo devices. Switch between 9 handcrafted map styles directly on your Karoo.",
-  "releaseNotes": "v1.2.2: Authentic official IGN MTN25 color palette clone (#f5efd7 base terrain, #f48d84 buildings, #B3E3F9 water), flat single-stroke contour lines, and updated Karoo theme preview.",
-  "screenshotUrls": [
-    "https://raw.githubusercontent.com/DAVOE75/KarooTopoMaps/main/art/theme_ign.png",
-    "https://raw.githubusercontent.com/DAVOE75/KarooTopoMaps/main/art/theme_gravel.png",
-    "https://raw.githubusercontent.com/DAVOE75/KarooTopoMaps/main/art/theme_dem.png",
-    "https://raw.githubusercontent.com/DAVOE75/KarooTopoMaps/main/art/theme_trail.png"
-  ]
+﻿{
+    "label":  "KarooTopoMaps",
+    "packageName":  "com.davoe.karootopomaps",
+    "latestApkUrl":  "https://github.com/DAVOE75/KarooTopoMaps/releases/latest/download/KarooTopoMaps.apk",
+    "latestVersion":  "1.2.3",
+    "latestVersionCode":  8,
+    "iconUrl":  "https://raw.githubusercontent.com/DAVOE75/KarooTopoMaps/main/art/logo2.png",
+    "developer":  "hesiOX",
+    "description":  "Custom high-contrast topographic map styles for Hammerhead Karoo devices. Switch between 9 handcrafted map styles directly on your Karoo.",
+    "releaseNotes":  "v1.2.3: Added dual compatibility for contour lines and elevation labels (supporting both native Hammerhead maps and OpenAndroMaps OAM tags).",
+    "screenshotUrls":  [
+                           "https://raw.githubusercontent.com/DAVOE75/KarooTopoMaps/main/art/theme_ign.png",
+                           "https://raw.githubusercontent.com/DAVOE75/KarooTopoMaps/main/art/theme_gravel.png",
+                           "https://raw.githubusercontent.com/DAVOE75/KarooTopoMaps/main/art/theme_dem.png",
+                           "https://raw.githubusercontent.com/DAVOE75/KarooTopoMaps/main/art/theme_trail.png"
+                       ]
 }

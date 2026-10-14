@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <rendertheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" map-background="#dcd5d0"
     version="1" xmlns="http://mapsforge.org/renderTheme"
     xsi:schemaLocation="http://mapsforge.org/renderTheme https://raw.githubusercontent.com/mapsforge/vtm/master/resources/rendertheme.xsd">
@@ -230,12 +230,13 @@
     </m>
 
     <!-- elevation contours -->
-    <m e="way" k="natural" v="minor_contour_line" zoom-min="14">
+    <m e="way" k="natural|contour_ext" v="minor_contour_line|elevation_minor|elevation_medium" zoom-min="14">
         <line stroke="#979797" width="0.25"/>
     </m>
-    <m e="way" k="natural" v="major_contour_line" zoom-min="10">
+    <m e="way" k="natural|contour_ext" v="major_contour_line|elevation_major" zoom-min="10">
         <line stroke="#979797" width="0.75"/>
         <text k="name" caption="true" size="12" priority="5" fill="#444444" stroke="#ffffff" stroke-width="2.0" style="bold"/>
+        <text k="ele" caption="true" size="12" priority="5" fill="#444444" stroke="#ffffff" stroke-width="2.0" style="bold"/>
     </m>
 
     <!-- special roads -->
