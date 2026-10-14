@@ -264,10 +264,11 @@ object CustomThemeManager {
      */
     private fun isValidXml(xml: String): Boolean {
         return try {
+            val cleanXml = xml.removePrefix("\uFEFF").trim()
             val factory = XmlPullParserFactory.newInstance()
             factory.isNamespaceAware = true
             val parser = factory.newPullParser()
-            parser.setInput(StringReader(xml))
+            parser.setInput(StringReader(cleanXml))
             while (parser.next() != org.xmlpull.v1.XmlPullParser.END_DOCUMENT) {
                 // Parse through whole document
             }
@@ -287,8 +288,9 @@ object CustomThemeManager {
         val target = ThemeManager.getTargetThemeFile()
 
         return try {
-            // Load base template (IGN topo as baseline template)
-            val template = context.assets.open("themes/ign_topo.xml").bufferedReader(Charsets.UTF_8).use { it.readText() }
+            // Load base template (IGN topo as baseline template) and strip any UTF-8 BOM
+            val rawTemplate = context.assets.open("themes/ign_topo.xml").bufferedReader(Charsets.UTF_8).use { it.readText() }
+            val template = rawTemplate.removePrefix("\uFEFF").trimStart()
 
             var customXml = template
 

@@ -62,6 +62,7 @@
     <string name="btn_save_apply">Guardar y Aplicar al Karoo</string>
     <string name="btn_reset_defaults">Restablecer Valores</string>
     <string name="custom_theme_saved">¡Mapa personalizado guardado y aplicado al Karoo!</string>
+    <string name="error_custom_theme_failed">Error al generar el XML del mapa personalizado. Prueba a restablecer valores.</string>
     <string name="reset_confirm_title">¿Restablecer valores?</string>
     <string name="reset_confirm_msg">¿Deseas restablecer todos los colores, tipografía y visibilidad de capas a los valores por defecto del IGN?</string>
     <string name="btn_reset">Restablecer</string>
@@ -169,10 +170,10 @@
     <string name="pro_tools_title">Herramientas Ciclistas PRO</string>
     <string name="pro_tools_desc">Filtros cartográficos avanzados y presets inteligentes</string>
     <string name="preset_discipline_title">Perfiles de Mapa por Disciplina</string>
-    <string name="preset_road">Carretera Pro</string>
-    <string name="preset_mtb">MTB Enduro</string>
-    <string name="preset_gravel">Gravel Pro</string>
-    <string name="preset_dark">AMOLED Noche</string>
+    <string name="preset_road">Carretera</string>
+    <string name="preset_mtb">MTB</string>
+    <string name="preset_gravel">Gravel</string>
+    <string name="preset_dark">Noche</string>
     <string name="pro_sunlight_title">Potenciador Sol Extremo</string>
     <string name="pro_sunlight_desc">Alto contraste y trazos reforzados contra reflejos solares</string>
     <string name="pro_water_title">Radar de Fuentes de Agua</string>

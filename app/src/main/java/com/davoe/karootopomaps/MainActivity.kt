@@ -71,12 +71,18 @@ class MainActivity : AppCompatActivity() {
 
         btnApplyCustomTheme.setOnClickListener {
             if (LicenseManager.isProActivated(this)) {
+                val target = ThemeManager.getTargetThemeFile()
+                if (!target.parentFile?.canWrite().let { it == true || target.canWrite() || android.os.Environment.getExternalStorageDirectory().canWrite() }) {
+                    Toast.makeText(this, getString(R.string.error_storage_permission), Toast.LENGTH_LONG).show()
+                    return@setOnClickListener
+                }
+
                 val success = CustomThemeManager.generateAndApplyCustomTheme(this)
                 if (success) {
                     Toast.makeText(this, getString(R.string.custom_theme_saved), Toast.LENGTH_SHORT).show()
                     renderThemes()
                 } else {
-                    Toast.makeText(this, getString(R.string.error_storage_permission), Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, getString(R.string.error_custom_theme_failed), Toast.LENGTH_LONG).show()
                 }
             } else {
                 showProActivationDialog()

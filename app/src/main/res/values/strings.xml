@@ -62,6 +62,7 @@
     <string name="btn_save_apply">Save &amp; Apply to Karoo</string>
     <string name="btn_reset_defaults">Reset to Defaults</string>
     <string name="custom_theme_saved">Custom theme saved &amp; applied to Karoo!</string>
+    <string name="error_custom_theme_failed">Error generating custom theme XML. Please try resetting defaults.</string>
     <string name="reset_confirm_title">Reset to Defaults?</string>
     <string name="reset_confirm_msg">Reset all colors, typography settings and layer visibility back to IGN defaults?</string>
     <string name="btn_reset">Reset</string>
@@ -169,10 +170,10 @@
     <string name="pro_tools_title">PRO Cyclist Tools</string>
     <string name="pro_tools_desc">Advanced cartographic filters and smart presets</string>
     <string name="preset_discipline_title">Discipline Map Presets</string>
-    <string name="preset_road">Road Pro</string>
-    <string name="preset_mtb">MTB Enduro</string>
-    <string name="preset_gravel">Gravel Pro</string>
-    <string name="preset_dark">AMOLED Dark</string>
+    <string name="preset_road">Road</string>
+    <string name="preset_mtb">MTB</string>
+    <string name="preset_gravel">Gravel</string>
+    <string name="preset_dark">Night</string>
     <string name="pro_sunlight_title">High-Glare Sunlight Booster</string>
     <string name="pro_sunlight_desc">High contrast outlines and bold strokes for intense midday sun</string>
     <string name="pro_water_title">Survival Water Fountain Radar</string>
