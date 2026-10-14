@@ -11,6 +11,13 @@
     <string name="theme_restore_success">Tema original de Karoo restaurado con éxito.</string>
     <string name="error_storage_permission">Se requiere permiso de acceso a archivos.</string>
 
+    <!-- Opciones de Curvas y Altitud -->
+    <string name="contour_settings_title">Curvas de Nivel y Altitudes</string>
+    <string name="contour_settings_note">Aviso: Asegúrate de tener activado «Curvas de nivel» en los Ajustes de Mapa de tu Karoo.</string>
+    <string name="contour_mode_none">Ninguna</string>
+    <string name="contour_mode_major">Solo Maestras</string>
+    <string name="contour_mode_all">Todas</string>
+
     <!-- Temas -->
     <string name="theme_ign_name">IGN</string>
     <string name="theme_ign_desc">Paleta oficial IGN 1:25.000: Curvas de nivel, relieve claro, colores hipsométricos y parcelario de gran nitidez.</string>

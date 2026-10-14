@@ -18,12 +18,14 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.google.android.material.button.MaterialButton
+import com.google.android.material.button.MaterialButtonToggleGroup
 import com.google.android.material.card.MaterialCardView
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var themesContainer: LinearLayout
     private lateinit var btnRestore: MaterialButton
+    private lateinit var toggleContourMode: MaterialButtonToggleGroup
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +33,9 @@ class MainActivity : AppCompatActivity() {
 
         themesContainer = findViewById(R.id.themesContainer)
         btnRestore = findViewById(R.id.btnRestore)
+        toggleContourMode = findViewById(R.id.toggleContourMode)
+
+        setupContourToggle()
 
         btnRestore.setOnClickListener {
             handleRestore()
@@ -38,6 +43,34 @@ class MainActivity : AppCompatActivity() {
 
         checkAndRequestPermissions()
         renderThemes()
+    }
+
+    private fun setupContourToggle() {
+        val currentMode = ThemeManager.getContourMode(this)
+        when (currentMode) {
+            ThemeManager.CONTOUR_MODE_NONE -> toggleContourMode.check(R.id.btnContourNone)
+            ThemeManager.CONTOUR_MODE_ALL -> toggleContourMode.check(R.id.btnContourAll)
+            else -> toggleContourMode.check(R.id.btnContourMajor)
+        }
+
+        toggleContourMode.addOnButtonCheckedListener { _, checkedId, isChecked ->
+            if (isChecked) {
+                val newMode = when (checkedId) {
+                    R.id.btnContourNone -> ThemeManager.CONTOUR_MODE_NONE
+                    R.id.btnContourAll -> ThemeManager.CONTOUR_MODE_ALL
+                    else -> ThemeManager.CONTOUR_MODE_MAJOR
+                }
+                if (newMode != ThemeManager.getContourMode(this)) {
+                    ThemeManager.setContourMode(this, newMode)
+                    // If a custom theme is currently active, re-apply it with the new contour settings
+                    val activeId = ThemeManager.getCurrentThemeId(this)
+                    if (activeId != null) {
+                        ThemeManager.reapplyCurrentTheme(this)
+                        Toast.makeText(this, getString(R.string.theme_applied_success), Toast.LENGTH_SHORT).show()
+                    }
+                }
+            }
+        }
     }
 
     override fun onResume() {

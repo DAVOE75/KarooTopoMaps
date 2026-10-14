@@ -105,20 +105,37 @@ object ThemeManager {
         return true
     }
 
+    const val CONTOUR_MODE_NONE = "none"
+    const val CONTOUR_MODE_MAJOR = "major"
+    const val CONTOUR_MODE_ALL = "all"
+    const val DEFAULT_CONTOUR_MODE = CONTOUR_MODE_MAJOR
+
+    fun getContourMode(context: Context): String {
+        val prefs = context.getSharedPreferences("karoo_topo_maps", Context.MODE_PRIVATE)
+        return prefs.getString("contour_altitude_mode", DEFAULT_CONTOUR_MODE) ?: DEFAULT_CONTOUR_MODE
+    }
+
+    fun setContourMode(context: Context, mode: String) {
+        val prefs = context.getSharedPreferences("karoo_topo_maps", Context.MODE_PRIVATE)
+        prefs.edit().putString("contour_altitude_mode", mode).apply()
+    }
+
     fun applyTheme(context: Context, theme: MapTheme): Boolean {
         ensureBackupExists()
         val target = getTargetThemeFile()
+        val contourMode = getContourMode(context)
 
         return try {
-            context.assets.open(theme.assetFileName).use { input ->
-                FileOutputStream(target).use { output ->
-                    input.copyTo(output)
-                    output.flush()
-                    output.fd.sync()
-                }
+            val rawXml = context.assets.open(theme.assetFileName).bufferedReader(Charsets.UTF_8).use { it.readText() }
+            val modifiedXml = processContourAltitudes(rawXml, contourMode)
+
+            FileOutputStream(target).use { output ->
+                output.write(modifiedXml.toByteArray(Charsets.UTF_8))
+                output.flush()
+                output.fd.sync()
             }
             saveCurrentThemeId(context, theme.id)
-            Log.d(TAG, "Theme applied: ${theme.id} to ${target.absolutePath}")
+            Log.d(TAG, "Theme applied: ${theme.id} (contours: $contourMode) to ${target.absolutePath}")
 
             triggerKarooRefresh(context)
             true
@@ -126,6 +143,60 @@ object ThemeManager {
             Log.e(TAG, "Error applying theme ${theme.id}", e)
             false
         }
+    }
+
+    fun reapplyCurrentTheme(context: Context): Boolean {
+        val currentId = getCurrentThemeId(context) ?: "ign_topo"
+        val theme = AVAILABLE_THEMES.find { it.id == currentId } ?: AVAILABLE_THEMES.first()
+        return applyTheme(context, theme)
+    }
+
+    /**
+     * Modifies the XML theme content based on user's contour altitude preference:
+     * - NONE: Removes text labels (<text k="name".../> and <text k="ele".../>) from contour line rules.
+     * - MAJOR: Keeps text labels only on major contour lines (default).
+     * - ALL: Injects altitude text labels on both major and minor contour lines.
+     */
+    private fun processContourAltitudes(xmlContent: String, mode: String): String {
+        if (mode == CONTOUR_MODE_NONE) {
+            // Remove text elements from contour rule blocks
+            // Matches <text ...> inside contour rules where k="name" or k="ele"
+            return xmlContent.replace(
+                Regex("""<text\s+k="(?:name|ele)"\s+caption="true"[^>]*/>\r?\n?"""),
+                ""
+            )
+        }
+
+        if (mode == CONTOUR_MODE_ALL) {
+            // In major contours, text tags are already present.
+            // For minor contours (v="minor_contour_line|elevation_minor|elevation_medium"),
+            // find closing </m> of those inner match blocks and insert smaller altitude text before </m>.
+            // Pattern for nested minor contour rules:
+            return xmlContent.replace(
+                Regex("""(<m\s+k="natural\|contour_ext"\s+v="minor_contour_line\|elevation_minor\|elevation_medium">[\s\S]*?<line[^>]*/>)(\s*</m>)""")
+            ) { matchResult ->
+                val prefix = matchResult.groupValues[1]
+                val suffix = matchResult.groupValues[2]
+                val indent = "                "
+                val textTags = "\n$indent<text k=\"name\" caption=\"true\" size=\"10\" priority=\"3\" fill=\"#6D5339\" stroke=\"#FFFFFF\" stroke-width=\"1.8\" style=\"normal\"/>" +
+                        "\n$indent<text k=\"ele\" caption=\"true\" size=\"10\" priority=\"3\" fill=\"#6D5339\" stroke=\"#FFFFFF\" stroke-width=\"1.8\" style=\"normal\"/>"
+                "$prefix$textTags$suffix"
+            }.replace(
+                // Also match simple minor contour definitions like IGN and original Karoo:
+                // <m e="way" k="natural|contour_ext" v="minor_contour_line|elevation_minor|elevation_medium" zoom-min="14">\n    <line .../>\n</m>
+                Regex("""(<m\s+e="way"\s+k="natural\|contour_ext"\s+v="minor_contour_line\|elevation_minor\|elevation_medium"[^>]*>[\s\S]*?<line[^>]*/>)(\s*</m>)""")
+            ) { matchResult ->
+                val prefix = matchResult.groupValues[1]
+                val suffix = matchResult.groupValues[2]
+                val indent = "        "
+                val textTags = "\n$indent<text k=\"name\" caption=\"true\" size=\"10\" priority=\"3\" fill=\"#5C442A\" stroke=\"#FFFFFF\" stroke-width=\"1.8\" style=\"normal\"/>" +
+                        "\n$indent<text k=\"ele\" caption=\"true\" size=\"10\" priority=\"3\" fill=\"#5C442A\" stroke=\"#FFFFFF\" stroke-width=\"1.8\" style=\"normal\"/>"
+                "$prefix$textTags$suffix"
+            }
+        }
+
+        // Default: CONTOUR_MODE_MAJOR (raw XML already configured for major contour altitudes)
+        return xmlContent
     }
 
     fun restoreOriginalTheme(context: Context): Boolean {
@@ -190,3 +261,4 @@ object ThemeManager {
         }
     }
 }
+

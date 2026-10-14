@@ -11,6 +11,13 @@
     <string name="theme_restore_success">Thème Karoo d\'origine restauré.</string>
     <string name="error_storage_permission">Autorisation d\'accès aux fichiers requise.</string>
 
+    <!-- Options Courbes et Altitudes -->
+    <string name="contour_settings_title">Courbes de Niveau &amp; Altitudes</string>
+    <string name="contour_settings_note">Remarque : Assurez-vous d\'activer « Courbes de niveau » dans les Paramètres de Carte de votre Karoo.</string>
+    <string name="contour_mode_none">Aucune</string>
+    <string name="contour_mode_major">Maîtresses Seules</string>
+    <string name="contour_mode_all">Toutes</string>
+
     <!-- Thèmes -->
     <string name="theme_ign_name">IGN</string>
     <string name="theme_ign_desc">Palette officielle IGN 1:25 000 : courbes de niveau, ombrage du relief, teintes hypsométriques et parcelles nettes.</string>

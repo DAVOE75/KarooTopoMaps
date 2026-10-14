@@ -11,6 +11,13 @@
     <string name="theme_restore_success">Original Karoo theme restored.</string>
     <string name="error_storage_permission">Storage write permission required.</string>
 
+    <!-- Contour Labels Option -->
+    <string name="contour_settings_title">Elevation Contours &amp; Altitudes</string>
+    <string name="contour_settings_note">Note: Ensure "Contour Lines" is enabled in your Karoo Map Settings for them to appear.</string>
+    <string name="contour_mode_none">None</string>
+    <string name="contour_mode_major">Index Only</string>
+    <string name="contour_mode_all">All Lines</string>
+
     <!-- Themes -->
     <string name="theme_ign_name">IGN</string>
     <string name="theme_ign_desc">Official IGN 1:25,000 palette: contour lines, relief shading, hypsometric colors, and sharp parcels.</string>

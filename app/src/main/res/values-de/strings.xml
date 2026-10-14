@@ -11,6 +11,13 @@
     <string name="theme_restore_success">Originales Karoo-Theme wiederhergestellt.</string>
     <string name="error_storage_permission">Dateizugriffsberechtigung erforderlich.</string>
 
+    <!-- Optionen Höhenlinien und Höhenangaben -->
+    <string name="contour_settings_title">Höhenlinien &amp; Höhenwerte</string>
+    <string name="contour_settings_note">Hinweis: Stelle sicher, dass «Höhenlinien» in den Karteneinstellungen deines Karoo aktiviert ist.</string>
+    <string name="contour_mode_none">Keine</string>
+    <string name="contour_mode_major">Nur Hauptlinien</string>
+    <string name="contour_mode_all">Alle Linien</string>
+
     <!-- Themes -->
     <string name="theme_ign_name">IGN</string>
     <string name="theme_ign_desc">Offizielle IGN 1:25.000 Palette: Höhenlinien, klares Relief, hypsometrische Farben und scharfe Flurstücke.</string>

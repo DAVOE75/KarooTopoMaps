@@ -11,6 +11,13 @@
     <string name="theme_restore_success">Tema originale Karoo ripristinato con successo.</string>
     <string name="error_storage_permission">È richiesta l\'autorizzazione di accesso ai file.</string>
 
+    <!-- Opzioni Curve e Altitudine -->
+    <string name="contour_settings_title">Curve di Livello e Altitudini</string>
+    <string name="contour_settings_note">Nota: Assicurati di attivare «Curve di livello» nelle Impostazioni Mappa del tuo Karoo.</string>
+    <string name="contour_mode_none">Nessuna</string>
+    <string name="contour_mode_major">Solo Principali</string>
+    <string name="contour_mode_all">Tutte</string>
+
     <!-- Temi -->
     <string name="theme_ign_name">IGN</string>
     <string name="theme_ign_desc">Tavolozza ufficiale IGN 1:25.000: curve di livello, rilievo, tinte ipsometriche e lotti dettagliati.</string>
