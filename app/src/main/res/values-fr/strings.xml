@@ -62,6 +62,17 @@
     <string name="btn_save_apply">Enregistrer &amp; Appliquer au Karoo</string>
     <string name="btn_reset_defaults">Rétablir les Valeurs par Défaut</string>
     <string name="custom_theme_saved">Carte personnalisée enregistrée et appliquée au Karoo !</string>
+    <string name="reset_confirm_title">Rétablir les valeurs par défaut ?</string>
+    <string name="reset_confirm_msg">Voulez-vous rétablir toutes les couleurs, la typographie et la visibilité des couches aux valeurs IGN par défaut ?</string>
+    <string name="btn_reset">Rétablir</string>
+    <string name="btn_cancel">Annuler</string>
+    <string name="btn_select">Sélectionner</string>
+    <string name="color_picker_title">Choisir la Couleur</string>
+    <string name="color_spectrum_title">Spectre Continu Arc-en-ciel</string>
+    <string name="color_palette_title">Palette Rapide (Optimisée Soleil)</string>
+    <string name="color_selected_label">Couleur Sélectionnée &amp; Code Hex :</string>
+    <string name="invalid_hex_error">Format hexadécimal non valide (utilisez #RRGGBB)</string>
+    <string name="line_style_title">Options de Style de Ligne</string>
 
     <!-- Contrôles Typographiques -->
     <string name="typography_card_title">Typographie de Carte &amp; Lisibilité</string>

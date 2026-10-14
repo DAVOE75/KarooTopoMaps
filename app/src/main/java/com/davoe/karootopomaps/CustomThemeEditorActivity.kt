@@ -68,14 +68,14 @@ class CustomThemeEditorActivity : AppCompatActivity() {
 
         btnResetDefaults.setOnClickListener {
             AlertDialog.Builder(this)
-                .setTitle(R.string.btn_reset_defaults)
-                .setMessage("Reset all colors, font settings and layer visibility back to IGN defaults?")
-                .setPositiveButton("Reset") { _, _ ->
+                .setTitle(R.string.reset_confirm_title)
+                .setMessage(R.string.reset_confirm_msg)
+                .setPositiveButton(R.string.btn_reset) { _, _ ->
                     CustomThemeManager.resetToDefaults(this)
                     setupTypographyControls()
                     renderElements()
                 }
-                .setNegativeButton("Cancel", null)
+                .setNegativeButton(R.string.btn_cancel, null)
                 .show()
         }
 
@@ -216,14 +216,38 @@ class CustomThemeEditorActivity : AppCompatActivity() {
         val gridPalette = dialogView.findViewById<GridLayout>(R.id.gridPalette)
         val viewPreview = dialogView.findViewById<View>(R.id.viewSelectedColorPreview)
         val etHex = dialogView.findViewById<EditText>(R.id.etHexCode)
+        val spectrumBar = dialogView.findViewById<ColorSpectrumBar>(R.id.spectrumBar)
 
         tvTitle.setText(element.nameRes)
 
         var selectedColor = CustomThemeManager.getColor(this, element.key)
         etHex.setText(selectedColor)
         try {
-            viewPreview.setBackgroundColor(Color.parseColor(selectedColor))
+            val parsedInitial = Color.parseColor(selectedColor)
+            viewPreview.setBackgroundColor(parsedInitial)
+            spectrumBar.setColor(parsedInitial)
         } catch (ignored: Exception) {}
+
+        val swatchCards = mutableListOf<Pair<MaterialCardView, String>>()
+
+        fun updateSelectedSwatchHighlight(currentHex: String) {
+            for ((card, hex) in swatchCards) {
+                if (hex.equals(currentHex, ignoreCase = true)) {
+                    card.strokeColor = Color.parseColor("#FFD700")
+                    card.strokeWidth = 6
+                } else {
+                    card.strokeColor = Color.parseColor("#444444")
+                    card.strokeWidth = 2
+                }
+            }
+        }
+
+        spectrumBar.onColorChangedListener = { color, hex ->
+            selectedColor = hex
+            etHex.setText(hex)
+            viewPreview.setBackgroundColor(color)
+            updateSelectedSwatchHighlight(hex)
+        }
 
         etHex.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
@@ -233,37 +257,48 @@ class CustomThemeEditorActivity : AppCompatActivity() {
                     try {
                         val parsed = Color.parseColor(hex)
                         viewPreview.setBackgroundColor(parsed)
+                        spectrumBar.setColor(parsed)
                         selectedColor = hex
+                        updateSelectedSwatchHighlight(hex)
                     } catch (ignored: Exception) {}
                 }
             }
             override fun afterTextChanged(s: Editable?) {}
         })
 
-        // Populate Palette grid
+        // Populate Palette grid with 5 columns for perfect fit on Karoo screen
+        val displayMetrics = resources.displayMetrics
+        val screenWidth = displayMetrics.widthPixels
+        val swatchSize = (screenWidth * 0.12).toInt().coerceIn(60, 90)
+
         for (colorHex in PRESET_COLORS) {
+            val isCurrent = colorHex.equals(selectedColor, ignoreCase = true)
             val swatch = MaterialCardView(this).apply {
                 layoutParams = GridLayout.LayoutParams().apply {
-                    width = 80
-                    height = 80
-                    setMargins(8, 8, 8, 8)
+                    width = swatchSize
+                    height = swatchSize
+                    setMargins(6, 6, 6, 6)
                 }
-                radius = 40f
-                strokeColor = Color.parseColor("#444444")
-                strokeWidth = 2
+                radius = swatchSize / 2f
+                strokeColor = if (isCurrent) Color.parseColor("#FFD700") else Color.parseColor("#444444")
+                strokeWidth = if (isCurrent) 6 else 2
                 setCardBackgroundColor(Color.parseColor(colorHex))
                 setOnClickListener {
                     selectedColor = colorHex
                     etHex.setText(colorHex)
-                    viewPreview.setBackgroundColor(Color.parseColor(colorHex))
+                    val parsed = Color.parseColor(colorHex)
+                    viewPreview.setBackgroundColor(parsed)
+                    spectrumBar.setColor(parsed)
+                    updateSelectedSwatchHighlight(colorHex)
                 }
             }
+            swatchCards.add(Pair(swatch, colorHex))
             gridPalette.addView(swatch)
         }
 
         AlertDialog.Builder(this)
             .setView(dialogView)
-            .setPositiveButton("Select") { _, _ ->
+            .setPositiveButton(R.string.btn_select) { _, _ ->
                 val finalHex = etHex.text.toString().trim()
                 if (finalHex.matches(Regex("""^#([A-Fa-f0-9]{6})$"""))) {
                     CustomThemeManager.setColor(this, element.key, finalHex)
@@ -271,10 +306,10 @@ class CustomThemeEditorActivity : AppCompatActivity() {
                         colorSampleView.setBackgroundColor(Color.parseColor(finalHex))
                     } catch (ignored: Exception) {}
                 } else {
-                    Toast.makeText(this, "Invalid hex color format (use #RRGGBB)", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, getString(R.string.invalid_hex_error), Toast.LENGTH_SHORT).show()
                 }
             }
-            .setNegativeButton("Cancel", null)
+            .setNegativeButton(R.string.btn_cancel, null)
             .show()
     }
 
@@ -325,11 +360,11 @@ class CustomThemeEditorActivity : AppCompatActivity() {
 
         AlertDialog.Builder(this)
             .setView(dialogView)
-            .setPositiveButton("OK") { _, _ ->
+            .setPositiveButton(R.string.btn_select) { _, _ ->
                 CustomThemeManager.setLineWidth(this, element.key, selectedWidth)
                 CustomThemeManager.setLinePattern(this, element.key, selectedPattern)
             }
-            .setNegativeButton("Cancel", null)
+            .setNegativeButton(R.string.btn_cancel, null)
             .show()
     }
 }

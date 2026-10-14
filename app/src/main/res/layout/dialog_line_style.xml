@@ -11,7 +11,7 @@
         android:id="@+id/tvLineDialogTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Line Style Options"
+        android:text="@string/line_style_title"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         android:textStyle="bold"

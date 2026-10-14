@@ -62,6 +62,17 @@
     <string name="btn_save_apply">Speichern &amp; auf Karoo anwenden</string>
     <string name="btn_reset_defaults">Auf Standard zurücksetzen</string>
     <string name="custom_theme_saved">Benutzerdefinierte Karte gespeichert und angewendet!</string>
+    <string name="reset_confirm_title">Auf Standard zurücksetzen?</string>
+    <string name="reset_confirm_msg">Möchtest du alle Farben, Typografie und Ebenensichtbarkeit auf die IGN-Standardwerte zurücksetzen?</string>
+    <string name="btn_reset">Zurücksetzen</string>
+    <string name="btn_cancel">Abbrechen</string>
+    <string name="btn_select">Auswählen</string>
+    <string name="color_picker_title">Farbe wählen</string>
+    <string name="color_spectrum_title">Kontinuierliches Regenbogenspektrum</string>
+    <string name="color_palette_title">Schnellpalette (Sonnenlicht-optimiert)</string>
+    <string name="color_selected_label">Ausgewählte Farbe &amp; Hex-Code:</string>
+    <string name="invalid_hex_error">Ungültiges Hex-Farbformat (verwende #RRGGBB)</string>
+    <string name="line_style_title">Linienstil-Optionen</string>
 
     <!-- Typografie-Einstellungen -->
     <string name="typography_card_title">Kartentypografie &amp; Lesbarkeit</string>

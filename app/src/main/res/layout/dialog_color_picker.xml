@@ -11,17 +11,32 @@
         android:id="@+id/tvColorPickerTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Choose Color"
+        android:text="@string/color_picker_title"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         android:textStyle="bold"
         android:layout_marginBottom="12dp" />
 
+    <!-- Continuous Rainbow Hue Spectrum Bar -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/color_spectrum_title"
+        android:textColor="#AAAAAA"
+        android:textSize="11sp"
+        android:layout_marginBottom="6dp" />
+
+    <com.davoe.karootopomaps.ColorSpectrumBar
+        android:id="@+id/spectrumBar"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_marginBottom="14dp" />
+
     <!-- Palette of High-Visibility Outdoor Cycling Colors -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Quick Palette (Sunlight Optimized)"
+        android:text="@string/color_palette_title"
         android:textColor="#AAAAAA"
         android:textSize="11sp"
         android:layout_marginBottom="8dp" />
@@ -30,14 +45,14 @@
         android:id="@+id/gridPalette"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:columnCount="6"
+        android:columnCount="5"
         android:alignmentMode="alignMargins"
-        android:layout_marginBottom="16dp" />
+        android:layout_marginBottom="14dp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hex RGB Code:"
+        android:text="@string/color_selected_label"
         android:textColor="#AAAAAA"
         android:textSize="11sp"
         android:layout_marginBottom="4dp" />
@@ -49,12 +64,13 @@
         android:gravity="center_vertical">
 
         <com.google.android.material.card.MaterialCardView
-            android:layout_width="36dp"
-            android:layout_height="36dp"
-            app:cardCornerRadius="18dp"
+            android:id="@+id/cardPreviewWrapper"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:cardCornerRadius="20dp"
             app:strokeColor="#FFFFFF"
-            app:strokeWidth="1dp"
-            android:layout_marginEnd="8dp">
+            app:strokeWidth="2dp"
+            android:layout_marginEnd="10dp">
 
             <View
                 android:id="@+id/viewSelectedColorPreview"
@@ -78,7 +94,8 @@
             android:inputType="textCapCharacters"
             android:maxLength="7"
             android:typeface="monospace"
-            android:textSize="14sp" />
+            android:textSize="15sp"
+            android:textStyle="bold" />
 
     </LinearLayout>
 

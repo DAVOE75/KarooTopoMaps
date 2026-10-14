@@ -62,6 +62,17 @@
     <string name="btn_save_apply">Salva e Applica al Karoo</string>
     <string name="btn_reset_defaults">Ripristina Valori Predefiniti</string>
     <string name="custom_theme_saved">Mappa personalizzata salvata e applicata al Karoo!</string>
+    <string name="reset_confirm_title">Ripristinare i valori predefiniti?</string>
+    <string name="reset_confirm_msg">Vuoi ripristinare tutti i colori, le impostazioni dei caratteri e la visibilità dei livelli ai valori predefiniti IGN?</string>
+    <string name="btn_reset">Ripristina</string>
+    <string name="btn_cancel">Annulla</string>
+    <string name="btn_select">Seleziona</string>
+    <string name="color_picker_title">Scegli Colore</string>
+    <string name="color_spectrum_title">Spettro Continuo Arcobaleno</string>
+    <string name="color_palette_title">Tavolozza Rapida (Ottimizzata Sole)</string>
+    <string name="color_selected_label">Colore Selezionato &amp; Codice Hex:</string>
+    <string name="invalid_hex_error">Formato colore esadecimale non valido (usa #RRGGBB)</string>
+    <string name="line_style_title">Opzioni Stile Linea</string>
 
     <!-- Controlli Tipografici -->
     <string name="typography_card_title">Tipografia della Mappa &amp; Leggibilità</string>

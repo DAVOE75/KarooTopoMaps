@@ -62,6 +62,17 @@
     <string name="btn_save_apply">Save &amp; Apply to Karoo</string>
     <string name="btn_reset_defaults">Reset to Defaults</string>
     <string name="custom_theme_saved">Custom theme saved &amp; applied to Karoo!</string>
+    <string name="reset_confirm_title">Reset to Defaults?</string>
+    <string name="reset_confirm_msg">Reset all colors, typography settings and layer visibility back to IGN defaults?</string>
+    <string name="btn_reset">Reset</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_select">Select</string>
+    <string name="color_picker_title">Choose Color</string>
+    <string name="color_spectrum_title">Continuous Rainbow Spectrum</string>
+    <string name="color_palette_title">Quick Palette (Sunlight Optimized)</string>
+    <string name="color_selected_label">Selected Color &amp; Hex Code:</string>
+    <string name="invalid_hex_error">Invalid hex color format (use #RRGGBB)</string>
+    <string name="line_style_title">Line Style Options</string>
 
     <!-- Typography Controls -->
     <string name="typography_card_title">Map Typography &amp; Text Legibility</string>
