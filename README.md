@@ -34,7 +34,7 @@ Cada estilo ha sido calibrado milimétricamente teniendo en cuenta la óptica de
 
 > [!IMPORTANT]
 > **Aviso sobre las Funciones PRO**:
-> Las funciones avanzadas del **Estudio de Mapas Personalizados PRO** se encuentran actualmente en **fase de pruebas y testeo cerrado (BETA)**. Durante este periodo, esta sección está inactiva para el público general. En breve se anunciará la apertura oficial para que todos los usuarios que lo deseen puedan adquirir su licencia de por vida y desbloquear el estudio completo. ¡Los 9 temas clásicos continúan siendo 100% gratuitos y totalmente funcionales!
+> Las funciones avanzadas del **Estudio de Mapas Personalizados PRO** se encuentran actualmente en **fase de pruebas y testeo cerrado (BETA)**. Durante este periodo, esta sección está inactiva para el público general. En breve se anunciará la apertura oficial para que todos los usuarios que lo deseen puedan adquirir su licencia y desbloquear el estudio completo. ¡Los 9 temas clásicos continúan siendo 100% gratuitos y totalmente funcionales!
 
 * 🎨 **Estudio de Mapas Personalizado (PRO)**: Crea tu propio estilo cartográfico desde cero o edita cualquiera de los existentes con control total del mapa.
 * <img src="art/ic_gis_presets.svg" width="16" height="16" align="center" /> **Perfiles Inteligentes por Disciplina (1 Solo Toque)**:

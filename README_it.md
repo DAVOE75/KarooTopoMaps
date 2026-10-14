@@ -36,7 +36,7 @@ Ogni stile è stato calibrato con precisione millimetrica per i display transfle
 
 > [!IMPORTANT]
 > **Avviso riguardante le Funzioni PRO**:
-> Le funzioni avanzate dello **Studio Mappa Personalizzata PRO** sono attualmente in **fase di test chiuso (BETA)**. Durante questo periodo, questa sezione è temporaneamente inattiva per il pubblico generale. A breve verrà annunciato il rilascio ufficiale affinché tutti gli utenti interessati possano acquistare una licenza a vita. Tutti i 9 temi classici rimangono gratuiti al 100%, intatti e pienamente operativi!
+> Le funzioni avanzate dello **Studio Mappa Personalizzata PRO** sono attualmente in **fase di test chiuso (BETA)**. Durante questo periodo, questa sezione è temporaneamente inattiva per il pubblico generale. A breve verrà annunciato il rilascio ufficiale affinché tutti gli utenti interessati possano acquistare una licenza. Tutti i 9 temi classici rimangono gratuiti al 100%, intatti e pienamente operativi!
 
 * 🎨 **Studio Mappa Personalizzata (PRO)**: Crea il tuo stile cartografico da zero o modifica qualsiasi tema esistente con pieno controllo visivo.
 * <img src="art/ic_gis_presets.svg" width="16" height="16" align="center" /> **Profili per Disciplina con 1 Tocco**:

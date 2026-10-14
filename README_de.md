@@ -36,7 +36,7 @@ Jeder Stil wurde präzise für die transflektiven Displays des Karoo bei direkte
 
 > [!IMPORTANT]
 > **Hinweis zu den PRO-Funktionen**:
-> Die erweiterten Funktionen des **PRO Custom Karten-Studios** befinden sich derzeit in einer **geschlossenen Testphase (BETA)**. Während dieser Testphase ist dieser Bereich für die Allgemeinheit vorübergehend inaktiv. Der offizielle Start wird in Kürze bekannt gegeben, sodass alle interessierten Nutzer eine lebenslange Lizenz erwerben können. Alle 9 klassischen Themen bleiben zu 100% kostenlos, unverändert und voll einsatzbereit!
+> Die erweiterten Funktionen des **PRO Custom Karten-Studios** befinden sich derzeit in einer **geschlossenen Testphase (BETA)**. Während dieser Testphase ist dieser Bereich für die Allgemeinheit vorübergehend inaktiv. Der offizielle Start wird in Kürze bekannt gegeben, sodass alle interessierten Nutzer eine Lizenz erwerben können. Alle 9 klassischen Themen bleiben zu 100% kostenlos, unverändert und voll einsatzbereit!
 
 * 🎨 **Custom Karten-Studio (PRO)**: Erstelle deinen eigenen Kartenstil von Grund auf oder passe bestehende Themes mit voller visueller Kontrolle an.
 * <img src="art/ic_gis_presets.svg" width="16" height="16" align="center" /> **1-Klick-Disziplin-Profile**:

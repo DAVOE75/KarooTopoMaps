@@ -36,7 +36,7 @@ Cada estilo foi minuciosamente calibrado para as telas transfletivas do Karoo so
 
 > [!IMPORTANT]
 > **Aviso sobre as Funcionalidades PRO**:
-> As ferramentas avançadas do **Estúdio de Mapa Personalizado PRO** encontram-se atualmente em **fase de testes fechados (BETA)**. Durante este período, esta secção está temporariamente inativa para o público em geral. Muito em breve será anunciado o lançamento oficial para que todos os utilizadores interessados possam adquirir a sua licença vitalícia. Todos os 9 temas clássicos continuam 100% gratuitos, intocáveis e totalmente funcionais!
+> As ferramentas avançadas do **Estúdio de Mapa Personalizado PRO** encontram-se atualmente em **fase de testes fechados (BETA)**. Durante este período, esta secção está temporariamente inativa para o público em geral. Muito em breve será anunciado o lançamento oficial para que todos os utilizadores interessados possam adquirir a sua licença. Todos os 9 temas clássicos continuam 100% gratuitos, intocáveis e totalmente funcionais!
 
 * 🎨 **Estúdio de Mapa Personalizado (PRO)**: Crie o seu próprio estilo cartográfico de raiz ou edite qualquer tema com controlo visual absoluto.
 * <img src="art/ic_gis_presets.svg" width="16" height="16" align="center" /> **Predefinições por Disciplina com 1 Toque**:

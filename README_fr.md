@@ -36,7 +36,7 @@ Chaque thème a été calibré avec précision pour les écrans transflectifs du
 
 > [!IMPORTANT]
 > **Avis concernant les fonctionnalités PRO** :
-> Les fonctionnalités avancées du **Studio de Carte Personnalisée PRO** sont actuellement en **phase de test fermé (BETA)**. Durant cette période, cette section est temporairement inactive pour le grand public. L'ouverture officielle sera annoncée très prochainement afin que tous les utilisateurs puissent acquérir leur licence à vie. Les 9 thèmes classiques restent 100% gratuits, intouchables et pleinement fonctionnels !
+> Les fonctionnalités avancées du **Studio de Carte Personnalisée PRO** sont actuellement en **phase de test fermé (BETA)**. Durant cette période, cette section est temporairement inactive pour le grand public. L'ouverture officielle sera annoncée très prochainement afin que tous les utilisateurs puissent acquérir leur licence. Les 9 thèmes classiques restent 100% gratuits, intouchables et pleinement fonctionnels !
 
 * 🎨 **Studio de Carte Personnalisée (PRO)** : Créez votre propre style cartographique ou modifiez n'importe quel thème avec un contrôle visuel total.
 * <img src="art/ic_gis_presets.svg" width="16" height="16" align="center" /> **Préréglages par Discipline en 1 Seul Clic** :

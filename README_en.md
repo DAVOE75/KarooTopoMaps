@@ -36,7 +36,7 @@ Each style is calibrated for sunlight readability on Karoo transflective display
 
 > [!IMPORTANT]
 > **Notice Regarding PRO Features**:
-> The advanced features in the **PRO Custom Map Studio** are currently in **closed testing and validation phase (BETA)**. During this trial period, this section is temporarily inactive for the general public. We will soon announce the official public release so that anyone interested can acquire a lifetime license and unlock the complete studio. All 9 classic themes remain 100% free, untouched, and fully operational!
+> The advanced features in the **PRO Custom Map Studio** are currently in **closed testing and validation phase (BETA)**. During this trial period, this section is temporarily inactive for the general public. We will soon announce the official public release so that anyone interested can acquire a license and unlock the complete studio. All 9 classic themes remain 100% free, untouched, and fully operational!
 
 * 🎨 **Custom Map Studio (PRO)**: Design your own cartographic style from scratch or customize any baseline theme with complete visual control.
 * <img src="art/ic_gis_presets.svg" width="16" height="16" align="center" /> **1-Touch Discipline Presets**:
