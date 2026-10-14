@@ -52,11 +52,11 @@
     <string name="badge_pro">PRO</string>
     <string name="btn_customize_colors">Customize Colors</string>
     <string name="btn_unlock_pro">Unlock Pro Studio</string>
-    <string name="pro_dialog_title">Unlock Pro Studio</string>
-    <string name="pro_dialog_msg">Create your dream map style with full control over terrain, trails, contours, and POI colors.\n\nEnter your activation code or get one via Buy Me a Coffee:</string>
+    <string name="pro_dialog_title">Pro Studio — Closed Beta Testing</string>
+    <string name="pro_dialog_msg">The PRO Custom Map Studio is currently in closed testing phase (BETA) and will soon be publicly released for all users.\n\nIf you have a private beta access code, enter it below:</string>
     <string name="pro_code_hint">KTOP-XXXX-YYYY-ZZZZ</string>
-    <string name="btn_activate">Activate</string>
-    <string name="btn_get_code">Get License Code</string>
+    <string name="btn_activate">Validate Access</string>
+    <string name="btn_get_code">Upcoming Release Info</string>
     <string name="pro_activation_success">Pro Studio unlocked successfully!</string>
     <string name="pro_activation_invalid">Invalid code. Please check and try again.</string>
     <string name="btn_save_apply">Save &amp; Apply to Karoo</string>

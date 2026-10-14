@@ -32,6 +32,29 @@
 
 Ogni stile è stato calibrato con precisione millimetrica per i display transflettivi del Karoo sotto la luce solare diretta, garantendo la massima leggibilità dei sentieri, delle curve di livello e un contrasto perfetto sul tracciato della tua traccia.
 
+### ⚡ Novità nella versione 1.3.0 (Grande Aggiornamento):
+
+> [!IMPORTANT]
+> **Avviso riguardante le Funzioni PRO**:
+> Le funzioni avanzate dello **Studio Mappa Personalizzata PRO** sono attualmente in **fase di test chiuso (BETA)**. Durante questo periodo, questa sezione è temporaneamente inattiva per il pubblico generale. A breve verrà annunciato il rilascio ufficiale affinché tutti gli utenti interessati possano acquistare una licenza a vita. Tutti i 9 temi classici rimangono gratuiti al 100%, intatti e pienamente operativi!
+
+* 🎨 **Studio Mappa Personalizzata (PRO)**: Crea il tuo stile cartografico da zero o modifica qualsiasi tema esistente con pieno controllo visivo.
+* ⚡ **Profili per Disciplina con 1 Tocco**:
+  * 🚴 **Strada Pro**: Sfondo pulito a contrasto massimo, rete stradale rinforzata e disattivazione totale di curve e sentieri per una leggibilità perfetta ad alta velocità.
+  * 🚵 **MTB Enduro**: Curve di livello ad altissima precisione (10m/20m), singletrack in rosso brillante ad alta visibilità, strade forestali e radar di sopravvivenza attivi.
+  * 🌲 **Gravel Pro**: Priorità assoluta a piste sterrate, sentieri rurali e fontane d'acqua potabile; strade secondarie attenuate.
+  * 🌙 **AMOLED Notte**: Sfondo nero puro (`#000000`) per il massimo risparmio della batteria e nessun abbagliamento notturno.
+* ☀️ **Booster per Sole Intenso (High-Glare Sunlight Booster)**: Aumenta automaticamente lo spessore di tutte le linee del +25% e aggiunge bordi ad alto contrasto per una lettura nitida sotto il sole cocente.
+* 💧 **Radar Fontane d\'Acqua Potabile (Modalità Sopravvivenza)**: Mostra le fontane d'acqua potabile (`drinking_water`) con la massima priorità e un'icona ingrandita blu brillante visibile anche da livelli di zoom lontani.
+* 🟢🔵🔴⚫ **Classificazione Difficoltà Sentieri IMBA**: Colora automaticamente i singletrack in base al livello tecnico ufficiale di OpenStreetMap (Verde, Blu, Rosso, Nero).
+* 👁️ **Visibilità e Rimozione Reale dei Livelli**: Disattiva gli elementi indesiderati rendendoli invisibili al 100% sulla mappa.
+* 📏 **Personalizzazione di Tratti e Motivi**: Spessore delle linee regolabile (Sottile, Normale, Spesso, Ultra) e stili di linea (Continua, Tratteggiata, Punteggiata).
+* 📐 **Controlli Tipografici**: Scala del testo (85%, 100%, 120%, 140%), spessore (Normale o Grassetto) e famiglie di caratteri (Standard, Condensata o Monospace).
+* 💾 **Salvataggio e Condivisione Profili via Codice**: Esporta il tuo stile in un codice testuale da condividere con i compagni di pedalata e importalo istantaneamente su qualsiasi Karoo.
+* 🗺️ **Simbologia Vettoriale GIS Nativa**: Icone tecniche dorate pulite basate sugli standard dei sistemi informativi geografici.
+* 🔑 **Attivazione Crittografica Offline**: Licenza permanente del dispositivo senza dipendere da Google Play o connessione internet durante le uscite.
+* 🔄 **Supporto Mappe Doppio e Universale**: Piena compatibilità con le mappe ufficiali Hammerhead e OpenAndroMaps (OAM).
+
 ---
 
 ## Galleria su Dispositivo Reale (Hammerhead Karoo)

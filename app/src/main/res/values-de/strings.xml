@@ -52,11 +52,11 @@
     <string name="badge_pro">PRO</string>
     <string name="btn_customize_colors">Karte anpassen</string>
     <string name="btn_unlock_pro">Pro Studio freischalten</string>
-    <string name="pro_dialog_title">Pro Studio freischalten</string>
-    <string name="pro_dialog_msg">Erstelle deinen eigenen maßgeschneiderten Kartenstil mit voller Kontrolle über Geländefarben, Wege und POIs.\n\nGib deinen Aktivierungscode ein oder erhalte einen via Buy Me a Coffee:</string>
+    <string name="pro_dialog_title">Pro Studio — Geschlossene Testphase</string>
+    <string name="pro_dialog_msg">Das PRO Custom Karten-Studio befindet sich derzeit in einer geschlossenen Testphase (BETA) und wird in Kürze für alle Nutzer verfügbar sein.\n\nWenn du einen privaten Beta-Zugangscode hast, gib ihn unten ein:</string>
     <string name="pro_code_hint">KTOP-XXXX-YYYY-ZZZZ</string>
-    <string name="btn_activate">Aktivieren</string>
-    <string name="btn_get_code">Lizenzcode erhalten</string>
+    <string name="btn_activate">Zugang prüfen</string>
+    <string name="btn_get_code">Release-Informationen</string>
     <string name="pro_activation_success">Pro Studio erfolgreich freigeschaltet!</string>
     <string name="pro_activation_invalid">Ungültiger Code. Bitte prüfen und erneut versuchen.</string>
     <string name="btn_save_apply">Speichern &amp; auf Karoo anwenden</string>

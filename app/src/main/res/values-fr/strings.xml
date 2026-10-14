@@ -52,11 +52,11 @@
     <string name="badge_pro">PRO</string>
     <string name="btn_customize_colors">Personnaliser la Carte</string>
     <string name="btn_unlock_pro">Débloquer le Studio Pro</string>
-    <string name="pro_dialog_title">Débloquer le Studio Pro</string>
-    <string name="pro_dialog_msg">Créez votre propre style de carte sur mesure avec contrôle total sur les couleurs et la visibilité des couches.\n\nEntrez votre code d\'activation ou obtenez-en un via Buy Me a Coffee :</string>
+    <string name="pro_dialog_title">Studio Pro — En Phase de Test</string>
+    <string name="pro_dialog_msg">Le Studio de Carte Personnalisée PRO est actuellement en phase de test fermé (BETA) et sera bientôt disponible pour tous les utilisateurs.\n\nSi vous disposez d\'un code d\'accès bêta, saisissez-le ci-dessous :</string>
     <string name="pro_code_hint">KTOP-XXXX-YYYY-ZZZZ</string>
-    <string name="btn_activate">Activer</string>
-    <string name="btn_get_code">Obtenir la Licence</string>
+    <string name="btn_activate">Valider l\'Accès</string>
+    <string name="btn_get_code">Informations sur la Sortie</string>
     <string name="pro_activation_success">Studio Pro débloqué avec succès !</string>
     <string name="pro_activation_invalid">Code non valide. Veuillez vérifier et réessayer.</string>
     <string name="btn_save_apply">Enregistrer &amp; Appliquer au Karoo</string>

@@ -30,14 +30,28 @@
 
 Cada estilo ha sido calibrado milimétricamente teniendo en cuenta la óptica de las pantallas transflectivas de Karoo bajo la luz directa del sol, garantizando máxima visibilidad de senderos, curvas de nivel y un contraste perfecto sobre el track de tu ruta.
 
-### Novedades en v1.3.0 (Gran Actualización):
-* 🎨 **Estudio de Mapa Personalizado (Pro)**: Personaliza absolutamente todo el mapa a tu gusto con selector de color RGB y paleta de 30 tonos probados bajo el sol.
-* 👁️ **Control de Visibilidad por Capas**: Activa o desactiva con un solo toque elementos individuales (lagos, ríos, curvas, edificios, senderos MTB, etc.).
-* 📐 **Controles de Tipografía Cartográfica**: Elige la escala de tamaño del texto (85%, 100%, 120%, 140%), el grosor (Normal o Negrita) y la familia tipográfica (Estándar, Condensada o Técnica Mono).
-* 🗺️ **Iconografía GIS Profesional**: Simbología técnica vectorial limpia basada en sistemas de información geográfica.
-* 🔑 **Activación por Código Offline**: Desbloqueo directo en el Karoo sin depender de Google Play ni conexión permanente a internet.
-* 🏔️ **Selector de Altitudes en Curvas**: Muestra cotas en Ninguna, Solo Maestras o Todas.
-* 🔄 **Compatibilidad Universal Dual**: Soporte para mapas nativos Hammerhead y OpenAndroMaps (OAM).
+### ⚡ Novedades en v1.3.0 (Gran Actualización):
+
+> [!IMPORTANT]
+> **Aviso sobre las Funciones PRO**:
+> Las funciones avanzadas del **Estudio de Mapas Personalizados PRO** se encuentran actualmente en **fase de pruebas y testeo cerrado (BETA)**. Durante este periodo, esta sección está inactiva para el público general. En breve se anunciará la apertura oficial para que todos los usuarios que lo deseen puedan adquirir su licencia de por vida y desbloquear el estudio completo. ¡Los 9 temas clásicos continúan siendo 100% gratuitos y totalmente funcionales!
+
+* 🎨 **Estudio de Mapas Personalizado (PRO)**: Crea tu propio estilo cartográfico desde cero o edita cualquiera de los existentes con control total del mapa.
+* ⚡ **Perfiles Inteligentes por Disciplina (1 Solo Toque)**:
+  * 🚴 **Carretera Pro**: Fondo limpio de contraste extremo, carreteras principales reforzadas y apagado total de curvas y senderos para máxima visibilidad de la línea de ruta a 40 km/h.
+  * 🚵 **MTB Enduro**: Curvas de nivel ultraprecisas (10m/20m), senderos técnicos (*singletracks*) en rojo de alta visibilidad, pistas forestales destacadas y radares activos.
+  * 🌲 **Gravel Pro**: Prioridad a pistas de tierra, caminos rurales y fuentes de agua; carreteras secundarias y nacionales atenuadas.
+  * 🌙 **AMOLED Noche**: Fondo negro puro (`#000000`) para ahorro máximo de batería de pantalla y cero deslumbramientos nocturnos.
+* ☀️ **Potenciador de Sol Extremo (High-Glare Sunlight Booster)**: Aumenta automáticamente el grosor de todos los trazos un +25% y añade rebordes de alto contraste para una lectura cristalina bajo el sol de mediodía.
+* 💧 **Radar de Fuentes de Agua Potable (Survival Mode)**: Eleva los puntos de agua potable (`drinking_water`) a prioridad máxima con icono agrandado en azul brillante visible desde niveles de zoom lejanos.
+* 🟢🔵🔴⚫ **Dificultad de Senderos IMBA**: Colorea automáticamente las trialeras y senderos según su grado técnico en OpenStreetMap (Verde = Fácil, Azul = Moderado, Rojo = Difícil, Negro = Experto).
+* 👁️ **Control de Visibilidad y Ocultación Real**: Apaga cualquier elemento que no quieras ver (carreteras, polígonos, edificios, curvas, etc.) quedando 100% invisibles en el mapa.
+* 📏 **Personalización de Trazos y Patrones**: Grosor de línea ajustable (Fino, Normal, Grueso, Ultra) y patrones de línea (Continua, Discontinua, Puntos).
+* 📐 **Controles de Tipografía Cartográfica**: Escala de tamaño de texto (85%, 100%, 120%, 140%), estilo (Normal o Negrita) y familia de fuentes (Estándar, Condensada o Monoespaciada).
+* 💾 **Copia de Seguridad y Compartir Mapas**: Exporta tu perfil de mapa en un código de texto para compartirlo con tu grupeta por WhatsApp o notas, e impórtalo en cualquier Karoo al instante.
+* 🗺️ **Iconografía GIS Vectorial Nativa**: Simbología técnica limpia en color oro basada en estándares de sistemas de información geográfica.
+* 🔑 **Activación Criptográfica Offline**: Licencia individual permanente sin depender de Google Play ni cobertura en ruta.
+* 🔄 **Compatibilidad Universal Dual**: Soporte completo para mapas oficiales Hammerhead y OpenAndroMaps (OAM).
 
 ---
 

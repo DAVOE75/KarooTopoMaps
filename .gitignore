@@ -12,3 +12,5 @@ app/build/
 *.apk
 !release/*.apk
 .vscode/
+generate_license.py
+*license_generator*

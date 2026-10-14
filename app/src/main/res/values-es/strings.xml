@@ -52,11 +52,11 @@
     <string name="badge_pro">PRO</string>
     <string name="btn_customize_colors">Personalizar Mapa</string>
     <string name="btn_unlock_pro">Desbloquear Estudio Pro</string>
-    <string name="pro_dialog_title">Desbloquear Estudio Pro</string>
-    <string name="pro_dialog_msg">Crea tu estilo de mapa a medida con control total sobre colores y visibilidad de capas.\n\nIntroduce tu código de activación o consíguelo en Buy Me a Coffee:</string>
+    <string name="pro_dialog_title">Estudio Pro — En Fase de Pruebas</string>
+    <string name="pro_dialog_msg">El Estudio de Mapa Personalizado PRO se encuentra actualmente en fase de pruebas cerradas (BETA) y estará disponible muy pronto para todos los usuarios.\n\nSi dispones de un código de acceso beta, introdúcelo a continuación:</string>
     <string name="pro_code_hint">KTOP-XXXX-YYYY-ZZZZ</string>
-    <string name="btn_activate">Activar</string>
-    <string name="btn_get_code">Obtener Licencia</string>
+    <string name="btn_activate">Validar Acceso</string>
+    <string name="btn_get_code">Información Próximo Lanzamiento</string>
     <string name="pro_activation_success">¡Estudio Pro desbloqueado con éxito!</string>
     <string name="pro_activation_invalid">Código no válido. Revisa los caracteres e inténtalo de nuevo.</string>
     <string name="btn_save_apply">Guardar y Aplicar al Karoo</string>
