@@ -163,4 +163,29 @@
     <string name="elem_bike_shop_desc">Talleres mecánicos ciclistas</string>
     <string name="elem_place_label_name">Nombres de Pueblos y Ciudades</string>
     <string name="elem_place_label_desc">Topónimos y rótulos de población</string>
+
+    <!-- PRO FEATURES & INTELLIGENT PRESETS -->
+    <string name="pro_tools_title">Herramientas Ciclistas PRO</string>
+    <string name="pro_tools_desc">Filtros cartográficos avanzados y presets inteligentes</string>
+    <string name="preset_discipline_title">Perfiles de Mapa por Disciplina</string>
+    <string name="preset_road">Carretera Pro</string>
+    <string name="preset_mtb">MTB Enduro</string>
+    <string name="preset_gravel">Gravel Pro</string>
+    <string name="preset_dark">AMOLED Noche</string>
+    <string name="pro_sunlight_title">Potenciador Sol Extremo</string>
+    <string name="pro_sunlight_desc">Alto contraste y trazos reforzados contra reflejos solares</string>
+    <string name="pro_water_title">Radar de Fuentes de Agua</string>
+    <string name="pro_water_desc">Prioridad máxima e iluminación visible de puntos de agua potable</string>
+    <string name="pro_mtb_grades_title">Dificultad de Senderos IMBA</string>
+    <string name="pro_mtb_grades_desc">Colorea trialeras según nivel técnico (Verde, Azul, Rojo, Negro)</string>
+    <string name="pro_backup_title">Perfiles y Compartir Mapas</string>
+    <string name="pro_backup_desc">Guarda tus estilos y compártelos con tu grupeta</string>
+    <string name="btn_export_profile">Exportar Código</string>
+    <string name="btn_import_profile">Importar Código</string>
+    <string name="dialog_export_title">Código de tu Perfil de Mapa</string>
+    <string name="dialog_import_title">Importar Perfil de Mapa</string>
+    <string name="dialog_import_hint">Pega el código del perfil aquí...</string>
+    <string name="msg_profile_copied">¡Código copiado al portapapeles!</string>
+    <string name="msg_profile_imported">¡Perfil personalizado importado con éxito!</string>
+    <string name="error_invalid_profile">Código de perfil no válido</string>
 </resources>

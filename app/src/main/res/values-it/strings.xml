@@ -163,4 +163,29 @@
     <string name="elem_bike_shop_desc">Officine meccaniche ciclistiche</string>
     <string name="elem_place_label_name">Nomi di Città e Paesi</string>
     <string name="elem_place_label_desc">Toponimi e toponomastica delle località</string>
+
+    <!-- PRO FEATURES & INTELLIGENT PRESETS -->
+    <string name="pro_tools_title">Strumenti Ciclistici PRO</string>
+    <string name="pro_tools_desc">Filtri cartografici avanzati e preset intelligenti</string>
+    <string name="preset_discipline_title">Profili Mappa per Disciplina</string>
+    <string name="preset_road">Strada Pro</string>
+    <string name="preset_mtb">MTB Enduro</string>
+    <string name="preset_gravel">Gravel Pro</string>
+    <string name="preset_dark">AMOLED Notte</string>
+    <string name="pro_sunlight_title">Booster per Sole Intenso</string>
+    <string name="pro_sunlight_desc">Contrasto elevato e bordi rinforzati contro i riflessi solari</string>
+    <string name="pro_water_title">Radar Fontane d\'Acqua</string>
+    <string name="pro_water_desc">Massima priorità e punto luce ben visibile per l\'acqua potabile</string>
+    <string name="pro_mtb_grades_title">Difficoltà Sentieri IMBA</string>
+    <string name="pro_mtb_grades_desc">Colora i singletrack in base alla difficoltà tecnica (Verde, Blu, Rosso, Nero)</string>
+    <string name="pro_backup_title">Profili e Condivisione</string>
+    <string name="pro_backup_desc">Salva i tuoi stili e condividi i profili mappa con gli amici</string>
+    <string name="btn_export_profile">Esporta Codice</string>
+    <string name="btn_import_profile">Importa Codice</string>
+    <string name="dialog_export_title">Codice del tuo Profilo Mappa</string>
+    <string name="dialog_import_title">Importa Profilo Mappa</string>
+    <string name="dialog_import_hint">Incolla qui il codice del profilo...</string>
+    <string name="msg_profile_copied">Codice copiato negli appunti!</string>
+    <string name="msg_profile_imported">Profilo personalizzato importato con successo!</string>
+    <string name="error_invalid_profile">Codice profilo non valido</string>
 </resources>

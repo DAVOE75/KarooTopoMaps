@@ -57,6 +57,7 @@ class CustomThemeEditorActivity : AppCompatActivity() {
 
         btnBack.setOnClickListener { finish() }
 
+        setupProToolsControls()
         setupTypographyControls()
 
         btnSaveAndApply.setOnClickListener {
@@ -75,6 +76,7 @@ class CustomThemeEditorActivity : AppCompatActivity() {
                 .setMessage(R.string.reset_confirm_msg)
                 .setPositiveButton(R.string.btn_reset) { _, _ ->
                     CustomThemeManager.resetToDefaults(this)
+                    setupProToolsControls()
                     setupTypographyControls()
                     renderElements()
                 }
@@ -83,6 +85,93 @@ class CustomThemeEditorActivity : AppCompatActivity() {
         }
 
         renderElements()
+    }
+
+    private fun setupProToolsControls() {
+        val btnPresetRoad = findViewById<MaterialButton>(R.id.btnPresetRoad)
+        val btnPresetMtb = findViewById<MaterialButton>(R.id.btnPresetMtb)
+        val btnPresetGravel = findViewById<MaterialButton>(R.id.btnPresetGravel)
+        val btnPresetDark = findViewById<MaterialButton>(R.id.btnPresetDark)
+
+        val switchSunlight = findViewById<MaterialSwitch>(R.id.switchSunlightBooster)
+        val switchWater = findViewById<MaterialSwitch>(R.id.switchWaterRadar)
+        val switchMtbGrades = findViewById<MaterialSwitch>(R.id.switchMtbGrades)
+
+        val btnExport = findViewById<MaterialButton>(R.id.btnExportProfile)
+        val btnImport = findViewById<MaterialButton>(R.id.btnImportProfile)
+
+        // Initial switch states
+        switchSunlight.isChecked = CustomThemeManager.isSunlightBoosterEnabled(this)
+        switchWater.isChecked = CustomThemeManager.isWaterRadarEnabled(this)
+        switchMtbGrades.isChecked = CustomThemeManager.isMtbGradesEnabled(this)
+
+        switchSunlight.setOnCheckedChangeListener { _, isChecked ->
+            CustomThemeManager.setSunlightBoosterEnabled(this, isChecked)
+        }
+        switchWater.setOnCheckedChangeListener { _, isChecked ->
+            CustomThemeManager.setWaterRadarEnabled(this, isChecked)
+        }
+        switchMtbGrades.setOnCheckedChangeListener { _, isChecked ->
+            CustomThemeManager.setMtbGradesEnabled(this, isChecked)
+        }
+
+        // 1-Touch Discipline Presets
+        fun applyPreset(id: String) {
+            CustomThemeManager.loadPreset(this, id)
+            switchWater.isChecked = CustomThemeManager.isWaterRadarEnabled(this)
+            switchMtbGrades.isChecked = CustomThemeManager.isMtbGradesEnabled(this)
+            setupTypographyControls()
+            renderElements()
+            Toast.makeText(this, "Preset aplicado", Toast.LENGTH_SHORT).show()
+        }
+
+        btnPresetRoad.setOnClickListener { applyPreset("road") }
+        btnPresetMtb.setOnClickListener { applyPreset("mtb") }
+        btnPresetGravel.setOnClickListener { applyPreset("gravel") }
+        btnPresetDark.setOnClickListener { applyPreset("dark") }
+
+        // Export Profile Code
+        btnExport.setOnClickListener {
+            val code = CustomThemeManager.exportProfileCode(this)
+            val clipboard = getSystemService(android.content.Context.CLIPBOARD_SERVICE) as android.content.ClipboardManager
+            val clip = android.content.ClipData.newPlainText("KarooMapProfile", code)
+            clipboard.setPrimaryClip(clip)
+
+            AlertDialog.Builder(this)
+                .setTitle(R.string.dialog_export_title)
+                .setMessage("${getString(R.string.msg_profile_copied)}\n\n$code")
+                .setPositiveButton(android.R.string.ok, null)
+                .show()
+        }
+
+        // Import Profile Code
+        btnImport.setOnClickListener {
+            val input = EditText(this)
+            input.hint = getString(R.string.dialog_import_hint)
+            input.setTextColor(Color.WHITE)
+            input.setHintTextColor(Color.GRAY)
+            val padding = (16 * resources.displayMetrics.density).toInt()
+            input.setPadding(padding, padding, padding, padding)
+
+            AlertDialog.Builder(this)
+                .setTitle(R.string.dialog_import_title)
+                .setView(input)
+                .setPositiveButton(android.R.string.ok) { _, _ ->
+                    val code = input.text.toString().trim()
+                    if (code.isNotEmpty() && CustomThemeManager.importProfileCode(this, code)) {
+                        switchSunlight.isChecked = CustomThemeManager.isSunlightBoosterEnabled(this)
+                        switchWater.isChecked = CustomThemeManager.isWaterRadarEnabled(this)
+                        switchMtbGrades.isChecked = CustomThemeManager.isMtbGradesEnabled(this)
+                        setupTypographyControls()
+                        renderElements()
+                        Toast.makeText(this, getString(R.string.msg_profile_imported), Toast.LENGTH_SHORT).show()
+                    } else {
+                        Toast.makeText(this, getString(R.string.error_invalid_profile), Toast.LENGTH_LONG).show()
+                    }
+                }
+                .setNegativeButton(R.string.btn_cancel, null)
+                .show()
+        }
     }
 
     private fun setupTypographyControls() {

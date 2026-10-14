@@ -163,4 +163,29 @@
     <string name="elem_bike_shop_desc">Werkstätten und Fahrradgeschäfte</string>
     <string name="elem_place_label_name">Orts- &amp; Stadtnamen</string>
     <string name="elem_place_label_desc">Toponyme und Beschriftungen</string>
+
+    <!-- PRO FEATURES & INTELLIGENT PRESETS -->
+    <string name="pro_tools_title">PRO Radsport-Tools</string>
+    <string name="pro_tools_desc">Erweiterte kartografische Filter und intelligente Voreinstellungen</string>
+    <string name="preset_discipline_title">Kartenprofile nach Disziplin</string>
+    <string name="preset_road">Rennrad Pro</string>
+    <string name="preset_mtb">MTB Enduro</string>
+    <string name="preset_gravel">Gravel Pro</string>
+    <string name="preset_dark">AMOLED Nacht</string>
+    <string name="pro_sunlight_title">Sonnenlicht-Kontrast-Booster</string>
+    <string name="pro_sunlight_desc">Hoher Kontrast und verstärkte Konturen gegen grelle Sonnenreflexionen</string>
+    <string name="pro_water_title">Trinkwasser-Radar</string>
+    <string name="pro_water_desc">Höchste Anzeigepriorität und leuchtende Markierung für Trinkwasserbrunnen</string>
+    <string name="pro_mtb_grades_title">IMBA MTB-Schwierigkeitsgrade</string>
+    <string name="pro_mtb_grades_desc">Färbung von Singletrails nach technischem Grad (Grün, Blau, Rot, Schwarz)</string>
+    <string name="pro_backup_title">Profile &amp; Teilen</string>
+    <string name="pro_backup_desc">Stile sichern und Kartenprofile mit Freunden teilen</string>
+    <string name="btn_export_profile">Code exportieren</string>
+    <string name="btn_import_profile">Code importieren</string>
+    <string name="dialog_export_title">Dein Kartenprofil-Code</string>
+    <string name="dialog_import_title">Kartenprofil-Code importieren</string>
+    <string name="dialog_import_hint">Profilcode hier einfügen...</string>
+    <string name="msg_profile_copied">Code in die Zwischenablage kopiert!</string>
+    <string name="msg_profile_imported">Benutzerdefiniertes Profil erfolgreich importiert!</string>
+    <string name="error_invalid_profile">Ungültiger Profilcode</string>
 </resources>

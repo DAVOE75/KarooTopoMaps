@@ -116,6 +116,86 @@ object CustomThemeManager {
         prefs.edit().putString("font_family", family).apply()
     }
 
+    // PRO Special Feature Toggles
+    const val PREF_SUNLIGHT_BOOSTER = "pro_sunlight_booster"
+    const val PREF_WATER_RADAR = "pro_water_radar"
+    const val PREF_MTB_GRADES = "pro_mtb_grades"
+
+    fun isSunlightBoosterEnabled(context: Context): Boolean {
+        val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+        return prefs.getBoolean(PREF_SUNLIGHT_BOOSTER, false)
+    }
+
+    fun setSunlightBoosterEnabled(context: Context, enabled: Boolean) {
+        val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+        prefs.edit().putBoolean(PREF_SUNLIGHT_BOOSTER, enabled).apply()
+    }
+
+    fun isWaterRadarEnabled(context: Context): Boolean {
+        val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+        return prefs.getBoolean(PREF_WATER_RADAR, false)
+    }
+
+    fun setWaterRadarEnabled(context: Context, enabled: Boolean) {
+        val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+        prefs.edit().putBoolean(PREF_WATER_RADAR, enabled).apply()
+    }
+
+    fun isMtbGradesEnabled(context: Context): Boolean {
+        val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+        return prefs.getBoolean(PREF_MTB_GRADES, false)
+    }
+
+    fun setMtbGradesEnabled(context: Context, enabled: Boolean) {
+        val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+        prefs.edit().putBoolean(PREF_MTB_GRADES, enabled).apply()
+    }
+
+    /**
+     * Exports current map theme profile as a base64 or JSON string for sharing.
+     */
+    fun exportProfileCode(context: Context): String {
+        val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+        val all = prefs.all
+        val json = org.json.JSONObject()
+        for ((k, v) in all) {
+            json.put(k, v)
+        }
+        val bytes = json.toString().toByteArray(Charsets.UTF_8)
+        return android.util.Base64.encodeToString(bytes, android.util.Base64.NO_WRAP)
+    }
+
+    /**
+     * Imports a map profile code from base64 string.
+     */
+    fun importProfileCode(context: Context, code: String): Boolean {
+        return try {
+            val bytes = android.util.Base64.decode(code.trim(), android.util.Base64.NO_WRAP)
+            val jsonStr = String(bytes, Charsets.UTF_8)
+            val json = org.json.JSONObject(jsonStr)
+            val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+            val editor = prefs.edit()
+            editor.clear()
+            val keys = json.keys()
+            while (keys.hasNext()) {
+                val key = keys.next()
+                when (val value = json.get(key)) {
+                    is Boolean -> editor.putBoolean(key, value)
+                    is Int -> editor.putInt(key, value)
+                    is Long -> editor.putLong(key, value)
+                    is Float -> editor.putFloat(key, value)
+                    is Double -> editor.putFloat(key, value.toFloat())
+                    is String -> editor.putString(key, value)
+                }
+            }
+            editor.apply()
+            true
+        } catch (e: Exception) {
+            Log.e(TAG, "Error importing profile code", e)
+            false
+        }
+    }
+
     /**
      * Resets all colors, typography and visibility toggles back to defaults.
      */
@@ -125,10 +205,73 @@ object CustomThemeManager {
     }
 
     /**
-     * Loads preset colors from an existing bundled theme (e.g. IGN, Gravel, Dark)
+     * Loads preset discipline configurations: Road, MTB, Gravel, AMOLED Dark.
      */
     fun loadPreset(context: Context, presetThemeId: String) {
         when (presetThemeId) {
+            "road" -> {
+                // High contrast clean road navigation
+                setColor(context, "color_bg", "#FFFFFF")
+                setColor(context, "color_motorway", "#E05A47")
+                setColor(context, "color_primary_road", "#E5933A")
+                setColor(context, "color_secondary_road", "#F5D061")
+                setColor(context, "color_residential_street", "#EEEEEE")
+                setLineWidth(context, "color_primary_road", 1.4f)
+                setLineWidth(context, "color_secondary_road", 1.2f)
+                // Disable contour noise for high speed clarity
+                setElementVisible(context, "color_contour_major", false)
+                setElementVisible(context, "color_contour_minor", false)
+                setElementVisible(context, "color_contour_label", false)
+                // Disable rough singletracks
+                setElementVisible(context, "color_mtb_singletrack", false)
+                setElementVisible(context, "color_gravel_track", false)
+                setElementVisible(context, "color_water_body", true)
+                setElementVisible(context, "color_place_label", true)
+                setFontWeight(context, FONT_WEIGHT_BOLD)
+            }
+            "mtb" -> {
+                // Ultra high precision mountain topography
+                setColor(context, "color_bg", "#F9F6F0")
+                setColor(context, "color_meadow", "#E2EBD3")
+                setColor(context, "color_forest", "#A3C8A7")
+                setColor(context, "color_contour_major", "#6D5339")
+                setColor(context, "color_contour_minor", "#9E7E5A")
+                setColor(context, "color_contour_label", "#4A3728")
+                setLineWidth(context, "color_contour_major", 1.0f)
+                setLineWidth(context, "color_contour_minor", 0.5f)
+                setElementVisible(context, "color_contour_major", true)
+                setElementVisible(context, "color_contour_minor", true)
+                setElementVisible(context, "color_contour_label", true)
+                setColor(context, "color_mtb_singletrack", "#FF0000") // high-vis red
+                setLineWidth(context, "color_mtb_singletrack", 1.2f)
+                setLinePattern(context, "color_mtb_singletrack", "dashed")
+                setColor(context, "color_gravel_track", "#8B5230")
+                setElementVisible(context, "color_mtb_singletrack", true)
+                setElementVisible(context, "color_gravel_track", true)
+                setMtbGradesEnabled(context, true)
+                setWaterRadarEnabled(context, true)
+            }
+            "gravel" -> {
+                setColor(context, "color_bg", "#F9F6F0")
+                setColor(context, "color_meadow", "#E2EBD3")
+                setColor(context, "color_rock", "#D0C8B8")
+                setColor(context, "color_water_body", "#A2D8F0")
+                setColor(context, "color_river", "#3588B8")
+                setColor(context, "color_forest", "#8FA882")
+                setColor(context, "color_residential", "#DFD4C4")
+                setColor(context, "color_contour_major", "#6D5339")
+                setColor(context, "color_contour_minor", "#D7C49E")
+                setColor(context, "color_contour_label", "#4A3728")
+                setElementVisible(context, "color_contour_major", true)
+                setElementVisible(context, "color_contour_minor", true)
+                setColor(context, "color_residential_street", "#FFFFFF")
+                setColor(context, "color_gravel_track", "#8B5230")
+                setLineWidth(context, "color_gravel_track", 1.1f)
+                setColor(context, "color_place_label", "#333333")
+                setElementVisible(context, "color_gravel_track", true)
+                setElementVisible(context, "color_mtb_singletrack", true)
+                setWaterRadarEnabled(context, true)
+            }
             "dark" -> {
                 setColor(context, "color_bg", "#121212")
                 setColor(context, "color_meadow", "#1C241D")
@@ -142,22 +285,8 @@ object CustomThemeManager {
                 setColor(context, "color_contour_label", "#CCCCCC")
                 setColor(context, "color_residential_street", "#404040")
                 setColor(context, "color_gravel_track", "#705030")
+                setColor(context, "color_mtb_singletrack", "#00E676")
                 setColor(context, "color_place_label", "#DDDDDD")
-            }
-            "gravel" -> {
-                setColor(context, "color_bg", "#F9F6F0")
-                setColor(context, "color_meadow", "#E2EBD3")
-                setColor(context, "color_rock", "#D0C8B8")
-                setColor(context, "color_water_body", "#A2D8F0")
-                setColor(context, "color_river", "#3588B8")
-                setColor(context, "color_forest", "#8FA882")
-                setColor(context, "color_residential", "#DFD4C4")
-                setColor(context, "color_contour_major", "#6D5339")
-                setColor(context, "color_contour_minor", "#D7C49E")
-                setColor(context, "color_contour_label", "#4A3728")
-                setColor(context, "color_residential_street", "#FFFFFF")
-                setColor(context, "color_gravel_track", "#8B5230")
-                setColor(context, "color_place_label", "#333333")
             }
             else -> {
                 // Baseline IGN
@@ -432,6 +561,52 @@ object CustomThemeManager {
             // Adjust font family
             if (fontFamily != FONT_FAMILY_DEFAULT) {
                 customXml = customXml.replace(Regex("""font-family="[^"]*""""), """font-family="$fontFamily"""")
+            }
+
+            // --- PRO CYCLIST FEATURES INJECTION ---
+
+            // 1. Survival Drinking Water Radar: Highlight water fountains with max zoom visibility & large icon
+            if (isWaterRadarEnabled(context)) {
+                customXml = customXml.replace(
+                    Regex("""<m v="drinking_water" zoom-min="15">[\s\S]*?</m>"""),
+                    """<m v="drinking_water" zoom-min="11"><symbol id="drinking-water" symbol-percent="175" src="file:/icons/drinking-water-15-bg.svg"/><text use="poi_label" size="14" fill="#0088FF" priority="1"/></m>"""
+                )
+            }
+
+            // 2. IMBA MTB Grading: Enforce distinct green, blue, red, black trail colors
+            if (isMtbGradesEnabled(context)) {
+                customXml = customXml.replace(
+                    Regex("""<line stroke="#854E85" cap="round" width="1.0"/>"""),
+                    """<line stroke="#00C853" cap="round" width="1.2"/>""" // Grade 1: Easy Green
+                )
+                customXml = customXml.replace(
+                    Regex("""<line stroke="#46B414" cap="round" width="1.0"/>"""),
+                    """<line stroke="#2979FF" cap="round" width="1.3"/>""" // Grade 2: Moderate Blue
+                )
+                customXml = customXml.replace(
+                    Regex("""<line stroke="#005297" cap="round" width="1.0"/>"""),
+                    """<line stroke="#FF1744" cap="round" width="1.4"/>""" // Grade 3: Difficult Red
+                )
+                customXml = customXml.replace(
+                    Regex("""<line stroke="#000000" cap="round" width="1.0"/>"""),
+                    """<line stroke="#212121" cap="round" width="1.5"/>""" // Grade 4: Very Difficult Black
+                )
+            }
+
+            // 3. High-Glare Sunlight Booster: Adds dark high-contrast borders & boldizes text
+            if (isSunlightBoosterEnabled(context)) {
+                // Boost stroke widths by +20% and force bold font
+                customXml = customXml.replace(Regex("""width="(\d+\.?\d*)"""")) { m ->
+                    val w = m.groupValues[1].toFloatOrNull() ?: 1.0f
+                    val boosted = String.format(java.util.Locale.US, "%.2f", w * 1.25f)
+                    """width="$boosted""""
+                }
+                customXml = customXml.replace(Regex("""stroke-width="(\d+\.?\d*)"""")) { m ->
+                    val sw = m.groupValues[1].toFloatOrNull() ?: 0.3f
+                    val boosted = String.format(java.util.Locale.US, "%.2f", (sw * 1.4f).coerceAtLeast(0.5f))
+                    """stroke-width="$boosted""""
+                }
+                customXml = customXml.replace(Regex("""style="normal""""), """style="bold"""")
             }
 
             // Write to Karoo file

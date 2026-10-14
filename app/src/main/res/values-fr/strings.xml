@@ -163,4 +163,29 @@
     <string name="elem_bike_shop_desc">Ateliers de réparation et boutiques de vélo</string>
     <string name="elem_place_label_name">Noms de Villes &amp; Villages</string>
     <string name="elem_place_label_desc">Toponymes et libellés de localités</string>
+
+    <!-- PRO FEATURES & INTELLIGENT PRESETS -->
+    <string name="pro_tools_title">Outils Cyclistes PRO</string>
+    <string name="pro_tools_desc">Filtres cartographiques avancés et préréglages intelligents</string>
+    <string name="preset_discipline_title">Profils de Carte par Discipline</string>
+    <string name="preset_road">Route Pro</string>
+    <string name="preset_mtb">VTT Enduro</string>
+    <string name="preset_gravel">Gravel Pro</string>
+    <string name="preset_dark">AMOLED Nuit</string>
+    <string name="pro_sunlight_title">Booster de Plein Soleil</string>
+    <string name="pro_sunlight_desc">Contraste élevé et contours renforcés contre l\'éblouissement solaire</string>
+    <string name="pro_water_title">Radar Points d\'Eau Potable</string>
+    <string name="pro_water_desc">Affichage prioritaire et surbrillance des points d\'eau</string>
+    <string name="pro_mtb_grades_title">Niveaux de Sentiers VTT (IMBA)</string>
+    <string name="pro_mtb_grades_desc">Coloration des sentiers selon la difficulté (Vert, Bleu, Rouge, Noir)</string>
+    <string name="pro_backup_title">Profils et Partage</string>
+    <string name="pro_backup_desc">Sauvegardez vos styles et partagez vos cartes avec vos amis</string>
+    <string name="btn_export_profile">Exporter le Code</string>
+    <string name="btn_import_profile">Importer le Code</string>
+    <string name="dialog_export_title">Code de votre Profil de Carte</string>
+    <string name="dialog_import_title">Importer un Profil de Carte</string>
+    <string name="dialog_import_hint">Collez le code de profil ici...</string>
+    <string name="msg_profile_copied">Code copié dans le presse-papiers !</string>
+    <string name="msg_profile_imported">Profil personnalisé importé avec succès !</string>
+    <string name="error_invalid_profile">Code de profil invalide</string>
 </resources>

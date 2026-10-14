@@ -163,4 +163,29 @@
     <string name="elem_bike_shop_desc">Bicycle stores and repair stations</string>
     <string name="elem_place_label_name">City &amp; Village Labels</string>
     <string name="elem_place_label_desc">Town names and place captions</string>
+
+    <!-- PRO FEATURES & INTELLIGENT PRESETS -->
+    <string name="pro_tools_title">PRO Cyclist Tools</string>
+    <string name="pro_tools_desc">Advanced cartographic filters and smart presets</string>
+    <string name="preset_discipline_title">Discipline Map Presets</string>
+    <string name="preset_road">Road Pro</string>
+    <string name="preset_mtb">MTB Enduro</string>
+    <string name="preset_gravel">Gravel Pro</string>
+    <string name="preset_dark">AMOLED Dark</string>
+    <string name="pro_sunlight_title">High-Glare Sunlight Booster</string>
+    <string name="pro_sunlight_desc">High contrast outlines and bold strokes for intense midday sun</string>
+    <string name="pro_water_title">Survival Water Fountain Radar</string>
+    <string name="pro_water_desc">Max priority display and bright highlight for drinking water sources</string>
+    <string name="pro_mtb_grades_title">IMBA MTB Difficulty Grading</string>
+    <string name="pro_mtb_grades_desc">Color singletracks by trail grade (Green, Blue, Red, Black)</string>
+    <string name="pro_backup_title">Profiles &amp; Cloud Export</string>
+    <string name="pro_backup_desc">Backup styles and share maps with friends</string>
+    <string name="btn_export_profile">Export Map Code</string>
+    <string name="btn_import_profile">Import Map Code</string>
+    <string name="dialog_export_title">Your Map Profile Code</string>
+    <string name="dialog_import_title">Import Map Profile Code</string>
+    <string name="dialog_import_hint">Paste profile code here...</string>
+    <string name="msg_profile_copied">Map code copied to clipboard!</string>
+    <string name="msg_profile_imported">Custom profile imported successfully!</string>
+    <string name="error_invalid_profile">Invalid map profile code</string>
 </resources>
