@@ -239,53 +239,25 @@
                         android:textStyle="bold"
                         android:layout_marginBottom="4dp" />
 
-                    <com.google.android.material.button.MaterialButtonToggleGroup
-                        android:id="@+id/toggleFontFamily"
+                    <com.google.android.material.card.MaterialCardView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:singleSelection="true"
-                        app:selectionRequired="true">
+                        android:layout_height="44dp"
+                        app:cardBackgroundColor="#252525"
+                        app:cardCornerRadius="8dp"
+                        app:strokeColor="#444444"
+                        app:strokeWidth="1dp"
+                        app:cardElevation="0dp">
 
-                        <com.google.android.material.button.MaterialButton
-                            android:id="@+id/btnFamilyDefault"
-                            style="@style/Widget.Material3.Button.OutlinedButton"
-                            android:layout_width="0dp"
-                            android:layout_height="36dp"
-                            android:layout_weight="1"
-                            android:insetTop="0dp"
-                            android:insetBottom="0dp"
-                            android:text="@string/font_family_default"
-                            android:textSize="11sp"
-                            android:textColor="#E0E0E0"
-                            app:strokeColor="#444444" />
+                        <Spinner
+                            android:id="@+id/spinnerFontFamily"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingStart="8dp"
+                            android:paddingEnd="8dp"
+                            android:backgroundTint="#FFD700"
+                            android:popupBackground="#1E1E1E" />
 
-                        <com.google.android.material.button.MaterialButton
-                            android:id="@+id/btnFamilyCondensed"
-                            style="@style/Widget.Material3.Button.OutlinedButton"
-                            android:layout_width="0dp"
-                            android:layout_height="36dp"
-                            android:layout_weight="1"
-                            android:insetTop="0dp"
-                            android:insetBottom="0dp"
-                            android:text="@string/font_family_condensed"
-                            android:textSize="11sp"
-                            android:textColor="#E0E0E0"
-                            app:strokeColor="#444444" />
-
-                        <com.google.android.material.button.MaterialButton
-                            android:id="@+id/btnFamilyMono"
-                            style="@style/Widget.Material3.Button.OutlinedButton"
-                            android:layout_width="0dp"
-                            android:layout_height="36dp"
-                            android:layout_weight="1.2"
-                            android:insetTop="0dp"
-                            android:insetBottom="0dp"
-                            android:text="@string/font_family_mono"
-                            android:textSize="11sp"
-                            android:textColor="#E0E0E0"
-                            app:strokeColor="#444444" />
-
-                    </com.google.android.material.button.MaterialButtonToggleGroup>
+                    </com.google.android.material.card.MaterialCardView>
 
                 </LinearLayout>
 

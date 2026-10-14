@@ -5,7 +5,10 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:background="#1E1E1E"
-    android:padding="20dp">
+    android:paddingStart="14dp"
+    android:paddingEnd="14dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="12dp">
 
     <TextView
         android:id="@+id/tvColorPickerTitle"
@@ -15,7 +18,7 @@
         android:textColor="#FFFFFF"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:layout_marginBottom="12dp" />
+        android:layout_marginBottom="10dp" />
 
     <!-- Continuous Rainbow Hue Spectrum Bar -->
     <TextView
@@ -29,8 +32,8 @@
     <com.davoe.karootopomaps.ColorSpectrumBar
         android:id="@+id/spectrumBar"
         android:layout_width="match_parent"
-        android:layout_height="32dp"
-        android:layout_marginBottom="14dp" />
+        android:layout_height="30dp"
+        android:layout_marginBottom="12dp" />
 
     <!-- Palette of High-Visibility Outdoor Cycling Colors -->
     <TextView
@@ -39,15 +42,22 @@
         android:text="@string/color_palette_title"
         android:textColor="#AAAAAA"
         android:textSize="11sp"
-        android:layout_marginBottom="8dp" />
+        android:layout_marginBottom="6dp" />
 
-    <GridLayout
-        android:id="@+id/gridPalette"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:columnCount="5"
-        android:alignmentMode="alignMargins"
-        android:layout_marginBottom="14dp" />
+        android:gravity="center"
+        android:layout_marginBottom="12dp">
+
+        <GridLayout
+            android:id="@+id/gridPalette"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="6"
+            android:rowCount="5" />
+
+    </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"

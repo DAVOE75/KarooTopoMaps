@@ -17,6 +17,9 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.button.MaterialButtonToggleGroup
 import com.google.android.material.card.MaterialCardView
+import android.widget.ArrayAdapter
+import android.widget.AdapterView
+import android.widget.Spinner
 import com.google.android.material.materialswitch.MaterialSwitch
 
 class CustomThemeEditorActivity : AppCompatActivity() {
@@ -28,7 +31,7 @@ class CustomThemeEditorActivity : AppCompatActivity() {
 
     private lateinit var toggleFontSize: MaterialButtonToggleGroup
     private lateinit var toggleFontWeight: MaterialButtonToggleGroup
-    private lateinit var toggleFontFamily: MaterialButtonToggleGroup
+    private lateinit var spinnerFontFamily: Spinner
 
     // Sunlight-tested outdoor color palette for instant picking on Karoo
     private val PRESET_COLORS = listOf(
@@ -50,7 +53,7 @@ class CustomThemeEditorActivity : AppCompatActivity() {
 
         toggleFontSize = findViewById(R.id.toggleFontSize)
         toggleFontWeight = findViewById(R.id.toggleFontWeight)
-        toggleFontFamily = findViewById(R.id.toggleFontFamily)
+        spinnerFontFamily = findViewById(R.id.spinnerFontFamily)
 
         btnBack.setOnClickListener { finish() }
 
@@ -119,22 +122,31 @@ class CustomThemeEditorActivity : AppCompatActivity() {
             }
         }
 
-        // Family
-        when (CustomThemeManager.getFontFamily(this)) {
-            CustomThemeManager.FONT_FAMILY_CONDENSED -> toggleFontFamily.check(R.id.btnFamilyCondensed)
-            CustomThemeManager.FONT_FAMILY_MONO -> toggleFontFamily.check(R.id.btnFamilyMono)
-            else -> toggleFontFamily.check(R.id.btnFamilyDefault)
-        }
+        // Font Family Dropdown / Spinner
+        val fontFamilies = listOf(
+            Pair(getString(R.string.font_family_default), CustomThemeManager.FONT_FAMILY_DEFAULT),
+            Pair(getString(R.string.font_family_condensed), CustomThemeManager.FONT_FAMILY_CONDENSED),
+            Pair(getString(R.string.font_family_mono), CustomThemeManager.FONT_FAMILY_MONO)
+        )
 
-        toggleFontFamily.addOnButtonCheckedListener { _, checkedId, isChecked ->
-            if (isChecked) {
-                val family = when (checkedId) {
-                    R.id.btnFamilyCondensed -> CustomThemeManager.FONT_FAMILY_CONDENSED
-                    R.id.btnFamilyMono -> CustomThemeManager.FONT_FAMILY_MONO
-                    else -> CustomThemeManager.FONT_FAMILY_DEFAULT
-                }
-                CustomThemeManager.setFontFamily(this, family)
+        val fontLabels = fontFamilies.map { it.first }
+        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, fontLabels).apply {
+            setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        }
+        spinnerFontFamily.adapter = adapter
+
+        val currentFamily = CustomThemeManager.getFontFamily(this)
+        val initialIndex = fontFamilies.indexOfFirst { it.second == currentFamily }.coerceAtLeast(0)
+        spinnerFontFamily.setSelection(initialIndex)
+
+        spinnerFontFamily.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                // Ensure text inside spinner is visible with clean white text
+                (view as? TextView)?.setTextColor(Color.WHITE)
+                val selectedFamily = fontFamilies[position].second
+                CustomThemeManager.setFontFamily(this@CustomThemeEditorActivity, selectedFamily)
             }
+            override fun onNothingSelected(parent: AdapterView<*>?) {}
         }
     }
 
@@ -266,10 +278,13 @@ class CustomThemeEditorActivity : AppCompatActivity() {
             override fun afterTextChanged(s: Editable?) {}
         })
 
-        // Populate Palette grid with 5 columns for perfect fit on Karoo screen
+        // Populate Palette grid with 6 columns centered to fit the Karoo screen perfectly
         val displayMetrics = resources.displayMetrics
         val screenWidth = displayMetrics.widthPixels
-        val swatchSize = (screenWidth * 0.12).toInt().coerceIn(60, 90)
+        // Screen width minus dialog margins and padding (approx 50dp) divided by 6 columns
+        val availableWidth = (screenWidth - (48 * displayMetrics.density)).toInt()
+        val swatchSize = (availableWidth / 6.5).toInt().coerceIn(48, 70)
+        val swatchMargin = 4
 
         for (colorHex in PRESET_COLORS) {
             val isCurrent = colorHex.equals(selectedColor, ignoreCase = true)
@@ -277,7 +292,7 @@ class CustomThemeEditorActivity : AppCompatActivity() {
                 layoutParams = GridLayout.LayoutParams().apply {
                     width = swatchSize
                     height = swatchSize
-                    setMargins(6, 6, 6, 6)
+                    setMargins(swatchMargin, swatchMargin, swatchMargin, swatchMargin)
                 }
                 radius = swatchSize / 2f
                 strokeColor = if (isCurrent) Color.parseColor("#FFD700") else Color.parseColor("#444444")

@@ -219,19 +219,29 @@ object CustomThemeManager {
             val residentialVis = isElementVisible(context, "color_residential")
             val residential = if (residentialVis) getColor(context, "color_residential") else bg
             val buildingVis = isElementVisible(context, "color_building")
-            val building = if (buildingVis) getColor(context, "color_building") else "#00000000"
+            val building = if (buildingVis) getColor(context, "color_building") else bg
             val industrialVis = isElementVisible(context, "color_industrial")
             val industrial = if (industrialVis) getColor(context, "color_industrial") else bg
 
-            customXml = customXml.replace(Regex("""<m v="residential">\s*<area mesh="true" fill="[^"]*""""), """<m v="residential"><area mesh="true" fill="$residential"""")
+            if (!residentialVis) {
+                customXml = customXml.replace(Regex("""<m v="residential">\s*<area mesh="true"[^>]*/>"""), """<m v="residential"><area mesh="true" fill="$bg"/>""")
+                customXml = customXml.replace(Regex("""<m v="retail">\s*<area mesh="true"[^>]*/>"""), """<m v="retail"><area mesh="true" fill="$bg"/>""")
+            } else {
+                customXml = customXml.replace(Regex("""<m v="residential">\s*<area mesh="true"[^>]*/>"""), """<m v="residential"><area mesh="true" fill="$residential" stroke="$residential" stroke-width="0.1"/>""")
+            }
+
             if (!buildingVis) {
-                // If building is disabled, remove the building polygon render rule completely
+                // Remove building footprint rule entirely so buildings are completely invisible
                 customXml = customXml.replace(Regex("""<m e="way" k="building" v="\*"\s+zoom-min="14">[\s\S]*?</m>"""), "")
             } else {
-                customXml = customXml.replace(Regex("""<m e="way" k="building" v="\*"\s+zoom-min="14">\s*<area mesh="true" fill="[^"]*""""),
-                    """<m e="way" k="building" v="*" zoom-min="14"><area mesh="true" fill="$building"""")
+                customXml = customXml.replace(Regex("""<m e="way" k="building" v="\*"\s+zoom-min="14">\s*<area mesh="true"[^>]*/>"""),
+                    """<m e="way" k="building" v="*" zoom-min="14"><area mesh="true" fill="$building" stroke="$building" stroke-width="0.3"/>""")
             }
-            customXml = customXml.replace(Regex("""<m v="industrial\|railway">\s*<area mesh="true" fill="[^"]*""""), """<m v="industrial|railway"><area mesh="true" fill="$industrial"""")
+            if (!industrialVis) {
+                customXml = customXml.replace(Regex("""<m v="industrial\|railway">\s*<area mesh="true"[^>]*/>"""), """<m v="industrial|railway"><area mesh="true" fill="$bg"/>""")
+            } else {
+                customXml = customXml.replace(Regex("""<m v="industrial\|railway">\s*<area mesh="true"[^>]*/>"""), """<m v="industrial|railway"><area mesh="true" fill="$industrial"/>""")
+            }
 
             // Contours
             val cMajorVis = isElementVisible(context, "color_contour_major")
@@ -273,10 +283,78 @@ object CustomThemeManager {
             }
             customXml = customXml.replace(Regex("""fill="#5C442A""""), """fill="$cLabel"""")
 
-            // Roads, Gravel & Trails
+            // Roads, Highways & Streets
+            val motorwayVis = isElementVisible(context, "color_motorway")
+            val priRoadVis = isElementVisible(context, "color_primary_road")
+            val secRoadVis = isElementVisible(context, "color_secondary_road")
+            val resStreetVis = isElementVisible(context, "color_residential_street")
+            val gravelVis = isElementVisible(context, "color_gravel_track")
             val mtbVis = isElementVisible(context, "color_mtb_singletrack")
+            val cyclewayVis = isElementVisible(context, "color_cycleway")
+
+            // 1. Motorways / Trunks
+            if (!motorwayVis) {
+                customXml = customXml.replace(Regex("""<m e="way" k="highway" v="motorway\|motorway_link\|trunk\|trunk_link">[\s\S]*?</m>"""), "")
+            } else {
+                val mwColor = getColor(context, "color_motorway")
+                val mwWidth = getLineWidth(context, "color_motorway")
+                customXml = customXml.replace(
+                    Regex("""<m e="way" k="highway" v="motorway\|motorway_link\|trunk\|trunk_link">[\s\S]*?</m>"""),
+                    """<m e="way" k="highway" v="motorway|motorway_link|trunk|trunk_link"><line stroke="$mwColor" cap="round" width="$mwWidth"/><text use="road_label" size="13" priority="14"/></m>"""
+                )
+            }
+
+            // 2. Primary roads (casings + fills)
+            if (!priRoadVis) {
+                customXml = customXml.replace(Regex("""<m e="way" k="highway" v="primary\|primary_link">[\s\S]*?</m>"""), "")
+            } else {
+                val priColor = getColor(context, "color_primary_road")
+                val priWidth = getLineWidth(context, "color_primary_road")
+                // Replace inner fill
+                customXml = customXml.replace(Regex("""(<m e="way" k="highway" v="primary\|primary_link">\s*<m zoom-min="12">\s*<line stroke=")[^"]*("\s*cap="round"\s*width=")[^"]*(")"""),
+                    "$1$priColor$2$priWidth$3")
+            }
+
+            // 3. Secondary & Tertiary roads (casings + fills)
+            if (!secRoadVis) {
+                customXml = customXml.replace(Regex("""<m e="way" k="highway" v="secondary\|secondary_link">[\s\S]*?</m>"""), "")
+                customXml = customXml.replace(Regex("""<m e="way" k="highway" v="tertiary\|tertiary_link">[\s\S]*?</m>"""), "")
+            } else {
+                val secColor = getColor(context, "color_secondary_road")
+                val secWidth = getLineWidth(context, "color_secondary_road")
+                customXml = customXml.replace(Regex("""(<m e="way" k="highway" v="secondary\|secondary_link">\s*<m zoom-min="13">\s*<line stroke=")[^"]*("\s*cap="round"\s*width=")[^"]*(")"""),
+                    "$1$secColor$2$secWidth$3")
+            }
+
+            // 4. Residential, unclassified, service, living_street, pedestrian
+            if (!resStreetVis) {
+                customXml = customXml.replace(Regex("""<m e="way" k="highway" v="residential\|living_street">[\s\S]*?</m>"""), "")
+                customXml = customXml.replace(Regex("""<m e="way" k="highway" v="unclassified\|road">[\s\S]*?</m>"""), "")
+                customXml = customXml.replace(Regex("""<m e="way" k="highway" v="service">[\s\S]*?</m>"""), "")
+                customXml = customXml.replace(Regex("""<m e="way" k="highway" v="pedestrian">[\s\S]*?</m>"""), "")
+            } else {
+                val resColor = getColor(context, "color_residential_street")
+                val resWidth = getLineWidth(context, "color_residential_street")
+                customXml = customXml.replace(Regex("""(<m e="way" k="highway" v="residential\|living_street">\s*<m zoom-min="15">\s*<line stroke=")[^"]*("\s*cap="round"\s*width=")[^"]*(")"""),
+                    "$1$resColor$2$resWidth$3")
+            }
+
+            // 5. Cycling networks & Cycleways
+            if (!cyclewayVis) {
+                customXml = customXml.replace(Regex("""<!-- Cycling networks[\s\S]*?</m>\s*</m>"""), "")
+                customXml = customXml.replace(Regex("""<m e="way" k="highway" v="cycleway">[\s\S]*?</m>"""), "")
+                customXml = customXml.replace(Regex("""<style-line id="paved_cycleway_casing"[^/]*/>"""), """<style-line id="paved_cycleway_casing" stroke="#00000000" width="0.0"/>""")
+                customXml = customXml.replace(Regex("""<style-line id="unpaved_cycleway_casing"[^/]*/>"""), """<style-line id="unpaved_cycleway_casing" stroke="#00000000" width="0.0"/>""")
+                customXml = customXml.replace(Regex("""<style-line id="cycling_path"[^/]*/>"""), """<style-line id="cycling_path" stroke="#00000000" width="0.0"/>""")
+            } else {
+                val cycleway = getColor(context, "color_cycleway")
+                val cyclewayWidth = getLineWidth(context, "color_cycleway")
+                customXml = customXml.replace(Regex("""<style-line id="paved_cycleway_casing"[^/]*/>"""), """<style-line id="paved_cycleway_casing" stroke="$cycleway" width="$cyclewayWidth" cap="round"/>""")
+            }
+
+            // 6. Gravel & Tracks & Singletracks
             val mtbSingletrack = if (mtbVis) getColor(context, "color_mtb_singletrack") else "#00000000"
-            val mtbWidth = getLineWidth(context, "color_mtb_singletrack")
+            val mtbWidth = if (mtbVis) getLineWidth(context, "color_mtb_singletrack") else 0.0f
             val mtbPattern = getLinePattern(context, "color_mtb_singletrack")
             val mtbDash = when (mtbPattern) {
                 "solid" -> ""
@@ -284,26 +362,51 @@ object CustomThemeManager {
                 else -> """ dasharray="6,4""""
             }
 
-            val cyclewayVis = isElementVisible(context, "color_cycleway")
-            val cycleway = if (cyclewayVis) getColor(context, "color_cycleway") else "#00000000"
-            val gravelVis = isElementVisible(context, "color_gravel_track")
             val gravel = if (gravelVis) getColor(context, "color_gravel_track") else "#00000000"
-            val gravelWidth = getLineWidth(context, "color_gravel_track")
+            val gravelWidth = if (gravelVis) getLineWidth(context, "color_gravel_track") else 0.0f
 
-            customXml = customXml.replace(
-                Regex("""<style-line id="path"[^/]*/>"""),
-                """<style-line id="path" stroke="$mtbSingletrack" width="$mtbWidth"$mtbDash cap="round"/>"""
-            )
-            customXml = customXml.replace(Regex("""<style-line id="paved_cycleway_casing" stroke="[^"]*""""), """<style-line id="paved_cycleway_casing" stroke="$cycleway"""")
-            customXml = customXml.replace(
-                Regex("""<style-line id="unpaved_casing"[^/]*/>"""),
-                """<style-line id="unpaved_casing" stroke="$gravel" width="$gravelWidth" cap="round"/>"""
-            )
+            if (!gravelVis && !mtbVis) {
+                // Strip all path/track/bridleway and footways completely
+                customXml = customXml.replace(Regex("""<m e="way" k="highway" v="path\|track\|bridleway">[\s\S]*?</m>"""), "")
+                customXml = customXml.replace(Regex("""<m e="way" k="highway" v="footway">[\s\S]*?</m>"""), "")
+                customXml = customXml.replace(Regex("""<style-line id="path"[^/]*/>"""), """<style-line id="path" stroke="#00000000" width="0.0"/>""")
+                customXml = customXml.replace(Regex("""<style-line id="unpaved_casing"[^/]*/>"""), """<style-line id="unpaved_casing" stroke="#00000000" width="0.0"/>""")
+            } else {
+                customXml = customXml.replace(
+                    Regex("""<style-line id="path"[^/]*/>"""),
+                    """<style-line id="path" stroke="$mtbSingletrack" width="$mtbWidth"$mtbDash cap="round"/>"""
+                )
+                customXml = customXml.replace(
+                    Regex("""<style-line id="unpaved_casing"[^/]*/>"""),
+                    """<style-line id="unpaved_casing" stroke="$gravel" width="$gravelWidth" cap="round"/>"""
+                )
+            }
+
+            // 7. Railways
+            if (!residentialVis && !resStreetVis) {
+                // If user disabled town/streets, also strip railway lines
+                customXml = customXml.replace(Regex("""<m e="way" k="railway">[\s\S]*?</m>"""), "")
+            }
 
             // Labels & POIs
             val placeVis = isElementVisible(context, "color_place_label")
-            val placeLabel = if (placeVis) getColor(context, "color_place_label") else "#00000000"
-            customXml = customXml.replace(Regex("""<style-text id="road_label" k="name" fill="[^"]*""""), """<style-text id="road_label" k="name" fill="$placeLabel"""")
+            if (!placeVis) {
+                customXml = customXml.replace(Regex("""<m e="node" k="place">[\s\S]*?</m>"""), "")
+                customXml = customXml.replace(Regex("""<style-text id="road_label"[^/]*/>"""), """<style-text id="road_label" k="name" fill="#00000000"/>""")
+            } else {
+                val placeLabel = getColor(context, "color_place_label")
+                customXml = customXml.replace(Regex("""<style-text id="road_label" k="name" fill="[^"]*""""), """<style-text id="road_label" k="name" fill="$placeLabel"""")
+            }
+
+            // POIs (amenities, fountains, shops)
+            val fountainVis = isElementVisible(context, "color_water_fountain")
+            val cafeVis = isElementVisible(context, "color_cafe_food")
+            val shopVis = isElementVisible(context, "color_bike_shop")
+            if (!fountainVis && !cafeVis && !shopVis) {
+                customXml = customXml.replace(Regex("""<m e="node" k="amenity">[\s\S]*?</m>"""), "")
+                customXml = customXml.replace(Regex("""<m e="node" k="shop">[\s\S]*?</m>"""), "")
+                customXml = customXml.replace(Regex("""<m e="node" k="tourism">[\s\S]*?</m>"""), "")
+            }
 
             // Typography & Font modifications
             val fontScale = getFontScale(context)
