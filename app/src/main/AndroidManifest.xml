@@ -24,6 +24,11 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".CustomThemeEditorActivity"
+            android:exported="false"
+            android:theme="@style/Theme.KarooTopoMaps" />
+
     </application>
 
 </manifest>

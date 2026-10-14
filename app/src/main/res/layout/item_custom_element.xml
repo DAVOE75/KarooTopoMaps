@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    app:cardBackgroundColor="#1A1A1A"
+    app:cardCornerRadius="10dp"
+    app:strokeColor="#2E2E2E"
+    app:strokeWidth="1dp"
+    app:cardElevation="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvElementName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Element Name"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvElementDesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Element description"
+                android:textColor="#9E9E9E"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+        <!-- Color Circle Preview Button -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardColorPreview"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="12dp"
+            app:cardCornerRadius="16dp"
+            app:strokeColor="#FFFFFF"
+            app:strokeWidth="1dp"
+            app:cardElevation="0dp">
+
+            <View
+                android:id="@+id/viewColorSample"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFD700" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Visibility Switch -->
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/switchVisibility"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

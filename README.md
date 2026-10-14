@@ -30,10 +30,14 @@
 
 Cada estilo ha sido calibrado milimétricamente teniendo en cuenta la óptica de las pantallas transflectivas de Karoo bajo la luz directa del sol, garantizando máxima visibilidad de senderos, curvas de nivel y un contraste perfecto sobre el track de tu ruta.
 
-### Novedades en v1.2.4:
-* 🏔️ **Selector de Altitudes en Curvas de Nivel**: Elige en la parte superior si quieres ver las cotas en **Ninguna**, **Solo Maestras** (por defecto) o en **Todas las Curvas**.
-* 🔄 **Compatibilidad Universal Dual**: Soporte completo para mapas oficiales Hammerhead y mapas de terceros como **OpenAndroMaps (OAM)** (reconociendo etiquetas `k="name"` y `k="ele"`).
-* ⚙️ **Aviso de configuración**: Recuerda que en los *Ajustes de Mapa* del Karoo debes tener activada la opción *«Curvas de nivel»*.
+### Novedades en v1.3.0 (Gran Actualización):
+* 🎨 **Estudio de Mapa Personalizado (Pro)**: Personaliza absolutamente todo el mapa a tu gusto con selector de color RGB y paleta de 30 tonos probados bajo el sol.
+* 👁️ **Control de Visibilidad por Capas**: Activa o desactiva con un solo toque elementos individuales (lagos, ríos, curvas, edificios, senderos MTB, etc.).
+* 📐 **Controles de Tipografía Cartográfica**: Elige la escala de tamaño del texto (85%, 100%, 120%, 140%), el grosor (Normal o Negrita) y la familia tipográfica (Estándar, Condensada o Técnica Mono).
+* 🗺️ **Iconografía GIS Profesional**: Simbología técnica vectorial limpia basada en sistemas de información geográfica.
+* 🔑 **Activación por Código Offline**: Desbloqueo directo en el Karoo sin depender de Google Play ni conexión permanente a internet.
+* 🏔️ **Selector de Altitudes en Curvas**: Muestra cotas en Ninguna, Solo Maestras o Todas.
+* 🔄 **Compatibilidad Universal Dual**: Soporte para mapas nativos Hammerhead y OpenAndroMaps (OAM).
 
 ---
 

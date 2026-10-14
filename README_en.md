@@ -32,10 +32,14 @@
 
 Each style is calibrated for sunlight readability on Karoo transflective displays, maximizing singletrack definition, contour readability, and route contrast.
 
-### What's New in v1.2.4:
-* 🏔️ **Contour Altitude Selector**: Choose right at the top whether you want elevation labels displayed on **None**, **Index/Major lines only** (default), or **All contour lines**.
-* 🔄 **Universal Dual Map Support**: Full compatibility for both official Hammerhead maps and third-party maps like **OpenAndroMaps (OAM)** (supporting both `k="name"` and `k="ele"` tags).
-* ⚙️ **Quick Setting Reminder**: Make sure "Contour Lines" is checked in your Karoo's Map Settings for contour layers to be active.
+### What's New in v1.3.0 (Major Release):
+* 🎨 **Custom Map Studio (Pro)**: Fully customize your map with RGB color pickers and 30 sunlight-tested cycling palette presets.
+* 👁️ **Layer Visibility Toggles**: Turn on/off individual map elements with a single tap (lakes, rivers, contours, buildings, MTB trails, etc.).
+* 📐 **Cartographic Typography Controls**: Choose font scale (85%, 100%, 120%, 140%), weight (Normal or Sunlight Bold), and font family (Standard, Condensed, or Technical Mono).
+* 🗺️ **Professional GIS Vector Symbology**: Clean technical symbology based on geographic information systems standards.
+* 🔑 **Offline License Activation**: Instant unlock on your Karoo without requiring Google Play or an active internet connection.
+* 🏔️ **Elevation Contours Selector**: Choose elevation labels on None, Major only, or All contour lines.
+* 🔄 **Universal Dual Map Support**: Native Hammerhead and OpenAndroMaps (OAM) tag compatibility.
 
 ---
 

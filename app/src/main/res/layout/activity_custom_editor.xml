@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#121212"
+    android:padding="16dp">
+
+    <!-- Top Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="12dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_revert"
+            android:tint="#FFFFFF"
+            android:contentDescription="Back" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/custom_theme_title"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/custom_theme_desc"
+                android:textColor="#9E9E9E"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="12dp"
+        android:background="#2E2E2E" />
+
+    <!-- Elements Scroll List -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Typography & Font Controls Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardTypography"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                app:cardBackgroundColor="#1A1A1A"
+                app:cardCornerRadius="12dp"
+                app:strokeColor="#FFD700"
+                app:strokeWidth="1dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/typography_card_title"
+                        android:textColor="#FFD700"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginBottom="10dp"
+                        android:text="@string/typography_card_desc"
+                        android:textColor="#9E9E9E"
+                        android:textSize="11sp" />
+
+                    <!-- Font Size Scale -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_font_size"
+                        android:textColor="#FFFFFF"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="4dp" />
+
+                    <com.google.android.material.button.MaterialButtonToggleGroup
+                        android:id="@+id/toggleFontSize"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        app:singleSelection="true"
+                        app:selectionRequired="true">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnSizeCompact"
+                            style="@style/Widget.Material3.Button.OutlinedButton"
+                            android:layout_width="0dp"
+                            android:layout_height="36dp"
+                            android:layout_weight="1"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            android:text="85%"
+                            android:textSize="11sp"
+                            android:textColor="#E0E0E0"
+                            app:strokeColor="#444444" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnSizeNormal"
+                            style="@style/Widget.Material3.Button.OutlinedButton"
+                            android:layout_width="0dp"
+                            android:layout_height="36dp"
+                            android:layout_weight="1"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            android:text="100%"
+                            android:textSize="11sp"
+                            android:textColor="#E0E0E0"
+                            app:strokeColor="#444444" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnSizeLarge"
+                            style="@style/Widget.Material3.Button.OutlinedButton"
+                            android:layout_width="0dp"
+                            android:layout_height="36dp"
+                            android:layout_weight="1"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            android:text="120%"
+                            android:textSize="11sp"
+                            android:textColor="#E0E0E0"
+                            app:strokeColor="#444444" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnSizeHuge"
+                            style="@style/Widget.Material3.Button.OutlinedButton"
+                            android:layout_width="0dp"
+                            android:layout_height="36dp"
+                            android:layout_weight="1"
+                            android:paddingLeft="2dp"
+                            android:paddingRight="2dp"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            android:text="140%"
+                            android:textSize="11sp"
+                            android:textColor="#E0E0E0"
+                            app:strokeColor="#444444" />
+
+                    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+                    <!-- Font Weight & Style -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_font_weight"
+                        android:textColor="#FFFFFF"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="4dp" />
+
+                    <com.google.android.material.button.MaterialButtonToggleGroup
+                        android:id="@+id/toggleFontWeight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        app:singleSelection="true"
+                        app:selectionRequired="true">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnWeightNormal"
+                            style="@style/Widget.Material3.Button.OutlinedButton"
+                            android:layout_width="0dp"
+                            android:layout_height="36dp"
+                            android:layout_weight="1"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            android:text="@string/font_weight_normal"
+                            android:textSize="11sp"
+                            android:textColor="#E0E0E0"
+                            app:strokeColor="#444444" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnWeightBold"
+                            style="@style/Widget.Material3.Button.OutlinedButton"
+                            android:layout_width="0dp"
+                            android:layout_height="36dp"
+                            android:layout_weight="1.2"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            android:text="@string/font_weight_bold"
+                            android:textSize="11sp"
+                            android:textColor="#E0E0E0"
+                            app:strokeColor="#444444" />
+
+                    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+                    <!-- Font Family -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_font_family"
+                        android:textColor="#FFFFFF"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="4dp" />
+
+                    <com.google.android.material.button.MaterialButtonToggleGroup
+                        android:id="@+id/toggleFontFamily"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:singleSelection="true"
+                        app:selectionRequired="true">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnFamilyDefault"
+                            style="@style/Widget.Material3.Button.OutlinedButton"
+                            android:layout_width="0dp"
+                            android:layout_height="36dp"
+                            android:layout_weight="1"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            android:text="@string/font_family_default"
+                            android:textSize="11sp"
+                            android:textColor="#E0E0E0"
+                            app:strokeColor="#444444" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnFamilyCondensed"
+                            style="@style/Widget.Material3.Button.OutlinedButton"
+                            android:layout_width="0dp"
+                            android:layout_height="36dp"
+                            android:layout_weight="1"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            android:text="@string/font_family_condensed"
+                            android:textSize="11sp"
+                            android:textColor="#E0E0E0"
+                            app:strokeColor="#444444" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnFamilyMono"
+                            style="@style/Widget.Material3.Button.OutlinedButton"
+                            android:layout_width="0dp"
+                            android:layout_height="36dp"
+                            android:layout_weight="1.2"
+                            android:insetTop="0dp"
+                            android:insetBottom="0dp"
+                            android:text="@string/font_family_mono"
+                            android:textSize="11sp"
+                            android:textColor="#E0E0E0"
+                            app:strokeColor="#444444" />
+
+                    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:id="@+id/customElementsContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Bottom Actions -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="8dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSaveAndApply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_save_apply"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            app:backgroundTint="#FFD700"
+            app:cornerRadius="8dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnResetDefaults"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/btn_reset_defaults"
+            android:textColor="#CCCCCC"
+            app:strokeColor="#555555" />
+
+    </LinearLayout>
+
+</LinearLayout>

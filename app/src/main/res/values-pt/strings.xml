@@ -45,4 +45,100 @@
 
     <string name="theme_alt_name">ALT-BTT Especial</string>
     <string name="theme_alt_desc">Variante de alto contraste óptico desenhada para máxima visibilidade sob sol direto.</string>
+
+    <!-- Tema Personalizado e Funcionalidades Pro -->
+    <string name="custom_theme_title">Estúdio de Mapa Personalizado (Pro)</string>
+    <string name="custom_theme_desc">Ajuste cada camada visual: ative/desative elementos e escolha a cor RGB exata de cada um.</string>
+    <string name="badge_pro">PRO</string>
+    <string name="btn_customize_colors">Personalizar Mapa</string>
+    <string name="btn_unlock_pro">Desbloquear Estúdio Pro</string>
+    <string name="pro_dialog_title">Desbloquear Estúdio Pro</string>
+    <string name="pro_dialog_msg">Crie o seu próprio estilo de mapa sob medida com controlo total sobre cores e visibilidade das camadas.\n\nInsira o seu código de ativação ou obtenha um via Buy Me a Coffee:</string>
+    <string name="pro_code_hint">KTOP-XXXX-YYYY-ZZZZ</string>
+    <string name="btn_activate">Ativar</string>
+    <string name="btn_get_code">Obter Licença</string>
+    <string name="pro_activation_success">Estúdio Pro desbloqueado com sucesso!</string>
+    <string name="pro_activation_invalid">Código inválido. Verifique os carateres e tente novamente.</string>
+    <string name="btn_save_apply">Guardar e Aplicar ao Karoo</string>
+    <string name="btn_reset_defaults">Restaurar Valores Padrão</string>
+    <string name="custom_theme_saved">Mapa personalizado guardado e aplicado ao Karoo!</string>
+
+    <!-- Controlos Tipográficos -->
+    <string name="typography_card_title">Tipografia do Mapa &amp; Legibilidade</string>
+    <string name="typography_card_desc">Ajuste o tamanho, espessura e fonte para facilitar a leitura em andamento</string>
+    <string name="label_font_size">Escala do Texto</string>
+    <string name="font_size_compact">Compacto (85%)</string>
+    <string name="font_size_normal">Padrão (100%)</string>
+    <string name="font_size_large">Grande (120%)</string>
+    <string name="font_size_huge">Ultra (140%)</string>
+    <string name="label_font_weight">Espessura da Fonte</string>
+    <string name="font_weight_normal">Normal</string>
+    <string name="font_weight_bold">Negrito (Sol)</string>
+    <string name="label_font_family">Família de Fonte</string>
+    <string name="font_family_default">Padrão</string>
+    <string name="font_family_condensed">Condensada</string>
+    <string name="font_family_mono">Técnica Mono</string>
+
+    <!-- Categorias SIG -->
+    <string name="cat_base_terrain">Relevo e Terreno Base</string>
+    <string name="cat_water">Hidrografia e Águas</string>
+    <string name="cat_forest_nature">Cobertura Vegetal e Florestas</string>
+    <string name="cat_urban_buildings">Cadastro Urbano e Edifícios</string>
+    <string name="cat_contours">Hipsometria e Curvas de Nível</string>
+    <string name="cat_roads_paths">Rede Viária e Trilhos</string>
+    <string name="cat_pois_labels">POIs Cartográficos e Toponímia</string>
+
+    <!-- Elementos -->
+    <string name="elem_bg_name">Fundo do Mapa</string>
+    <string name="elem_bg_desc">Cor da tela base para terreno não mapeado</string>
+    <string name="elem_meadow_name">Prados e Pastagens</string>
+    <string name="elem_meadow_desc">Campos abertos, prados e pastos alpinos</string>
+    <string name="elem_rock_name">Rocha e Alta Montanha</string>
+    <string name="elem_rock_desc">Paredes rochosas, cascalho e cumes alpinos</string>
+    <string name="elem_sand_name">Areia e Praias</string>
+    <string name="elem_sand_desc">Praias, dunas e terrenos arenosos</string>
+    <string name="elem_water_body_name">Lagos e Mar</string>
+    <string name="elem_water_body_desc">Oceanos, albufeiras e lagos</string>
+    <string name="elem_river_name">Rios e Ribeiro</string>
+    <string name="elem_river_desc">Cursos de água e canais fluviais</string>
+    <string name="elem_forest_name">Florestas e Bosques</string>
+    <string name="elem_forest_desc">Matas densas de folhosas e resinosas</string>
+    <string name="elem_park_name">Parques Urbanos e Jardins</string>
+    <string name="elem_park_desc">Parques de cidade e espaços recreativos verdes</string>
+    <string name="elem_residential_name">Áreas Residenciais</string>
+    <string name="elem_residential_desc">Localidades e uso do solo urbano</string>
+    <string name="elem_building_name">Edifícios</string>
+    <string name="elem_building_desc">Polígonos 2D de habitações e construções</string>
+    <string name="elem_industrial_name">Áreas Industriais</string>
+    <string name="elem_industrial_desc">Zonas comerciais e complexos ferroviários</string>
+    <string name="elem_contour_major_name">Curvas Mestras (Índice)</string>
+    <string name="elem_contour_major_desc">Linhas de altitude grossas a cada 50 m / 100 m</string>
+    <string name="elem_contour_minor_name">Curvas Secundárias</string>
+    <string name="elem_contour_minor_desc">Linhas de altitude finas a cada 10 m / 20 m</string>
+    <string name="elem_contour_label_name">Cotas de Altitude</string>
+    <string name="elem_contour_label_desc">Valores métricos de altitude ao longo das curvas</string>
+    <string name="elem_motorway_name">Autoestradas e Vias Rápidas</string>
+    <string name="elem_motorway_desc">Vias rápidas de alta capacidade</string>
+    <string name="elem_primary_road_name">Estradas Principais</string>
+    <string name="elem_primary_road_desc">Estradas nacionais e itinerários principais</string>
+    <string name="elem_secondary_road_name">Estradas Secundárias</string>
+    <string name="elem_secondary_road_desc">Estradas municipais e passos de montanha</string>
+    <string name="elem_residential_street_name">Ruas Urbanas</string>
+    <string name="elem_residential_street_desc">Ruas residenciais e caminhos pavimentados</string>
+    <string name="elem_gravel_track_name">Pistas de Cascalho e Florestais</string>
+    <string name="elem_gravel_track_desc">Estradas de terra batida e estradões de cascalho</string>
+    <string name="elem_mtb_singletrack_name">Trilhos BTT e Veredas</string>
+    <string name="elem_mtb_singletrack_desc">Singletracks técnicos e percursos pedestres</string>
+    <string name="elem_cycleway_name">Ciclovias e Ecopistas</string>
+    <string name="elem_cycleway_desc">Vias cicláveis segregadas e dedicadas</string>
+    <string name="elem_water_fountain_name">Fontes de Água Potável</string>
+    <string name="elem_water_fountain_desc">Pontos de água essenciais para os treinos</string>
+    <string name="elem_peak_mountain_name">Picos e Passos de Montanha</string>
+    <string name="elem_peak_mountain_desc">Cumes montanhosos e portelas</string>
+    <string name="elem_cafe_food_name">Cafés e Restaurantes</string>
+    <string name="elem_cafe_food_desc">Pontos de paragem para café e padarias</string>
+    <string name="elem_bike_shop_name">Lojas e Oficinas de Bicicletas</string>
+    <string name="elem_bike_shop_desc">Oficinas mecânicas ciclistas</string>
+    <string name="elem_place_label_name">Nomes de Cidades e Aldeias</string>
+    <string name="elem_place_label_desc">Topónimos e rótulos de povoações</string>
 </resources>

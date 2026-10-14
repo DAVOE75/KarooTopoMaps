@@ -10,10 +10,12 @@ import android.os.Environment
 import android.provider.Settings
 import android.view.LayoutInflater
 import android.view.View
+import android.widget.EditText
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -27,6 +29,11 @@ class MainActivity : AppCompatActivity() {
     private lateinit var btnRestore: MaterialButton
     private lateinit var toggleContourMode: MaterialButtonToggleGroup
 
+    private lateinit var cardCustomStudio: MaterialCardView
+    private lateinit var btnCustomize: MaterialButton
+    private lateinit var btnApplyCustomTheme: MaterialButton
+    private lateinit var tvProBadge: TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -35,7 +42,13 @@ class MainActivity : AppCompatActivity() {
         btnRestore = findViewById(R.id.btnRestore)
         toggleContourMode = findViewById(R.id.toggleContourMode)
 
+        cardCustomStudio = findViewById(R.id.cardCustomStudio)
+        btnCustomize = findViewById(R.id.btnCustomize)
+        btnApplyCustomTheme = findViewById(R.id.btnApplyCustomTheme)
+        tvProBadge = findViewById(R.id.tvProBadge)
+
         setupContourToggle()
+        setupCustomThemeStudio()
 
         btnRestore.setOnClickListener {
             handleRestore()
@@ -43,6 +56,96 @@ class MainActivity : AppCompatActivity() {
 
         checkAndRequestPermissions()
         renderThemes()
+    }
+
+    private fun setupCustomThemeStudio() {
+        updateProStudioUI()
+
+        btnCustomize.setOnClickListener {
+            if (LicenseManager.isProActivated(this)) {
+                startActivity(Intent(this, CustomThemeEditorActivity::class.java))
+            } else {
+                showProActivationDialog()
+            }
+        }
+
+        btnApplyCustomTheme.setOnClickListener {
+            if (LicenseManager.isProActivated(this)) {
+                val success = CustomThemeManager.generateAndApplyCustomTheme(this)
+                if (success) {
+                    Toast.makeText(this, getString(R.string.custom_theme_saved), Toast.LENGTH_SHORT).show()
+                    renderThemes()
+                } else {
+                    Toast.makeText(this, getString(R.string.error_storage_permission), Toast.LENGTH_LONG).show()
+                }
+            } else {
+                showProActivationDialog()
+            }
+        }
+    }
+
+    private fun updateProStudioUI() {
+        val isPro = LicenseManager.isProActivated(this)
+        val currentThemeId = ThemeManager.getCurrentThemeId(this)
+        val isCustomActive = (currentThemeId == CustomThemeManager.CUSTOM_THEME_ID)
+
+        if (isPro) {
+            tvProBadge.text = getString(R.string.badge_pro)
+            tvProBadge.setBackgroundColor(0xFF2E7D32.toInt()) // Green unlocked
+            btnCustomize.text = getString(R.string.btn_customize_colors)
+
+            if (isCustomActive) {
+                cardCustomStudio.strokeColor = 0xFFFFD700.toInt()
+                cardCustomStudio.strokeWidth = 4
+                btnApplyCustomTheme.text = getString(R.string.btn_active)
+                btnApplyCustomTheme.isEnabled = false
+            } else {
+                cardCustomStudio.strokeColor = 0xFF555555.toInt()
+                cardCustomStudio.strokeWidth = 2
+                btnApplyCustomTheme.text = getString(R.string.btn_apply)
+                btnApplyCustomTheme.isEnabled = true
+            }
+        } else {
+            tvProBadge.text = "PRO 🔒"
+            tvProBadge.setBackgroundColor(0xFFC77800.toInt())
+            btnCustomize.text = getString(R.string.btn_unlock_pro)
+            btnApplyCustomTheme.text = "🔒 " + getString(R.string.btn_apply)
+            cardCustomStudio.strokeColor = 0xFF333333.toInt()
+            cardCustomStudio.strokeWidth = 2
+        }
+    }
+
+    private fun showProActivationDialog() {
+        val input = EditText(this).apply {
+            hint = getString(R.string.pro_code_hint)
+            setSingleLine()
+            typeface = android.graphics.Typeface.MONOSPACE
+            setPadding(40, 30, 40, 30)
+        }
+
+        AlertDialog.Builder(this)
+            .setTitle(R.string.pro_dialog_title)
+            .setMessage(getString(R.string.pro_dialog_msg))
+            .setView(input)
+            .setPositiveButton(R.string.btn_activate) { _, _ ->
+                val code = input.text.toString().trim()
+                if (LicenseManager.activatePro(this, code)) {
+                    Toast.makeText(this, getString(R.string.pro_activation_success), Toast.LENGTH_LONG).show()
+                    updateProStudioUI()
+                    // Open editor immediately upon activation
+                    startActivity(Intent(this, CustomThemeEditorActivity::class.java))
+                } else {
+                    Toast.makeText(this, getString(R.string.pro_activation_invalid), Toast.LENGTH_LONG).show()
+                }
+            }
+            .setNeutralButton(R.string.btn_get_code) { _, _ ->
+                try {
+                    val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://buymeacoffee.com/davoe75"))
+                    startActivity(browserIntent)
+                } catch (ignored: Exception) {}
+            }
+            .setNegativeButton("Cancel", null)
+            .show()
     }
 
     private fun setupContourToggle() {
@@ -75,6 +178,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
+        updateProStudioUI()
         renderThemes()
     }
 

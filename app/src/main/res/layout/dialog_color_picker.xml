@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#1E1E1E"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/tvColorPickerTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Choose Color"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Palette of High-Visibility Outdoor Cycling Colors -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quick Palette (Sunlight Optimized)"
+        android:textColor="#AAAAAA"
+        android:textSize="11sp"
+        android:layout_marginBottom="8dp" />
+
+    <GridLayout
+        android:id="@+id/gridPalette"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="6"
+        android:alignmentMode="alignMargins"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hex RGB Code:"
+        android:textColor="#AAAAAA"
+        android:textSize="11sp"
+        android:layout_marginBottom="4dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            app:cardCornerRadius="18dp"
+            app:strokeColor="#FFFFFF"
+            app:strokeWidth="1dp"
+            android:layout_marginEnd="8dp">
+
+            <View
+                android:id="@+id/viewSelectedColorPreview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFD700" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <EditText
+            android:id="@+id/etHexCode"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:background="#2E2E2E"
+            android:hint="#RRGGBB"
+            android:textColorHint="#666666"
+            android:textColor="#FFFFFF"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:inputType="textCapCharacters"
+            android:maxLength="7"
+            android:typeface="monospace"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
