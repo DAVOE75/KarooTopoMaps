@@ -68,6 +68,66 @@
                 android:layout_marginBottom="10dp"
                 android:background="#2E2E2E" />
 
+            <!-- REAL-TIME MAP PREVIEW SIMULATION CARD -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                app:cardBackgroundColor="#0D0D0D"
+                app:cardCornerRadius="12dp"
+                app:strokeColor="#FFD700"
+                app:strokeWidth="1.5dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="6dp"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="4dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="SIMULACIÓN EN TIEMPO REAL"
+                            android:textColor="#FFD700"
+                            android:textSize="11sp"
+                            android:textStyle="bold"
+                            android:letterSpacing="0.05" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="#26FFD700"
+                            android:paddingStart="6dp"
+                            android:paddingEnd="6dp"
+                            android:paddingTop="2dp"
+                            android:paddingBottom="2dp"
+                            android:text="LIVE PREVIEW"
+                            android:textColor="#FFD700"
+                            android:textSize="9sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <com.davoe.karootopomaps.MapPreviewView
+                        android:id="@+id/mapPreviewView"
+                        android:layout_width="match_parent"
+                        android:layout_height="145dp" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
             <!-- PRO CYCLIST TOOLS CARD -->
             <com.google.android.material.card.MaterialCardView
                 android:id="@+id/cardProTools"

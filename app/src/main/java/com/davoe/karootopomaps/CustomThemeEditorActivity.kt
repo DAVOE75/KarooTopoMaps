@@ -32,6 +32,7 @@ class CustomThemeEditorActivity : AppCompatActivity() {
     private lateinit var toggleFontSize: MaterialButtonToggleGroup
     private lateinit var toggleFontWeight: MaterialButtonToggleGroup
     private lateinit var spinnerFontFamily: Spinner
+    private lateinit var mapPreviewView: MapPreviewView
 
     // Sunlight-tested outdoor color palette for instant picking on Karoo
     private val PRESET_COLORS = listOf(
@@ -54,6 +55,7 @@ class CustomThemeEditorActivity : AppCompatActivity() {
         toggleFontSize = findViewById(R.id.toggleFontSize)
         toggleFontWeight = findViewById(R.id.toggleFontWeight)
         spinnerFontFamily = findViewById(R.id.spinnerFontFamily)
+        mapPreviewView = findViewById(R.id.mapPreviewView)
 
         btnBack.setOnClickListener { finish() }
 
@@ -79,6 +81,7 @@ class CustomThemeEditorActivity : AppCompatActivity() {
                     setupProToolsControls()
                     setupTypographyControls()
                     renderElements()
+                    mapPreviewView.refreshPreview()
                 }
                 .setNegativeButton(R.string.btn_cancel, null)
                 .show()
@@ -107,12 +110,15 @@ class CustomThemeEditorActivity : AppCompatActivity() {
 
         switchSunlight.setOnCheckedChangeListener { _, isChecked ->
             CustomThemeManager.setSunlightBoosterEnabled(this, isChecked)
+            mapPreviewView.refreshPreview()
         }
         switchWater.setOnCheckedChangeListener { _, isChecked ->
             CustomThemeManager.setWaterRadarEnabled(this, isChecked)
+            mapPreviewView.refreshPreview()
         }
         switchMtbGrades.setOnCheckedChangeListener { _, isChecked ->
             CustomThemeManager.setMtbGradesEnabled(this, isChecked)
+            mapPreviewView.refreshPreview()
         }
 
         // 1-Touch Discipline Presets
@@ -122,6 +128,7 @@ class CustomThemeEditorActivity : AppCompatActivity() {
             switchMtbGrades.isChecked = CustomThemeManager.isMtbGradesEnabled(this)
             setupTypographyControls()
             renderElements()
+            mapPreviewView.refreshPreview()
             Toast.makeText(this, "Preset aplicado", Toast.LENGTH_SHORT).show()
         }
 
@@ -164,6 +171,7 @@ class CustomThemeEditorActivity : AppCompatActivity() {
                         switchMtbGrades.isChecked = CustomThemeManager.isMtbGradesEnabled(this)
                         setupTypographyControls()
                         renderElements()
+                        mapPreviewView.refreshPreview()
                         Toast.makeText(this, getString(R.string.msg_profile_imported), Toast.LENGTH_SHORT).show()
                     } else {
                         Toast.makeText(this, getString(R.string.error_invalid_profile), Toast.LENGTH_LONG).show()
@@ -192,6 +200,7 @@ class CustomThemeEditorActivity : AppCompatActivity() {
                     else -> CustomThemeManager.FONT_SCALE_NORMAL
                 }
                 CustomThemeManager.setFontScale(this, scale)
+                mapPreviewView.refreshPreview()
             }
         }
 
@@ -208,6 +217,7 @@ class CustomThemeEditorActivity : AppCompatActivity() {
                     else -> CustomThemeManager.FONT_WEIGHT_BOLD
                 }
                 CustomThemeManager.setFontWeight(this, weight)
+                mapPreviewView.refreshPreview()
             }
         }
 
@@ -234,6 +244,7 @@ class CustomThemeEditorActivity : AppCompatActivity() {
                 (view as? TextView)?.setTextColor(Color.WHITE)
                 val selectedFamily = fontFamilies[position].second
                 CustomThemeManager.setFontFamily(this@CustomThemeEditorActivity, selectedFamily)
+                mapPreviewView.refreshPreview()
             }
             override fun onNothingSelected(parent: AdapterView<*>?) {}
         }
@@ -301,6 +312,7 @@ class CustomThemeEditorActivity : AppCompatActivity() {
                     btnLineStyle.alpha = if (isChecked) 1.0f else 0.3f
                     btnLineStyle.isEnabled = isChecked
                 }
+                mapPreviewView.refreshPreview()
             }
 
             cardColor.setOnClickListener {
@@ -409,6 +421,7 @@ class CustomThemeEditorActivity : AppCompatActivity() {
                     try {
                         colorSampleView.setBackgroundColor(Color.parseColor(finalHex))
                     } catch (ignored: Exception) {}
+                    mapPreviewView.refreshPreview()
                 } else {
                     Toast.makeText(this, getString(R.string.invalid_hex_error), Toast.LENGTH_SHORT).show()
                 }
@@ -467,6 +480,7 @@ class CustomThemeEditorActivity : AppCompatActivity() {
             .setPositiveButton(R.string.btn_select) { _, _ ->
                 CustomThemeManager.setLineWidth(this, element.key, selectedWidth)
                 CustomThemeManager.setLinePattern(this, element.key, selectedPattern)
+                mapPreviewView.refreshPreview()
             }
             .setNegativeButton(R.string.btn_cancel, null)
             .show()

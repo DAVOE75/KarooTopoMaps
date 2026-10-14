@@ -116,19 +116,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showProActivationDialog() {
-        val input = EditText(this).apply {
-            hint = getString(R.string.pro_code_hint)
-            setSingleLine()
-            typeface = android.graphics.Typeface.MONOSPACE
-            setPadding(40, 30, 40, 30)
-        }
+        val dialogView = layoutInflater.inflate(R.layout.dialog_activate_pro, null)
+        val input = dialogView.findViewById<com.google.android.material.textfield.TextInputEditText>(R.id.etProActivationCode)
 
         AlertDialog.Builder(this)
             .setTitle(R.string.pro_dialog_title)
-            .setMessage(getString(R.string.pro_dialog_msg))
-            .setView(input)
+            .setView(dialogView)
             .setPositiveButton(R.string.btn_activate) { _, _ ->
-                val code = input.text.toString().trim()
+                val code = input?.text?.toString()?.trim() ?: ""
                 if (LicenseManager.activatePro(this, code)) {
                     Toast.makeText(this, getString(R.string.pro_activation_success), Toast.LENGTH_LONG).show()
                     updateProStudioUI()
