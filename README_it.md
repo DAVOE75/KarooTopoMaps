@@ -40,10 +40,10 @@ Ogni stile è stato calibrato con precisione millimetrica per i display transfle
 
 * <img src="art/ic_gis_studio.svg" width="16" height="16" align="center" /> **Studio Mappa Personalizzata (PRO)**: Crea il tuo stile cartografico da zero o modifica qualsiasi tema esistente con pieno controllo visivo.
 * <img src="art/ic_gis_presets.svg" width="16" height="16" align="center" /> **Profili per Disciplina con 1 Tocco**:
-  * 🚴 **Strada Pro**: Sfondo pulito a contrasto massimo, rete stradale rinforzata e disattivazione totale di curve e sentieri per una leggibilità perfetta ad alta velocità.
-  * 🚵 **MTB Enduro**: Curve di livello ad altissima precisione (10m/20m), singletrack in rosso brillante ad alta visibilità, strade forestali e radar di sopravvivenza attivi.
-  * 🌲 **Gravel Pro**: Priorità assoluta a piste sterrate, sentieri rurali e fontane d'acqua potabile; strade secondarie attenuate.
-  * 🌙 **AMOLED Notte**: Sfondo nero puro (`#000000`) per il massimo risparmio della batteria e nessun abbagliamento notturno.
+  * <img src="art/ic_gis_road.svg" width="14" height="14" align="center" /> **Strada Pro**: Sfondo pulito a contrasto massimo, rete stradale rinforzata e disattivazione totale di curve e sentieri per una leggibilità perfetta ad alta velocità.
+  * <img src="art/ic_gis_mtb.svg" width="14" height="14" align="center" /> **MTB Enduro**: Curve di livello ad altissima precisione (10m/20m), singletrack in rosso brillante ad alta visibilità, strade forestali e radar di sopravvivenza attivi.
+  * <img src="art/ic_gis_gravel.svg" width="14" height="14" align="center" /> **Gravel Pro**: Priorità assoluta a piste sterrate, sentieri rurali e fontane d'acqua potabile; strade secondarie attenuate.
+  * <img src="art/ic_gis_night.svg" width="14" height="14" align="center" /> **AMOLED Notte**: Sfondo nero puro (`#000000`) per il massimo risparmio della batteria e nessun abbagliamento notturno.
 * <img src="art/ic_gis_sun.svg" width="16" height="16" align="center" /> **Booster per Sole Intenso (High-Glare Sunlight Booster)**: Aumenta automaticamente lo spessore di tutte le linee del +25% e aggiunge bordi ad alto contrasto per una lettura nitida sotto il sole cocente.
 * <img src="art/ic_gis_fountain.svg" width="16" height="16" align="center" /> **Radar Fontane d\'Acqua Potabile (Modalità Sopravvivenza)**: Mostra le fontane d'acqua potabile (`drinking_water`) con la massima priorità e un'icona ingrandita blu brillante visibile anche da livelli di zoom lontani.
 * <img src="art/ic_gis_mtb.svg" width="16" height="16" align="center" /> **Classificazione Difficoltà Sentieri IMBA**: Colora automaticamente i singletrack in base al livello tecnico ufficiale di OpenStreetMap (Verde, Blu, Rosso, Nero).

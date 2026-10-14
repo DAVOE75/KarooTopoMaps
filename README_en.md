@@ -40,10 +40,10 @@ Each style is calibrated for sunlight readability on Karoo transflective display
 
 * <img src="art/ic_gis_studio.svg" width="16" height="16" align="center" /> **Custom Map Studio (PRO)**: Design your own cartographic style from scratch or customize any baseline theme with complete visual control.
 * <img src="art/ic_gis_presets.svg" width="16" height="16" align="center" /> **1-Touch Discipline Presets**:
-  * 🚴 **Road Pro**: Ultra-clean high-contrast background, bold road network, and disabled contours/singletracks for maximum navigation clarity at high speed.
-  * 🚵 **MTB Enduro**: High-precision elevation contours (10m/20m), high-visibility red singletracks, forest doubletracks, and active survival radars.
-  * 🌲 **Gravel Pro**: Priority on dirt doubletracks, unpaved roads, and water sources; muted secondary roads.
-  * 🌙 **AMOLED Dark**: Pure black background (`#000000`) for maximum battery life and zero night glare.
+  * <img src="art/ic_gis_road.svg" width="14" height="14" align="center" /> **Road Pro**: Ultra-clean high-contrast background, bold road network, and disabled contours/singletracks for maximum navigation clarity at high speed.
+  * <img src="art/ic_gis_mtb.svg" width="14" height="14" align="center" /> **MTB Enduro**: High-precision elevation contours (10m/20m), high-visibility red singletracks, forest doubletracks, and active survival radars.
+  * <img src="art/ic_gis_gravel.svg" width="14" height="14" align="center" /> **Gravel Pro**: Priority on dirt doubletracks, unpaved roads, and water sources; muted secondary roads.
+  * <img src="art/ic_gis_night.svg" width="14" height="14" align="center" /> **AMOLED Dark**: Pure black background (`#000000`) for maximum battery life and zero night glare.
 * <img src="art/ic_gis_sun.svg" width="16" height="16" align="center" /> **High-Glare Sunlight Booster**: Automatically boosts line widths by +25% and reinforces high-contrast outlines for pristine readability under direct noon sunlight.
 * <img src="art/ic_gis_fountain.svg" width="16" height="16" align="center" /> **Survival Drinking Water Radar**: Elevates potable water sources (`drinking_water`) to top priority with an enlarged bright blue icon visible from high zoom levels.
 * <img src="art/ic_gis_mtb.svg" width="16" height="16" align="center" /> **IMBA Trail Difficulty Grading**: Automatically colors singletracks according to official OpenStreetMap trail grades (Green = Easy, Blue = Moderate, Red = Difficult, Black = Expert).

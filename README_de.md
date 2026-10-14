@@ -40,10 +40,10 @@ Jeder Stil wurde präzise für die transflektiven Displays des Karoo bei direkte
 
 * <img src="art/ic_gis_studio.svg" width="16" height="16" align="center" /> **Custom Karten-Studio (PRO)**: Erstelle deinen eigenen Kartenstil von Grund auf oder passe bestehende Themes mit voller visueller Kontrolle an.
 * <img src="art/ic_gis_presets.svg" width="16" height="16" align="center" /> **1-Klick-Disziplin-Profile**:
-  * 🚴 **Rennrad Pro**: Ultra-cleaner Hintergrund mit Höchstkontrast, verstärktes Straßennetz und ausgeblendete Höhenlinien/Trails für maximale Navigationssicht bei hohem Tempo.
-  * 🚵 **MTB Enduro**: Hochpräzise Höhenlinien (10m/20m), leuchtend rote Singletrails, Waldwege und aktive Überlebens-Radare.
-  * 🌲 **Gravel Pro**: Priorität für unbefestigte Schotterwege, Forststraßen und Trinkwasserbrunnen; gedämpfte Nebenstraßen.
-  * 🌙 **AMOLED Nacht**: Reines Schwarz (`#000000`) für maximale Akkulaufzeit und blendfreie Fahrten bei Dunkelheit.
+  * <img src="art/ic_gis_road.svg" width="14" height="14" align="center" /> **Rennrad Pro**: Ultra-cleaner Hintergrund mit Höchstkontrast, verstärktes Straßennetz und ausgeblendete Höhenlinien/Trails für maximale Navigationssicht bei hohem Tempo.
+  * <img src="art/ic_gis_mtb.svg" width="14" height="14" align="center" /> **MTB Enduro**: Hochpräzise Höhenlinien (10m/20m), leuchtend rote Singletrails, Waldwege und aktive Überlebens-Radare.
+  * <img src="art/ic_gis_gravel.svg" width="14" height="14" align="center" /> **Gravel Pro**: Priorität für unbefestigte Schotterwege, Forststraßen und Trinkwasserbrunnen; gedämpfte Nebenstraßen.
+  * <img src="art/ic_gis_night.svg" width="14" height="14" align="center" /> **AMOLED Nacht**: Reines Schwarz (`#000000`) für maximale Akkulaufzeit und blendfreie Fahrten bei Dunkelheit.
 * <img src="art/ic_gis_sun.svg" width="16" height="16" align="center" /> **Sonnenlicht-Kontrast-Booster (High-Glare Sunlight Booster)**: Verstärkt automatisch alle Linienstärken um +25% und fügt kontrastreiche Konturen für beste Lesbarkeit bei sengender Mittagssonne hinzu.
 * <img src="art/ic_gis_fountain.svg" width="16" height="16" align="center" /> **Trinkwasser-Radar (Überlebensmodus)**: Zeigt Trinkwasserbrunnen (`drinking_water`) mit höchster Priorität und vergrößertem hellblauen Symbol an, das schon bei weiten Zoomstufen sichtbar ist.
 * <img src="art/ic_gis_mtb.svg" width="16" height="16" align="center" /> **IMBA MTB-Schwierigkeitsgrade**: Färbt Trails automatisch nach dem offiziellen OpenStreetMap-Schwierigkeitsgrad ein (Grün, Blau, Rot, Schwarz).

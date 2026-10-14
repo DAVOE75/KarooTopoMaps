@@ -38,10 +38,10 @@ Cada estilo ha sido calibrado milimétricamente teniendo en cuenta la óptica de
 
 * <img src="art/ic_gis_studio.svg" width="16" height="16" align="center" /> **Estudio de Mapas Personalizado (PRO)**: Crea tu propio estilo cartográfico desde cero o edita cualquiera de los existentes con control total del mapa.
 * <img src="art/ic_gis_presets.svg" width="16" height="16" align="center" /> **Perfiles Inteligentes por Disciplina (1 Solo Toque)**:
-  * 🚴 **Carretera Pro**: Fondo limpio de contraste extremo, carreteras principales reforzadas y apagado total de curvas y senderos para máxima visibilidad de la línea de ruta a 40 km/h.
-  * 🚵 **MTB Enduro**: Curvas de nivel ultraprecisas (10m/20m), senderos técnicos (*singletracks*) en rojo de alta visibilidad, pistas forestales destacadas y radares activos.
-  * 🌲 **Gravel Pro**: Prioridad a pistas de tierra, caminos rurales y fuentes de agua; carreteras secundarias y nacionales atenuadas.
-  * 🌙 **AMOLED Noche**: Fondo negro puro (`#000000`) para ahorro máximo de batería de pantalla y cero deslumbramientos nocturnos.
+  * <img src="art/ic_gis_road.svg" width="14" height="14" align="center" /> **Carretera Pro**: Fondo limpio de contraste extremo, carreteras principales reforzadas y apagado total de curvas y senderos para máxima visibilidad de la línea de ruta a 40 km/h.
+  * <img src="art/ic_gis_mtb.svg" width="14" height="14" align="center" /> **MTB Enduro**: Curvas de nivel ultraprecisas (10m/20m), senderos técnicos (*singletracks*) en rojo de alta visibilidad, pistas forestales destacadas y radares activos.
+  * <img src="art/ic_gis_gravel.svg" width="14" height="14" align="center" /> **Gravel Pro**: Prioridad a pistas de tierra, caminos rurales y fuentes de agua; carreteras secundarias y nacionales atenuadas.
+  * <img src="art/ic_gis_night.svg" width="14" height="14" align="center" /> **AMOLED Noche**: Fondo negro puro (`#000000`) para ahorro máximo de batería de pantalla y cero deslumbramientos nocturnos.
 * <img src="art/ic_gis_sun.svg" width="16" height="16" align="center" /> **Potenciador de Sol Extremo (High-Glare Sunlight Booster)**: Aumenta automáticamente el grosor de todos los trazos un +25% y añade rebordes de alto contraste para una lectura cristalina bajo el sol de mediodía.
 * <img src="art/ic_gis_fountain.svg" width="16" height="16" align="center" /> **Radar de Fuentes de Agua Potable (Survival Mode)**: Eleva los puntos de agua potable (`drinking_water`) a prioridad máxima con icono agrandado en azul brillante visible desde niveles de zoom lejanos.
 * <img src="art/ic_gis_mtb.svg" width="16" height="16" align="center" /> **Dificultad de Senderos IMBA**: Colorea automáticamente las trialeras y senderos según su grado técnico en OpenStreetMap (Verde = Fácil, Azul = Moderado, Rojo = Difícil, Negro = Experto).

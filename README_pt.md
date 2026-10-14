@@ -40,10 +40,10 @@ Cada estilo foi minuciosamente calibrado para as telas transfletivas do Karoo so
 
 * <img src="art/ic_gis_studio.svg" width="16" height="16" align="center" /> **Estúdio de Mapa Personalizado (PRO)**: Crie o seu próprio estilo cartográfico de raiz ou edite qualquer tema com controlo visual absoluto.
 * <img src="art/ic_gis_presets.svg" width="16" height="16" align="center" /> **Predefinições por Disciplina com 1 Toque**:
-  * 🚴 **Estrada Pro**: Fundo limpo de contraste extremo, rede viária reforçada e desligamento total de curvas e trilhos para máxima visibilidade em alta velocidade.
-  * 🚵 **BTT Enduro**: Curvas de nível de alta precisão (10m/20m), singletracks em vermelho brilhante de alta visibilidade, estradões florestais e radares de sobrevivência ativos.
-  * 🌲 **Gravel Pro**: Prioridade total a caminhos de terra batida, pistas de cascalho e fontes de água potável; estradas secundárias atenuadas.
-  * 🌙 **AMOLED Noite**: Fundo preto puro (`#000000`) para poupança máxima de bateria e zero encandeamento noturno.
+  * <img src="art/ic_gis_road.svg" width="14" height="14" align="center" /> **Estrada Pro**: Fundo limpo de contraste extremo, rede viária reforçada e desligamento total de curvas e trilhos para máxima visibilidade em alta velocidade.
+  * <img src="art/ic_gis_mtb.svg" width="14" height="14" align="center" /> **BTT Enduro**: Curvas de nível de alta precisão (10m/20m), singletracks em vermelho brilhante de alta visibilidade, estradões florestais e radares de sobrevivência ativos.
+  * <img src="art/ic_gis_gravel.svg" width="14" height="14" align="center" /> **Gravel Pro**: Prioridade total a caminhos de terra batida, pistas de cascalho e fontes de água potável; estradas secundárias atenuadas.
+  * <img src="art/ic_gis_night.svg" width="14" height="14" align="center" /> **AMOLED Noite**: Fundo preto puro (`#000000`) para poupança máxima de bateria e zero encandeamento noturno.
 * <img src="art/ic_gis_sun.svg" width="16" height="16" align="center" /> **Potenciador de Sol Intenso (High-Glare Sunlight Booster)**: Aumenta automaticamente a espessura de todas as linhas em +25% e adiciona contornos de alto contraste para uma leitura nítida sob o sol do meio-dia.
 * <img src="art/ic_gis_fountain.svg" width="16" height="16" align="center" /> **Radar de Fontes de Água Potável (Modo Sobrevivência)**: Exibe fontes de água potável (`drinking_water`) com prioridade máxima e ícone ampliado em azul vivo visível desde níveis de zoom afastados.
 * <img src="art/ic_gis_mtb.svg" width="16" height="16" align="center" /> **Classificação de Dificuldade BTT IMBA**: Colore automaticamente os singletracks consoante a graduação técnica oficial do OpenStreetMap (Verde, Azul, Vermelho, Preto).

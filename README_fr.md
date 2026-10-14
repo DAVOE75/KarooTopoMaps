@@ -40,10 +40,10 @@ Chaque thème a été calibré avec précision pour les écrans transflectifs du
 
 * <img src="art/ic_gis_studio.svg" width="16" height="16" align="center" /> **Studio de Carte Personnalisée (PRO)** : Créez votre propre style cartographique ou modifiez n'importe quel thème avec un contrôle visuel total.
 * <img src="art/ic_gis_presets.svg" width="16" height="16" align="center" /> **Préréglages par Discipline en 1 Seul Clic** :
-  * 🚴 **Route Pro** : Fond épuré à contraste maximal, réseau routier renforcé et désactivation complète des courbes et sentiers pour une lisibilité parfaite à haute vitesse.
-  * 🚵 **VTT Enduro** : Courbes de niveau haute précision (10m/20m), singletracks en rouge vif, pistes forestières et radars de survie activés.
-  * 🌲 **Gravel Pro** : Priorité absolue aux chemins de terre, pistes non goudronnées et points d'eau potable.
-  * 🌙 **AMOLED Nuit** : Fond noir pur (`#000000`) pour une économie de batterie maximale et zéro éblouissement de nuit.
+  * <img src="art/ic_gis_road.svg" width="14" height="14" align="center" /> **Route Pro** : Fond épuré à contraste maximal, réseau routier renforcé et désactivation complète des courbes et sentiers pour une lisibilité parfaite à haute vitesse.
+  * <img src="art/ic_gis_mtb.svg" width="14" height="14" align="center" /> **VTT Enduro** : Courbes de niveau haute précision (10m/20m), singletracks en rouge vif, pistes forestières et radars de survie activés.
+  * <img src="art/ic_gis_gravel.svg" width="14" height="14" align="center" /> **Gravel Pro** : Priorité absolue aux chemins de terre, pistes non goudronnées et points d'eau potable.
+  * <img src="art/ic_gis_night.svg" width="14" height="14" align="center" /> **AMOLED Nuit** : Fond noir pur (`#000000`) pour une économie de batterie maximale et zéro éblouissement de nuit.
 * <img src="art/ic_gis_sun.svg" width="16" height="16" align="center" /> **Booster de Plein Soleil (High-Glare Sunlight Booster)** : Épaissit automatiquement tous les traits de +25% et ajoute des contours contrastés pour une lecture limpide sous le soleil de midi.
 * <img src="art/ic_gis_fountain.svg" width="16" height="16" align="center" /> **Radar Points d\'Eau Potable (Mode Survie)** : Affiche les fontaines d'eau potable (`drinking_water`) en priorité maximale avec une icône agrandie bleu vif visible dès les niveaux de zoom éloignés.
 * <img src="art/ic_gis_mtb.svg" width="16" height="16" align="center" /> **Classification de Difficulté VTT (IMBA)** : Colore automatiquement les singletracks selon leur niveau technique officiel OpenStreetMap (Vert, Bleu, Rouge, Noir).
