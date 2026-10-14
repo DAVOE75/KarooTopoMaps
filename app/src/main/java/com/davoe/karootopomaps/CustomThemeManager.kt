@@ -45,6 +45,34 @@ object CustomThemeManager {
         prefs.edit().putBoolean("${key}_visible", visible).apply()
     }
 
+    /**
+     * Line styling: Stroke width multiplier (0.5 to 2.0)
+     */
+    fun getLineWidth(context: Context, key: String): Float {
+        val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+        val defaultWidth = CustomThemeSchema.ELEMENTS.find { it.key == key }?.defaultWidth ?: 0.6f
+        return prefs.getFloat("${key}_width", defaultWidth)
+    }
+
+    fun setLineWidth(context: Context, key: String, width: Float) {
+        val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+        prefs.edit().putFloat("${key}_width", width).apply()
+    }
+
+    /**
+     * Line styling: Pattern ("solid", "dashed", "dotted")
+     */
+    fun getLinePattern(context: Context, key: String): String {
+        val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+        val defaultPattern = CustomThemeSchema.ELEMENTS.find { it.key == key }?.defaultDashArray ?: "solid"
+        return prefs.getString("${key}_pattern", defaultPattern) ?: defaultPattern
+    }
+
+    fun setLinePattern(context: Context, key: String, pattern: String) {
+        val prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+        prefs.edit().putString("${key}_pattern", pattern).apply()
+    }
+
     // Typography Constants
     const val FONT_SCALE_COMPACT = "0.85"
     const val FONT_SCALE_NORMAL = "1.0"
@@ -213,21 +241,34 @@ object CustomThemeManager {
             val cMinor = if (cMinorVis) getColor(context, "color_contour_minor") else "#00000000"
             val cLabel = if (cLabelVis) getColor(context, "color_contour_label") else "#00000000"
 
+            val cMajorWidth = getLineWidth(context, "color_contour_major")
+            val cMinorWidth = getLineWidth(context, "color_contour_minor")
+            val cMajorPattern = getLinePattern(context, "color_contour_major")
+            val cMinorPattern = getLinePattern(context, "color_contour_minor")
+
+            fun patternToDash(pattern: String): String = when (pattern) {
+                "dashed" -> """ dasharray="8,6""""
+                "dotted" -> """ dasharray="3,3""""
+                else -> ""
+            }
+
             if (!cMinorVis) {
                 customXml = customXml.replace(Regex("""<m e="way" k="natural\|contour_ext" v="minor_contour_line\|elevation_minor\|elevation_medium"[^>]*>[\s\S]*?</m>"""), "")
             } else {
+                val dash = patternToDash(cMinorPattern)
                 customXml = customXml.replace(
-                    Regex("""(<m e="way" k="natural\|contour_ext" v="minor_contour_line\|elevation_minor\|elevation_medium" zoom-min="14">\s*<line stroke=")[^"]*(")"""),
-                    "$1$cMinor$2"
+                    Regex("""(<m e="way" k="natural\|contour_ext" v="minor_contour_line\|elevation_minor\|elevation_medium" zoom-min="14">\s*<line stroke=")[^"]*("\s*width=")[^"]*(")"""),
+                    "$1$cMinor$2$cMinorWidth$3$dash"
                 )
             }
 
             if (!cMajorVis) {
                 customXml = customXml.replace(Regex("""<m e="way" k="natural\|contour_ext" v="major_contour_line\|elevation_major"[^>]*>[\s\S]*?</m>"""), "")
             } else {
+                val dash = patternToDash(cMajorPattern)
                 customXml = customXml.replace(
-                    Regex("""(<m e="way" k="natural\|contour_ext" v="major_contour_line\|elevation_major" zoom-min="11">\s*<line stroke=")[^"]*(")"""),
-                    "$1$cMajor$2"
+                    Regex("""(<m e="way" k="natural\|contour_ext" v="major_contour_line\|elevation_major" zoom-min="11">\s*<line stroke=")[^"]*("\s*width=")[^"]*(")"""),
+                    "$1$cMajor$2$cMajorWidth$3$dash"
                 )
             }
             customXml = customXml.replace(Regex("""fill="#5C442A""""), """fill="$cLabel"""")
@@ -235,14 +276,29 @@ object CustomThemeManager {
             // Roads, Gravel & Trails
             val mtbVis = isElementVisible(context, "color_mtb_singletrack")
             val mtbSingletrack = if (mtbVis) getColor(context, "color_mtb_singletrack") else "#00000000"
+            val mtbWidth = getLineWidth(context, "color_mtb_singletrack")
+            val mtbPattern = getLinePattern(context, "color_mtb_singletrack")
+            val mtbDash = when (mtbPattern) {
+                "solid" -> ""
+                "dotted" -> """ dasharray="3,3""""
+                else -> """ dasharray="6,4""""
+            }
+
             val cyclewayVis = isElementVisible(context, "color_cycleway")
             val cycleway = if (cyclewayVis) getColor(context, "color_cycleway") else "#00000000"
             val gravelVis = isElementVisible(context, "color_gravel_track")
             val gravel = if (gravelVis) getColor(context, "color_gravel_track") else "#00000000"
+            val gravelWidth = getLineWidth(context, "color_gravel_track")
 
-            customXml = customXml.replace(Regex("""<style-line id="path" stroke="[^"]*""""), """<style-line id="path" stroke="$mtbSingletrack"""")
+            customXml = customXml.replace(
+                Regex("""<style-line id="path"[^/]*/>"""),
+                """<style-line id="path" stroke="$mtbSingletrack" width="$mtbWidth"$mtbDash cap="round"/>"""
+            )
             customXml = customXml.replace(Regex("""<style-line id="paved_cycleway_casing" stroke="[^"]*""""), """<style-line id="paved_cycleway_casing" stroke="$cycleway"""")
-            customXml = customXml.replace(Regex("""<style-line id="unpaved_casing" stroke="[^"]*""""), """<style-line id="unpaved_casing" stroke="$gravel"""")
+            customXml = customXml.replace(
+                Regex("""<style-line id="unpaved_casing"[^/]*/>"""),
+                """<style-line id="unpaved_casing" stroke="$gravel" width="$gravelWidth" cap="round"/>"""
+            )
 
             // Labels & POIs
             val placeVis = isElementVisible(context, "color_place_label")

@@ -79,6 +79,17 @@
     <string name="font_family_condensed">Condensada</string>
     <string name="font_family_mono">Técnica Mono</string>
 
+    <!-- Controles de Estilo de Línea -->
+    <string name="label_line_width">Grosor de Línea</string>
+    <string name="width_thin">Fina (0.4)</string>
+    <string name="width_normal">Normal (0.7)</string>
+    <string name="width_thick">Gruesa (1.1)</string>
+    <string name="width_extra">Ultra (1.6)</string>
+    <string name="label_line_pattern">Patrón de Trazo</string>
+    <string name="pattern_solid">Continua ──</string>
+    <string name="pattern_dashed">Discontinua ╌╌</string>
+    <string name="pattern_dotted">Puntos · ·</string>
+
     <!-- Categorías -->
     <string name="cat_base_terrain">Relieve y Terreno Base</string>
     <string name="cat_water">Hidrografía y Aguas</string>

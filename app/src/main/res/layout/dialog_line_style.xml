@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#1E1E1E"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/tvLineDialogTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Line Style Options"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="14dp" />
+
+    <!-- Line Width / Thickness -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_line_width"
+        android:textColor="#AAAAAA"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp" />
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/toggleLineWidth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:singleSelection="true"
+        app:selectionRequired="true">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnWidthThin"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_weight="1"
+            android:text="@string/width_thin"
+            android:textSize="11sp"
+            android:textColor="#E0E0E0"
+            app:strokeColor="#444444" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnWidthNormal"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_weight="1"
+            android:text="@string/width_normal"
+            android:textSize="11sp"
+            android:textColor="#E0E0E0"
+            app:strokeColor="#444444" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnWidthThick"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_weight="1"
+            android:text="@string/width_thick"
+            android:textSize="11sp"
+            android:textColor="#E0E0E0"
+            app:strokeColor="#444444" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnWidthExtra"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_weight="1"
+            android:text="@string/width_extra"
+            android:textSize="11sp"
+            android:textColor="#E0E0E0"
+            app:strokeColor="#444444" />
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <!-- Line Pattern / Dash -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_line_pattern"
+        android:textColor="#AAAAAA"
+        android:textSize="11sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp" />
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/toggleLinePattern"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        app:singleSelection="true"
+        app:selectionRequired="true">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPatternSolid"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_weight="1"
+            android:text="@string/pattern_solid"
+            android:textSize="11sp"
+            android:textColor="#E0E0E0"
+            app:strokeColor="#444444" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPatternDashed"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_weight="1"
+            android:text="@string/pattern_dashed"
+            android:textSize="11sp"
+            android:textColor="#E0E0E0"
+            app:strokeColor="#444444" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPatternDotted"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_weight="1"
+            android:text="@string/pattern_dotted"
+            android:textSize="11sp"
+            android:textColor="#E0E0E0"
+            app:strokeColor="#444444" />
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+</LinearLayout>

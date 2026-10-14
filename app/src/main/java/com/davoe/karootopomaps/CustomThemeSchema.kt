@@ -22,7 +22,10 @@ data class CustomizableElement(
     val category: ElementCategory,
     val defaultColorHex: String,
     val defaultEnabled: Boolean = true,
-    val supportsVisibilityToggle: Boolean = true
+    val supportsVisibilityToggle: Boolean = true,
+    val isLine: Boolean = false,
+    val defaultWidth: Float = 0.6f,
+    val defaultDashArray: String = "solid" // "solid", "dashed", "dotted"
 )
 
 object CustomThemeSchema {
@@ -119,14 +122,20 @@ object CustomThemeSchema {
             nameRes = R.string.elem_contour_major_name,
             descRes = R.string.elem_contour_major_desc,
             category = ElementCategory.CONTOURS,
-            defaultColorHex = "#855F3C"
+            defaultColorHex = "#855F3C",
+            isLine = true,
+            defaultWidth = 0.8f,
+            defaultDashArray = "solid"
         ),
         CustomizableElement(
             key = "color_contour_minor",
             nameRes = R.string.elem_contour_minor_name,
             descRes = R.string.elem_contour_minor_desc,
             category = ElementCategory.CONTOURS,
-            defaultColorHex = "#9E7E5A"
+            defaultColorHex = "#9E7E5A",
+            isLine = true,
+            defaultWidth = 0.4f,
+            defaultDashArray = "solid"
         ),
         CustomizableElement(
             key = "color_contour_label",
@@ -142,49 +151,70 @@ object CustomThemeSchema {
             nameRes = R.string.elem_motorway_name,
             descRes = R.string.elem_motorway_desc,
             category = ElementCategory.ROADS_PATHS,
-            defaultColorHex = "#E05A47"
+            defaultColorHex = "#E05A47",
+            isLine = true,
+            defaultWidth = 1.4f,
+            defaultDashArray = "solid"
         ),
         CustomizableElement(
             key = "color_primary_road",
             nameRes = R.string.elem_primary_road_name,
             descRes = R.string.elem_primary_road_desc,
             category = ElementCategory.ROADS_PATHS,
-            defaultColorHex = "#E5933A"
+            defaultColorHex = "#E5933A",
+            isLine = true,
+            defaultWidth = 1.1f,
+            defaultDashArray = "solid"
         ),
         CustomizableElement(
             key = "color_secondary_road",
             nameRes = R.string.elem_secondary_road_name,
             descRes = R.string.elem_secondary_road_desc,
             category = ElementCategory.ROADS_PATHS,
-            defaultColorHex = "#F5D061"
+            defaultColorHex = "#F5D061",
+            isLine = true,
+            defaultWidth = 0.9f,
+            defaultDashArray = "solid"
         ),
         CustomizableElement(
             key = "color_residential_street",
             nameRes = R.string.elem_residential_street_name,
             descRes = R.string.elem_residential_street_desc,
             category = ElementCategory.ROADS_PATHS,
-            defaultColorHex = "#FFFFFF"
+            defaultColorHex = "#FFFFFF",
+            isLine = true,
+            defaultWidth = 0.7f,
+            defaultDashArray = "solid"
         ),
         CustomizableElement(
             key = "color_gravel_track",
             nameRes = R.string.elem_gravel_track_name,
             descRes = R.string.elem_gravel_track_desc,
             category = ElementCategory.ROADS_PATHS,
-            defaultColorHex = "#8B5230"
+            defaultColorHex = "#8B5230",
+            isLine = true,
+            defaultWidth = 0.8f,
+            defaultDashArray = "solid"
         ),
         CustomizableElement(
             key = "color_mtb_singletrack",
             nameRes = R.string.elem_mtb_singletrack_name,
             descRes = R.string.elem_mtb_singletrack_desc,
             category = ElementCategory.ROADS_PATHS,
-            defaultColorHex = "#A020F0"
+            defaultColorHex = "#A020F0",
+            isLine = true,
+            defaultWidth = 0.8f,
+            defaultDashArray = "dashed"
         ),
         CustomizableElement(
             key = "color_cycleway",
             nameRes = R.string.elem_cycleway_name,
             descRes = R.string.elem_cycleway_desc,
             category = ElementCategory.ROADS_PATHS,
-            defaultColorHex = "#327A04"
+            defaultColorHex = "#327A04",
+            isLine = true,
+            defaultWidth = 0.9f,
+            defaultDashArray = "solid"
         ),
 
         // 📍 POIS & LABELS

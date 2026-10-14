@@ -79,6 +79,17 @@
     <string name="font_family_condensed">Condensato</string>
     <string name="font_family_mono">Tecnico Mono</string>
 
+    <!-- Controlli Stile Linea -->
+    <string name="label_line_width">Spessore Linea</string>
+    <string name="width_thin">Sottile (0.4)</string>
+    <string name="width_normal">Normale (0.7)</string>
+    <string name="width_thick">Spessa (1.1)</string>
+    <string name="width_extra">Ultra (1.6)</string>
+    <string name="label_line_pattern">Tratto di Linea</string>
+    <string name="pattern_solid">Continua ──</string>
+    <string name="pattern_dashed">Tratteggiata ╌╌</string>
+    <string name="pattern_dotted">Punteggiata · ·</string>
+
     <!-- Categorie GIS -->
     <string name="cat_base_terrain">Rilievo e Terreno Base</string>
     <string name="cat_water">Idrografia e Acque</string>

@@ -79,6 +79,17 @@
     <string name="font_family_condensed">Condensed</string>
     <string name="font_family_mono">Technical Mono</string>
 
+    <!-- Line Style Controls -->
+    <string name="label_line_width">Line Thickness</string>
+    <string name="width_thin">Thin (0.4)</string>
+    <string name="width_normal">Normal (0.7)</string>
+    <string name="width_thick">Thick (1.1)</string>
+    <string name="width_extra">Ultra (1.6)</string>
+    <string name="label_line_pattern">Line Pattern</string>
+    <string name="pattern_solid">Solid ──</string>
+    <string name="pattern_dashed">Dashed ╌╌</string>
+    <string name="pattern_dotted">Dotted · ·</string>
+
     <!-- Categories -->
     <string name="cat_base_terrain">Base Terrain</string>
     <string name="cat_water">Water &amp; Hydrography</string>

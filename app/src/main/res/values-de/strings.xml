@@ -79,6 +79,17 @@
     <string name="font_family_condensed">Kondensiert</string>
     <string name="font_family_mono">Technisch Mono</string>
 
+    <!-- Linienstil-Einstellungen -->
+    <string name="label_line_width">Linienstärke</string>
+    <string name="width_thin">Dünn (0.4)</string>
+    <string name="width_normal">Normal (0.7)</string>
+    <string name="width_thick">Dick (1.1)</string>
+    <string name="width_extra">Ultra (1.6)</string>
+    <string name="label_line_pattern">Linienmuster</string>
+    <string name="pattern_solid">Durchgehend ──</string>
+    <string name="pattern_dashed">Gestrichelt ╌╌</string>
+    <string name="pattern_dotted">Gepunktet · ·</string>
+
     <!-- GIS-Kategorien -->
     <string name="cat_base_terrain">Relief &amp; Basis-Gelände</string>
     <string name="cat_water">Hydrographie &amp; Gewässer</string>

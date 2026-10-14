@@ -79,6 +79,17 @@
     <string name="font_family_condensed">Condensée</string>
     <string name="font_family_mono">Technique Mono</string>
 
+    <!-- Contrôles de Style de Ligne -->
+    <string name="label_line_width">Épaisseur de Ligne</string>
+    <string name="width_thin">Fine (0.4)</string>
+    <string name="width_normal">Normale (0.7)</string>
+    <string name="width_thick">Épaisse (1.1)</string>
+    <string name="width_extra">Ultra (1.6)</string>
+    <string name="label_line_pattern">Motif de Tracé</string>
+    <string name="pattern_solid">Continue ──</string>
+    <string name="pattern_dashed">Pointillés ╌╌</string>
+    <string name="pattern_dotted">Points · ·</string>
+
     <!-- Catégories SIG -->
     <string name="cat_base_terrain">Relief &amp; Terrain de Base</string>
     <string name="cat_water">Hydrographie &amp; Eaux</string>

@@ -163,6 +163,7 @@ class CustomThemeEditorActivity : AppCompatActivity() {
             val cardColor = itemView.findViewById<MaterialCardView>(R.id.cardColorPreview)
             val viewColor = itemView.findViewById<View>(R.id.viewColorSample)
             val switchVis = itemView.findViewById<MaterialSwitch>(R.id.switchVisibility)
+            val btnLineStyle = itemView.findViewById<ImageButton>(R.id.btnLineStyle)
 
             tvName.setText(element.nameRes)
             tvDesc.setText(element.descRes)
@@ -180,10 +181,25 @@ class CustomThemeEditorActivity : AppCompatActivity() {
             cardColor.alpha = if (isVisible) 1.0f else 0.3f
             cardColor.isEnabled = isVisible
 
+            if (element.isLine) {
+                btnLineStyle.visibility = View.VISIBLE
+                btnLineStyle.alpha = if (isVisible) 1.0f else 0.3f
+                btnLineStyle.isEnabled = isVisible
+                btnLineStyle.setOnClickListener {
+                    showLineStyleDialog(element)
+                }
+            } else {
+                btnLineStyle.visibility = View.GONE
+            }
+
             switchVis.setOnCheckedChangeListener { _, isChecked ->
                 CustomThemeManager.setElementVisible(this, element.key, isChecked)
                 cardColor.alpha = if (isChecked) 1.0f else 0.3f
                 cardColor.isEnabled = isChecked
+                if (element.isLine) {
+                    btnLineStyle.alpha = if (isChecked) 1.0f else 0.3f
+                    btnLineStyle.isEnabled = isChecked
+                }
             }
 
             cardColor.setOnClickListener {
@@ -257,6 +273,61 @@ class CustomThemeEditorActivity : AppCompatActivity() {
                 } else {
                     Toast.makeText(this, "Invalid hex color format (use #RRGGBB)", Toast.LENGTH_SHORT).show()
                 }
+            }
+            .setNegativeButton("Cancel", null)
+            .show()
+    }
+
+    private fun showLineStyleDialog(element: CustomizableElement) {
+        val dialogView = LayoutInflater.from(this).inflate(R.layout.dialog_line_style, null)
+        val tvTitle = dialogView.findViewById<TextView>(R.id.tvLineDialogTitle)
+        val toggleWidth = dialogView.findViewById<MaterialButtonToggleGroup>(R.id.toggleLineWidth)
+        val togglePattern = dialogView.findViewById<MaterialButtonToggleGroup>(R.id.toggleLinePattern)
+
+        tvTitle.setText(element.nameRes)
+
+        var selectedWidth = CustomThemeManager.getLineWidth(this, element.key)
+        var selectedPattern = CustomThemeManager.getLinePattern(this, element.key)
+
+        when {
+            selectedWidth <= 0.45f -> toggleWidth.check(R.id.btnWidthThin)
+            selectedWidth <= 0.85f -> toggleWidth.check(R.id.btnWidthNormal)
+            selectedWidth <= 1.25f -> toggleWidth.check(R.id.btnWidthThick)
+            else -> toggleWidth.check(R.id.btnWidthExtra)
+        }
+
+        toggleWidth.addOnButtonCheckedListener { _, checkedId, isChecked ->
+            if (isChecked) {
+                selectedWidth = when (checkedId) {
+                    R.id.btnWidthThin -> 0.4f
+                    R.id.btnWidthNormal -> 0.7f
+                    R.id.btnWidthThick -> 1.1f
+                    else -> 1.6f
+                }
+            }
+        }
+
+        when (selectedPattern) {
+            "dashed" -> togglePattern.check(R.id.btnPatternDashed)
+            "dotted" -> togglePattern.check(R.id.btnPatternDotted)
+            else -> togglePattern.check(R.id.btnPatternSolid)
+        }
+
+        togglePattern.addOnButtonCheckedListener { _, checkedId, isChecked ->
+            if (isChecked) {
+                selectedPattern = when (checkedId) {
+                    R.id.btnPatternDashed -> "dashed"
+                    R.id.btnPatternDotted -> "dotted"
+                    else -> "solid"
+                }
+            }
+        }
+
+        AlertDialog.Builder(this)
+            .setView(dialogView)
+            .setPositiveButton("OK") { _, _ ->
+                CustomThemeManager.setLineWidth(this, element.key, selectedWidth)
+                CustomThemeManager.setLinePattern(this, element.key, selectedPattern)
             }
             .setNegativeButton("Cancel", null)
             .show()
