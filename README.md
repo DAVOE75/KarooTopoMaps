@@ -30,6 +30,11 @@
 
 Cada estilo ha sido calibrado milimétricamente teniendo en cuenta la óptica de las pantallas transflectivas de Karoo bajo la luz directa del sol, garantizando máxima visibilidad de senderos, curvas de nivel y un contraste perfecto sobre el track de tu ruta.
 
+### Novedades en v1.2.4:
+* 🏔️ **Selector de Altitudes en Curvas de Nivel**: Elige en la parte superior si quieres ver las cotas en **Ninguna**, **Solo Maestras** (por defecto) o en **Todas las Curvas**.
+* 🔄 **Compatibilidad Universal Dual**: Soporte completo para mapas oficiales Hammerhead y mapas de terceros como **OpenAndroMaps (OAM)** (reconociendo etiquetas `k="name"` y `k="ele"`).
+* ⚙️ **Aviso de configuración**: Recuerda que en los *Ajustes de Mapa* del Karoo debes tener activada la opción *«Curvas de nivel»*.
+
 ---
 
 ## Galería Visual en Dispositivo Real (Hammerhead Karoo)

@@ -32,6 +32,11 @@
 
 Each style is calibrated for sunlight readability on Karoo transflective displays, maximizing singletrack definition, contour readability, and route contrast.
 
+### What's New in v1.2.4:
+* 🏔️ **Contour Altitude Selector**: Choose right at the top whether you want elevation labels displayed on **None**, **Index/Major lines only** (default), or **All contour lines**.
+* 🔄 **Universal Dual Map Support**: Full compatibility for both official Hammerhead maps and third-party maps like **OpenAndroMaps (OAM)** (supporting both `k="name"` and `k="ele"` tags).
+* ⚙️ **Quick Setting Reminder**: Make sure "Contour Lines" is checked in your Karoo's Map Settings for contour layers to be active.
+
 ---
 
 ## Real Device Gallery (Hammerhead Karoo)
