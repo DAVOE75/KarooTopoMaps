@@ -330,6 +330,7 @@ class CustomThemeEditorActivity : AppCompatActivity() {
         val viewPreview = dialogView.findViewById<View>(R.id.viewSelectedColorPreview)
         val etHex = dialogView.findViewById<EditText>(R.id.etHexCode)
         val spectrumBar = dialogView.findViewById<ColorSpectrumBar>(R.id.spectrumBar)
+        val intensityBar = dialogView.findViewById<ColorIntensityBar>(R.id.intensityBar)
 
         tvTitle.setText(element.nameRes)
 
@@ -339,6 +340,7 @@ class CustomThemeEditorActivity : AppCompatActivity() {
             val parsedInitial = Color.parseColor(selectedColor)
             viewPreview.setBackgroundColor(parsedInitial)
             spectrumBar.setColor(parsedInitial)
+            intensityBar.setBaseColor(parsedInitial, selectedColor)
         } catch (ignored: Exception) {}
 
         val swatchCards = mutableListOf<Pair<MaterialCardView, String>>()
@@ -347,7 +349,7 @@ class CustomThemeEditorActivity : AppCompatActivity() {
             for ((card, hex) in swatchCards) {
                 if (hex.equals(currentHex, ignoreCase = true)) {
                     card.strokeColor = Color.parseColor("#FFD700")
-                    card.strokeWidth = 6
+                    card.strokeWidth = 5
                 } else {
                     card.strokeColor = Color.parseColor("#444444")
                     card.strokeWidth = 2
@@ -356,6 +358,14 @@ class CustomThemeEditorActivity : AppCompatActivity() {
         }
 
         spectrumBar.onColorChangedListener = { color, hex ->
+            selectedColor = hex
+            etHex.setText(hex)
+            viewPreview.setBackgroundColor(color)
+            intensityBar.setBaseColor(color)
+            updateSelectedSwatchHighlight(hex)
+        }
+
+        intensityBar.onIntensityChangedListener = { color, hex ->
             selectedColor = hex
             etHex.setText(hex)
             viewPreview.setBackgroundColor(color)
@@ -371,6 +381,7 @@ class CustomThemeEditorActivity : AppCompatActivity() {
                         val parsed = Color.parseColor(hex)
                         viewPreview.setBackgroundColor(parsed)
                         spectrumBar.setColor(parsed)
+                        intensityBar.setBaseColor(parsed, hex)
                         selectedColor = hex
                         updateSelectedSwatchHighlight(hex)
                     } catch (ignored: Exception) {}
@@ -405,6 +416,7 @@ class CustomThemeEditorActivity : AppCompatActivity() {
                     val parsed = Color.parseColor(colorHex)
                     viewPreview.setBackgroundColor(parsed)
                     spectrumBar.setColor(parsed)
+                    intensityBar.setBaseColor(parsed, colorHex)
                     updateSelectedSwatchHighlight(colorHex)
                 }
             }

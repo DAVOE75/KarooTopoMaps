@@ -32,7 +32,22 @@
     <com.davoe.karootopomaps.ColorSpectrumBar
         android:id="@+id/spectrumBar"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="26dp"
+        android:layout_marginBottom="10dp" />
+
+    <!-- Intensity & Tone Gradient Bar (Light to 100% Pure) -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/color_intensity_title"
+        android:textColor="#AAAAAA"
+        android:textSize="11sp"
+        android:layout_marginBottom="6dp" />
+
+    <com.davoe.karootopomaps.ColorIntensityBar
+        android:id="@+id/intensityBar"
+        android:layout_width="match_parent"
+        android:layout_height="26dp"
         android:layout_marginBottom="12dp" />
 
     <!-- Palette of High-Visibility Outdoor Cycling Colors -->

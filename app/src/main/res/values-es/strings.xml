@@ -69,6 +69,7 @@
     <string name="btn_select">Seleccionar</string>
     <string name="color_picker_title">Elegir Color</string>
     <string name="color_spectrum_title">Espectro Continuo Arcoíris</string>
+    <string name="color_intensity_title">Intensidad y Tono (Claro a 100% Puro)</string>
     <string name="color_palette_title">Paleta Rápida (Optimizada para Sol)</string>
     <string name="color_selected_label">Color Seleccionado y Código Hex:</string>
     <string name="invalid_hex_error">Formato de color hexadecimal no válido (usa #RRGGBB)</string>

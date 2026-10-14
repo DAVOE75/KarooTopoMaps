@@ -69,6 +69,7 @@
     <string name="btn_select">Select</string>
     <string name="color_picker_title">Choose Color</string>
     <string name="color_spectrum_title">Continuous Rainbow Spectrum</string>
+    <string name="color_intensity_title">Color Intensity &amp; Tone (Light to 100% Pure)</string>
     <string name="color_palette_title">Quick Palette (Sunlight Optimized)</string>
     <string name="color_selected_label">Selected Color &amp; Hex Code:</string>
     <string name="invalid_hex_error">Invalid hex color format (use #RRGGBB)</string>
