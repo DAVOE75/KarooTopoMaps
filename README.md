@@ -37,18 +37,18 @@ Cada estilo ha sido calibrado milimétricamente teniendo en cuenta la óptica de
 > Las funciones avanzadas del **Estudio de Mapas Personalizados PRO** se encuentran actualmente en **fase de pruebas y testeo cerrado (BETA)**. Durante este periodo, esta sección está inactiva para el público general. En breve se anunciará la apertura oficial para que todos los usuarios que lo deseen puedan adquirir su licencia de por vida y desbloquear el estudio completo. ¡Los 9 temas clásicos continúan siendo 100% gratuitos y totalmente funcionales!
 
 * 🎨 **Estudio de Mapas Personalizado (PRO)**: Crea tu propio estilo cartográfico desde cero o edita cualquiera de los existentes con control total del mapa.
-* ⚡ **Perfiles Inteligentes por Disciplina (1 Solo Toque)**:
+* <img src="art/ic_gis_presets.svg" width="16" height="16" align="center" /> **Perfiles Inteligentes por Disciplina (1 Solo Toque)**:
   * 🚴 **Carretera Pro**: Fondo limpio de contraste extremo, carreteras principales reforzadas y apagado total de curvas y senderos para máxima visibilidad de la línea de ruta a 40 km/h.
   * 🚵 **MTB Enduro**: Curvas de nivel ultraprecisas (10m/20m), senderos técnicos (*singletracks*) en rojo de alta visibilidad, pistas forestales destacadas y radares activos.
   * 🌲 **Gravel Pro**: Prioridad a pistas de tierra, caminos rurales y fuentes de agua; carreteras secundarias y nacionales atenuadas.
   * 🌙 **AMOLED Noche**: Fondo negro puro (`#000000`) para ahorro máximo de batería de pantalla y cero deslumbramientos nocturnos.
-* ☀️ **Potenciador de Sol Extremo (High-Glare Sunlight Booster)**: Aumenta automáticamente el grosor de todos los trazos un +25% y añade rebordes de alto contraste para una lectura cristalina bajo el sol de mediodía.
-* 💧 **Radar de Fuentes de Agua Potable (Survival Mode)**: Eleva los puntos de agua potable (`drinking_water`) a prioridad máxima con icono agrandado en azul brillante visible desde niveles de zoom lejanos.
-* 🟢🔵🔴⚫ **Dificultad de Senderos IMBA**: Colorea automáticamente las trialeras y senderos según su grado técnico en OpenStreetMap (Verde = Fácil, Azul = Moderado, Rojo = Difícil, Negro = Experto).
+* <img src="art/ic_gis_sun.svg" width="16" height="16" align="center" /> **Potenciador de Sol Extremo (High-Glare Sunlight Booster)**: Aumenta automáticamente el grosor de todos los trazos un +25% y añade rebordes de alto contraste para una lectura cristalina bajo el sol de mediodía.
+* <img src="art/ic_gis_fountain.svg" width="16" height="16" align="center" /> **Radar de Fuentes de Agua Potable (Survival Mode)**: Eleva los puntos de agua potable (`drinking_water`) a prioridad máxima con icono agrandado en azul brillante visible desde niveles de zoom lejanos.
+* <img src="art/ic_gis_mtb.svg" width="16" height="16" align="center" /> **Dificultad de Senderos IMBA**: Colorea automáticamente las trialeras y senderos según su grado técnico en OpenStreetMap (Verde = Fácil, Azul = Moderado, Rojo = Difícil, Negro = Experto).
 * 👁️ **Control de Visibilidad y Ocultación Real**: Apaga cualquier elemento que no quieras ver (carreteras, polígonos, edificios, curvas, etc.) quedando 100% invisibles en el mapa.
 * 📏 **Personalización de Trazos y Patrones**: Grosor de línea ajustable (Fino, Normal, Grueso, Ultra) y patrones de línea (Continua, Discontinua, Puntos).
 * 📐 **Controles de Tipografía Cartográfica**: Escala de tamaño de texto (85%, 100%, 120%, 140%), estilo (Normal o Negrita) y familia de fuentes (Estándar, Condensada o Monoespaciada).
-* 💾 **Copia de Seguridad y Compartir Mapas**: Exporta tu perfil de mapa en un código de texto para compartirlo con tu grupeta por WhatsApp o notas, e impórtalo en cualquier Karoo al instante.
+* <img src="art/ic_gis_export.svg" width="16" height="16" align="center" /> **Copia de Seguridad y Compartir Mapas**: Exporta tu perfil de mapa en un código de texto para compartirlo con tu grupeta por WhatsApp o notas, e impórtalo en cualquier Karoo al instante.
 * 🗺️ **Iconografía GIS Vectorial Nativa**: Simbología técnica limpia en color oro basada en estándares de sistemas de información geográfica.
 * 🔑 **Activación Criptográfica Offline**: Licencia individual permanente sin depender de Google Play ni cobertura en ruta.
 * 🔄 **Compatibilidad Universal Dual**: Soporte completo para mapas oficiales Hammerhead y OpenAndroMaps (OAM).
