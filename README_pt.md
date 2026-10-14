@@ -38,7 +38,7 @@ Cada estilo foi minuciosamente calibrado para as telas transfletivas do Karoo so
 > **Aviso sobre as Funcionalidades PRO**:
 > As ferramentas avançadas do **Estúdio de Mapa Personalizado PRO** encontram-se atualmente em **fase de testes fechados (BETA)**. Durante este período, esta secção está temporariamente inativa para o público em geral. Muito em breve será anunciado o lançamento oficial para que todos os utilizadores interessados possam adquirir a sua licença. Todos os 9 temas clássicos continuam 100% gratuitos, intocáveis e totalmente funcionais!
 
-* 🎨 **Estúdio de Mapa Personalizado (PRO)**: Crie o seu próprio estilo cartográfico de raiz ou edite qualquer tema com controlo visual absoluto.
+* <img src="art/ic_gis_studio.svg" width="16" height="16" align="center" /> **Estúdio de Mapa Personalizado (PRO)**: Crie o seu próprio estilo cartográfico de raiz ou edite qualquer tema com controlo visual absoluto.
 * <img src="art/ic_gis_presets.svg" width="16" height="16" align="center" /> **Predefinições por Disciplina com 1 Toque**:
   * 🚴 **Estrada Pro**: Fundo limpo de contraste extremo, rede viária reforçada e desligamento total de curvas e trilhos para máxima visibilidade em alta velocidade.
   * 🚵 **BTT Enduro**: Curvas de nível de alta precisão (10m/20m), singletracks em vermelho brilhante de alta visibilidade, estradões florestais e radares de sobrevivência ativos.
@@ -47,13 +47,13 @@ Cada estilo foi minuciosamente calibrado para as telas transfletivas do Karoo so
 * <img src="art/ic_gis_sun.svg" width="16" height="16" align="center" /> **Potenciador de Sol Intenso (High-Glare Sunlight Booster)**: Aumenta automaticamente a espessura de todas as linhas em +25% e adiciona contornos de alto contraste para uma leitura nítida sob o sol do meio-dia.
 * <img src="art/ic_gis_fountain.svg" width="16" height="16" align="center" /> **Radar de Fontes de Água Potável (Modo Sobrevivência)**: Exibe fontes de água potável (`drinking_water`) com prioridade máxima e ícone ampliado em azul vivo visível desde níveis de zoom afastados.
 * <img src="art/ic_gis_mtb.svg" width="16" height="16" align="center" /> **Classificação de Dificuldade BTT IMBA**: Colore automaticamente os singletracks consoante a graduação técnica oficial do OpenStreetMap (Verde, Azul, Vermelho, Preto).
-* 👁️ **Visibilidade e Ocultação Real de Camadas**: Desative qualquer elemento indesejado, tornando-o 100% invisível no mapa.
-* 📏 **Personalização de Traços e Padrões**: Espessura de linha ajustável (Fina, Normal, Grossa, Ultra) e padrões de linha (Contínua, Tracejada, Pontilhada).
-* 📐 **Controlos Tipográficos**: Escala do texto (85%, 100%, 120%, 140%), estilo (Normal ou Negrito) e famílias de fontes (Padrão, Condensada ou Monospaçada).
+* <img src="art/ic_gis_visibility.svg" width="16" height="16" align="center" /> **Visibilidade e Ocultação Real de Camadas**: Desative qualquer elemento indesejado, tornando-o 100% invisível no mapa.
+* <img src="art/ic_gis_lines.svg" width="16" height="16" align="center" /> **Personalização de Traços e Padrões**: Espessura de linha ajustável (Fina, Normal, Grossa, Ultra) e padrões de linha (Contínua, Tracejada, Pontilhada).
+* <img src="art/ic_gis_typography.svg" width="16" height="16" align="center" /> **Controlos Tipográficos**: Escala do texto (85%, 100%, 120%, 140%), estilo (Normal ou Negrito) e famílias de fontes (Padrão, Condensada ou Monospaçada).
 * <img src="art/ic_gis_export.svg" width="16" height="16" align="center" /> **Cópia de Segurança e Partilha de Perfis**: Exporte o seu estilo num código de texto para partilhar com os amigos e importe-o instantaneamente em qualquer Karoo.
-* 🗺️ **Simbologia Vetorial SIG Nativa**: Ícones técnicos dourados limpos baseados nas normas dos sistemas de informação geográfica.
-* 🔑 **Ativação Criptográfica Offline**: Licença permanente para o dispositivo sem depender do Google Play ou de ligação à internet no terreno.
-* 🔄 **Suporte Duplo e Universal**: Compatibilidade total com mapas oficiais Hammerhead e OpenAndroMaps (OAM).
+* <img src="art/ic_gis_map.svg" width="16" height="16" align="center" /> **Simbologia Vetorial SIG Nativa**: Ícones técnicos dourados limpos baseados nas normas dos sistemas de informação geográfica.
+* <img src="art/ic_gis_key.svg" width="16" height="16" align="center" /> **Ativação Criptográfica Offline**: Licença permanente para o dispositivo sem depender do Google Play ou de ligação à internet no terreno.
+* <img src="art/ic_gis_map.svg" width="16" height="16" align="center" /> **Suporte Duplo e Universal**: Compatibilidade total com mapas oficiais Hammerhead e OpenAndroMaps (OAM).
 
 ---
 

@@ -38,7 +38,7 @@ Each style is calibrated for sunlight readability on Karoo transflective display
 > **Notice Regarding PRO Features**:
 > The advanced features in the **PRO Custom Map Studio** are currently in **closed testing and validation phase (BETA)**. During this trial period, this section is temporarily inactive for the general public. We will soon announce the official public release so that anyone interested can acquire a license and unlock the complete studio. All 9 classic themes remain 100% free, untouched, and fully operational!
 
-* 🎨 **Custom Map Studio (PRO)**: Design your own cartographic style from scratch or customize any baseline theme with complete visual control.
+* <img src="art/ic_gis_studio.svg" width="16" height="16" align="center" /> **Custom Map Studio (PRO)**: Design your own cartographic style from scratch or customize any baseline theme with complete visual control.
 * <img src="art/ic_gis_presets.svg" width="16" height="16" align="center" /> **1-Touch Discipline Presets**:
   * 🚴 **Road Pro**: Ultra-clean high-contrast background, bold road network, and disabled contours/singletracks for maximum navigation clarity at high speed.
   * 🚵 **MTB Enduro**: High-precision elevation contours (10m/20m), high-visibility red singletracks, forest doubletracks, and active survival radars.
@@ -47,13 +47,13 @@ Each style is calibrated for sunlight readability on Karoo transflective display
 * <img src="art/ic_gis_sun.svg" width="16" height="16" align="center" /> **High-Glare Sunlight Booster**: Automatically boosts line widths by +25% and reinforces high-contrast outlines for pristine readability under direct noon sunlight.
 * <img src="art/ic_gis_fountain.svg" width="16" height="16" align="center" /> **Survival Drinking Water Radar**: Elevates potable water sources (`drinking_water`) to top priority with an enlarged bright blue icon visible from high zoom levels.
 * <img src="art/ic_gis_mtb.svg" width="16" height="16" align="center" /> **IMBA Trail Difficulty Grading**: Automatically colors singletracks according to official OpenStreetMap trail grades (Green = Easy, Blue = Moderate, Red = Difficult, Black = Expert).
-* 👁️ **True Layer Visibility & Elimination**: Disable any element you don't need (highways, residential polygons, buildings, contours, etc.) so they are 100% invisible on the map.
-* 📏 **Line Stroke & Pattern Customization**: Configurable line widths (Thin, Normal, Thick, Ultra) and dash patterns (Solid, Dashed, Dotted).
-* 📐 **Cartographic Typography Controls**: Customize text scale (85%, 100%, 120%, 140%), style (Normal or Bold), and font families (Standard, Condensed, or Technical Monospace).
+* <img src="art/ic_gis_visibility.svg" width="16" height="16" align="center" /> **True Layer Visibility & Elimination**: Disable any element you don't need (highways, residential polygons, buildings, contours, etc.) so they are 100% invisible on the map.
+* <img src="art/ic_gis_lines.svg" width="16" height="16" align="center" /> **Line Stroke & Pattern Customization**: Configurable line widths (Thin, Normal, Thick, Ultra) and dash patterns (Solid, Dashed, Dotted).
+* <img src="art/ic_gis_typography.svg" width="16" height="16" align="center" /> **Cartographic Typography Controls**: Customize text scale (85%, 100%, 120%, 140%), style (Normal or Bold), and font families (Standard, Condensed, or Technical Monospace).
 * <img src="art/ic_gis_export.svg" width="16" height="16" align="center" /> **Cloud / Code Profile Sharing**: Export your custom map style to a text code to share with riding buddies via WhatsApp or notes, and import instantly on any Karoo.
-* 🗺️ **Native GIS Vector Symbology**: Clean technical gold-toned symbology based on GIS standards.
-* 🔑 **Offline Cryptographic Activation**: Lifetime device license without relying on Google Play or internet access on the trail.
-* 🔄 **Universal Dual Map Support**: Full compatibility with official Hammerhead maps and OpenAndroMaps (OAM).
+* <img src="art/ic_gis_map.svg" width="16" height="16" align="center" /> **Native GIS Vector Symbology**: Clean technical gold-toned symbology based on GIS standards.
+* <img src="art/ic_gis_key.svg" width="16" height="16" align="center" /> **Offline Cryptographic Activation**: License activation without relying on Google Play or internet access on the trail.
+* <img src="art/ic_gis_map.svg" width="16" height="16" align="center" /> **Universal Dual Map Support**: Full compatibility with official Hammerhead maps and OpenAndroMaps (OAM).
 
 ---
 

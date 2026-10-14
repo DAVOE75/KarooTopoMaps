@@ -38,7 +38,7 @@ Jeder Stil wurde präzise für die transflektiven Displays des Karoo bei direkte
 > **Hinweis zu den PRO-Funktionen**:
 > Die erweiterten Funktionen des **PRO Custom Karten-Studios** befinden sich derzeit in einer **geschlossenen Testphase (BETA)**. Während dieser Testphase ist dieser Bereich für die Allgemeinheit vorübergehend inaktiv. Der offizielle Start wird in Kürze bekannt gegeben, sodass alle interessierten Nutzer eine Lizenz erwerben können. Alle 9 klassischen Themen bleiben zu 100% kostenlos, unverändert und voll einsatzbereit!
 
-* 🎨 **Custom Karten-Studio (PRO)**: Erstelle deinen eigenen Kartenstil von Grund auf oder passe bestehende Themes mit voller visueller Kontrolle an.
+* <img src="art/ic_gis_studio.svg" width="16" height="16" align="center" /> **Custom Karten-Studio (PRO)**: Erstelle deinen eigenen Kartenstil von Grund auf oder passe bestehende Themes mit voller visueller Kontrolle an.
 * <img src="art/ic_gis_presets.svg" width="16" height="16" align="center" /> **1-Klick-Disziplin-Profile**:
   * 🚴 **Rennrad Pro**: Ultra-cleaner Hintergrund mit Höchstkontrast, verstärktes Straßennetz und ausgeblendete Höhenlinien/Trails für maximale Navigationssicht bei hohem Tempo.
   * 🚵 **MTB Enduro**: Hochpräzise Höhenlinien (10m/20m), leuchtend rote Singletrails, Waldwege und aktive Überlebens-Radare.
@@ -47,13 +47,13 @@ Jeder Stil wurde präzise für die transflektiven Displays des Karoo bei direkte
 * <img src="art/ic_gis_sun.svg" width="16" height="16" align="center" /> **Sonnenlicht-Kontrast-Booster (High-Glare Sunlight Booster)**: Verstärkt automatisch alle Linienstärken um +25% und fügt kontrastreiche Konturen für beste Lesbarkeit bei sengender Mittagssonne hinzu.
 * <img src="art/ic_gis_fountain.svg" width="16" height="16" align="center" /> **Trinkwasser-Radar (Überlebensmodus)**: Zeigt Trinkwasserbrunnen (`drinking_water`) mit höchster Priorität und vergrößertem hellblauen Symbol an, das schon bei weiten Zoomstufen sichtbar ist.
 * <img src="art/ic_gis_mtb.svg" width="16" height="16" align="center" /> **IMBA MTB-Schwierigkeitsgrade**: Färbt Trails automatisch nach dem offiziellen OpenStreetMap-Schwierigkeitsgrad ein (Grün, Blau, Rot, Schwarz).
-* 👁️ **Echte Layer-Sichtbarkeit und Ausblendung**: Deaktiviere unerwünschte Elemente (Autobahnen, Wohngebiete, Gebäude, Höhenlinien), sodass sie zu 100% unsichtbar sind.
-* 📏 **Anpassbare Linienstile**: Konfigurierbare Linienstärken (Dünn, Normal, Dick, Ultra) und Muster (Durchgezogen, Gestrichelt, Gepunktet).
-* 📐 **Kartografische Typografie**: Textskalierung (85%, 100%, 120%, 140%), Schriftstärke (Normal oder Fett) und Schriftarten (Standard, Schmal oder Monospace).
+* <img src="art/ic_gis_visibility.svg" width="16" height="16" align="center" /> **Echte Layer-Sichtbarkeit und Ausblendung**: Deaktiviere unerwünschte Elemente (Autobahnen, Wohngebiete, Gebäude, Höhenlinien), sodass sie zu 100% unsichtbar sind.
+* <img src="art/ic_gis_lines.svg" width="16" height="16" align="center" /> **Anpassbare Linienstile**: Konfigurierbare Linienstärken (Dünn, Normal, Dick, Ultra) und Muster (Durchgezogen, Gestrichelt, Gepunktet).
+* <img src="art/ic_gis_typography.svg" width="16" height="16" align="center" /> **Kartografische Typografie**: Textskalierung (85%, 100%, 120%, 140%), Schriftstärke (Normal oder Fett) und Schriftarten (Standard, Schmal oder Monospace).
 * <img src="art/ic_gis_export.svg" width="16" height="16" align="center" /> **Profile teilen & sichern**: Exportiere dein Design als Textcode, um es per WhatsApp mit deiner Gruppe zu teilen und auf jedem Karoo sofort zu importieren.
-* 🗺️ **Echte GIS-Vektorsymbole**: Saubere goldfarbene technische Symbologie nach Geoinformationssystem-Standards.
-* 🔑 **Offline-Kryptografische Aktivierung**: Dauerhafte Gerätelizenz ohne Abhängigkeit von Google Play oder Mobilfunkempfang.
-* 🔄 **Duale Kartenkompatibilität**: Volle Unterstützung für offizielle Hammerhead-Karten und OpenAndroMaps (OAM).
+* <img src="art/ic_gis_map.svg" width="16" height="16" align="center" /> **Echte GIS-Vektorsymbole**: Saubere goldfarbene technische Symbologie nach Geoinformationssystem-Standards.
+* <img src="art/ic_gis_key.svg" width="16" height="16" align="center" /> **Offline-Kryptografische Aktivierung**: Lizenzaktivierung ohne Abhängigkeit von Google Play oder Mobilfunkempfang.
+* <img src="art/ic_gis_map.svg" width="16" height="16" align="center" /> **Duale Kartenkompatibilität**: Volle Unterstützung für offizielle Hammerhead-Karten und OpenAndroMaps (OAM).
 
 ---
 

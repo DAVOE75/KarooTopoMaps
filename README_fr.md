@@ -38,7 +38,7 @@ Chaque thème a été calibré avec précision pour les écrans transflectifs du
 > **Avis concernant les fonctionnalités PRO** :
 > Les fonctionnalités avancées du **Studio de Carte Personnalisée PRO** sont actuellement en **phase de test fermé (BETA)**. Durant cette période, cette section est temporairement inactive pour le grand public. L'ouverture officielle sera annoncée très prochainement afin que tous les utilisateurs puissent acquérir leur licence. Les 9 thèmes classiques restent 100% gratuits, intouchables et pleinement fonctionnels !
 
-* 🎨 **Studio de Carte Personnalisée (PRO)** : Créez votre propre style cartographique ou modifiez n'importe quel thème avec un contrôle visuel total.
+* <img src="art/ic_gis_studio.svg" width="16" height="16" align="center" /> **Studio de Carte Personnalisée (PRO)** : Créez votre propre style cartographique ou modifiez n'importe quel thème avec un contrôle visuel total.
 * <img src="art/ic_gis_presets.svg" width="16" height="16" align="center" /> **Préréglages par Discipline en 1 Seul Clic** :
   * 🚴 **Route Pro** : Fond épuré à contraste maximal, réseau routier renforcé et désactivation complète des courbes et sentiers pour une lisibilité parfaite à haute vitesse.
   * 🚵 **VTT Enduro** : Courbes de niveau haute précision (10m/20m), singletracks en rouge vif, pistes forestières et radars de survie activés.
@@ -47,13 +47,13 @@ Chaque thème a été calibré avec précision pour les écrans transflectifs du
 * <img src="art/ic_gis_sun.svg" width="16" height="16" align="center" /> **Booster de Plein Soleil (High-Glare Sunlight Booster)** : Épaissit automatiquement tous les traits de +25% et ajoute des contours contrastés pour une lecture limpide sous le soleil de midi.
 * <img src="art/ic_gis_fountain.svg" width="16" height="16" align="center" /> **Radar Points d\'Eau Potable (Mode Survie)** : Affiche les fontaines d'eau potable (`drinking_water`) en priorité maximale avec une icône agrandie bleu vif visible dès les niveaux de zoom éloignés.
 * <img src="art/ic_gis_mtb.svg" width="16" height="16" align="center" /> **Classification de Difficulté VTT (IMBA)** : Colore automatiquement les singletracks selon leur niveau technique officiel OpenStreetMap (Vert, Bleu, Rouge, Noir).
-* 👁️ **Visibilité et Élimination Réelle des Couches** : Désactivez les éléments indésirables pour les faire disparaître à 100% de la carte.
-* 📏 **Personnalisation des Lignes** : Épaisseur réglable (Fin, Normal, Épais, Ultra) et styles de pointillés (Continu, Tirets, Points).
-* 📐 **Contrôles de Typographie** : Échelle du texte (85%, 100%, 120%, 140%), graisse (Normal ou Gras) et polices (Standard, Condensée ou Monospace).
+* <img src="art/ic_gis_visibility.svg" width="16" height="16" align="center" /> **Visibilité et Élimination Réelle des Couches** : Désactivez les éléments indésirables pour les faire disparaître à 100% de la carte.
+* <img src="art/ic_gis_lines.svg" width="16" height="16" align="center" /> **Personnalisation des Lignes** : Épaisseur réglable (Fin, Normal, Épais, Ultra) et styles de pointillés (Continu, Tirets, Points).
+* <img src="art/ic_gis_typography.svg" width="16" height="16" align="center" /> **Contrôles de Typographie** : Échelle du texte (85%, 100%, 120%, 140%), graisse (Normal ou Gras) et polices (Standard, Condensée ou Monospace).
 * <img src="art/ic_gis_export.svg" width="16" height="16" align="center" /> **Sauvegarde et Partage de Profils par Code** : Exportez votre style sous forme de code texte pour le partager avec vos amis et l'importer instantanément sur n'importe quel Karoo.
-* 🗺️ **Simbologie Vectorielle SIG Native** : Icônes dorées vectorielles nettes basées sur les standards des systèmes d'information géographique.
-* 🔑 **Activation Cryptographique Hors-Ligne** : Déverrouillage permanent sans dépendre de Google Play ni d'une connexion internet sur le vélo.
-* 🔄 **Support Cartographique Universel** : Compatibilité totale avec les cartes officielles Hammerhead et OpenAndroMaps (OAM).
+* <img src="art/ic_gis_map.svg" width="16" height="16" align="center" /> **Simbologie Vectorielle SIG Native** : Icônes dorées vectorielles nettes basées sur les standards des systèmes d'information géographique.
+* <img src="art/ic_gis_key.svg" width="16" height="16" align="center" /> **Activation Cryptographique Hors-Ligne** : Déverrouillage permanent sans dépendre de Google Play ni d'une connexion internet sur le vélo.
+* <img src="art/ic_gis_map.svg" width="16" height="16" align="center" /> **Support Cartographique Universel** : Compatibilité totale avec les cartes officielles Hammerhead et OpenAndroMaps (OAM).
 
 ---
 
