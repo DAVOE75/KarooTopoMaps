@@ -20,7 +20,7 @@
   <a href="https://github.com/DAVOE75/KarooTopoMaps/releases/latest"><img src="https://img.shields.io/github/v/release/DAVOE75/KarooTopoMaps?style=flat-square&logo=android&logoColor=white&label=Release&color=2E7D32" alt="Latest Release" /></a>
   <a href="https://github.com/DAVOE75/KarooTopoMaps/releases"><img src="https://img.shields.io/github/downloads/DAVOE75/KarooTopoMaps/total?style=flat-square&logo=github&logoColor=white&label=Downloads&color=D4AF37" alt="Total Downloads" /></a>
   <img src="https://img.shields.io/badge/Device-Karoo_1_•_2_•_3-1B1B1B?style=flat-square&logo=googlemaps&logoColor=D4AF37" alt="Karoo Compatibility" />
-  <a href="https://github.com/DAVOE75/KarooTopoMaps/blob/main/LICENSE"><img src="https://img.shields.io/github/license/DAVOE75/KarooTopoMaps?style=flat-square&label=License&color=455A64" alt="MIT License" /></a>
+  <a href="https://github.com/DAVOE75/KarooTopoMaps/blob/main/LICENSE"><img src="https://img.shields.io/github/license/DAVOE75/KarooTopoMaps?style=flat-square&label=License&color=455A64" alt="License" /></a>
   <a href="https://buymeacoffee.com/davoe75"><img src="https://img.shields.io/badge/Donate-Buy_Me_a_Coffee-FF813F?style=flat-square&logo=buy-me-a-coffee&logoColor=white" alt="Buy Me A Coffee" /></a>
 </p>
 
@@ -147,7 +147,7 @@ The quickest way to switch themes on the fly directly on your Karoo:
 ## Cartographic Origin and Credits
 
 * **Official IGN Theme**: This style has been handcrafted and independently created by David García Pascual (hesiOX), modeled faithfully on the cartographic symbology, hypsometric colors, and contour line specifications of Spain's **MTN25 (1:25,000 scale) National Topographic Map** published by the **Instituto Geográfico Nacional de España (IGN / CNIG)**. It does not use, borrow, or copy code from Tobias Kuehn's Elevate theme, nor does it rely on external icon packs (`ele-res`). It is a pure, standalone vector Mapsforge rendering style engineered specifically for the Hammerhead Karoo.
-* **License**: [MIT License](LICENSE).
+* **License**: Copyright © 2026 David García Pascual. **All rights reserved.** The code and assets are the author's original work and are published for viewing only; copying, modifying or reusing them without prior written permission is not allowed. See [LICENSE](LICENSE). The 9 classic themes are free.
 
 ---
 

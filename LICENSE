@@ -1,0 +1,27 @@
+KarooTopoMaps - Proprietary License
+
+Copyright (c) 2026 David García Pascual (DAVOE75). All rights reserved.
+
+The source code, map styles, design, translations and assets of KarooTopoMaps are
+the original work of the author and are published for viewing and reference only.
+
+Without prior written permission from the author, you may NOT:
+  - copy, modify, merge, publish, sublicense or redistribute any part of this
+    code, map styles or assets, in source or binary form;
+  - use this code or its assets, in whole or in part, in other projects,
+    whether free or commercial;
+  - redistribute modified or unmodified builds of the app;
+  - remove, bypass or replicate the PRO licensing mechanism.
+
+Official builds are published only at https://github.com/DAVOE75/KarooTopoMaps/releases.
+
+To request permission, contact the author through the GitHub repository.
+
+Third-party components and map data remain under their own licenses (for example,
+the Hammerhead karoo-ext SDK, Apache License 2.0, and OpenStreetMap data, ODbL).
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY ARISING FROM THE USE OF THE SOFTWARE.
+
+KarooTopoMaps is not affiliated with, endorsed by, or supported by Hammerhead or SRAM.

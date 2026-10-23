@@ -20,7 +20,7 @@
   <a href="https://github.com/DAVOE75/KarooTopoMaps/releases/latest"><img src="https://img.shields.io/github/v/release/DAVOE75/KarooTopoMaps?style=flat-square&logo=android&logoColor=white&label=Versão&color=2E7D32" alt="Última Versão" /></a>
   <a href="https://github.com/DAVOE75/KarooTopoMaps/releases"><img src="https://img.shields.io/github/downloads/DAVOE75/KarooTopoMaps/total?style=flat-square&logo=github&logoColor=white&label=Downloads&color=D4AF37" alt="Downloads Totais" /></a>
   <img src="https://img.shields.io/badge/Dispositivo-Karoo_1_•_2_•_3-1B1B1B?style=flat-square&logo=googlemaps&logoColor=D4AF37" alt="Compatibilidade Karoo" />
-  <a href="https://github.com/DAVOE75/KarooTopoMaps/blob/main/LICENSE"><img src="https://img.shields.io/github/license/DAVOE75/KarooTopoMaps?style=flat-square&label=Licença&color=455A64" alt="Licença MIT" /></a>
+  <a href="https://github.com/DAVOE75/KarooTopoMaps/blob/main/LICENSE"><img src="https://img.shields.io/github/license/DAVOE75/KarooTopoMaps?style=flat-square&label=Licença&color=455A64" alt="License" /></a>
   <a href="https://buymeacoffee.com/davoe75"><img src="https://img.shields.io/badge/Apoiar-Buy_Me_a_Coffee-FF813F?style=flat-square&logo=buy-me-a-coffee&logoColor=white" alt="Buy Me A Coffee" /></a>
 </p>
 
@@ -147,7 +147,7 @@ A forma mais simples de trocar de tema diretamente na tela do seu Karoo:
 ## Origem Cartográfica e Créditos
 
 * **Tema IGN Oficial**: Este estilo cartográfico foi criado de forma 100% artesanal e independente por David García Pascual (hesiOX), baseando-se fielmente na simbologia, curvas de nível e paleta hipsométrica do **Mapa Topográfico Nacional MTN25 (escala 1:25.000)** do **Instituto Geográfico Nacional da Espanha (IGN / CNIG)**. Em momento algum foi consultado, utilizado ou copiado o tema Elevate de Tobias Kuehn, nem são necessários pacotes externos de ícones (`ele-res`). Trata-se de um estilo vetorial Mapsforge puro e nativo.
-* **Licença**: [MIT License](LICENSE).
+* **Licença**: Copyright © 2026 David García Pascual. **Todos os direitos reservados.** O código e os recursos são obra original do autor e são publicados apenas para consulta; não é permitido copiá-los, modificá-los nem reutilizá-los sem autorização prévia por escrito. Veja [LICENSE](LICENSE). Os 9 temas clássicos são gratuitos.
 
 ---
 

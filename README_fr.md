@@ -20,7 +20,7 @@
   <a href="https://github.com/DAVOE75/KarooTopoMaps/releases/latest"><img src="https://img.shields.io/github/v/release/DAVOE75/KarooTopoMaps?style=flat-square&logo=android&logoColor=white&label=Version&color=2E7D32" alt="Dernière Version" /></a>
   <a href="https://github.com/DAVOE75/KarooTopoMaps/releases"><img src="https://img.shields.io/github/downloads/DAVOE75/KarooTopoMaps/total?style=flat-square&logo=github&logoColor=white&label=Téléchargements&color=D4AF37" alt="Téléchargements totaux" /></a>
   <img src="https://img.shields.io/badge/Appareil-Karoo_1_•_2_•_3-1B1B1B?style=flat-square&logo=googlemaps&logoColor=D4AF37" alt="Compatibilité Karoo" />
-  <a href="https://github.com/DAVOE75/KarooTopoMaps/blob/main/LICENSE"><img src="https://img.shields.io/github/license/DAVOE75/KarooTopoMaps?style=flat-square&label=Licence&color=455A64" alt="Licence MIT" /></a>
+  <a href="https://github.com/DAVOE75/KarooTopoMaps/blob/main/LICENSE"><img src="https://img.shields.io/github/license/DAVOE75/KarooTopoMaps?style=flat-square&label=Licence&color=455A64" alt="License" /></a>
   <a href="https://buymeacoffee.com/davoe75"><img src="https://img.shields.io/badge/Soutenir-Buy_Me_a_Coffee-FF813F?style=flat-square&logo=buy-me-a-coffee&logoColor=white" alt="Buy Me A Coffee" /></a>
 </p>
 
@@ -147,7 +147,7 @@ Le moyen le plus simple de changer de thème directement depuis l'écran de votr
 ## Origine Cartographique et Crédits
 
 * **Thème IGN Officiel** : Ce style cartographique a été créé de manière 100 % artisanale et indépendante par David García Pascual (hesiOX), en s'inspirant fidèlement de la sémiologie et de la charte graphique de la **Carte Topographique Nationale MTN25 (échelle 1:25 000)** de **l'Instituto Geográfico Nacional d'Espagne (IGN / CNIG)**. En aucun cas le thème Elevate de Tobias Kuehn n'a été consulté, utilisé ou copié, et aucun pack externe d'icônes (`ele-res`) n'est requis. Il s'agit d'un style vectoriel Mapsforge pur et autonome.
-* **Licence** : [MIT License](LICENSE).
+* **Licence** : Copyright © 2026 David García Pascual. **Tous droits réservés.** Le code et les ressources sont l'œuvre originale de l'auteur et sont publiés à titre de consultation uniquement ; il est interdit de les copier, modifier ou réutiliser sans autorisation écrite préalable. Voir [LICENSE](LICENSE). Les 9 thèmes classiques sont gratuits.
 
 ---
 

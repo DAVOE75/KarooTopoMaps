@@ -20,7 +20,7 @@
   <a href="https://github.com/DAVOE75/KarooTopoMaps/releases/latest"><img src="https://img.shields.io/github/v/release/DAVOE75/KarooTopoMaps?style=flat-square&logo=android&logoColor=white&label=Versione&color=2E7D32" alt="Ultima Versione" /></a>
   <a href="https://github.com/DAVOE75/KarooTopoMaps/releases"><img src="https://img.shields.io/github/downloads/DAVOE75/KarooTopoMaps/total?style=flat-square&logo=github&logoColor=white&label=Download&color=D4AF37" alt="Download Totali" /></a>
   <img src="https://img.shields.io/badge/Dispositivo-Karoo_1_•_2_•_3-1B1B1B?style=flat-square&logo=googlemaps&logoColor=D4AF37" alt="Compatibilità Karoo" />
-  <a href="https://github.com/DAVOE75/KarooTopoMaps/blob/main/LICENSE"><img src="https://img.shields.io/github/license/DAVOE75/KarooTopoMaps?style=flat-square&label=Licenza&color=455A64" alt="Licenza MIT" /></a>
+  <a href="https://github.com/DAVOE75/KarooTopoMaps/blob/main/LICENSE"><img src="https://img.shields.io/github/license/DAVOE75/KarooTopoMaps?style=flat-square&label=Licenza&color=455A64" alt="License" /></a>
   <a href="https://buymeacoffee.com/davoe75"><img src="https://img.shields.io/badge/Dona-Buy_Me_a_Coffee-FF813F?style=flat-square&logo=buy-me-a-coffee&logoColor=white" alt="Buy Me A Coffee" /></a>
 </p>
 
@@ -147,7 +147,7 @@ Il modo più semplice per cambiare tema direttamente sullo schermo del tuo Karoo
 ## Origine Cartografica e Crediti
 
 * **Tema IGN Ufficiale**: Questo stile cartografico è stato creato in modo totalmente artigianale e indipendente da David García Pascual (hesiOX), basandosi fedelmente sulla simbologia, curve di livello e tinte altimetriche della **Mappa Topografica Nazionale MTN25 (scala 1:25.000)** dell'**Instituto Geográfico Nacional de España (IGN / CNIG)**. Non è stato consultato né copiato il tema Elevate di Tobias Kuehn, né sono necessari pacchetti esterni di icone (`ele-res`). Si tratta di uno stile vettoriale Mapsforge puro e nativo.
-* **Licenza**: [MIT License](LICENSE).
+* **Licenza**: Copyright © 2026 David García Pascual. **Tutti i diritti riservati.** Il codice e le risorse sono opera originale dell'autore e sono pubblicati solo a scopo di consultazione; non è consentito copiarli, modificarli o riutilizzarli senza previa autorizzazione scritta. Vedi [LICENSE](LICENSE). I 9 temi classici sono gratuiti.
 
 ---
 

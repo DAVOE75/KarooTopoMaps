@@ -20,7 +20,7 @@
   <a href="https://github.com/DAVOE75/KarooTopoMaps/releases/latest"><img src="https://img.shields.io/github/v/release/DAVOE75/KarooTopoMaps?style=flat-square&logo=android&logoColor=white&label=Version&color=2E7D32" alt="Neueste Version" /></a>
   <a href="https://github.com/DAVOE75/KarooTopoMaps/releases"><img src="https://img.shields.io/github/downloads/DAVOE75/KarooTopoMaps/total?style=flat-square&logo=github&logoColor=white&label=Downloads&color=D4AF37" alt="Gesamte Downloads" /></a>
   <img src="https://img.shields.io/badge/Ger%C3%A4t-Karoo_1_•_2_•_3-1B1B1B?style=flat-square&logo=googlemaps&logoColor=D4AF37" alt="Karoo Kompatibilität" />
-  <a href="https://github.com/DAVOE75/KarooTopoMaps/blob/main/LICENSE"><img src="https://img.shields.io/github/license/DAVOE75/KarooTopoMaps?style=flat-square&label=Lizenz&color=455A64" alt="MIT Lizenz" /></a>
+  <a href="https://github.com/DAVOE75/KarooTopoMaps/blob/main/LICENSE"><img src="https://img.shields.io/github/license/DAVOE75/KarooTopoMaps?style=flat-square&label=Lizenz&color=455A64" alt="License" /></a>
   <a href="https://buymeacoffee.com/davoe75"><img src="https://img.shields.io/badge/Spenden-Buy_Me_a_Coffee-FF813F?style=flat-square&logo=buy-me-a-coffee&logoColor=white" alt="Buy Me A Coffee" /></a>
 </p>
 
@@ -147,7 +147,7 @@ Der schnellste Weg, Stile direkt auf deinem Karoo zu wechseln:
 ## Kartografischer Ursprung & Credits
 
 * **Offizielles IGN-Design**: Dieser Kartenstil wurde vollständig unabhängig und von Hand von David García Pascual (hesiOX) erstellt, basierend auf der offiziellen Symbolik und den Farbpaletten der **Nationalen Topografischen Karte MTN25 (Maßstab 1:25.000)** des **Spanischen Nationalen Geografischen Instituts (IGN / CNIG)**. Es wurde zu keinem Zeitpunkt Code von Tobias Kuehns Elevate verwendet oder kopiert, noch werden externe Icon-Pakete (`ele-res`) benötigt. Es handelt sich um einen reinen, nativen Mapsforge-Vektorstil.
-* **Lizenz**: [MIT License](LICENSE).
+* **Lizenz**: Copyright © 2026 David García Pascual. **Alle Rechte vorbehalten.** Code und Assets sind das Originalwerk des Autors und werden nur zur Einsicht veröffentlicht; Kopieren, Ändern oder Wiederverwenden ohne vorherige schriftliche Genehmigung ist nicht gestattet. Siehe [LICENSE](LICENSE). Die 9 klassischen Themen sind kostenlos.
 
 ---
 

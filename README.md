@@ -20,7 +20,7 @@
   <a href="https://github.com/DAVOE75/KarooTopoMaps/releases/latest"><img src="https://img.shields.io/github/v/release/DAVOE75/KarooTopoMaps?style=flat-square&logo=android&logoColor=white&label=Versi%C3%B3n&color=2E7D32" alt="Última versión" /></a>
   <a href="https://github.com/DAVOE75/KarooTopoMaps/releases"><img src="https://img.shields.io/github/downloads/DAVOE75/KarooTopoMaps/total?style=flat-square&logo=github&logoColor=white&label=Descargas&color=D4AF37" alt="Descargas totales" /></a>
   <img src="https://img.shields.io/badge/Dispositivo-Karoo_1_•_2_•_3-1B1B1B?style=flat-square&logo=googlemaps&logoColor=D4AF37" alt="Compatibilidad Karoo" />
-  <a href="https://github.com/DAVOE75/KarooTopoMaps/blob/main/LICENSE"><img src="https://img.shields.io/github/license/DAVOE75/KarooTopoMaps?style=flat-square&label=Licencia&color=455A64" alt="Licencia MIT" /></a>
+  <a href="https://github.com/DAVOE75/KarooTopoMaps/blob/main/LICENSE"><img src="https://img.shields.io/github/license/DAVOE75/KarooTopoMaps?style=flat-square&label=Licencia&color=455A64" alt="License" /></a>
   <a href="https://buymeacoffee.com/davoe75"><img src="https://img.shields.io/badge/Donar-Buy_Me_a_Coffee-FF813F?style=flat-square&logo=buy-me-a-coffee&logoColor=white" alt="Buy Me A Coffee" /></a>
 </p>
 
@@ -147,7 +147,7 @@ La forma más sencilla e interactiva de cambiar de tema directamente desde la pa
 ## Origen Cartográfico y Créditos
 
 * **Tema IGN Oficial**: Este estilo cartográfico ha sido diseñado de manera 100% artesanal e independiente por David García Pascual (hesiOX), basándose fielmente en la simbología, curvas de nivel y paleta hipsométrica del **Mapa Topográfico Nacional MTN25 (escala 1:25.000)** del **Instituto Geográfico Nacional de España (IGN / CNIG)**. En ningún momento se ha consultado, utilizado ni copiado el tema Elevate ni recursos de Tobias Kuehn; se trata de una implementación Mapsforge pura y nativa sin dependencias de paquetes externos de iconos.
-* **Licencia del Proyecto**: [MIT License](LICENSE).
+* **Licencia del Proyecto**: Copyright © 2026 David García Pascual. **Todos los derechos reservados.** El código y los recursos son obra original del autor y se publican solo para consulta; no se permite copiarlos, modificarlos ni reutilizarlos sin permiso previo por escrito. Ver [LICENSE](LICENSE). Los 9 temas clásicos son gratuitos.
 
 ---
 
