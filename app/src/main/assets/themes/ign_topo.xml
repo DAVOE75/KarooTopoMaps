@@ -5,12 +5,12 @@
     Autor: David Garcia Pascual (hesiOX) — https://github.com/DAVOE75/KarooTopoMaps
     Licencia: MIT
 -->
-<rendertheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" map-background="#f5efd7"
+<rendertheme xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" map-background="#dfe8b6"
     version="1" xmlns="http://mapsforge.org/renderTheme"
     xsi:schemaLocation="http://mapsforge.org/renderTheme https://raw.githubusercontent.com/mapsforge/vtm/master/resources/rendertheme.xsd">
 
     <!-- AREA STYLES: Oficial IGN MTN25 1:25.000 -->
-    <style-area fill="#B3E3F9" id="water" stroke="#6BB8E0" stroke-width="0.3" mesh="true"/>
+    <style-area fill="#8fd3f4" id="water" stroke="#5fb4e0" stroke-width="0.3" mesh="true"/>
 
     <!-- LINE CASINGS -->
     <style-line id="unpaved_casing" stroke="#854E85" cap="round"/>
@@ -18,7 +18,7 @@
     <style-line id="paved_cycleway_casing" stroke="#327a04" cap="round"/>
 
     <!-- LINE STYLES -->
-    <style-line id="path" stroke="#555555" dasharray="6,4" cap="round" width="0.6"/>
+    <style-line id="path" stroke="#222222" dasharray="6,4" cap="butt" width="0.6"/>
     <style-line id="cycling_path" stroke="#ffffff" dasharray="8,8" cap="round" width="0.9"/>
     <style-line id="ferry" stroke="#50A8DE" dasharray="8,8" cap="round" width="0.9"/>
 
@@ -26,8 +26,8 @@
     <style-line cap="butt" fix="true" id="fix" width="1.0"/>
 
     <!-- Water line styles: Oficial IGN azul hidrografia -->
-    <style-line cap="butt" id="water" stroke="#50A8DE" width="1.0"/>
-    <style-line fix="false" id="river" stroke="#429AD2" use="water"/>
+    <style-line cap="butt" id="water" stroke="#2a86cc" width="1.0"/>
+    <style-line fix="false" id="river" stroke="#2a86cc" use="water"/>
 
     <!-- Text styles: Oficial IGN toponimia azul agua y rotulacion viaria -->
     <style-text id="poi_label" caption="true" dy="-15" fill="#1B6CA8" font-family="thin"
@@ -43,7 +43,7 @@
         <area use="water"/>
     </m>
     <m e="way" k="natural" v="nosea">
-        <area mesh="true" fill="#f5efd7"/>
+        <area mesh="true" fill="#dfe8b6"/>
     </m>
     <!-- paleta oficial clonada del Mapa Topografico Nacional 1:25.000 del IGN (MTN25) -->
 
@@ -54,7 +54,7 @@
                 <area mesh="true" fill="#D7E4B4"/>
             </m>
             <m v="residential">
-                <area mesh="true" fill="#f48d84" stroke="#c8554b" stroke-width="0.3"/>
+                <area mesh="true" fill="#ee7a7a" stroke="#d9343f" stroke-width="0.3"/>
             </m>
             <m v="allotments">
                 <area mesh="true" fill="#D4E5B5"/>
@@ -69,7 +69,7 @@
                 <area mesh="true" fill="#EAE8D0"/>
             </m>
             <m v="farmland|orchard|vineyard">
-                <area mesh="true" fill="#D8E7BD"/>
+                <area mesh="true" fill="#dde8b4"/>
             </m>
             <m v="quarry">
                 <area mesh="true" fill="#DDD9D0"/>
@@ -126,7 +126,7 @@
 
         <!-- Bosques / Masa forestal: Verde salvia oficial IGN MTN25 -->
         <m k="landuse|natural" v="forest|wood">
-            <area mesh="true" fill="#A3C8A7"/>
+            <area mesh="true" fill="#a9cf94"/>
         </m>
 
         <m k="landuse" v="grass">
@@ -149,7 +149,7 @@
             <line use="water" width="0.2"/>
         </m>
         <m v="stream" zoom-min="13">
-            <line use="water" width="0.4"/>
+            <line use="water" width="0.4" dasharray="6,3"/>
         </m>
         <m v="canal">
             <line use="river" width="-0.3"/>
@@ -244,15 +244,15 @@
 
     <!-- buildings: Oficial IGN MTN25 (#f48d84 con borde fino definido) -->
     <m e="way" k="building" v="*" zoom-min="14">
-        <area mesh="true" fill="#f48d84" stroke="#a84038" stroke-width="0.35"/>
+        <area mesh="true" fill="#e8666c" stroke="#d9343f" stroke-width="0.35"/>
     </m>
 
     <!-- elevation contours: Oficial IGN MTN25 (trazo unico limpio sin duplicacion) -->
     <m e="way" k="natural|contour_ext" v="minor_contour_line|elevation_minor|elevation_medium" zoom-min="14">
-        <line stroke="#9E7E5A" width="0.30" cap="round"/>
+        <line stroke="#a8683c" width="0.30" cap="round"/>
     </m>
     <m e="way" k="natural|contour_ext" v="major_contour_line|elevation_major" zoom-min="11">
-        <line stroke="#855F3C" width="0.55" cap="round"/>
+        <line stroke="#9a6a3c" width="0.55" cap="round"/>
         <text k="name" caption="true" size="11" priority="5" fill="#5C442A" stroke="#FFFFFF" stroke-width="2.0" style="bold"/>
         <text k="ele" caption="true" size="11" priority="5" fill="#5C442A" stroke="#FFFFFF" stroke-width="2.0" style="bold"/>
     </m>
@@ -425,10 +425,10 @@
     </m>
     <m e="way" k="highway" v="residential|living_street">
         <m zoom-min="15">
-            <line stroke="#C9C2B0" cap="round" width="1.8"/>
+            <line stroke="#e2434d" cap="round" width="1.1"/>
         </m>
         <m zoom-max="14" zoom-min="13">
-            <line stroke="#C9C2B0" cap="round" width="1.6"/>
+            <line stroke="#e2434d" cap="round" width="1.0"/>
         </m>
         <m k="surface" v="unpaved|compacted|ground|gravel|dirt|grass|sand|fine_gravel" zoom-min="13">
             <line use="unpaved_casing" width="2.2"/>
@@ -454,10 +454,10 @@
     </m>
     <m e="way" k="highway" v="unclassified|road">
         <m zoom-min="15">
-            <line stroke="#C9C2B0" cap="round" width="2.0"/>
+            <line stroke="#8a8a8a" cap="round" width="2.0"/>
         </m>
         <m zoom-max="14" zoom-min="12">
-            <line stroke="#C9C2B0" cap="round" width="1.8"/>
+            <line stroke="#8a8a8a" cap="round" width="1.8"/>
         </m>
         <m k="surface" v="unpaved|compacted|ground|gravel|dirt|grass|sand|fine_gravel" zoom-min="12">
             <line use="unpaved_casing" width="2.4"/>
@@ -483,10 +483,10 @@
     </m>
     <m e="way" k="highway" v="tertiary|tertiary_link">
         <m zoom-min="14">
-            <line stroke="#FCE38A" cap="round" width="2.2"/>
+            <line stroke="#4a4a40" cap="round" width="2.2"/>
         </m>
         <m zoom-max="13" zoom-min="11">
-            <line stroke="#FCE38A" cap="round" width="2.0"/>
+            <line stroke="#4a4a40" cap="round" width="2.0"/>
         </m>
         <m k="surface" v="unpaved|compacted|ground|gravel|dirt|grass|sand|fine_gravel" zoom-min="12">
             <line use="unpaved_casing" width="2.6"/>
@@ -581,10 +581,10 @@
 
     <m e="way" k="highway" v="residential|living_street">
         <m zoom-min="15">
-            <line stroke="#ffffff" cap="round" width="1.1"/>
+            <line stroke="#e2434d" cap="round" width="1.0"/>
         </m>
         <m zoom-max="14" zoom-min="13">
-            <line stroke="#ffffff" cap="round" width="0.9"/>
+            <line stroke="#e2434d" cap="round" width="0.8"/>
         </m>
         <m zoom-min="13">
             <text use="road_label" size="13" priority="8"/>
@@ -603,10 +603,10 @@
     </m>
     <m e="way" k="highway" v="tertiary|tertiary_link">
         <m zoom-min="14">
-            <line stroke="#F7E67E" cap="round" width="1.4"/>
+            <line stroke="#27a844" cap="round" width="1.4"/>
         </m>
         <m zoom-max="13" zoom-min="11">
-            <line stroke="#F7E67E" cap="round" width="1.2"/>
+            <line stroke="#27a844" cap="round" width="1.2"/>
         </m>
         <m zoom-min="11">
             <text use="road_label" size="13" priority="10"/>
@@ -614,10 +614,10 @@
     </m>
     <m e="way" k="highway" v="secondary|secondary_link">
         <m zoom-min="13">
-            <line stroke="#EBD32B" cap="round" width="1.7"/>
+            <line stroke="#f2cf00" cap="round" width="1.7"/>
         </m>
         <m zoom-max="12" zoom-min="10">
-            <line stroke="#EBD32B" cap="round" width="1.5"/>
+            <line stroke="#f2cf00" cap="round" width="1.5"/>
         </m>
         <m zoom-min="10">
             <text use="road_label" size="13" priority="11"/>
@@ -625,10 +625,10 @@
     </m>
     <m e="way" k="highway" v="primary|primary_link">
         <m zoom-min="12">
-            <line stroke="#EB1727" cap="round" width="1.9"/>
+            <line stroke="#e0141e" cap="round" width="1.9"/>
         </m>
         <m zoom-max="11" zoom-min="8">
-            <line stroke="#EB1727" cap="round" width="1.6"/>
+            <line stroke="#e0141e" cap="round" width="1.6"/>
         </m>
         <m zoom-min="8">
             <text use="road_label" size="13" priority="12"/>
